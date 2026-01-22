@@ -1,0 +1,1610 @@
+{
+  "metadata": {
+    "report_title": "WS7 - NSS Governance and Implementation Framework",
+    "generated_date": "2026-01-22T13:23:30.091511",
+    "version": "1.0",
+    "author": "NSS X System"
+  },
+  "section_1_governance_framework": {
+    "summary": {
+      "governance_bodies": 10,
+      "national_level": 7,
+      "regional_level": 2,
+      "local_level": 1,
+      "decision_processes": 6
+    },
+    "governance_bodies": [
+      {
+        "name": "National Spatial Strategy Authority (NSSA)",
+        "name_ar": "هيئة الاستراتيجية المكانية الوطنية",
+        "level": "national",
+        "type": "authority",
+        "mandate": "Lead, coordinate, and monitor implementation of the NSS across all sectors and regions",
+        "composition": [
+          "Chairperson (Minister-level appointee)",
+          "Deputy Chairperson (Technical)",
+          "Representatives from key ministries",
+          "Regional Development Directors",
+          "Private Sector Representatives"
+        ],
+        "functions": [
+          "Set strategic priorities for NSS implementation",
+          "Coordinate sectoral and regional strategies with NSS",
+          "Arbitrate inter-ministerial and inter-regional conflicts",
+          "Monitor progress against NSS targets",
+          "Propose policy adjustments to Council of Ministers",
+          "Manage NSS stakeholder engagement"
+        ],
+        "decision_rights": [
+          "Approve regional spatial plans",
+          "Issue spatial development guidelines",
+          "Recommend project spatial alignment",
+          "Escalate major conflicts to Council"
+        ],
+        "meeting_frequency": "Monthly",
+        "reports_to": "Council of Economic and Development Affairs (CEDA)",
+        "secretariat": "NSS Technical Secretariat"
+      },
+      {
+        "name": "NSS Technical Secretariat",
+        "name_ar": "الأمانة الفنية للاستراتيجية المكانية",
+        "level": "national",
+        "type": "secretariat",
+        "mandate": "Provide technical support, analysis, and coordination for NSS implementation",
+        "composition": [
+          "Secretary General",
+          "Planning & Analysis Division",
+          "Monitoring & Evaluation Division",
+          "Regional Coordination Division",
+          "Stakeholder Engagement Division",
+          "GIS & Data Management Division"
+        ],
+        "functions": [
+          "Prepare technical analysis and recommendations",
+          "Coordinate with ministerial technical teams",
+          "Manage NSS data platform and monitoring system",
+          "Draft policy documents and guidelines",
+          "Organize stakeholder consultations",
+          "Prepare NSSA meeting materials"
+        ],
+        "decision_rights": [
+          "Technical recommendations",
+          "Data standards",
+          "Process guidelines"
+        ],
+        "meeting_frequency": "Weekly",
+        "reports_to": "National Spatial Strategy Authority",
+        "secretariat": null
+      },
+      {
+        "name": "Inter-Ministerial Spatial Coordination Committee",
+        "name_ar": "اللجنة الوزارية التنسيقية للتنمية المكانية",
+        "level": "national",
+        "type": "committee",
+        "mandate": "Coordinate sectoral strategies and investments with NSS spatial framework",
+        "composition": [
+          "Deputy Ministers from key ministries",
+          "Planning Directors from each ministry",
+          "NSS Technical Secretariat"
+        ],
+        "functions": [
+          "Align sectoral strategies with NSS",
+          "Coordinate cross-sectoral investments",
+          "Resolve sector-level conflicts",
+          "Share best practices",
+          "Review spatial impact assessments"
+        ],
+        "decision_rights": [
+          "Recommend sectoral alignment actions",
+          "Approve joint investment coordination"
+        ],
+        "meeting_frequency": "Bi-weekly",
+        "reports_to": "National Spatial Strategy Authority",
+        "secretariat": "NSS Technical Secretariat"
+      },
+      {
+        "name": "Water-Land Nexus Working Group",
+        "name_ar": "مجموعة عمل العلاقة بين المياه والأراضي",
+        "level": "national",
+        "type": "committee",
+        "mandate": "Ensure all spatial development decisions account for water availability and sustainability",
+        "composition": [
+          "Ministry of Environment, Water and Agriculture",
+          "NSS Technical Secretariat",
+          "Desalination Conversion Corporation",
+          "Regional Water Authorities"
+        ],
+        "functions": [
+          "Water impact assessment for development proposals",
+          "Water allocation recommendations by region",
+          "Agricultural transition monitoring",
+          "Desalination capacity planning"
+        ],
+        "decision_rights": [
+          "Water availability certification for major projects"
+        ],
+        "meeting_frequency": "Monthly",
+        "reports_to": "Inter-Ministerial Coordination Committee",
+        "secretariat": "NSS Technical Secretariat"
+      },
+      {
+        "name": "Infrastructure Coordination Working Group",
+        "name_ar": "مجموعة عمل تنسيق البنية التحتية",
+        "level": "national",
+        "type": "committee",
+        "mandate": "Coordinate infrastructure planning across transport, energy, digital, and utilities",
+        "composition": [
+          "Ministry of Transport",
+          "Ministry of Energy",
+          "Ministry of Communications",
+          "Utility Providers",
+          "NSS Technical Secretariat"
+        ],
+        "functions": [
+          "Infrastructure master plan coordination",
+          "Corridor development sequencing",
+          "Utility co-location optimization",
+          "Investment prioritization"
+        ],
+        "decision_rights": [
+          "Infrastructure alignment recommendations"
+        ],
+        "meeting_frequency": "Monthly",
+        "reports_to": "Inter-Ministerial Coordination Committee",
+        "secretariat": "NSS Technical Secretariat"
+      },
+      {
+        "name": "Environmental Protection Working Group",
+        "name_ar": "مجموعة عمل حماية البيئة",
+        "level": "national",
+        "type": "committee",
+        "mandate": "Mainstream environmental sustainability into all spatial development decisions",
+        "composition": [
+          "National Center for Environmental Compliance",
+          "National Center for Wildlife",
+          "Ministry of Environment",
+          "NSS Technical Secretariat"
+        ],
+        "functions": [
+          "Environmental impact review of NSS projects",
+          "Protected area boundary management",
+          "Climate adaptation integration",
+          "Biodiversity corridor planning"
+        ],
+        "decision_rights": [
+          "Environmental clearance recommendations"
+        ],
+        "meeting_frequency": "Monthly",
+        "reports_to": "Inter-Ministerial Coordination Committee",
+        "secretariat": "NSS Technical Secretariat"
+      },
+      {
+        "name": "Regional Spatial Development Commission (per region)",
+        "name_ar": "هيئة التنمية المكانية الإقليمية",
+        "level": "regional",
+        "type": "authority",
+        "mandate": "Translate NSS into regional spatial plans and coordinate implementation within the region",
+        "composition": [
+          "Regional Governor (Chair)",
+          "Regional Planning Director",
+          "Municipal Representatives",
+          "Private Sector Representatives",
+          "Community Representatives"
+        ],
+        "functions": [
+          "Develop regional spatial plans aligned with NSS",
+          "Coordinate municipal plans within region",
+          "Prioritize regional infrastructure investments",
+          "Monitor regional progress against NSS targets",
+          "Stakeholder engagement at regional level"
+        ],
+        "decision_rights": [
+          "Approve municipal spatial plans",
+          "Recommend regional project priorities",
+          "Issue regional development guidelines"
+        ],
+        "meeting_frequency": "Monthly",
+        "reports_to": "National Spatial Strategy Authority",
+        "secretariat": "Regional Planning Office"
+      },
+      {
+        "name": "Regional Planning Office (per region)",
+        "name_ar": "مكتب التخطيط الإقليمي",
+        "level": "regional",
+        "type": "secretariat",
+        "mandate": "Provide technical planning support for regional spatial development",
+        "composition": [
+          "Regional Planning Director",
+          "Spatial Planners",
+          "GIS Specialists",
+          "Environmental Officers",
+          "Infrastructure Coordinators"
+        ],
+        "functions": [
+          "Prepare regional spatial plans",
+          "Coordinate with municipalities",
+          "Manage regional spatial data",
+          "Support project assessment",
+          "Community consultation"
+        ],
+        "decision_rights": [
+          "Technical recommendations",
+          "Data management"
+        ],
+        "meeting_frequency": "Weekly",
+        "reports_to": "Regional Spatial Development Commission",
+        "secretariat": null
+      },
+      {
+        "name": "Municipal Planning Committee (per municipality)",
+        "name_ar": "لجنة التخطيط البلدي",
+        "level": "local",
+        "type": "committee",
+        "mandate": "Ensure local plans and permits comply with NSS and regional spatial plans",
+        "composition": [
+          "Mayor/Municipal Director (Chair)",
+          "Planning Department Head",
+          "Infrastructure Department",
+          "Community Representatives"
+        ],
+        "functions": [
+          "Prepare local spatial plans",
+          "Issue development permits",
+          "Enforce zoning regulations",
+          "Local stakeholder engagement",
+          "Monitor local development"
+        ],
+        "decision_rights": [
+          "Local plan adoption (within NSS framework)",
+          "Development permit issuance"
+        ],
+        "meeting_frequency": "Bi-weekly",
+        "reports_to": "Regional Spatial Development Commission",
+        "secretariat": "Municipal Planning Department"
+      },
+      {
+        "name": "Giga-Projects Spatial Coordination Board",
+        "name_ar": "مجلس تنسيق المشاريع الكبرى المكاني",
+        "level": "national",
+        "type": "committee",
+        "mandate": "Ensure giga-projects (NEOM, Red Sea, Qiddiya, etc.) align with NSS",
+        "composition": [
+          "Royal Commission Representatives",
+          "PIF Representatives",
+          "NSS Authority",
+          "Relevant Ministries"
+        ],
+        "functions": [
+          "Coordinate giga-project spatial impacts",
+          "Resolve conflicts between giga-projects and NSS",
+          "Ensure infrastructure connectivity",
+          "Manage cumulative environmental impacts"
+        ],
+        "decision_rights": [
+          "Recommend modifications for NSS alignment"
+        ],
+        "meeting_frequency": "Quarterly",
+        "reports_to": "Council of Economic and Development Affairs",
+        "secretariat": "NSS Technical Secretariat"
+      }
+    ],
+    "decision_processes": [
+      {
+        "name": "Spatial Alignment Assessment",
+        "description": "Assess whether a proposed project aligns with NSS spatial framework",
+        "trigger": "New major project proposal (>SAR 500M or >100ha)",
+        "steps": [
+          {
+            "step": "1",
+            "action": "Project submits spatial impact assessment form",
+            "actor": "Project Proponent"
+          },
+          {
+            "step": "2",
+            "action": "Technical Secretariat reviews against NSS criteria",
+            "actor": "NSS Technical Secretariat"
+          },
+          {
+            "step": "3",
+            "action": "Sectoral working groups provide input",
+            "actor": "Working Groups"
+          },
+          {
+            "step": "4",
+            "action": "Prepare alignment recommendation",
+            "actor": "NSS Technical Secretariat"
+          },
+          {
+            "step": "5",
+            "action": "Decision by NSSA or escalation",
+            "actor": "NSSA"
+          }
+        ],
+        "decision_authority": "National Spatial Strategy Authority",
+        "timeline_days": 45,
+        "escalation": "CEDA for strategic projects",
+        "output": "Spatial Alignment Certificate or Conditions"
+      },
+      {
+        "name": "Regional Plan Approval",
+        "description": "Process for approving regional spatial plans",
+        "trigger": "Regional Spatial Development Commission submits plan",
+        "steps": [
+          {
+            "step": "1",
+            "action": "Regional Commission submits draft plan",
+            "actor": "Regional Commission"
+          },
+          {
+            "step": "2",
+            "action": "Technical review for NSS compliance",
+            "actor": "NSS Technical Secretariat"
+          },
+          {
+            "step": "3",
+            "action": "Inter-ministerial consultation",
+            "actor": "Coordination Committee"
+          },
+          {
+            "step": "4",
+            "action": "Public consultation (30 days)",
+            "actor": "Regional Commission"
+          },
+          {
+            "step": "5",
+            "action": "Revisions incorporated",
+            "actor": "Regional Commission"
+          },
+          {
+            "step": "6",
+            "action": "NSSA approval",
+            "actor": "NSSA"
+          }
+        ],
+        "decision_authority": "National Spatial Strategy Authority",
+        "timeline_days": 180,
+        "escalation": "CEDA for significant conflicts",
+        "output": "Approved Regional Spatial Plan"
+      },
+      {
+        "name": "Inter-Regional Conflict Resolution",
+        "description": "Resolve conflicts between regions on spatial development",
+        "trigger": "Conflict identified by either region or Technical Secretariat",
+        "steps": [
+          {
+            "step": "1",
+            "action": "Conflict documentation",
+            "actor": "NSS Technical Secretariat"
+          },
+          {
+            "step": "2",
+            "action": "Mediation meeting between regions",
+            "actor": "NSS Technical Secretariat"
+          },
+          {
+            "step": "3",
+            "action": "Technical options analysis",
+            "actor": "NSS Technical Secretariat"
+          },
+          {
+            "step": "4",
+            "action": "Recommended resolution to NSSA",
+            "actor": "NSS Technical Secretariat"
+          },
+          {
+            "step": "5",
+            "action": "NSSA decision",
+            "actor": "NSSA"
+          }
+        ],
+        "decision_authority": "National Spatial Strategy Authority",
+        "timeline_days": 60,
+        "escalation": "CEDA for politically sensitive issues",
+        "output": "Binding resolution decision"
+      },
+      {
+        "name": "Sectoral Strategy NSS Integration",
+        "description": "Ensure sectoral strategies align with NSS",
+        "trigger": "New or updated sectoral strategy submitted",
+        "steps": [
+          {
+            "step": "1",
+            "action": "Ministry submits strategy for NSS review",
+            "actor": "Line Ministry"
+          },
+          {
+            "step": "2",
+            "action": "Spatial consistency analysis",
+            "actor": "NSS Technical Secretariat"
+          },
+          {
+            "step": "3",
+            "action": "Coordination Committee discussion",
+            "actor": "Coordination Committee"
+          },
+          {
+            "step": "4",
+            "action": "Alignment modifications negotiated",
+            "actor": "Ministry + Secretariat"
+          },
+          {
+            "step": "5",
+            "action": "Certification of NSS alignment",
+            "actor": "NSSA"
+          }
+        ],
+        "decision_authority": "Inter-Ministerial Coordination Committee",
+        "timeline_days": 90,
+        "escalation": "NSSA for unresolved conflicts",
+        "output": "NSS Alignment Certification"
+      },
+      {
+        "name": "Emergency Spatial Deviation",
+        "description": "Fast-track process for urgent deviations from NSS",
+        "trigger": "Emergency situation requiring immediate action",
+        "steps": [
+          {
+            "step": "1",
+            "action": "Emergency request with justification",
+            "actor": "Requesting Entity"
+          },
+          {
+            "step": "2",
+            "action": "Rapid assessment (48 hours)",
+            "actor": "NSS Technical Secretariat"
+          },
+          {
+            "step": "3",
+            "action": "NSSA Chair emergency approval",
+            "actor": "NSSA Chair"
+          },
+          {
+            "step": "4",
+            "action": "NSSA ratification (within 30 days)",
+            "actor": "NSSA"
+          }
+        ],
+        "decision_authority": "NSSA Chair (emergency) / NSSA (ratification)",
+        "timeline_days": 5,
+        "escalation": "Minister/Council for major deviations",
+        "output": "Emergency Deviation Permit"
+      },
+      {
+        "name": "NSS Quinquennial Review",
+        "description": "Comprehensive review and update of NSS every 5 years",
+        "trigger": "5-year cycle or significant change in circumstances",
+        "steps": [
+          {
+            "step": "1",
+            "action": "Performance assessment",
+            "actor": "NSS Technical Secretariat"
+          },
+          {
+            "step": "2",
+            "action": "Scenario update and stress testing",
+            "actor": "NSS Technical Secretariat"
+          },
+          {
+            "step": "3",
+            "action": "Stakeholder consultation",
+            "actor": "NSSA"
+          },
+          {
+            "step": "4",
+            "action": "Draft revision preparation",
+            "actor": "NSS Technical Secretariat"
+          },
+          {
+            "step": "5",
+            "action": "Inter-ministerial review",
+            "actor": "Coordination Committee"
+          },
+          {
+            "step": "6",
+            "action": "NSSA approval",
+            "actor": "NSSA"
+          },
+          {
+            "step": "7",
+            "action": "CEDA endorsement",
+            "actor": "CEDA"
+          }
+        ],
+        "decision_authority": "CEDA",
+        "timeline_days": 365,
+        "escalation": "Council of Ministers for major changes",
+        "output": "Updated National Spatial Strategy"
+      }
+    ]
+  },
+  "section_2_raci_matrix": {
+    "summary": {
+      "total_activities": 30,
+      "categories": [
+        "Monitoring & Evaluation",
+        "Infrastructure",
+        "Environment",
+        "Giga-Projects",
+        "Economic Development",
+        "Housing & Urban",
+        "Water Management",
+        "Strategic Planning"
+      ],
+      "ministries_covered": 11
+    },
+    "matrix": [
+      {
+        "activity": "NSS Vision and Strategy Formulation",
+        "category": "Strategic Planning",
+        "nss_authority": "A",
+        "momra": "C",
+        "mowe": "C",
+        "mot": "C",
+        "misa": "C",
+        "moi": "C",
+        "tourism": "C",
+        "housing": "C",
+        "regions": "C",
+        "pif": "C",
+        "royal_commission": "C"
+      },
+      {
+        "activity": "Regional Spatial Plan Development",
+        "category": "Strategic Planning",
+        "nss_authority": "A",
+        "momra": "C",
+        "mowe": "C",
+        "mot": "C",
+        "misa": "I",
+        "moi": "I",
+        "tourism": "C",
+        "housing": "C",
+        "regions": "R",
+        "pif": "I",
+        "royal_commission": "C"
+      },
+      {
+        "activity": "Sectoral Strategy NSS Alignment",
+        "category": "Strategic Planning",
+        "nss_authority": "A",
+        "momra": "R",
+        "mowe": "R",
+        "mot": "R",
+        "misa": "R",
+        "moi": "R",
+        "tourism": "R",
+        "housing": "R",
+        "regions": "C",
+        "pif": "C",
+        "royal_commission": "R"
+      },
+      {
+        "activity": "Urban Development Guidelines",
+        "category": "Strategic Planning",
+        "nss_authority": "A",
+        "momra": "R",
+        "mowe": "C",
+        "mot": "C",
+        "misa": "I",
+        "moi": "I",
+        "tourism": "C",
+        "housing": "C",
+        "regions": "C",
+        "pif": "I",
+        "royal_commission": "C"
+      },
+      {
+        "activity": "Water Allocation Policy",
+        "category": "Water Management",
+        "nss_authority": "C",
+        "momra": "I",
+        "mowe": "A",
+        "mot": "I",
+        "misa": "I",
+        "moi": "C",
+        "tourism": "I",
+        "housing": "C",
+        "regions": "C",
+        "pif": "I",
+        "royal_commission": "C"
+      },
+      {
+        "activity": "Agricultural Water Transition",
+        "category": "Water Management",
+        "nss_authority": "C",
+        "momra": "I",
+        "mowe": "A",
+        "mot": "I",
+        "misa": "I",
+        "moi": "I",
+        "tourism": "I",
+        "housing": "I",
+        "regions": "R",
+        "pif": "I",
+        "royal_commission": "I"
+      },
+      {
+        "activity": "Desalination Capacity Planning",
+        "category": "Water Management",
+        "nss_authority": "C",
+        "momra": "I",
+        "mowe": "A",
+        "mot": "I",
+        "misa": "I",
+        "moi": "I",
+        "tourism": "I",
+        "housing": "I",
+        "regions": "C",
+        "pif": "C",
+        "royal_commission": "C"
+      },
+      {
+        "activity": "Transport Corridor Development",
+        "category": "Infrastructure",
+        "nss_authority": "C",
+        "momra": "C",
+        "mowe": "I",
+        "mot": "A",
+        "misa": "I",
+        "moi": "C",
+        "tourism": "C",
+        "housing": "I",
+        "regions": "C",
+        "pif": "C",
+        "royal_commission": "C"
+      },
+      {
+        "activity": "Rail Network Planning",
+        "category": "Infrastructure",
+        "nss_authority": "C",
+        "momra": "I",
+        "mowe": "I",
+        "mot": "A",
+        "misa": "I",
+        "moi": "C",
+        "tourism": "C",
+        "housing": "I",
+        "regions": "C",
+        "pif": "R",
+        "royal_commission": "C"
+      },
+      {
+        "activity": "Port Development",
+        "category": "Infrastructure",
+        "nss_authority": "C",
+        "momra": "I",
+        "mowe": "I",
+        "mot": "A",
+        "misa": "C",
+        "moi": "C",
+        "tourism": "I",
+        "housing": "I",
+        "regions": "C",
+        "pif": "C",
+        "royal_commission": "C"
+      },
+      {
+        "activity": "Airport Development",
+        "category": "Infrastructure",
+        "nss_authority": "C",
+        "momra": "I",
+        "mowe": "I",
+        "mot": "A",
+        "misa": "C",
+        "moi": "I",
+        "tourism": "C",
+        "housing": "I",
+        "regions": "C",
+        "pif": "C",
+        "royal_commission": "C"
+      },
+      {
+        "activity": "Energy Grid Expansion",
+        "category": "Infrastructure",
+        "nss_authority": "C",
+        "momra": "I",
+        "mowe": "I",
+        "mot": "I",
+        "misa": "I",
+        "moi": "C",
+        "tourism": "I",
+        "housing": "I",
+        "regions": "C",
+        "pif": "C",
+        "royal_commission": "C"
+      },
+      {
+        "activity": "Industrial Zone Designation",
+        "category": "Economic Development",
+        "nss_authority": "C",
+        "momra": "C",
+        "mowe": "C",
+        "mot": "C",
+        "misa": "C",
+        "moi": "A",
+        "tourism": "I",
+        "housing": "I",
+        "regions": "C",
+        "pif": "C",
+        "royal_commission": "C"
+      },
+      {
+        "activity": "Tourism Zone Development",
+        "category": "Economic Development",
+        "nss_authority": "C",
+        "momra": "C",
+        "mowe": "C",
+        "mot": "C",
+        "misa": "C",
+        "moi": "I",
+        "tourism": "A",
+        "housing": "I",
+        "regions": "C",
+        "pif": "C",
+        "royal_commission": "R"
+      },
+      {
+        "activity": "Investment Attraction",
+        "category": "Economic Development",
+        "nss_authority": "I",
+        "momra": "I",
+        "mowe": "I",
+        "mot": "I",
+        "misa": "A",
+        "moi": "C",
+        "tourism": "C",
+        "housing": "I",
+        "regions": "C",
+        "pif": "R",
+        "royal_commission": "C"
+      },
+      {
+        "activity": "Mining Sector Development",
+        "category": "Economic Development",
+        "nss_authority": "C",
+        "momra": "I",
+        "mowe": "C",
+        "mot": "C",
+        "misa": "C",
+        "moi": "A",
+        "tourism": "I",
+        "housing": "I",
+        "regions": "C",
+        "pif": "C",
+        "royal_commission": "I"
+      },
+      {
+        "activity": "Housing Supply Planning",
+        "category": "Housing & Urban",
+        "nss_authority": "C",
+        "momra": "C",
+        "mowe": "I",
+        "mot": "C",
+        "misa": "I",
+        "moi": "I",
+        "tourism": "I",
+        "housing": "A",
+        "regions": "C",
+        "pif": "C",
+        "royal_commission": "I"
+      },
+      {
+        "activity": "TOD Development",
+        "category": "Housing & Urban",
+        "nss_authority": "C",
+        "momra": "R",
+        "mowe": "I",
+        "mot": "C",
+        "misa": "I",
+        "moi": "I",
+        "tourism": "I",
+        "housing": "C",
+        "regions": "C",
+        "pif": "C",
+        "royal_commission": "I"
+      },
+      {
+        "activity": "Urban Regeneration",
+        "category": "Housing & Urban",
+        "nss_authority": "C",
+        "momra": "A",
+        "mowe": "I",
+        "mot": "C",
+        "misa": "I",
+        "moi": "I",
+        "tourism": "C",
+        "housing": "C",
+        "regions": "R",
+        "pif": "C",
+        "royal_commission": "I"
+      },
+      {
+        "activity": "Green Space Development",
+        "category": "Housing & Urban",
+        "nss_authority": "C",
+        "momra": "A",
+        "mowe": "C",
+        "mot": "I",
+        "misa": "I",
+        "moi": "I",
+        "tourism": "I",
+        "housing": "I",
+        "regions": "R",
+        "pif": "I",
+        "royal_commission": "I"
+      },
+      {
+        "activity": "Protected Area Management",
+        "category": "Environment",
+        "nss_authority": "C",
+        "momra": "I",
+        "mowe": "A",
+        "mot": "I",
+        "misa": "I",
+        "moi": "I",
+        "tourism": "C",
+        "housing": "I",
+        "regions": "C",
+        "pif": "I",
+        "royal_commission": "C"
+      },
+      {
+        "activity": "Climate Adaptation Planning",
+        "category": "Environment",
+        "nss_authority": "C",
+        "momra": "C",
+        "mowe": "A",
+        "mot": "C",
+        "misa": "I",
+        "moi": "I",
+        "tourism": "C",
+        "housing": "C",
+        "regions": "C",
+        "pif": "I",
+        "royal_commission": "C"
+      },
+      {
+        "activity": "Coastal Zone Management",
+        "category": "Environment",
+        "nss_authority": "C",
+        "momra": "C",
+        "mowe": "A",
+        "mot": "I",
+        "misa": "I",
+        "moi": "I",
+        "tourism": "C",
+        "housing": "I",
+        "regions": "R",
+        "pif": "I",
+        "royal_commission": "R"
+      },
+      {
+        "activity": "NEOM Development",
+        "category": "Giga-Projects",
+        "nss_authority": "C",
+        "momra": "C",
+        "mowe": "C",
+        "mot": "C",
+        "misa": "C",
+        "moi": "C",
+        "tourism": "C",
+        "housing": "C",
+        "regions": "C",
+        "pif": "A",
+        "royal_commission": "R"
+      },
+      {
+        "activity": "Red Sea Project",
+        "category": "Giga-Projects",
+        "nss_authority": "C",
+        "momra": "C",
+        "mowe": "C",
+        "mot": "C",
+        "misa": "C",
+        "moi": "I",
+        "tourism": "C",
+        "housing": "I",
+        "regions": "C",
+        "pif": "A",
+        "royal_commission": "R"
+      },
+      {
+        "activity": "AlUla Development",
+        "category": "Giga-Projects",
+        "nss_authority": "C",
+        "momra": "C",
+        "mowe": "C",
+        "mot": "C",
+        "misa": "C",
+        "moi": "I",
+        "tourism": "C",
+        "housing": "I",
+        "regions": "C",
+        "pif": "C",
+        "royal_commission": "A"
+      },
+      {
+        "activity": "Qiddiya Development",
+        "category": "Giga-Projects",
+        "nss_authority": "C",
+        "momra": "C",
+        "mowe": "C",
+        "mot": "C",
+        "misa": "C",
+        "moi": "I",
+        "tourism": "C",
+        "housing": "I",
+        "regions": "C",
+        "pif": "A",
+        "royal_commission": "R"
+      },
+      {
+        "activity": "NSS Progress Monitoring",
+        "category": "Monitoring & Evaluation",
+        "nss_authority": "A",
+        "momra": "R",
+        "mowe": "R",
+        "mot": "R",
+        "misa": "R",
+        "moi": "R",
+        "tourism": "R",
+        "housing": "R",
+        "regions": "R",
+        "pif": "R",
+        "royal_commission": "R"
+      },
+      {
+        "activity": "KPI Data Collection",
+        "category": "Monitoring & Evaluation",
+        "nss_authority": "A",
+        "momra": "R",
+        "mowe": "R",
+        "mot": "R",
+        "misa": "R",
+        "moi": "R",
+        "tourism": "R",
+        "housing": "R",
+        "regions": "R",
+        "pif": "R",
+        "royal_commission": "R"
+      },
+      {
+        "activity": "Spatial Impact Assessment",
+        "category": "Monitoring & Evaluation",
+        "nss_authority": "A",
+        "momra": "C",
+        "mowe": "C",
+        "mot": "C",
+        "misa": "C",
+        "moi": "C",
+        "tourism": "C",
+        "housing": "C",
+        "regions": "C",
+        "pif": "C",
+        "royal_commission": "C"
+      }
+    ],
+    "ministry_summaries": {
+      "NSSA": {
+        "accountable_count": 7,
+        "responsible_count": 0,
+        "consulted_count": 22,
+        "informed_count": 1
+      },
+      "MOMRA": {
+        "accountable_count": 2,
+        "responsible_count": 5,
+        "consulted_count": 13,
+        "informed_count": 10
+      },
+      "MOWE": {
+        "accountable_count": 6,
+        "responsible_count": 3,
+        "consulted_count": 12,
+        "informed_count": 9
+      },
+      "MOT": {
+        "accountable_count": 4,
+        "responsible_count": 3,
+        "consulted_count": 15,
+        "informed_count": 8
+      }
+    }
+  },
+  "section_3_kpi_framework": {
+    "summary": {
+      "total_kpis": 26,
+      "categories": {
+        "demographic": 3,
+        "economic": 5,
+        "environmental": 6,
+        "infrastructure": 5,
+        "governance": 4,
+        "quality_of_life": 3
+      }
+    },
+    "kpis": [
+      {
+        "id": "KPI-D01",
+        "name": "Regional Population Balance",
+        "category": "demographic",
+        "description": "Population share in top 3 regions vs target",
+        "unit": "%",
+        "baseline_2024": 64.0,
+        "target_2030": 62.0,
+        "target_2040": 58.0,
+        "target_2050": 55.0,
+        "data_source": "General Authority for Statistics",
+        "responsible": "NSS Authority",
+        "frequency": "Annual",
+        "calculation": "(Pop in Riyadh+Makkah+Eastern) / Total Pop * 100"
+      },
+      {
+        "id": "KPI-D02",
+        "name": "Urban Primacy Ratio",
+        "category": "demographic",
+        "description": "Riyadh population vs second largest city",
+        "unit": "ratio",
+        "baseline_2024": 1.85,
+        "target_2030": 1.75,
+        "target_2040": 1.65,
+        "target_2050": 1.5,
+        "data_source": "General Authority for Statistics",
+        "responsible": "NSS Authority",
+        "frequency": "Annual",
+        "calculation": "Riyadh Pop / Jeddah Pop"
+      },
+      {
+        "id": "KPI-D03",
+        "name": "Migration to Secondary Cities",
+        "category": "demographic",
+        "description": "Net migration to tier-2 cities as % of total migration",
+        "unit": "%",
+        "baseline_2024": 15.0,
+        "target_2030": 25.0,
+        "target_2040": 35.0,
+        "target_2050": 40.0,
+        "data_source": "General Authority for Statistics",
+        "responsible": "NSS Authority",
+        "frequency": "Annual",
+        "calculation": "Net migration to tier-2 / Total internal migration * 100"
+      },
+      {
+        "id": "KPI-E01",
+        "name": "Regional GDP Distribution",
+        "category": "economic",
+        "description": "GDP share outside top 3 regions",
+        "unit": "%",
+        "baseline_2024": 18.0,
+        "target_2030": 22.0,
+        "target_2040": 28.0,
+        "target_2050": 35.0,
+        "data_source": "General Authority for Statistics",
+        "responsible": "Ministry of Economy and Planning",
+        "frequency": "Annual",
+        "calculation": "(National GDP - Top 3 regions GDP) / National GDP * 100"
+      },
+      {
+        "id": "KPI-E02",
+        "name": "Economic Diversification Index",
+        "category": "economic",
+        "description": "Average regional economic diversification (Herfindahl index)",
+        "unit": "index",
+        "baseline_2024": 0.45,
+        "target_2030": 0.55,
+        "target_2040": 0.65,
+        "target_2050": 0.75,
+        "data_source": "General Authority for Statistics",
+        "responsible": "Ministry of Economy and Planning",
+        "frequency": "Annual",
+        "calculation": "1 - Herfindahl concentration index of regional sectors"
+      },
+      {
+        "id": "KPI-E03",
+        "name": "Corridor GDP Contribution",
+        "category": "economic",
+        "description": "GDP generated along designated corridors",
+        "unit": "SAR Billion",
+        "baseline_2024": 850,
+        "target_2030": 1200,
+        "target_2040": 1800,
+        "target_2050": 2500,
+        "data_source": "Ministry of Economy and Planning",
+        "responsible": "NSS Authority",
+        "frequency": "Annual",
+        "calculation": "Sum of GDP in corridor municipalities"
+      },
+      {
+        "id": "KPI-E04",
+        "name": "Private Sector Employment Share",
+        "category": "economic",
+        "description": "% of employment in private sector by region",
+        "unit": "%",
+        "baseline_2024": 55.0,
+        "target_2030": 62.0,
+        "target_2040": 68.0,
+        "target_2050": 75.0,
+        "data_source": "Ministry of Human Resources",
+        "responsible": "Ministry of Human Resources",
+        "frequency": "Quarterly",
+        "calculation": "Private sector employees / Total employees * 100"
+      },
+      {
+        "id": "KPI-E05",
+        "name": "Tourism Contribution to GDP",
+        "category": "economic",
+        "description": "Tourism sector contribution to national GDP",
+        "unit": "%",
+        "baseline_2024": 5.4,
+        "target_2030": 10.0,
+        "target_2040": 12.0,
+        "target_2050": 15.0,
+        "data_source": "Ministry of Tourism",
+        "responsible": "Ministry of Tourism",
+        "frequency": "Annual",
+        "calculation": "Tourism GDP / Total GDP * 100"
+      },
+      {
+        "id": "KPI-V01",
+        "name": "Protected Area Coverage",
+        "category": "environmental",
+        "description": "% of land area in protected status",
+        "unit": "%",
+        "baseline_2024": 4.3,
+        "target_2030": 30.0,
+        "target_2040": 30.0,
+        "target_2050": 30.0,
+        "data_source": "National Center for Wildlife",
+        "responsible": "MOWE",
+        "frequency": "Annual",
+        "calculation": "Protected area / Total land area * 100"
+      },
+      {
+        "id": "KPI-V02",
+        "name": "Per Capita Water Consumption",
+        "category": "environmental",
+        "description": "Daily water consumption per capita",
+        "unit": "liters/day",
+        "baseline_2024": 263,
+        "target_2030": 200,
+        "target_2040": 175,
+        "target_2050": 150,
+        "data_source": "Ministry of Environment",
+        "responsible": "MOWE",
+        "frequency": "Annual",
+        "calculation": "Total water consumption / Population / 365"
+      },
+      {
+        "id": "KPI-V03",
+        "name": "Wastewater Reuse Rate",
+        "category": "environmental",
+        "description": "% of treated wastewater reused",
+        "unit": "%",
+        "baseline_2024": 18.0,
+        "target_2030": 50.0,
+        "target_2040": 80.0,
+        "target_2050": 100.0,
+        "data_source": "Ministry of Environment",
+        "responsible": "MOWE",
+        "frequency": "Annual",
+        "calculation": "Reused wastewater / Treated wastewater * 100"
+      },
+      {
+        "id": "KPI-V04",
+        "name": "Urban Green Space per Capita",
+        "category": "environmental",
+        "description": "Public green space per urban resident",
+        "unit": "sqm",
+        "baseline_2024": 1.2,
+        "target_2030": 5.0,
+        "target_2040": 7.0,
+        "target_2050": 9.0,
+        "data_source": "MOMRA",
+        "responsible": "MOMRA",
+        "frequency": "Annual",
+        "calculation": "Total urban green space / Urban population"
+      },
+      {
+        "id": "KPI-V05",
+        "name": "Renewable Energy Share",
+        "category": "environmental",
+        "description": "Renewable energy as % of electricity generation",
+        "unit": "%",
+        "baseline_2024": 0.6,
+        "target_2030": 30.0,
+        "target_2040": 45.0,
+        "target_2050": 50.0,
+        "data_source": "Ministry of Energy",
+        "responsible": "Ministry of Energy",
+        "frequency": "Annual",
+        "calculation": "Renewable generation / Total generation * 100"
+      },
+      {
+        "id": "KPI-V06",
+        "name": "Groundwater Balance",
+        "category": "environmental",
+        "description": "Ratio of extraction to recharge",
+        "unit": "ratio",
+        "baseline_2024": 2.8,
+        "target_2030": 2.0,
+        "target_2040": 1.5,
+        "target_2050": 1.0,
+        "data_source": "Ministry of Environment",
+        "responsible": "MOWE",
+        "frequency": "Annual",
+        "calculation": "Annual extraction / Annual recharge"
+      },
+      {
+        "id": "KPI-I01",
+        "name": "Rail Network Coverage",
+        "category": "infrastructure",
+        "description": "Total operational rail network length",
+        "unit": "km",
+        "baseline_2024": 4500,
+        "target_2030": 6500,
+        "target_2040": 8500,
+        "target_2050": 10000,
+        "data_source": "Saudi Railway Company",
+        "responsible": "Ministry of Transport",
+        "frequency": "Annual",
+        "calculation": "Total operational rail km"
+      },
+      {
+        "id": "KPI-I02",
+        "name": "Road Network Quality",
+        "category": "infrastructure",
+        "description": "% of road network in good/excellent condition",
+        "unit": "%",
+        "baseline_2024": 75.0,
+        "target_2030": 85.0,
+        "target_2040": 90.0,
+        "target_2050": 95.0,
+        "data_source": "Ministry of Transport",
+        "responsible": "Ministry of Transport",
+        "frequency": "Annual",
+        "calculation": "Roads in good condition / Total roads * 100"
+      },
+      {
+        "id": "KPI-I03",
+        "name": "Broadband Coverage",
+        "category": "infrastructure",
+        "description": "% of population with access to high-speed internet",
+        "unit": "%",
+        "baseline_2024": 92.0,
+        "target_2030": 98.0,
+        "target_2040": 99.5,
+        "target_2050": 100.0,
+        "data_source": "Communications and Space Commission",
+        "responsible": "MCIT",
+        "frequency": "Annual",
+        "calculation": "Population with broadband access / Total population * 100"
+      },
+      {
+        "id": "KPI-I04",
+        "name": "Public Transit Coverage",
+        "category": "infrastructure",
+        "description": "% of urban population within 500m of transit stop",
+        "unit": "%",
+        "baseline_2024": 25.0,
+        "target_2030": 50.0,
+        "target_2040": 70.0,
+        "target_2050": 85.0,
+        "data_source": "MOMRA",
+        "responsible": "MOMRA",
+        "frequency": "Annual",
+        "calculation": "Pop within 500m of transit / Total urban pop * 100"
+      },
+      {
+        "id": "KPI-I05",
+        "name": "Regional Airport Connectivity",
+        "category": "infrastructure",
+        "description": "Average daily flights per regional airport",
+        "unit": "flights/day",
+        "baseline_2024": 8.0,
+        "target_2030": 15.0,
+        "target_2040": 25.0,
+        "target_2050": 35.0,
+        "data_source": "GACA",
+        "responsible": "Ministry of Transport",
+        "frequency": "Quarterly",
+        "calculation": "Total regional flights / Number of regional airports"
+      },
+      {
+        "id": "KPI-G01",
+        "name": "NSS Alignment Rate",
+        "category": "governance",
+        "description": "% of major projects aligned with NSS",
+        "unit": "%",
+        "baseline_2024": 40.0,
+        "target_2030": 80.0,
+        "target_2040": 95.0,
+        "target_2050": 100.0,
+        "data_source": "NSS Authority",
+        "responsible": "NSS Authority",
+        "frequency": "Quarterly",
+        "calculation": "Aligned projects / Total major projects * 100"
+      },
+      {
+        "id": "KPI-G02",
+        "name": "Regional Plan Coverage",
+        "category": "governance",
+        "description": "% of regions with approved spatial plans",
+        "unit": "%",
+        "baseline_2024": 23.0,
+        "target_2030": 100.0,
+        "target_2040": 100.0,
+        "target_2050": 100.0,
+        "data_source": "NSS Authority",
+        "responsible": "NSS Authority",
+        "frequency": "Annual",
+        "calculation": "Regions with plans / 13 * 100"
+      },
+      {
+        "id": "KPI-G03",
+        "name": "Inter-ministerial Conflict Resolution",
+        "category": "governance",
+        "description": "Average days to resolve spatial conflicts",
+        "unit": "days",
+        "baseline_2024": 180.0,
+        "target_2030": 60.0,
+        "target_2040": 45.0,
+        "target_2050": 30.0,
+        "data_source": "NSS Authority",
+        "responsible": "NSS Authority",
+        "frequency": "Quarterly",
+        "calculation": "Sum of resolution days / Number of conflicts"
+      },
+      {
+        "id": "KPI-G04",
+        "name": "Stakeholder Consultation Participation",
+        "category": "governance",
+        "description": "Participants in NSS consultations per year",
+        "unit": "thousands",
+        "baseline_2024": 5.0,
+        "target_2030": 50.0,
+        "target_2040": 100.0,
+        "target_2050": 150.0,
+        "data_source": "NSS Authority",
+        "responsible": "NSS Authority",
+        "frequency": "Annual",
+        "calculation": "Total consultation participants"
+      },
+      {
+        "id": "KPI-Q01",
+        "name": "Housing Affordability Index",
+        "category": "quality_of_life",
+        "description": "% of households able to afford housing",
+        "unit": "%",
+        "baseline_2024": 47.0,
+        "target_2030": 60.0,
+        "target_2040": 65.0,
+        "target_2050": 70.0,
+        "data_source": "Ministry of Housing",
+        "responsible": "Ministry of Housing",
+        "frequency": "Annual",
+        "calculation": "Affordable housing stock / Households requiring housing * 100"
+      },
+      {
+        "id": "KPI-Q02",
+        "name": "Service Accessibility",
+        "category": "quality_of_life",
+        "description": "% of population within 30 min of essential services",
+        "unit": "%",
+        "baseline_2024": 75.0,
+        "target_2030": 85.0,
+        "target_2040": 92.0,
+        "target_2050": 98.0,
+        "data_source": "MOMRA",
+        "responsible": "MOMRA",
+        "frequency": "Annual",
+        "calculation": "Pop within 30 min of services / Total pop * 100"
+      },
+      {
+        "id": "KPI-Q03",
+        "name": "Regional Quality of Life Index",
+        "category": "quality_of_life",
+        "description": "Composite quality of life score by region",
+        "unit": "index",
+        "baseline_2024": 68.0,
+        "target_2030": 75.0,
+        "target_2040": 82.0,
+        "target_2050": 88.0,
+        "data_source": "Multiple sources",
+        "responsible": "NSS Authority",
+        "frequency": "Annual",
+        "calculation": "Weighted average of health, education, services, environment scores"
+      }
+    ]
+  },
+  "section_4_monitoring_system": {
+    "summary": {
+      "monitoring_mechanisms": 7,
+      "reporting_levels": [
+        "Monthly",
+        "Quarterly",
+        "Bi-annual",
+        "Annual",
+        "Quinquennial"
+      ]
+    },
+    "mechanisms": [
+      {
+        "name": "Annual NSS Progress Report",
+        "purpose": "Comprehensive assessment of NSS implementation progress",
+        "frequency": "Annual",
+        "participants": [
+          "NSS Authority",
+          "All ministries",
+          "Regional Commissions"
+        ],
+        "outputs": [
+          "Progress report",
+          "KPI dashboard",
+          "Recommendations"
+        ],
+        "criteria": [
+          "Achievement against KPI targets",
+          "Investment execution rate",
+          "Regional plan adoption",
+          "Major project alignment"
+        ]
+      },
+      {
+        "name": "Quarterly KPI Dashboard",
+        "purpose": "Track key performance indicators in real-time",
+        "frequency": "Quarterly",
+        "participants": [
+          "NSS Technical Secretariat",
+          "Data providers"
+        ],
+        "outputs": [
+          "Interactive dashboard",
+          "Trend analysis",
+          "Alert flags"
+        ],
+        "criteria": [
+          "Data quality and timeliness",
+          "Deviation from targets",
+          "Emerging issues"
+        ]
+      },
+      {
+        "name": "Bi-Annual Stakeholder Forum",
+        "purpose": "Engage stakeholders in NSS review and feedback",
+        "frequency": "Bi-annual",
+        "participants": [
+          "All stakeholder groups",
+          "Public",
+          "Private sector"
+        ],
+        "outputs": [
+          "Feedback synthesis",
+          "Consultation report",
+          "Action items"
+        ],
+        "criteria": [
+          "Stakeholder satisfaction",
+          "Feedback incorporation",
+          "Participation rates"
+        ]
+      },
+      {
+        "name": "Quinquennial Strategic Review",
+        "purpose": "Comprehensive review and update of NSS every 5 years",
+        "frequency": "Every 5 years",
+        "participants": [
+          "NSSA",
+          "CEDA",
+          "All stakeholders"
+        ],
+        "outputs": [
+          "Updated NSS",
+          "New targets",
+          "Revised strategies"
+        ],
+        "criteria": [
+          "Achievement of phase targets",
+          "Changed circumstances",
+          "Emerging opportunities",
+          "International best practices"
+        ]
+      },
+      {
+        "name": "Monthly Management Dashboard",
+        "purpose": "Operational monitoring for NSS Authority management",
+        "frequency": "Monthly",
+        "participants": [
+          "NSS Authority leadership",
+          "Technical Secretariat"
+        ],
+        "outputs": [
+          "Management brief",
+          "Issue log",
+          "Decision items"
+        ],
+        "criteria": [
+          "Process efficiency",
+          "Coordination effectiveness",
+          "Resource utilization"
+        ]
+      },
+      {
+        "name": "Regional Progress Reviews",
+        "purpose": "Monitor implementation at regional level",
+        "frequency": "Quarterly",
+        "participants": [
+          "Regional Commissions",
+          "NSS Technical Secretariat"
+        ],
+        "outputs": [
+          "Regional progress reports",
+          "Comparison dashboards"
+        ],
+        "criteria": [
+          "Regional KPI performance",
+          "Local plan implementation",
+          "Inter-regional coordination"
+        ]
+      },
+      {
+        "name": "Giga-Project Spatial Alignment Review",
+        "purpose": "Ensure giga-projects remain aligned with NSS",
+        "frequency": "Quarterly",
+        "participants": [
+          "Royal Commissions",
+          "PIF",
+          "NSS Authority"
+        ],
+        "outputs": [
+          "Alignment status",
+          "Issue identification",
+          "Resolution actions"
+        ],
+        "criteria": [
+          "Spatial compliance",
+          "Infrastructure coordination",
+          "Environmental impact management"
+        ]
+      }
+    ],
+    "data_management": {
+      "platform": "NSS Digital Platform",
+      "data_sources": [
+        "National Center for Wildlife",
+        "MOMRA",
+        "General Authority for Statistics",
+        "Saudi Railway Company",
+        "Ministry of Housing",
+        "Communications and Space Commission",
+        "Ministry of Transport",
+        "Ministry of Economy and Planning",
+        "Ministry of Tourism",
+        "Ministry of Environment",
+        "GACA",
+        "Multiple sources",
+        "Ministry of Human Resources",
+        "NSS Authority",
+        "Ministry of Energy"
+      ],
+      "integration": "API connections to ministry systems",
+      "visualization": "Interactive dashboards with drill-down",
+      "access_levels": [
+        "Public dashboard",
+        "Ministry level",
+        "NSSA management",
+        "Executive summary"
+      ]
+    }
+  },
+  "appendices": {
+    "output_files": [
+      "WS7_GOVERNANCE_REPORT.json",
+      "WS7_GOVERNANCE_REPORT.md",
+      "governance_bodies.csv",
+      "decision_processes.csv",
+      "raci_matrix.csv",
+      "kpi_framework.csv",
+      "monitoring_mechanisms.csv"
+    ]
+  }
+}

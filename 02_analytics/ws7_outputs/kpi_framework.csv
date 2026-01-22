@@ -1,0 +1,27 @@
+KPI_ID,Name,Category,Unit,Baseline_2024,Target_2030,Target_2040,Target_2050,Data_Source,Responsible,Frequency
+KPI-D01,Regional Population Balance,demographic,%,64.0,62.0,58.0,55.0,General Authority for Statistics,NSS Authority,Annual
+KPI-D02,Urban Primacy Ratio,demographic,ratio,1.85,1.75,1.65,1.5,General Authority for Statistics,NSS Authority,Annual
+KPI-D03,Migration to Secondary Cities,demographic,%,15.0,25.0,35.0,40.0,General Authority for Statistics,NSS Authority,Annual
+KPI-E01,Regional GDP Distribution,economic,%,18.0,22.0,28.0,35.0,General Authority for Statistics,Ministry of Economy and Planning,Annual
+KPI-E02,Economic Diversification Index,economic,index,0.45,0.55,0.65,0.75,General Authority for Statistics,Ministry of Economy and Planning,Annual
+KPI-E03,Corridor GDP Contribution,economic,SAR Billion,850.0,1200.0,1800.0,2500.0,Ministry of Economy and Planning,NSS Authority,Annual
+KPI-E04,Private Sector Employment Share,economic,%,55.0,62.0,68.0,75.0,Ministry of Human Resources,Ministry of Human Resources,Quarterly
+KPI-E05,Tourism Contribution to GDP,economic,%,5.4,10.0,12.0,15.0,Ministry of Tourism,Ministry of Tourism,Annual
+KPI-V01,Protected Area Coverage,environmental,%,4.3,30.0,30.0,30.0,National Center for Wildlife,MOWE,Annual
+KPI-V02,Per Capita Water Consumption,environmental,liters/day,263.0,200.0,175.0,150.0,Ministry of Environment,MOWE,Annual
+KPI-V03,Wastewater Reuse Rate,environmental,%,18.0,50.0,80.0,100.0,Ministry of Environment,MOWE,Annual
+KPI-V04,Urban Green Space per Capita,environmental,sqm,1.2,5.0,7.0,9.0,MOMRA,MOMRA,Annual
+KPI-V05,Renewable Energy Share,environmental,%,0.6,30.0,45.0,50.0,Ministry of Energy,Ministry of Energy,Annual
+KPI-V06,Groundwater Balance,environmental,ratio,2.8,2.0,1.5,1.0,Ministry of Environment,MOWE,Annual
+KPI-I01,Rail Network Coverage,infrastructure,km,4500.0,6500.0,8500.0,10000.0,Saudi Railway Company,Ministry of Transport,Annual
+KPI-I02,Road Network Quality,infrastructure,%,75.0,85.0,90.0,95.0,Ministry of Transport,Ministry of Transport,Annual
+KPI-I03,Broadband Coverage,infrastructure,%,92.0,98.0,99.5,100.0,Communications and Space Commission,MCIT,Annual
+KPI-I04,Public Transit Coverage,infrastructure,%,25.0,50.0,70.0,85.0,MOMRA,MOMRA,Annual
+KPI-I05,Regional Airport Connectivity,infrastructure,flights/day,8.0,15.0,25.0,35.0,GACA,Ministry of Transport,Quarterly
+KPI-G01,NSS Alignment Rate,governance,%,40.0,80.0,95.0,100.0,NSS Authority,NSS Authority,Quarterly
+KPI-G02,Regional Plan Coverage,governance,%,23.0,100.0,100.0,100.0,NSS Authority,NSS Authority,Annual
+KPI-G03,Inter-ministerial Conflict Resolution,governance,days,180.0,60.0,45.0,30.0,NSS Authority,NSS Authority,Quarterly
+KPI-G04,Stakeholder Consultation Participation,governance,thousands,5.0,50.0,100.0,150.0,NSS Authority,NSS Authority,Annual
+KPI-Q01,Housing Affordability Index,quality_of_life,%,47.0,60.0,65.0,70.0,Ministry of Housing,Ministry of Housing,Annual
+KPI-Q02,Service Accessibility,quality_of_life,%,75.0,85.0,92.0,98.0,MOMRA,MOMRA,Annual
+KPI-Q03,Regional Quality of Life Index,quality_of_life,index,68.0,75.0,82.0,88.0,Multiple sources,NSS Authority,Annual

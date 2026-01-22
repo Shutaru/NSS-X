@@ -1,0 +1,13 @@
+Zone,Type,Area_km2,Regions,Intensity,Sensitivity
+Riyadh Metropolitan Growth Zone,urban_growth,6500,Riyadh,high,medium
+Jeddah-Makkah Urban Agglomeration,urban_growth,4500,Makkah,high,high
+Eastern Province Industrial-Urban Zone,urban_growth,5000,Eastern Province,high,high
+NEOM Innovation Zone,industrial,26500,Tabuk,medium,high
+Northern Mining Belt,industrial,35000,"Northern Borders, Al-Jouf, Hail",low,medium
+Central Agricultural Zone,agricultural,45000,"Al-Qassim, Riyadh (rural)",low,medium
+Southern Agricultural Terraces,agricultural,15000,"Asir, Al-Baha, Jazan",low,high
+Red Sea Marine Protected Area,protected,28000,"Tabuk, Madinah, Makkah",minimal,high
+Asir-Sarawat Protected Highlands,protected,18000,"Asir, Al-Baha",minimal,high
+Empty Quarter Conservation Zone,protected,250000,"Riyadh, Eastern Province, Najran",minimal,medium
+AlUla Heritage Tourism Zone,tourism,22000,Madinah,low,high
+Red Sea Tourism Development Zone,tourism,34000,"Tabuk, Madinah",low,high

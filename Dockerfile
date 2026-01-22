@@ -47,9 +47,12 @@ RUN mkdir -p 02_analytics 03_scenarios 04_strategy 05_governance 06_deliverables
 # Expose Streamlit port
 EXPOSE 8501
 
+# Copy analytics outputs
+COPY 02_analytics/ ./02_analytics/
+
 # Health check
 HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
     CMD curl -f http://localhost:8501/_stcore/health || exit 1
 
-# Run Streamlit
-CMD ["streamlit", "run", "scripts/dashboard.py", "--server.port=8501", "--server.address=0.0.0.0", "--server.headless=true"]
+# Run Complete Dashboard (all workstreams)
+CMD ["streamlit", "run", "scripts/dashboard_complete.py", "--server.port=8501", "--server.address=0.0.0.0", "--server.headless=true"]

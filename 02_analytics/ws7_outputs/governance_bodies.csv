@@ -1,0 +1,11 @@
+Name,Level,Type,Mandate,Meeting_Frequency,Reports_To
+National Spatial Strategy Authority (NSSA),national,authority,"Lead, coordinate, and monitor implementation of the NSS across all sectors and regions...",Monthly,Council of Economic and Development Affairs (CEDA)
+NSS Technical Secretariat,national,secretariat,"Provide technical support, analysis, and coordination for NSS implementation...",Weekly,National Spatial Strategy Authority
+Inter-Ministerial Spatial Coordination Committee,national,committee,Coordinate sectoral strategies and investments with NSS spatial framework...,Bi-weekly,National Spatial Strategy Authority
+Water-Land Nexus Working Group,national,committee,Ensure all spatial development decisions account for water availability and sustainability...,Monthly,Inter-Ministerial Coordination Committee
+Infrastructure Coordination Working Group,national,committee,"Coordinate infrastructure planning across transport, energy, digital, and utilities...",Monthly,Inter-Ministerial Coordination Committee
+Environmental Protection Working Group,national,committee,Mainstream environmental sustainability into all spatial development decisions...,Monthly,Inter-Ministerial Coordination Committee
+Regional Spatial Development Commission (per region),regional,authority,Translate NSS into regional spatial plans and coordinate implementation within the region...,Monthly,National Spatial Strategy Authority
+Regional Planning Office (per region),regional,secretariat,Provide technical planning support for regional spatial development...,Weekly,Regional Spatial Development Commission
+Municipal Planning Committee (per municipality),local,committee,Ensure local plans and permits comply with NSS and regional spatial plans...,Bi-weekly,Regional Spatial Development Commission
+Giga-Projects Spatial Coordination Board,national,committee,"Ensure giga-projects (NEOM, Red Sea, Qiddiya, etc.) align with NSS...",Quarterly,Council of Economic and Development Affairs

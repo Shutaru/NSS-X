@@ -1,0 +1,1996 @@
+{
+  "metadata": {
+    "report_title": "WS6 - National Spatial Strategy Draft",
+    "generated_date": "2026-01-22T13:23:26.168977",
+    "version": "1.0",
+    "author": "NSS X System"
+  },
+  "section_1_vision": {
+    "vision_statement": "By 2050, Saudi Arabia will be a thriving, sustainable, and connected \n            nation where all regions prosper, cities are livable, natural heritage is preserved, \n            and every citizen has access to economic opportunity and quality of life - a global \n            model of balanced territorial development in harmony with Vision 2030 aspirations.",
+    "vision_statement_ar": "بحلول عام 2050، ستكون المملكة العربية السعودية دولة مزدهرة ومستدامة \n            ومتصلة حيث تزدهر جميع المناطق، وتكون المدن صالحة للعيش، ويُحافظ على التراث الطبيعي، \n            ويتمتع كل مواطن بفرص اقتصادية وجودة حياة عالية - نموذج عالمي للتنمية الإقليمية المتوازنة \n            بانسجام مع تطلعات رؤية 2030.",
+    "time_horizon": 2050,
+    "guiding_principles": [
+      {
+        "principle": "Balanced Regional Development",
+        "principle_ar": "التنمية الإقليمية المتوازنة",
+        "description": "Ensure all 13 regions have distinct economic roles and adequate investment to reduce spatial inequality and concentration in top 3 regions."
+      },
+      {
+        "principle": "Water Security as Foundation",
+        "principle_ar": "الأمن المائي كأساس",
+        "description": "Treat water as the binding constraint for all spatial development decisions. No development approval without sustainable water solution."
+      },
+      {
+        "principle": "Connected Corridors",
+        "principle_ar": "الممرات المتصلة",
+        "description": "Develop integrated transport and economic corridors linking regions to maximize economic spillovers and reduce isolation."
+      },
+      {
+        "principle": "Environmental Sustainability",
+        "principle_ar": "الاستدامة البيئية",
+        "description": "Protect 30% of land and sea by 2030, mainstream climate resilience, and achieve net-zero domestic emissions by 2060."
+      },
+      {
+        "principle": "Compact Urban Form",
+        "principle_ar": "الشكل الحضري المدمج",
+        "description": "Promote compact, mixed-use urban development around transit nodes to reduce sprawl, car dependency, and infrastructure costs."
+      },
+      {
+        "principle": "Heritage Integration",
+        "principle_ar": "التكامل مع التراث",
+        "description": "Preserve and celebrate Saudi cultural heritage as asset for tourism, identity, and community wellbeing."
+      },
+      {
+        "principle": "Adaptive Planning",
+        "principle_ar": "التخطيط التكيفي",
+        "description": "Design spatial strategies flexible enough to accommodate multiple future scenarios including climate stress and energy transition."
+      },
+      {
+        "principle": "Implementation Focus",
+        "principle_ar": "التركيز على التنفيذ",
+        "description": "Every spatial policy must have clear accountability, funding mechanism, timeline, and monitoring indicators."
+      }
+    ],
+    "strategic_objectives": [
+      {
+        "id": "SO1",
+        "objective": "Polycentric Urban Network",
+        "description": "Develop 5 national-tier cities (Riyadh, Jeddah, Dammam, NEOM, Makkah) and 15 regional-tier cities as balanced growth poles",
+        "target_2050": "Reduce top-3 regional population concentration from 64% to 55%",
+        "kpis": [
+          "Regional population share",
+          "Urban primacy ratio",
+          "Inter-city connectivity index"
+        ]
+      },
+      {
+        "id": "SO2",
+        "objective": "Integrated Economic Corridors",
+        "description": "Establish 5 major economic corridors connecting all regions with multimodal transport and economic activity",
+        "target_2050": "100% of regions within 4 hours of a national corridor",
+        "kpis": [
+          "Corridor GDP contribution",
+          "Freight volumes",
+          "Journey times"
+        ]
+      },
+      {
+        "id": "SO3",
+        "objective": "Sustainable Water Management",
+        "description": "Achieve water security through demand reduction, supply diversification, and 100% treated wastewater reuse",
+        "target_2050": "Reduce per capita water consumption by 40%, eliminate groundwater overextraction",
+        "kpis": [
+          "Per capita consumption",
+          "Groundwater balance",
+          "Reuse rate",
+          "Desalination share"
+        ]
+      },
+      {
+        "id": "SO4",
+        "objective": "Climate-Resilient Territories",
+        "description": "Build climate adaptation into all spatial development and protect vulnerable areas",
+        "target_2050": "All development designed for +3°C scenario, 30% protected areas",
+        "kpis": [
+          "Protected area coverage",
+          "Heat vulnerability index",
+          "Coastal protection coverage"
+        ]
+      },
+      {
+        "id": "SO5",
+        "objective": "Economic Diversification Zones",
+        "description": "Create specialized economic zones aligned with regional competitive advantages",
+        "target_2050": "Each region has distinct economic specialization with <30% oil dependency",
+        "kpis": [
+          "Regional diversification index",
+          "Non-oil GDP share",
+          "Private sector employment"
+        ]
+      },
+      {
+        "id": "SO6",
+        "objective": "Quality of Life for All",
+        "description": "Ensure all Saudis have access to quality services, green spaces, and affordable housing",
+        "target_2050": "9 sqm green space per capita, 30-min access to services, 70% housing affordability",
+        "kpis": [
+          "Green space per capita",
+          "Service accessibility",
+          "Housing affordability index"
+        ]
+      },
+      {
+        "id": "SO7",
+        "objective": "Digital and Physical Connectivity",
+        "description": "Achieve universal high-speed connectivity and comprehensive transport network",
+        "target_2050": "100% fiber/5G coverage, all cities on rail network, 6 international hubs",
+        "kpis": [
+          "Broadband coverage",
+          "Rail network km",
+          "Air connectivity index"
+        ]
+      }
+    ],
+    "vision2030_alignment": [
+      "Vibrant Society: Quality of life, heritage preservation, social development",
+      "Thriving Economy: Economic diversification, private sector growth, tourism",
+      "Ambitious Nation: Effective governance, implementation excellence, global positioning"
+    ]
+  },
+  "section_2_spatial_structure": {
+    "summary": {
+      "strategic_nodes": 20,
+      "tier_1_national": 5,
+      "tier_2_regional": 10,
+      "tier_3_subregional": 5,
+      "development_corridors": 6,
+      "functional_zones": 12
+    },
+    "strategic_nodes": [
+      {
+        "name": "Riyadh",
+        "name_ar": "الرياض",
+        "region": "Riyadh",
+        "tier": 1,
+        "type": "capital",
+        "population_2024": 8.9,
+        "population_2050": 15.0,
+        "functions": [
+          "National Capital",
+          "Financial Hub",
+          "Technology Center",
+          "Entertainment Capital"
+        ],
+        "investments": [
+          "Riyadh Metro",
+          "King Salman Park",
+          "Sports Boulevard",
+          "Downtown redevelopment"
+        ],
+        "connectivity": "critical",
+        "giga_projects": [
+          "Diriyah Gate",
+          "Qiddiya",
+          "King Salman Park",
+          "Riyadh Green"
+        ]
+      },
+      {
+        "name": "Jeddah",
+        "name_ar": "جدة",
+        "region": "Makkah",
+        "tier": 1,
+        "type": "economic",
+        "population_2024": 4.8,
+        "population_2050": 7.5,
+        "functions": [
+          "Commercial Gateway",
+          "Red Sea Hub",
+          "Creative Industries",
+          "Logistics"
+        ],
+        "investments": [
+          "Jeddah Central",
+          "Port expansion",
+          "Waterfront development",
+          "Metro system"
+        ],
+        "connectivity": "critical",
+        "giga_projects": [
+          "Jeddah Central",
+          "Obhur Development"
+        ]
+      },
+      {
+        "name": "Dammam-Khobar-Dhahran",
+        "name_ar": "الدمام-الخبر-الظهران",
+        "region": "Eastern Province",
+        "tier": 1,
+        "type": "industrial",
+        "population_2024": 5.3,
+        "population_2050": 8.0,
+        "functions": [
+          "Energy Hub",
+          "Industrial Base",
+          "Technology R&D",
+          "Gulf Gateway"
+        ],
+        "investments": [
+          "SPARK",
+          "Industrial diversification",
+          "Waterfront development",
+          "Rail connectivity"
+        ],
+        "connectivity": "critical",
+        "giga_projects": [
+          "King Salman Energy Park"
+        ]
+      },
+      {
+        "name": "NEOM",
+        "name_ar": "نيوم",
+        "region": "Tabuk",
+        "tier": 1,
+        "type": "emerging",
+        "population_2024": 0.05,
+        "population_2050": 2.0,
+        "functions": [
+          "Future City",
+          "Innovation Hub",
+          "Sustainable Living",
+          "Tourism Destination"
+        ],
+        "investments": [
+          "The Line",
+          "Trojena",
+          "Oxagon",
+          "Sindalah"
+        ],
+        "connectivity": "critical",
+        "giga_projects": [
+          "NEOM - The Line",
+          "Trojena",
+          "Oxagon",
+          "Sindalah"
+        ]
+      },
+      {
+        "name": "Makkah",
+        "name_ar": "مكة المكرمة",
+        "region": "Makkah",
+        "tier": 1,
+        "type": "tourism",
+        "population_2024": 2.4,
+        "population_2050": 4.0,
+        "functions": [
+          "Holy City",
+          "Religious Tourism",
+          "Services Hub"
+        ],
+        "investments": [
+          "Haram expansion",
+          "Transport infrastructure",
+          "Hospitality"
+        ],
+        "connectivity": "critical",
+        "giga_projects": []
+      },
+      {
+        "name": "Madinah",
+        "name_ar": "المدينة المنورة",
+        "region": "Madinah",
+        "tier": 2,
+        "type": "tourism",
+        "population_2024": 1.5,
+        "population_2050": 2.8,
+        "functions": [
+          "Holy City",
+          "Cultural Tourism",
+          "Knowledge Hub"
+        ],
+        "investments": [
+          "Prophet's Mosque surroundings",
+          "AlUla connectivity",
+          "University expansion"
+        ],
+        "connectivity": "high",
+        "giga_projects": [
+          "AlUla Development"
+        ]
+      },
+      {
+        "name": "Tabuk City",
+        "name_ar": "تبوك",
+        "region": "Tabuk",
+        "tier": 2,
+        "type": "emerging",
+        "population_2024": 0.7,
+        "population_2050": 1.5,
+        "functions": [
+          "NEOM Gateway",
+          "Agriculture",
+          "Tourism Base"
+        ],
+        "investments": [
+          "Airport expansion",
+          "NEOM connectivity",
+          "Agricultural modernization"
+        ],
+        "connectivity": "high",
+        "giga_projects": []
+      },
+      {
+        "name": "Abha",
+        "name_ar": "أبها",
+        "region": "Asir",
+        "tier": 2,
+        "type": "tourism",
+        "population_2024": 1.2,
+        "population_2050": 2.0,
+        "functions": [
+          "Mountain Tourism",
+          "Regional Capital",
+          "Agriculture"
+        ],
+        "investments": [
+          "Tourism infrastructure",
+          "Airport expansion",
+          "Cable car network"
+        ],
+        "connectivity": "medium",
+        "giga_projects": [
+          "Asir Development"
+        ]
+      },
+      {
+        "name": "Jubail",
+        "name_ar": "الجبيل",
+        "region": "Eastern Province",
+        "tier": 2,
+        "type": "industrial",
+        "population_2024": 0.5,
+        "population_2050": 1.2,
+        "functions": [
+          "Industrial City",
+          "Petrochemicals",
+          "Manufacturing"
+        ],
+        "investments": [
+          "Industrial expansion",
+          "Green hydrogen",
+          "Desalination"
+        ],
+        "connectivity": "high",
+        "giga_projects": []
+      },
+      {
+        "name": "Yanbu",
+        "name_ar": "ينبع",
+        "region": "Madinah",
+        "tier": 2,
+        "type": "industrial",
+        "population_2024": 0.3,
+        "population_2050": 0.8,
+        "functions": [
+          "Industrial Port",
+          "Petrochemicals",
+          "Red Sea Access"
+        ],
+        "investments": [
+          "Port expansion",
+          "Industrial zones",
+          "Renewable energy"
+        ],
+        "connectivity": "high",
+        "giga_projects": []
+      },
+      {
+        "name": "Buraydah",
+        "name_ar": "بريدة",
+        "region": "Al-Qassim",
+        "tier": 2,
+        "type": "economic",
+        "population_2024": 0.8,
+        "population_2050": 1.2,
+        "functions": [
+          "Agricultural Hub",
+          "Food Processing",
+          "Logistics"
+        ],
+        "investments": [
+          "Water efficiency",
+          "Agri-tech",
+          "Solar energy",
+          "Food processing"
+        ],
+        "connectivity": "medium",
+        "giga_projects": []
+      },
+      {
+        "name": "Hail",
+        "name_ar": "حائل",
+        "region": "Hail",
+        "tier": 2,
+        "type": "economic",
+        "population_2024": 0.5,
+        "population_2050": 0.8,
+        "functions": [
+          "Agricultural Center",
+          "Mining Gateway",
+          "Heritage Tourism"
+        ],
+        "investments": [
+          "Mining development",
+          "Agricultural modernization",
+          "Tourism"
+        ],
+        "connectivity": "medium",
+        "giga_projects": []
+      },
+      {
+        "name": "Jazan City",
+        "name_ar": "جيزان",
+        "region": "Jazan",
+        "tier": 2,
+        "type": "industrial",
+        "population_2024": 0.5,
+        "population_2050": 0.9,
+        "functions": [
+          "Economic City",
+          "Agriculture",
+          "Fishing"
+        ],
+        "investments": [
+          "Economic city completion",
+          "Port development",
+          "Agriculture"
+        ],
+        "connectivity": "medium",
+        "giga_projects": [
+          "Jazan Economic City"
+        ]
+      },
+      {
+        "name": "Arar",
+        "name_ar": "عرعر",
+        "region": "Northern Borders",
+        "tier": 2,
+        "type": "industrial",
+        "population_2024": 0.3,
+        "population_2050": 0.6,
+        "functions": [
+          "Mining Hub",
+          "Renewable Energy",
+          "Border Trade"
+        ],
+        "investments": [
+          "Phosphate processing",
+          "Solar farms",
+          "Cross-border infrastructure"
+        ],
+        "connectivity": "medium",
+        "giga_projects": [
+          "Waad Al-Shamal"
+        ]
+      },
+      {
+        "name": "Sakaka",
+        "name_ar": "سكاكا",
+        "region": "Al-Jouf",
+        "tier": 2,
+        "type": "economic",
+        "population_2024": 0.35,
+        "population_2050": 0.6,
+        "functions": [
+          "Olive Capital",
+          "Renewable Energy",
+          "Heritage Tourism"
+        ],
+        "investments": [
+          "Renewable energy",
+          "Agricultural efficiency",
+          "Heritage sites"
+        ],
+        "connectivity": "medium",
+        "giga_projects": []
+      },
+      {
+        "name": "Al-Kharj",
+        "name_ar": "الخرج",
+        "region": "Riyadh",
+        "tier": 3,
+        "type": "economic",
+        "population_2024": 0.4,
+        "population_2050": 0.7,
+        "functions": [
+          "Agricultural Processing",
+          "Industrial Zone",
+          "Riyadh Satellite"
+        ],
+        "investments": [
+          "Industrial development",
+          "Riyadh connectivity"
+        ],
+        "connectivity": "medium",
+        "giga_projects": []
+      },
+      {
+        "name": "Taif",
+        "name_ar": "الطائف",
+        "region": "Makkah",
+        "tier": 3,
+        "type": "tourism",
+        "population_2024": 0.7,
+        "population_2050": 1.0,
+        "functions": [
+          "Summer Resort",
+          "Agriculture",
+          "Heritage"
+        ],
+        "investments": [
+          "Tourism development",
+          "Rose cultivation",
+          "Heritage preservation"
+        ],
+        "connectivity": "medium",
+        "giga_projects": []
+      },
+      {
+        "name": "AlUla",
+        "name_ar": "العلا",
+        "region": "Madinah",
+        "tier": 3,
+        "type": "tourism",
+        "population_2024": 0.05,
+        "population_2050": 0.15,
+        "functions": [
+          "Heritage Tourism",
+          "Cultural Destination",
+          "Arts"
+        ],
+        "investments": [
+          "Heritage development",
+          "Airport",
+          "Hospitality"
+        ],
+        "connectivity": "high",
+        "giga_projects": [
+          "AlUla Development"
+        ]
+      },
+      {
+        "name": "Najran",
+        "name_ar": "نجران",
+        "region": "Najran",
+        "tier": 3,
+        "type": "economic",
+        "population_2024": 0.4,
+        "population_2050": 0.55,
+        "functions": [
+          "Heritage City",
+          "Agriculture",
+          "Border Trade"
+        ],
+        "investments": [
+          "Heritage preservation",
+          "Agricultural development"
+        ],
+        "connectivity": "low",
+        "giga_projects": []
+      },
+      {
+        "name": "Al-Baha",
+        "name_ar": "الباحة",
+        "region": "Al-Baha",
+        "tier": 3,
+        "type": "tourism",
+        "population_2024": 0.25,
+        "population_2050": 0.35,
+        "functions": [
+          "Mountain Tourism",
+          "Heritage",
+          "Agriculture"
+        ],
+        "investments": [
+          "Tourism infrastructure",
+          "Heritage preservation"
+        ],
+        "connectivity": "low",
+        "giga_projects": []
+      }
+    ],
+    "development_corridors": [
+      {
+        "name": "Central Economic Corridor",
+        "name_ar": "الممر الاقتصادي الأوسط",
+        "type": "economic",
+        "origin": "Riyadh",
+        "destination": "Dammam",
+        "intermediate": [
+          "Al-Kharj"
+        ],
+        "length_km": 450,
+        "infrastructure": [
+          "High-speed rail",
+          "Highway upgrade",
+          "Fiber backbone",
+          "Industrial zones"
+        ],
+        "sectors": [
+          "Finance",
+          "Technology",
+          "Logistics",
+          "Manufacturing"
+        ],
+        "investment_sar_b": 85,
+        "priority": "critical",
+        "timeline": "2025-2035"
+      },
+      {
+        "name": "Red Sea Tourism Corridor",
+        "name_ar": "ممر البحر الأحمر السياحي",
+        "type": "tourism",
+        "origin": "NEOM",
+        "destination": "Jeddah",
+        "intermediate": [
+          "Tabuk City",
+          "AlUla",
+          "Yanbu"
+        ],
+        "length_km": 1200,
+        "infrastructure": [
+          "Coastal highway",
+          "Rail link",
+          "Airports",
+          "Marinas"
+        ],
+        "sectors": [
+          "Tourism",
+          "Hospitality",
+          "Entertainment",
+          "Creative Industries"
+        ],
+        "investment_sar_b": 150,
+        "priority": "critical",
+        "timeline": "2025-2040"
+      },
+      {
+        "name": "Holy Cities Corridor",
+        "name_ar": "ممر المدن المقدسة",
+        "type": "mixed",
+        "origin": "Makkah",
+        "destination": "Madinah",
+        "intermediate": [
+          "Jeddah"
+        ],
+        "length_km": 450,
+        "infrastructure": [
+          "Haramain Rail (existing)",
+          "Highway upgrade",
+          "Pilgrim services"
+        ],
+        "sectors": [
+          "Religious Tourism",
+          "Hospitality",
+          "Services",
+          "Real Estate"
+        ],
+        "investment_sar_b": 40,
+        "priority": "critical",
+        "timeline": "2025-2030"
+      },
+      {
+        "name": "Northern Mining & Energy Corridor",
+        "name_ar": "ممر التعدين والطاقة الشمالي",
+        "type": "logistics",
+        "origin": "Arar",
+        "destination": "Jubail",
+        "intermediate": [
+          "Sakaka",
+          "Hail",
+          "Buraydah"
+        ],
+        "length_km": 1100,
+        "infrastructure": [
+          "Freight rail",
+          "Mining roads",
+          "Power grid",
+          "Solar farms"
+        ],
+        "sectors": [
+          "Mining",
+          "Renewable Energy",
+          "Logistics",
+          "Processing"
+        ],
+        "investment_sar_b": 95,
+        "priority": "high",
+        "timeline": "2025-2040"
+      },
+      {
+        "name": "Southern Tourism & Agriculture Corridor",
+        "name_ar": "ممر السياحة والزراعة الجنوبي",
+        "type": "mixed",
+        "origin": "Abha",
+        "destination": "Jazan City",
+        "intermediate": [
+          "Al-Baha",
+          "Najran"
+        ],
+        "length_km": 600,
+        "infrastructure": [
+          "Mountain roads",
+          "Regional airports",
+          "Tourism infrastructure"
+        ],
+        "sectors": [
+          "Tourism",
+          "Agriculture",
+          "Coffee",
+          "Handicrafts"
+        ],
+        "investment_sar_b": 35,
+        "priority": "medium",
+        "timeline": "2030-2045"
+      },
+      {
+        "name": "Trans-Arabia Land Bridge",
+        "name_ar": "الجسر البري عبر الجزيرة",
+        "type": "logistics",
+        "origin": "Jeddah",
+        "destination": "Dammam",
+        "intermediate": [
+          "Riyadh"
+        ],
+        "length_km": 1200,
+        "infrastructure": [
+          "Freight rail",
+          "Container terminals",
+          "Dry ports",
+          "Logistics hubs"
+        ],
+        "sectors": [
+          "Logistics",
+          "Trade",
+          "Manufacturing",
+          "E-commerce"
+        ],
+        "investment_sar_b": 120,
+        "priority": "critical",
+        "timeline": "2025-2035"
+      }
+    ],
+    "functional_zones": [
+      {
+        "name": "Riyadh Metropolitan Growth Zone",
+        "type": "urban_growth",
+        "description": "Primary national growth pole with controlled expansion",
+        "area_km2": 6500,
+        "regions": [
+          "Riyadh"
+        ],
+        "permitted": [
+          "Residential",
+          "Commercial",
+          "Industrial",
+          "Services",
+          "Green spaces"
+        ],
+        "restricted": [
+          "Heavy industry",
+          "Mining",
+          "Large-scale agriculture"
+        ],
+        "intensity": "high",
+        "sensitivity": "medium"
+      },
+      {
+        "name": "Jeddah-Makkah Urban Agglomeration",
+        "type": "urban_growth",
+        "description": "Western urban corridor with tourism and commerce focus",
+        "area_km2": 4500,
+        "regions": [
+          "Makkah"
+        ],
+        "permitted": [
+          "Residential",
+          "Commercial",
+          "Tourism",
+          "Services"
+        ],
+        "restricted": [
+          "Heavy industry",
+          "Polluting activities"
+        ],
+        "intensity": "high",
+        "sensitivity": "high"
+      },
+      {
+        "name": "Eastern Province Industrial-Urban Zone",
+        "type": "urban_growth",
+        "description": "Polycentric industrial and residential development",
+        "area_km2": 5000,
+        "regions": [
+          "Eastern Province"
+        ],
+        "permitted": [
+          "Industrial",
+          "Residential",
+          "Commercial",
+          "Port facilities"
+        ],
+        "restricted": [
+          "Large-scale agriculture"
+        ],
+        "intensity": "high",
+        "sensitivity": "high"
+      },
+      {
+        "name": "NEOM Innovation Zone",
+        "type": "industrial",
+        "description": "Future technology and sustainable industry hub",
+        "area_km2": 26500,
+        "regions": [
+          "Tabuk"
+        ],
+        "permitted": [
+          "Clean technology",
+          "Tourism",
+          "Research",
+          "Sustainable living"
+        ],
+        "restricted": [
+          "Polluting industry",
+          "Traditional energy"
+        ],
+        "intensity": "medium",
+        "sensitivity": "high"
+      },
+      {
+        "name": "Northern Mining Belt",
+        "type": "industrial",
+        "description": "Mining and mineral processing zone",
+        "area_km2": 35000,
+        "regions": [
+          "Northern Borders",
+          "Al-Jouf",
+          "Hail"
+        ],
+        "permitted": [
+          "Mining",
+          "Processing",
+          "Renewable energy"
+        ],
+        "restricted": [
+          "Residential (outside designated areas)",
+          "Tourism"
+        ],
+        "intensity": "low",
+        "sensitivity": "medium"
+      },
+      {
+        "name": "Central Agricultural Zone",
+        "type": "agricultural",
+        "description": "Modernized agriculture with water efficiency requirements",
+        "area_km2": 45000,
+        "regions": [
+          "Al-Qassim",
+          "Riyadh (rural)"
+        ],
+        "permitted": [
+          "Smart agriculture",
+          "Agri-tech",
+          "Food processing"
+        ],
+        "restricted": [
+          "Water-intensive crops",
+          "Urban expansion"
+        ],
+        "intensity": "low",
+        "sensitivity": "medium"
+      },
+      {
+        "name": "Southern Agricultural Terraces",
+        "type": "agricultural",
+        "description": "Mountain agriculture and specialty crops",
+        "area_km2": 15000,
+        "regions": [
+          "Asir",
+          "Al-Baha",
+          "Jazan"
+        ],
+        "permitted": [
+          "Traditional agriculture",
+          "Coffee",
+          "Fruit orchards",
+          "Agri-tourism"
+        ],
+        "restricted": [
+          "Industrial agriculture",
+          "Large-scale development"
+        ],
+        "intensity": "low",
+        "sensitivity": "high"
+      },
+      {
+        "name": "Red Sea Marine Protected Area",
+        "type": "protected",
+        "description": "Marine conservation with controlled eco-tourism",
+        "area_km2": 28000,
+        "regions": [
+          "Tabuk",
+          "Madinah",
+          "Makkah"
+        ],
+        "permitted": [
+          "Conservation",
+          "Research",
+          "Eco-tourism",
+          "Sustainable fishing"
+        ],
+        "restricted": [
+          "Industrial activity",
+          "Large-scale development",
+          "Dredging"
+        ],
+        "intensity": "minimal",
+        "sensitivity": "high"
+      },
+      {
+        "name": "Asir-Sarawat Protected Highlands",
+        "type": "protected",
+        "description": "Mountain ecosystem conservation",
+        "area_km2": 18000,
+        "regions": [
+          "Asir",
+          "Al-Baha"
+        ],
+        "permitted": [
+          "Conservation",
+          "Hiking",
+          "Eco-tourism",
+          "Research"
+        ],
+        "restricted": [
+          "Urban development",
+          "Mining",
+          "Industrial activity"
+        ],
+        "intensity": "minimal",
+        "sensitivity": "high"
+      },
+      {
+        "name": "Empty Quarter Conservation Zone",
+        "type": "protected",
+        "description": "Desert ecosystem and cultural landscape protection",
+        "area_km2": 250000,
+        "regions": [
+          "Riyadh",
+          "Eastern Province",
+          "Najran"
+        ],
+        "permitted": [
+          "Conservation",
+          "Research",
+          "Controlled tourism",
+          "Renewable energy"
+        ],
+        "restricted": [
+          "Urban development",
+          "Water extraction",
+          "Industrial activity"
+        ],
+        "intensity": "minimal",
+        "sensitivity": "medium"
+      },
+      {
+        "name": "AlUla Heritage Tourism Zone",
+        "type": "tourism",
+        "description": "World-class heritage and cultural tourism destination",
+        "area_km2": 22000,
+        "regions": [
+          "Madinah"
+        ],
+        "permitted": [
+          "Heritage tourism",
+          "Cultural facilities",
+          "Eco-lodges",
+          "Arts"
+        ],
+        "restricted": [
+          "Heavy industry",
+          "Large-scale agriculture",
+          "Mass housing"
+        ],
+        "intensity": "low",
+        "sensitivity": "high"
+      },
+      {
+        "name": "Red Sea Tourism Development Zone",
+        "type": "tourism",
+        "description": "Luxury coastal tourism and eco-resorts",
+        "area_km2": 34000,
+        "regions": [
+          "Tabuk",
+          "Madinah"
+        ],
+        "permitted": [
+          "Resort development",
+          "Marinas",
+          "Eco-tourism",
+          "Water sports"
+        ],
+        "restricted": [
+          "Industrial activity",
+          "Mass housing",
+          "Polluting uses"
+        ],
+        "intensity": "low",
+        "sensitivity": "high"
+      }
+    ]
+  },
+  "section_3_regional_objectives": {
+    "Riyadh": {
+      "region": "Riyadh",
+      "region_ar": "الرياض",
+      "strategic_role": "National Capital & Economic Powerhouse",
+      "vision": "A world-class capital city that leads the nation's transformation while providing exceptional quality of life for all residents",
+      "population_2050": 15.0,
+      "gdp_share_2050": 45.0,
+      "priority_sectors": [
+        "Financial Services",
+        "Technology",
+        "Entertainment",
+        "Government",
+        "Tourism"
+      ],
+      "key_projects": [
+        "Riyadh Metro completion",
+        "Diriyah Gate",
+        "Qiddiya",
+        "King Salman Park",
+        "Sports Boulevard"
+      ],
+      "infrastructure": [
+        "Metro expansion",
+        "Water recycling 100%",
+        "Green corridors",
+        "Smart city systems"
+      ],
+      "environmental_targets": {
+        "green_space_per_capita_sqm": 12,
+        "water_recycling_pct": 100,
+        "renewable_energy_pct": 50
+      },
+      "complementarities": [
+        "Financial center for all regions",
+        "Entertainment destination",
+        "Technology hub"
+      ],
+      "challenges": [
+        "Water scarcity",
+        "Urban heat island",
+        "Traffic congestion",
+        "Housing affordability"
+      ]
+    },
+    "Makkah": {
+      "region": "Makkah",
+      "region_ar": "مكة المكرمة",
+      "strategic_role": "Spiritual Heart & Western Gateway",
+      "vision": "The spiritual center of the Muslim world with a thriving commercial economy and preserved heritage",
+      "population_2050": 12.0,
+      "gdp_share_2050": 18.0,
+      "priority_sectors": [
+        "Religious Tourism",
+        "Hospitality",
+        "Trade",
+        "Logistics",
+        "Healthcare"
+      ],
+      "key_projects": [
+        "Haram expansion",
+        "Jeddah Central",
+        "Port modernization",
+        "Metro systems"
+      ],
+      "infrastructure": [
+        "Pilgrim transport",
+        "Flood protection",
+        "Port expansion",
+        "Water security"
+      ],
+      "environmental_targets": {
+        "green_space_per_capita_sqm": 6,
+        "water_recycling_pct": 80,
+        "coastal_protection_km": 200
+      },
+      "complementarities": [
+        "Religious tourism for all",
+        "Commercial gateway",
+        "Red Sea access"
+      ],
+      "challenges": [
+        "Peak season management",
+        "Flood risk",
+        "Heritage preservation",
+        "Housing density"
+      ]
+    },
+    "Eastern Province": {
+      "region": "Eastern Province",
+      "region_ar": "المنطقة الشرقية",
+      "strategic_role": "Industrial Powerhouse & Energy Transition Leader",
+      "vision": "Transform from oil capital to diversified industrial leader, pioneering the energy transition",
+      "population_2050": 8.0,
+      "gdp_share_2050": 22.0,
+      "priority_sectors": [
+        "Petrochemicals",
+        "Manufacturing",
+        "Green Hydrogen",
+        "Technology",
+        "Tourism"
+      ],
+      "key_projects": [
+        "SPARK",
+        "Industrial diversification",
+        "Waterfront development",
+        "Green hydrogen"
+      ],
+      "infrastructure": [
+        "Industrial infrastructure",
+        "Port expansion",
+        "Rail connectivity",
+        "Renewable energy"
+      ],
+      "environmental_targets": {
+        "green_space_per_capita_sqm": 10,
+        "water_recycling_pct": 90,
+        "renewable_energy_pct": 60
+      },
+      "complementarities": [
+        "Industrial services for nation",
+        "Energy expertise",
+        "Gulf connectivity"
+      ],
+      "challenges": [
+        "Economic diversification",
+        "Environmental cleanup",
+        "Workforce transition"
+      ]
+    },
+    "Madinah": {
+      "region": "Madinah",
+      "region_ar": "المدينة المنورة",
+      "strategic_role": "Holy City & Cultural Heritage Capital",
+      "vision": "A sacred city that welcomes pilgrims while becoming the premier cultural tourism destination",
+      "population_2050": 3.5,
+      "gdp_share_2050": 6.0,
+      "priority_sectors": [
+        "Religious Tourism",
+        "Cultural Tourism",
+        "Agriculture",
+        "Industry"
+      ],
+      "key_projects": [
+        "AlUla Development",
+        "Prophet's Mosque surroundings",
+        "Yanbu expansion"
+      ],
+      "infrastructure": [
+        "Tourism infrastructure",
+        "Water security",
+        "Connectivity to AlUla"
+      ],
+      "environmental_targets": {
+        "green_space_per_capita_sqm": 8,
+        "heritage_sites_protected": 100,
+        "water_recycling_pct": 75
+      },
+      "complementarities": [
+        "Religious tourism synergy with Makkah",
+        "Cultural tourism leader",
+        "Industrial port at Yanbu"
+      ],
+      "challenges": [
+        "Water scarcity",
+        "Heritage preservation",
+        "Seasonal demand fluctuation"
+      ]
+    },
+    "Tabuk": {
+      "region": "Tabuk",
+      "region_ar": "تبوك",
+      "strategic_role": "Future City & Tourism Frontier",
+      "vision": "Home to NEOM, the world's most ambitious sustainable development, and gateway to Red Sea wonders",
+      "population_2050": 3.5,
+      "gdp_share_2050": 8.0,
+      "priority_sectors": [
+        "NEOM Industries",
+        "Tourism",
+        "Technology",
+        "Renewable Energy",
+        "Sustainable Agriculture"
+      ],
+      "key_projects": [
+        "NEOM (The Line, Trojena, Oxagon)",
+        "Red Sea Project",
+        "AMAALA"
+      ],
+      "infrastructure": [
+        "NEOM infrastructure",
+        "Airports",
+        "Desalination",
+        "Renewable energy"
+      ],
+      "environmental_targets": {
+        "protected_area_pct": 50,
+        "renewable_energy_pct": 100,
+        "zero_carbon_target": 2040
+      },
+      "complementarities": [
+        "Innovation laboratory for nation",
+        "Tourism anchor",
+        "Sustainability model"
+      ],
+      "challenges": [
+        "Execution risk",
+        "Labor availability",
+        "Environmental sensitivity",
+        "Remote location"
+      ]
+    },
+    "Asir": {
+      "region": "Asir",
+      "region_ar": "عسير",
+      "strategic_role": "Mountain Tourism & Agricultural Heritage",
+      "vision": "Saudi Arabia's premier domestic tourism destination celebrating mountain culture and natural beauty",
+      "population_2050": 3.0,
+      "gdp_share_2050": 3.5,
+      "priority_sectors": [
+        "Tourism",
+        "Agriculture",
+        "Handicrafts",
+        "Healthcare"
+      ],
+      "key_projects": [
+        "Asir Development",
+        "Tourism infrastructure",
+        "Heritage preservation"
+      ],
+      "infrastructure": [
+        "Mountain roads",
+        "Cable cars",
+        "Airports",
+        "Tourism facilities"
+      ],
+      "environmental_targets": {
+        "protected_area_pct": 30,
+        "forest_conservation_pct": 90,
+        "water_harvesting_capacity_mcm": 50
+      },
+      "complementarities": [
+        "Domestic tourism escape",
+        "Agricultural diversity",
+        "Cultural heritage"
+      ],
+      "challenges": [
+        "Accessibility",
+        "Seasonal demand",
+        "Infrastructure in terrain",
+        "Brain drain"
+      ]
+    },
+    "Al-Qassim": {
+      "region": "Al-Qassim",
+      "region_ar": "القصيم",
+      "strategic_role": "Agricultural Innovation Hub",
+      "vision": "Transform from water-depleting agriculture to model of sustainable, high-tech food production",
+      "population_2050": 2.0,
+      "gdp_share_2050": 2.5,
+      "priority_sectors": [
+        "Smart Agriculture",
+        "Food Processing",
+        "Logistics",
+        "Solar Energy"
+      ],
+      "key_projects": [
+        "Agricultural transformation",
+        "Solar farms",
+        "Food processing cluster"
+      ],
+      "infrastructure": [
+        "Water efficiency",
+        "Solar energy",
+        "Logistics connectivity",
+        "Agri-tech facilities"
+      ],
+      "environmental_targets": {
+        "water_consumption_reduction_pct": 50,
+        "solar_capacity_gw": 10,
+        "groundwater_balance": "neutral"
+      },
+      "complementarities": [
+        "Food security for nation",
+        "Agricultural expertise",
+        "Central location"
+      ],
+      "challenges": [
+        "CRITICAL water depletion",
+        "Crop transition",
+        "Economic diversification"
+      ]
+    },
+    "Hail": {
+      "region": "Hail",
+      "region_ar": "حائل",
+      "strategic_role": "Agricultural & Mining Development Hub",
+      "vision": "Leverage mining potential and agricultural heritage for sustainable regional growth",
+      "population_2050": 1.0,
+      "gdp_share_2050": 1.5,
+      "priority_sectors": [
+        "Mining",
+        "Agriculture",
+        "Renewable Energy",
+        "Tourism"
+      ],
+      "key_projects": [
+        "Mining development",
+        "Agricultural modernization",
+        "Heritage tourism"
+      ],
+      "infrastructure": [
+        "Mining roads",
+        "Water efficiency",
+        "Rail connectivity"
+      ],
+      "environmental_targets": {
+        "water_efficiency_improvement_pct": 40,
+        "mining_rehabilitation_pct": 100
+      },
+      "complementarities": [
+        "Mining corridor link",
+        "Agricultural production",
+        "Heritage sites"
+      ],
+      "challenges": [
+        "Water scarcity",
+        "Remote location",
+        "Small market size"
+      ]
+    },
+    "Northern Borders": {
+      "region": "Northern Borders",
+      "region_ar": "الحدود الشمالية",
+      "strategic_role": "Mining & Renewable Energy Frontier",
+      "vision": "The nation's mining and clean energy powerhouse, transforming resources into sustainable prosperity",
+      "population_2050": 0.8,
+      "gdp_share_2050": 2.0,
+      "priority_sectors": [
+        "Mining",
+        "Renewable Energy",
+        "Industrial Processing",
+        "Border Trade"
+      ],
+      "key_projects": [
+        "Waad Al-Shamal expansion",
+        "Solar mega-farms",
+        "Phosphate processing"
+      ],
+      "infrastructure": [
+        "Mining rail",
+        "Power grid",
+        "Processing facilities",
+        "Cross-border links"
+      ],
+      "environmental_targets": {
+        "renewable_energy_capacity_gw": 15,
+        "mining_rehabilitation_pct": 100
+      },
+      "complementarities": [
+        "Mineral supply for nation",
+        "Renewable energy export",
+        "Northern gateway"
+      ],
+      "challenges": [
+        "Remote location",
+        "Harsh climate",
+        "Labor availability",
+        "Infrastructure gaps"
+      ]
+    },
+    "Jazan": {
+      "region": "Jazan",
+      "region_ar": "جازان",
+      "strategic_role": "Tropical Agriculture & Economic Diversification",
+      "vision": "Leverage unique climate for agricultural excellence and become Red Sea industrial hub",
+      "population_2050": 2.2,
+      "gdp_share_2050": 1.8,
+      "priority_sectors": [
+        "Agriculture",
+        "Industry",
+        "Tourism",
+        "Fishing"
+      ],
+      "key_projects": [
+        "Jazan Economic City",
+        "Agricultural development",
+        "Farasan tourism"
+      ],
+      "infrastructure": [
+        "Economic city completion",
+        "Port development",
+        "Agricultural infrastructure"
+      ],
+      "environmental_targets": {
+        "marine_protected_area_pct": 30,
+        "agricultural_diversity_index": "high"
+      },
+      "complementarities": [
+        "Tropical agriculture",
+        "Red Sea industry",
+        "Island tourism"
+      ],
+      "challenges": [
+        "Economic city completion",
+        "Flood risk",
+        "Border proximity"
+      ]
+    },
+    "Najran": {
+      "region": "Najran",
+      "region_ar": "نجران",
+      "strategic_role": "Heritage Preservation & Agricultural Oasis",
+      "vision": "Preserve unique cultural heritage while developing sustainable agriculture and tourism",
+      "population_2050": 0.75,
+      "gdp_share_2050": 0.8,
+      "priority_sectors": [
+        "Heritage Tourism",
+        "Agriculture",
+        "Trade"
+      ],
+      "key_projects": [
+        "Ukhdood site development",
+        "Agricultural modernization",
+        "Heritage preservation"
+      ],
+      "infrastructure": [
+        "Heritage facilities",
+        "Water management",
+        "Connectivity"
+      ],
+      "environmental_targets": {
+        "heritage_sites_preserved": 100,
+        "water_efficiency_pct": 60
+      },
+      "complementarities": [
+        "Archaeological tourism",
+        "Agricultural tradition",
+        "Border trade"
+      ],
+      "challenges": [
+        "Border security",
+        "Remote location",
+        "Small economy"
+      ]
+    },
+    "Al-Baha": {
+      "region": "Al-Baha",
+      "region_ar": "الباحة",
+      "strategic_role": "Mountain Retreat & Heritage Village",
+      "vision": "A preserved mountain heritage region offering unique domestic tourism experiences",
+      "population_2050": 0.6,
+      "gdp_share_2050": 0.6,
+      "priority_sectors": [
+        "Tourism",
+        "Agriculture",
+        "Handicrafts",
+        "Honey Production"
+      ],
+      "key_projects": [
+        "Tourism development",
+        "Heritage village preservation",
+        "Road improvements"
+      ],
+      "infrastructure": [
+        "Tourism infrastructure",
+        "Road access",
+        "Heritage preservation"
+      ],
+      "environmental_targets": {
+        "forest_preservation_pct": 90,
+        "heritage_villages_preserved": 50
+      },
+      "complementarities": [
+        "Asir tourism synergy",
+        "Unique heritage",
+        "Agricultural products"
+      ],
+      "challenges": [
+        "Small size",
+        "Terrain challenges",
+        "Infrastructure cost"
+      ]
+    },
+    "Al-Jouf": {
+      "region": "Al-Jouf",
+      "region_ar": "الجوف",
+      "strategic_role": "Renewable Energy Hub & Agricultural Innovation",
+      "vision": "Become Saudi Arabia's renewable energy capital while modernizing olive and agricultural production",
+      "population_2050": 0.85,
+      "gdp_share_2050": 1.3,
+      "priority_sectors": [
+        "Renewable Energy",
+        "Agriculture",
+        "Tourism",
+        "Mining"
+      ],
+      "key_projects": [
+        "Solar mega-farms",
+        "Olive processing",
+        "Heritage tourism",
+        "Wind farms"
+      ],
+      "infrastructure": [
+        "Renewable energy grid",
+        "Water efficiency",
+        "Tourism access"
+      ],
+      "environmental_targets": {
+        "renewable_capacity_gw": 20,
+        "water_efficiency_improvement_pct": 45
+      },
+      "complementarities": [
+        "Renewable energy for grid",
+        "Agricultural exports",
+        "Heritage sites"
+      ],
+      "challenges": [
+        "Water scarcity",
+        "Remote location",
+        "Infrastructure needs"
+      ]
+    }
+  },
+  "section_4_investment_priorities": {
+    "summary": {
+      "total_sar_billion": 1425,
+      "by_category": {
+        "infrastructure": 530,
+        "economic": 740,
+        "social": 100,
+        "environmental": 55
+      },
+      "priority_count": 12
+    },
+    "priorities": [
+      {
+        "id": "IP-001",
+        "title": "National Water Security Program",
+        "category": "infrastructure",
+        "description": "Massive expansion of desalination, 100% wastewater reuse, agricultural water efficiency",
+        "cost_sar_b": 150,
+        "timeline": "2025-2035",
+        "regions": [
+          "All regions"
+        ],
+        "outcomes": [
+          "40% reduction in water consumption",
+          "Eliminate groundwater overdraft",
+          "100% reuse"
+        ],
+        "funding": [
+          "Government budget",
+          "PIF",
+          "PPP for desalination"
+        ],
+        "agency": "Ministry of Environment, Water and Agriculture"
+      },
+      {
+        "id": "IP-002",
+        "title": "National Rail Network Completion",
+        "category": "infrastructure",
+        "description": "Complete freight and passenger rail connecting all major cities",
+        "cost_sar_b": 200,
+        "timeline": "2025-2040",
+        "regions": [
+          "All regions"
+        ],
+        "outcomes": [
+          "5,500 km rail network",
+          "All tier-1 cities connected",
+          "50% freight shift to rail"
+        ],
+        "funding": [
+          "Government budget",
+          "PIF",
+          "PPP"
+        ],
+        "agency": "Saudi Railway Company"
+      },
+      {
+        "id": "IP-003",
+        "title": "Renewable Energy Mega-Program",
+        "category": "infrastructure",
+        "description": "Achieve 100GW renewable capacity with grid integration",
+        "cost_sar_b": 180,
+        "timeline": "2025-2040",
+        "regions": [
+          "Tabuk",
+          "Northern Borders",
+          "Al-Jouf",
+          "Hail"
+        ],
+        "outcomes": [
+          "100GW capacity",
+          "50% domestic energy from renewables",
+          "Green hydrogen export"
+        ],
+        "funding": [
+          "PIF",
+          "Private sector",
+          "International investment"
+        ],
+        "agency": "Ministry of Energy"
+      },
+      {
+        "id": "IP-004",
+        "title": "NEOM Phase 1 Completion",
+        "category": "economic",
+        "description": "Complete The Line, Trojena, Oxagon, and Sindalah by 2035",
+        "cost_sar_b": 500,
+        "timeline": "2025-2035",
+        "regions": [
+          "Tabuk"
+        ],
+        "outcomes": [
+          "1M residents in The Line",
+          "Trojena ski resort operational",
+          "Oxagon port operational"
+        ],
+        "funding": [
+          "PIF"
+        ],
+        "agency": "NEOM Company"
+      },
+      {
+        "id": "IP-005",
+        "title": "Red Sea & AMAALA Tourism",
+        "category": "economic",
+        "description": "Complete luxury tourism destinations on Red Sea coast",
+        "cost_sar_b": 75,
+        "timeline": "2025-2035",
+        "regions": [
+          "Tabuk",
+          "Madinah"
+        ],
+        "outcomes": [
+          "50 resorts",
+          "30,000 hotel rooms",
+          "8,000 jobs"
+        ],
+        "funding": [
+          "PIF",
+          "Private investors"
+        ],
+        "agency": "Red Sea Global"
+      },
+      {
+        "id": "IP-006",
+        "title": "AlUla Heritage Development",
+        "category": "economic",
+        "description": "World-class heritage tourism destination development",
+        "cost_sar_b": 35,
+        "timeline": "2025-2035",
+        "regions": [
+          "Madinah"
+        ],
+        "outcomes": [
+          "UNESCO site protection",
+          "2M annual visitors",
+          "Sustainable tourism model"
+        ],
+        "funding": [
+          "PIF",
+          "Royal Commission for AlUla"
+        ],
+        "agency": "Royal Commission for AlUla"
+      },
+      {
+        "id": "IP-007",
+        "title": "Agricultural Transformation Program",
+        "category": "economic",
+        "description": "Transform water-intensive agriculture to sustainable, high-tech production",
+        "cost_sar_b": 45,
+        "timeline": "2025-2035",
+        "regions": [
+          "Al-Qassim",
+          "Hail",
+          "Al-Jouf",
+          "Riyadh"
+        ],
+        "outcomes": [
+          "50% water reduction",
+          "Crop transition complete",
+          "Agri-tech leadership"
+        ],
+        "funding": [
+          "Government subsidies",
+          "Environment Fund",
+          "Private sector"
+        ],
+        "agency": "Ministry of Environment, Water and Agriculture"
+      },
+      {
+        "id": "IP-008",
+        "title": "Mining Sector Development",
+        "category": "economic",
+        "description": "Develop mining sector to SAR 240B contribution",
+        "cost_sar_b": 60,
+        "timeline": "2025-2040",
+        "regions": [
+          "Northern Borders",
+          "Madinah",
+          "Hail",
+          "Tabuk"
+        ],
+        "outcomes": [
+          "3% GDP contribution",
+          "90,000 jobs",
+          "Downstream processing"
+        ],
+        "funding": [
+          "Private investment",
+          "Ma'aden",
+          "PIF"
+        ],
+        "agency": "Ministry of Industry and Mineral Resources"
+      },
+      {
+        "id": "IP-009",
+        "title": "Asir Tourism Development",
+        "category": "economic",
+        "description": "Develop Asir as premier domestic tourism destination",
+        "cost_sar_b": 25,
+        "timeline": "2025-2035",
+        "regions": [
+          "Asir",
+          "Al-Baha"
+        ],
+        "outcomes": [
+          "5M annual visitors",
+          "Heritage preservation",
+          "Mountain resorts"
+        ],
+        "funding": [
+          "Government budget",
+          "Private sector"
+        ],
+        "agency": "Ministry of Tourism"
+      },
+      {
+        "id": "IP-010",
+        "title": "National Housing Program",
+        "category": "social",
+        "description": "Achieve 70% Saudi home ownership through affordable housing",
+        "cost_sar_b": 100,
+        "timeline": "2025-2035",
+        "regions": [
+          "All regions"
+        ],
+        "outcomes": [
+          "70% ownership",
+          "500,000 affordable units",
+          "TOD communities"
+        ],
+        "funding": [
+          "Real Estate Development Fund",
+          "PIF",
+          "Private sector"
+        ],
+        "agency": "Ministry of Housing"
+      },
+      {
+        "id": "IP-011",
+        "title": "Urban Green Infrastructure",
+        "category": "environmental",
+        "description": "Achieve 9 sqm green space per capita in all cities",
+        "cost_sar_b": 40,
+        "timeline": "2025-2040",
+        "regions": [
+          "All regions"
+        ],
+        "outcomes": [
+          "9 sqm per capita",
+          "Urban forests",
+          "Heat island reduction"
+        ],
+        "funding": [
+          "Municipal budgets",
+          "Green Fund"
+        ],
+        "agency": "Ministry of Municipal and Rural Affairs"
+      },
+      {
+        "id": "IP-012",
+        "title": "Protected Areas Expansion",
+        "category": "environmental",
+        "description": "Expand protected areas to 30% of land and sea by 2030",
+        "cost_sar_b": 15,
+        "timeline": "2025-2030",
+        "regions": [
+          "All regions"
+        ],
+        "outcomes": [
+          "30% land protected",
+          "30% sea protected",
+          "Wildlife corridors"
+        ],
+        "funding": [
+          "Government budget",
+          "International funds"
+        ],
+        "agency": "National Center for Wildlife"
+      }
+    ]
+  },
+  "section_5_stakeholder_materials": {
+    "executive_summary": {
+      "title": "National Spatial Strategy - Executive Summary",
+      "subtitle": "Saudi Arabia 2050: A Vision for Balanced Territorial Development",
+      "for": "Royal Court, Council of Ministers, Regional Governors",
+      "sections": [
+        {
+          "title": "Vision",
+          "content": "By 2050, Saudi Arabia will be a thriving, sustainable, and connected \n            nation where all regions prosper, cities are livable, natural heritage is preserved, \n            and every citizen has access to economic opportunity and quality of life - a global \n            model of balanced territorial development in harmony with Vision 2030 aspirations."
+        },
+        {
+          "title": "Strategic Objectives",
+          "content": [
+            "Polycentric Urban Network",
+            "Integrated Economic Corridors",
+            "Sustainable Water Management",
+            "Climate-Resilient Territories",
+            "Economic Diversification Zones",
+            "Quality of Life for All",
+            "Digital and Physical Connectivity"
+          ]
+        },
+        {
+          "title": "Spatial Structure",
+          "content": {
+            "strategic_nodes": 20,
+            "development_corridors": 6,
+            "functional_zones": 12
+          }
+        },
+        {
+          "title": "Investment Required",
+          "content": {
+            "total_sar_billion": 1425,
+            "by_category": {
+              "infrastructure": 530,
+              "economic": 740,
+              "social": 100,
+              "environmental": 55
+            },
+            "priority_count": 12
+          }
+        },
+        {
+          "title": "Key Actions",
+          "content": [
+            "Establish NSS Coordination Authority",
+            "Approve spatial structure and zoning",
+            "Prioritize water security investments",
+            "Align sectoral strategies with NSS"
+          ]
+        }
+      ]
+    },
+    "public_consultation": {
+      "title": "Shape Your Country's Future",
+      "subtitle": "Public Consultation on National Spatial Strategy 2050",
+      "key_messages": [
+        "Your voice matters in shaping where and how Saudi Arabia develops",
+        "We want to hear about your region's needs and opportunities",
+        "The NSS will guide development for the next 25 years"
+      ],
+      "consultation_topics": [
+        {
+          "topic": "Quality of Life",
+          "questions": [
+            "What services are missing in your community?",
+            "How can we improve your neighborhood?",
+            "What would make your daily life better?"
+          ]
+        },
+        {
+          "topic": "Economic Opportunities",
+          "questions": [
+            "What industries should develop in your region?",
+            "How can we create more local jobs?",
+            "What skills training is needed?"
+          ]
+        },
+        {
+          "topic": "Environment",
+          "questions": [
+            "What natural areas should be protected?",
+            "How can we address water scarcity?",
+            "What green spaces are needed in cities?"
+          ]
+        },
+        {
+          "topic": "Connectivity",
+          "questions": [
+            "How can transport be improved?",
+            "What digital services are needed?",
+            "How can we better connect regions?"
+          ]
+        }
+      ],
+      "feedback_channels": [
+        "Online portal: nss.gov.sa",
+        "Regional workshops in all 13 regions",
+        "Written submissions",
+        "Municipal office feedback forms"
+      ],
+      "timeline": "90-day consultation period"
+    },
+    "faq": [
+      {
+        "question": "What is the National Spatial Strategy (NSS)?",
+        "answer": "The NSS is a comprehensive plan that guides where and how development occurs across Saudi Arabia until 2050. It coordinates land use, infrastructure, economic development, and environmental protection across all 13 regions."
+      },
+      {
+        "question": "How does the NSS relate to Vision 2030?",
+        "answer": "The NSS translates Vision 2030's ambitious goals into spatial reality. It identifies where giga-projects, cities, corridors, and protected areas will be located to achieve Vision 2030 targets in a coordinated way."
+      },
+      {
+        "question": "What are the main goals of the NSS?",
+        "answer": "The NSS aims to: (1) Balance development across all 13 regions, (2) Ensure water security, (3) Connect regions with transport corridors, (4) Protect the environment, (5) Improve quality of life for all Saudis."
+      },
+      {
+        "question": "How will my region benefit?",
+        "answer": "Every region has a specific role and investment priorities in the NSS. Check the Regional Objectives section for your region's strategic role, priority sectors, and planned infrastructure investments."
+      },
+      {
+        "question": "How much investment is planned?",
+        "answer": "The NSS identifies over SAR 1.4 trillion in priority investments across infrastructure, economic development, social services, and environmental protection over 25 years."
+      },
+      {
+        "question": "Who is responsible for implementing the NSS?",
+        "answer": "A National NSS Coordination Authority will oversee implementation, working with line ministries, regional authorities, and the private sector. Each ministry has specific responsibilities defined in the Governance Framework."
+      },
+      {
+        "question": "How can I participate?",
+        "answer": "Public consultation is open for 90 days. You can provide feedback through the online portal (nss.gov.sa), attend regional workshops, or submit written comments to your local municipality."
+      },
+      {
+        "question": "Will the NSS affect my property?",
+        "answer": "The NSS provides high-level guidance that will be detailed through regional and local plans. Specific zoning changes will go through proper legal processes with affected communities consulted."
+      },
+      {
+        "question": "How will water scarcity be addressed?",
+        "answer": "Water security is the #1 priority. The NSS mandates: 40% reduction in consumption, 100% wastewater reuse, expansion of desalination, and transition away from water-intensive agriculture."
+      },
+      {
+        "question": "How will the NSS be monitored?",
+        "answer": "A comprehensive KPI framework tracks progress annually. Bi-annual reviews assess performance and the strategy will be updated every 5 years based on changing conditions."
+      }
+    ]
+  },
+  "appendices": {
+    "output_files": [
+      "WS6_NSS_DRAFT_REPORT.json",
+      "WS6_NSS_DRAFT_REPORT.md",
+      "strategic_nodes.csv",
+      "development_corridors.csv",
+      "functional_zones.csv",
+      "regional_objectives.csv",
+      "investment_priorities.csv"
+    ]
+  }
+}

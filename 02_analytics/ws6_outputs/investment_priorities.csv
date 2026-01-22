@@ -1,0 +1,13 @@
+ID,Title,Category,Cost_SAR_B,Timeline,Agency
+IP-001,National Water Security Program,infrastructure,150,2025-2035,"Ministry of Environment, Water and Agriculture"
+IP-002,National Rail Network Completion,infrastructure,200,2025-2040,Saudi Railway Company
+IP-003,Renewable Energy Mega-Program,infrastructure,180,2025-2040,Ministry of Energy
+IP-004,NEOM Phase 1 Completion,economic,500,2025-2035,NEOM Company
+IP-005,Red Sea & AMAALA Tourism,economic,75,2025-2035,Red Sea Global
+IP-006,AlUla Heritage Development,economic,35,2025-2035,Royal Commission for AlUla
+IP-007,Agricultural Transformation Program,economic,45,2025-2035,"Ministry of Environment, Water and Agriculture"
+IP-008,Mining Sector Development,economic,60,2025-2040,Ministry of Industry and Mineral Resources
+IP-009,Asir Tourism Development,economic,25,2025-2035,Ministry of Tourism
+IP-010,National Housing Program,social,100,2025-2035,Ministry of Housing
+IP-011,Urban Green Infrastructure,environmental,40,2025-2040,Ministry of Municipal and Rural Affairs
+IP-012,Protected Areas Expansion,environmental,15,2025-2030,National Center for Wildlife
