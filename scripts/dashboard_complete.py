@@ -1063,19 +1063,19 @@ def render_ws2_retrospective():
     with cols[4]:
         st.markdown(render_stat_module("✗", "Discontinue", str(discontinue), "Phase out", "red"), unsafe_allow_html=True)
     
-    # Charts in two columns
+    # Modern visualizations in two columns
     col1, col2 = st.columns(2)
     
     with col1:
-        # Donut chart for distribution
+        # Treemap for hierarchical distribution
         rec_counts = continuity['Recommendation'].value_counts().reset_index()
         rec_counts.columns = ['Recommendation', 'Count']
+        rec_counts['Percentage'] = (rec_counts['Count'] / rec_counts['Count'].sum() * 100).round(1)
         
-        fig = px.pie(
-            rec_counts, 
-            names='Recommendation', 
+        fig = px.treemap(
+            rec_counts,
+            path=['Recommendation'],
             values='Count',
-            title="",
             color='Recommendation',
             color_discrete_map={
                 'MAINTAIN': '#22c55e',
@@ -1084,32 +1084,52 @@ def render_ws2_retrospective():
                 'NEW': '#8b5cf6',
                 'DISCONTINUE': '#ef4444'
             },
-            hole=0.55
+            custom_data=['Percentage']
         )
-        fig.update_layout(**get_chart_layout(height=280))
-        fig.update_traces(textposition='inside', textinfo='percent', textfont_size=11)
+        fig.update_traces(
+            texttemplate="<b>%{label}</b><br>%{value} policies<br>%{customdata[0]}%",
+            textfont=dict(size=13, color='white'),
+            marker=dict(cornerradius=8)
+        )
+        fig.update_layout(
+            height=300,
+            margin=dict(l=10, r=10, t=30, b=10),
+            paper_bgcolor='rgba(0,0,0,0)',
+            title=dict(text="Policy Distribution", font=dict(size=13, color='#1a1a1a'), x=0)
+        )
         st.plotly_chart(fig, use_container_width=True)
     
     with col2:
-        # Horizontal bar by priority
-        priority_counts = continuity.groupby(['Priority', 'Recommendation']).size().reset_index(name='Count')
-        fig2 = px.bar(
-            priority_counts,
-            y='Priority',
-            x='Count',
-            color='Recommendation',
-            title="",
-            orientation='h',
-            color_discrete_map={
-                'MAINTAIN': '#22c55e',
-                'STRENGTHEN': '#3b82f6',
-                'MODIFY': '#f59e0b',
-                'NEW': '#8b5cf6',
-                'DISCONTINUE': '#ef4444'
-            },
-            barmode='stack'
+        # Heatmap for Priority x Recommendation matrix
+        priority_rec = continuity.groupby(['Priority', 'Recommendation']).size().unstack(fill_value=0)
+        priority_order = ['High', 'Medium', 'Low'] if 'High' in priority_rec.index else priority_rec.index.tolist()
+        rec_order = ['MAINTAIN', 'STRENGTHEN', 'MODIFY', 'NEW', 'DISCONTINUE']
+        rec_order = [r for r in rec_order if r in priority_rec.columns]
+        priority_rec = priority_rec.reindex(index=[p for p in priority_order if p in priority_rec.index], columns=rec_order)
+        
+        fig2 = px.imshow(
+            priority_rec.values,
+            x=priority_rec.columns,
+            y=priority_rec.index,
+            color_continuous_scale=['#f0f9ff', '#006C35'],
+            aspect='auto',
+            text_auto=True
         )
-        fig2.update_layout(**get_chart_layout(height=280))
+        fig2.update_traces(
+            texttemplate='%{z}',
+            textfont=dict(size=14, color='#1a1a1a'),
+            hovertemplate='Priority: %{y}<br>Recommendation: %{x}<br>Count: %{z}<extra></extra>'
+        )
+        fig2.update_layout(
+            height=300,
+            margin=dict(l=10, r=10, t=30, b=10),
+            paper_bgcolor='rgba(0,0,0,0)',
+            plot_bgcolor='rgba(0,0,0,0)',
+            title=dict(text="Priority × Recommendation Matrix", font=dict(size=13, color='#1a1a1a'), x=0),
+            xaxis=dict(title='', tickfont=dict(size=10)),
+            yaxis=dict(title='', tickfont=dict(size=11)),
+            coloraxis_showscale=False
+        )
         st.plotly_chart(fig2, use_container_width=True)
     
     # Data table with expander
