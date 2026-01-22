@@ -1150,97 +1150,110 @@ def render_ws3_benchmarking():
     methodology = ws3['methodology']
     principles = ws3['principles']
     
-    # Countries Analyzed - Compact module cards
-    countries = report.get('section_1_country_analyses', {})
-    
-    st.markdown('<div class="module-grid">', unsafe_allow_html=True)
-    country_icons = {"Singapore": "🇸🇬", "Netherlands": "🇳🇱", "UAE": "🇦🇪", "South Korea": "🇰🇷", "Malaysia": "🇲🇾"}
-    
-    for country, data in countries.items():
-        if isinstance(data, dict):
-            relevance = data.get('relevance_score', 'N/A')
-            lessons = data.get('key_lessons', ['N/A'])
-            first_lesson = lessons[0][:100] + "..." if lessons and len(lessons[0]) > 100 else (lessons[0] if lessons else "N/A")
-            icon = country_icons.get(country, "🌍")
+    # Use methodology data for country stats (more reliable than report JSON)
+    if not methodology.empty and 'Country' in methodology.columns:
+        country_icons = {"Singapore": "🇸🇬", "Netherlands": "🇳🇱", "UAE": "🇦🇪", "South Korea": "🇰🇷", "Malaysia": "🇲🇾", "Japan": "🇯🇵", "Germany": "🇩🇪"}
+        country_lessons = {
+            "Singapore": "Compact city-state with world-class integrated planning",
+            "Netherlands": "Water management & polycentric urban development",
+            "UAE": "Rapid urbanization & economic diversification model", 
+            "South Korea": "Technology-driven spatial development",
+            "Malaysia": "Regional corridor approach & industrial zones"
+        }
+        
+        # Country stat modules inline
+        countries_list = methodology['Country'].tolist()
+        if countries_list:
+            cols = st.columns(len(countries_list))
+            avg_col = 'Average' if 'Average' in methodology.columns else None
             
-            stats = [{"value": str(relevance), "label": "Relevance"}]
-            st.markdown(render_module_card(
-                icon, 
-                country, 
-                first_lesson,
-                badge=f"Score: {relevance}",
-                badge_color="green" if relevance and float(str(relevance).replace('N/A', '0')) >= 4 else "amber",
-                stats=stats
-            ), unsafe_allow_html=True)
-    st.markdown('</div>', unsafe_allow_html=True)
+            for i, country in enumerate(countries_list):
+                row = methodology[methodology['Country'] == country].iloc[0]
+                avg_score = row[avg_col] if avg_col else 0
+                icon = country_icons.get(country, "🌍")
+                
+                with cols[i]:
+                    st.markdown(render_stat_module(
+                        icon, 
+                        country, 
+                        f"{avg_score:.1f}" if isinstance(avg_score, (int, float)) else str(avg_score),
+                        country_lessons.get(country, "Benchmark country")[:35],
+                        "green" if avg_score >= 4 else "blue" if avg_score >= 3 else "amber"
+                    ), unsafe_allow_html=True)
     
-    # Methodology Comparison - Radar Chart
+    # Modern Methodology Comparison - Heatmap instead of Radar
     st.markdown(render_section_header("📊", "Methodology Comparison", "Multi-dimensional analysis across criteria"), unsafe_allow_html=True)
     
     if not methodology.empty and 'Country' in methodology.columns:
-        # Radar chart for methodology comparison
         categories = [col for col in methodology.columns if col not in ['Country', 'Average']]
         
-        fig = go.Figure()
-        colors = ['#006C35', '#3b82f6', '#f59e0b', '#8b5cf6', '#ef4444']
+        col1, col2 = st.columns([3, 2])
         
-        for i, (_, row) in enumerate(methodology.iterrows()):
-            values = [row[cat] for cat in categories]
-            values.append(values[0])  # Close the polygon
+        with col1:
+            # Heatmap for methodology comparison (much cleaner than radar)
+            heatmap_data = methodology.set_index('Country')[categories]
             
-            fig.add_trace(go.Scatterpolar(
-                r=values,
-                theta=categories + [categories[0]],
-                fill='toself',
-                name=row['Country'],
-                line=dict(color=colors[i % len(colors)]),
-                fillcolor=f"rgba{tuple(list(int(colors[i % len(colors)].lstrip('#')[j:j+2], 16) for j in (0, 2, 4)) + [0.1])}"
-            ))
-        
-        fig.update_layout(
-            polar=dict(
-                radialaxis=dict(
-                    visible=True,
-                    range=[0, 5],
-                    tickfont=dict(size=9),
-                    gridcolor='rgba(0,0,0,0.08)'
-                ),
-                angularaxis=dict(
-                    tickfont=dict(size=9),
-                    gridcolor='rgba(0,0,0,0.08)'
-                ),
-                bgcolor='rgba(0,0,0,0)'
-            ),
-            showlegend=True,
-            legend=dict(
-                orientation='h',
-                yanchor='bottom',
-                y=-0.2,
-                xanchor='center',
-                x=0.5,
-                font=dict(size=10)
-            ),
-            height=380,
-            margin=dict(l=60, r=60, t=30, b=60),
-            paper_bgcolor='rgba(0,0,0,0)',
-            font=dict(family="Inter, sans-serif", color='#6b7280', size=11)
-        )
-        st.plotly_chart(fig, use_container_width=True)
-        
-        # Ranking bar chart
-        if 'Average' in methodology.columns:
-            meth_sorted = methodology.sort_values('Average', ascending=True)
-            fig_bar = px.bar(
-                meth_sorted,
-                y='Country',
-                x='Average',
-                orientation='h',
-                color='Average',
-                color_continuous_scale=['#ef4444', '#f59e0b', '#22c55e', '#006C35']
+            fig = px.imshow(
+                heatmap_data.values,
+                x=categories,
+                y=heatmap_data.index,
+                color_continuous_scale=['#fef3c7', '#f59e0b', '#006C35'],
+                aspect='auto',
+                text_auto='.1f'
             )
-            fig_bar.update_layout(**get_chart_layout("Overall Methodology Ranking", height=200))
-            fig_bar.update_coloraxes(showscale=False)
-            st.plotly_chart(fig_bar, use_container_width=True)
+            fig.update_traces(
+                texttemplate='%{z:.1f}',
+                textfont=dict(size=11, color='#1a1a1a'),
+                hovertemplate='%{y}<br>%{x}: %{z:.1f}<extra></extra>'
+            )
+            fig.update_layout(
+                height=280,
+                margin=dict(l=10, r=10, t=35, b=10),
+                paper_bgcolor='rgba(0,0,0,0)',
+                plot_bgcolor='rgba(0,0,0,0)',
+                title=dict(text="Score Matrix (1-5 scale)", font=dict(size=13, color='#1a1a1a'), x=0),
+                xaxis=dict(title='', tickfont=dict(size=9), tickangle=30),
+                yaxis=dict(title='', tickfont=dict(size=11)),
+                coloraxis=dict(
+                    colorbar=dict(
+                        title='Score',
+                        thickness=12,
+                        len=0.7,
+                        tickfont=dict(size=9)
+                    )
+                )
+            )
+            st.plotly_chart(fig, use_container_width=True)
+        
+        with col2:
+            # Overall Ranking - Horizontal bars
+            if 'Average' in methodology.columns:
+                meth_sorted = methodology.sort_values('Average', ascending=True)
+                
+                fig_bar = go.Figure()
+                colors = ['#006C35' if v >= 4 else '#3b82f6' if v >= 3 else '#f59e0b' for v in meth_sorted['Average']]
+                
+                fig_bar.add_trace(go.Bar(
+                    y=meth_sorted['Country'],
+                    x=meth_sorted['Average'],
+                    orientation='h',
+                    marker=dict(color=colors, cornerradius=6),
+                    text=[f"{v:.2f}" for v in meth_sorted['Average']],
+                    textposition='inside',
+                    textfont=dict(size=12, color='white')
+                ))
+                
+                fig_bar.update_layout(
+                    height=280,
+                    margin=dict(l=10, r=10, t=35, b=10),
+                    paper_bgcolor='rgba(0,0,0,0)',
+                    plot_bgcolor='rgba(0,0,0,0)',
+                    title=dict(text="Overall Ranking", font=dict(size=13, color='#1a1a1a'), x=0),
+                    xaxis=dict(title='', range=[0, 5], tickfont=dict(size=10), gridcolor='rgba(0,0,0,0.05)'),
+                    yaxis=dict(title='', tickfont=dict(size=11)),
+                    showlegend=False
+                )
+                st.plotly_chart(fig_bar, use_container_width=True)
     
     # Design Principles - Better visualization
     st.markdown(render_section_header("🎨", "Design Principles for KSA", "Adapted from international benchmarks"), unsafe_allow_html=True)
