@@ -940,22 +940,14 @@ def render_overview():
     """Render overview tab with premium styling."""
     ws6 = load_ws6_data()
     
-    # KPI Grid
-    st.markdown('<div class="kpi-grid">', unsafe_allow_html=True)
-    
-    kpis = [
-        ("👥", "Population 2024", "34.1M", "+2.3% YoY", "positive"),
-        ("💰", "GDP 2024", "$1.1T", "+4.5%", "positive"),
-        ("🗺️", "Regions", "13", "All Covered", "neutral"),
-        ("🏙️", "Strategic Nodes", "20", "Tier 1-3", "neutral"),
-        ("📈", "Investment Plan", "SAR 1.4T", "2025-2050", "neutral"),
-    ]
-    
-    kpi_html = ""
-    for icon, label, value, delta, delta_type in kpis:
-        kpi_html += render_kpi_card(icon, label, value, delta, delta_type)
-    
-    st.markdown(kpi_html + '</div>', unsafe_allow_html=True)
+    # Compact KPI modules all in one row
+    st.markdown('<div class="stat-grid" style="grid-template-columns: repeat(5, 1fr);">', unsafe_allow_html=True)
+    st.markdown(render_stat_module("👥", "Population 2024", "34.1M", "+2.3% YoY", "green"), unsafe_allow_html=True)
+    st.markdown(render_stat_module("💰", "GDP 2024", "$1.1T", "+4.5%", "green"), unsafe_allow_html=True)
+    st.markdown(render_stat_module("🗺️", "Regions", "13", "All Covered", "blue"), unsafe_allow_html=True)
+    st.markdown(render_stat_module("🏙️", "Strategic Nodes", "20", "Tier 1-3", "amber"), unsafe_allow_html=True)
+    st.markdown(render_stat_module("📈", "Investment", "SAR 1.4T", "2025-2050", "purple"), unsafe_allow_html=True)
+    st.markdown('</div>', unsafe_allow_html=True)
     
     # Vision Statement
     if ws6:
