@@ -21,6 +21,43 @@ from loguru import logger
 
 
 # =============================================================================
+# COORDINATE LOOKUPS (Module-level for CSV generation)
+# =============================================================================
+
+CITY_COORDS = {
+    "Riyadh": (24.7136, 46.6753),
+    "Jeddah": (21.4858, 39.1925),
+    "Dammam-Khobar-Dhahran": (26.4207, 50.0888),
+    "NEOM": (28.0000, 35.0000),
+    "Makkah": (21.3891, 39.8579),
+    "Madinah": (24.5247, 39.5692),
+    "Tabuk City": (28.3835, 36.5662),
+    "Abha": (18.2164, 42.5053),
+    "Jubail": (27.0046, 49.6225),
+    "Yanbu": (24.0895, 38.0618),
+    "Buraydah": (26.3260, 43.9750),
+    "Taif": (21.2703, 40.4158),
+    "Khamis Mushait": (18.3000, 42.7333),
+    "Hail": (27.5114, 41.7208),
+    "Jizan City": (16.8894, 42.5511),
+    "Najran City": (17.4917, 44.1322),
+    "Al Bahah City": (20.0129, 41.4677),
+    "Arar City": (30.9753, 41.0381),
+    "Sakaka": (29.9697, 40.2064),
+    "Al Hofuf": (25.3648, 49.5870)
+}
+
+CORRIDOR_COORDS = {
+    "Riyadh-Jeddah Economic Corridor": ((24.7136, 46.6753), (21.4858, 39.1925)),
+    "Eastern Economic Corridor": ((26.4207, 50.0888), (27.0046, 49.6225)),
+    "Red Sea Tourism Corridor": ((28.0000, 35.0000), (21.4858, 39.1925)),
+    "Northern Development Corridor": ((28.3835, 36.5662), (30.9753, 41.0381)),
+    "Southern Growth Corridor": ((18.2164, 42.5053), (16.8894, 42.5511)),
+    "Central Logistics Spine": ((24.7136, 46.6753), (26.3260, 43.9750))
+}
+
+
+# =============================================================================
 # DATA CLASSES
 # =============================================================================
 
@@ -49,6 +86,8 @@ class StrategicNode:
     key_investments: List[str]
     connectivity_priority: str  # critical, high, medium
     giga_projects: List[str]
+    lat: float = 0.0  # Latitude
+    lon: float = 0.0  # Longitude
 
 
 @dataclass
@@ -66,6 +105,10 @@ class DevelopmentCorridor:
     investment_sar_billion: float
     priority: str  # critical, high, medium
     timeline: str  # 2025-2030, 2030-2040, 2040-2050
+    start_lat: float = 0.0
+    start_lon: float = 0.0
+    end_lat: float = 0.0
+    end_lon: float = 0.0
 
 
 @dataclass
@@ -283,7 +326,8 @@ class SpatialStructureBuilder:
                 primary_functions=["National Capital", "Financial Hub", "Technology Center", "Entertainment Capital"],
                 key_investments=["Riyadh Metro", "King Salman Park", "Sports Boulevard", "Downtown redevelopment"],
                 connectivity_priority="critical",
-                giga_projects=["Diriyah Gate", "Qiddiya", "King Salman Park", "Riyadh Green"]
+                giga_projects=["Diriyah Gate", "Qiddiya", "King Salman Park", "Riyadh Green"],
+                lat=24.7136, lon=46.6753
             ),
             StrategicNode(
                 name="Jeddah",
@@ -1430,7 +1474,9 @@ class WS6ReportGenerator:
             'Pop_2024_M': n.population_2024,
             'Pop_2050_M': n.population_2050_target,
             'Functions': ', '.join(n.primary_functions[:3]),
-            'Priority': n.connectivity_priority
+            'Priority': n.connectivity_priority,
+            'Lat': CITY_COORDS.get(n.name, (24.5, 45.0))[0],
+            'Lon': CITY_COORDS.get(n.name, (24.5, 45.0))[1]
         } for n in nodes])
         nodes_df.to_csv(self.output_dir / "strategic_nodes.csv", index=False)
         
@@ -1442,7 +1488,11 @@ class WS6ReportGenerator:
             'Length_km': c.length_km,
             'Investment_SAR_B': c.investment_sar_billion,
             'Priority': c.priority,
-            'Timeline': c.timeline
+            'Timeline': c.timeline,
+            'Start_Lat': CORRIDOR_COORDS.get(c.name, ((24.5, 45.0), (25.0, 46.0)))[0][0],
+            'Start_Lon': CORRIDOR_COORDS.get(c.name, ((24.5, 45.0), (25.0, 46.0)))[0][1],
+            'End_Lat': CORRIDOR_COORDS.get(c.name, ((24.5, 45.0), (25.0, 46.0)))[1][0],
+            'End_Lon': CORRIDOR_COORDS.get(c.name, ((24.5, 45.0), (25.0, 46.0)))[1][1]
         } for c in corridors])
         corridors_df.to_csv(self.output_dir / "development_corridors.csv", index=False)
         
@@ -1551,6 +1601,10 @@ class WS6ReportGenerator:
         return report
     
     def _node_to_dict(self, node: StrategicNode) -> Dict:
+        # Get coordinates from lookup or use node's own coords
+        coords = CITY_COORDS.get(node.name, (node.lat, node.lon))
+        lat, lon = coords if coords != (0.0, 0.0) else (24.0, 45.0)  # Default to center of KSA
+        
         return {
             "name": node.name,
             "name_ar": node.name_ar,
@@ -1562,10 +1616,21 @@ class WS6ReportGenerator:
             "functions": node.primary_functions,
             "investments": node.key_investments,
             "connectivity": node.connectivity_priority,
-            "giga_projects": node.giga_projects
+            "giga_projects": node.giga_projects,
+            "lat": lat,
+            "lon": lon
         }
     
     def _corridor_to_dict(self, corridor: DevelopmentCorridor) -> Dict:
+        # Get coordinates from lookup or use corridor's own coords
+        coords = CORRIDOR_COORDS.get(corridor.name, None)
+        if coords:
+            start_lat, start_lon = coords[0]
+            end_lat, end_lon = coords[1]
+        else:
+            start_lat, start_lon = corridor.start_lat, corridor.start_lon
+            end_lat, end_lon = corridor.end_lat, corridor.end_lon
+        
         return {
             "name": corridor.name,
             "name_ar": corridor.name_ar,
@@ -1578,7 +1643,11 @@ class WS6ReportGenerator:
             "sectors": corridor.economic_sectors,
             "investment_sar_b": corridor.investment_sar_billion,
             "priority": corridor.priority,
-            "timeline": corridor.timeline
+            "timeline": corridor.timeline,
+            "start_lat": start_lat,
+            "start_lon": start_lon,
+            "end_lat": end_lat,
+            "end_lon": end_lon
         }
     
     def _zone_to_dict(self, zone: FunctionalZone) -> Dict:

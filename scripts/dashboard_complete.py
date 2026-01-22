@@ -519,7 +519,34 @@ def render_ws6_nss_draft():
         col2.metric("Tier 2 (Regional)", tier2)
         col3.metric("Tier 3 (Sub-regional)", tier3)
         
-        # Chart
+        # Geographic Map of Strategic Nodes
+        if 'Lat' in nodes.columns and 'Lon' in nodes.columns:
+            st.subheader("🗺️ Strategic Nodes Map")
+            fig_map = px.scatter_geo(
+                nodes,
+                lat='Lat',
+                lon='Lon',
+                size='Pop_2050_M' if 'Pop_2050_M' in nodes.columns else None,
+                color='Tier',
+                hover_name='Name' if 'Name' in nodes.columns else None,
+                hover_data=['Function', 'Pop_2050_M'] if all(c in nodes.columns for c in ['Function', 'Pop_2050_M']) else None,
+                title="Saudi Arabia Strategic Nodes Network",
+                color_discrete_sequence=['#006C35', '#28a745', '#74c476'],
+                scope='asia'
+            )
+            fig_map.update_geos(
+                center=dict(lat=24.0, lon=45.0),
+                projection_scale=4,
+                showland=True,
+                landcolor='rgb(243, 243, 243)',
+                countrycolor='rgb(204, 204, 204)',
+                showocean=True,
+                oceancolor='rgb(230, 245, 255)'
+            )
+            fig_map.update_layout(height=500, margin={"r":0,"t":40,"l":0,"b":0})
+            st.plotly_chart(fig_map, use_container_width=True)
+        
+        # Bar Chart
         if 'Pop_2050_M' in nodes.columns and 'Name' in nodes.columns:
             fig = px.bar(
                 nodes.sort_values('Pop_2050_M', ascending=True),
@@ -542,6 +569,43 @@ def render_ws6_nss_draft():
         if 'Investment_SAR_B' in corridors.columns:
             total_investment = corridors['Investment_SAR_B'].sum()
             st.metric("Total Corridor Investment", f"SAR {total_investment:.0f}B")
+        
+        # Corridor Map (show start/end points)
+        if all(c in corridors.columns for c in ['Start_Lat', 'Start_Lon', 'End_Lat', 'End_Lon']):
+            st.subheader("🗺️ Development Corridors Map")
+            
+            # Create corridor lines using mapbox
+            import plotly.graph_objects as go
+            fig_corr = go.Figure()
+            
+            colors = {'critical': '#dc3545', 'high': '#ffc107', 'medium': '#28a745'}
+            
+            for _, row in corridors.iterrows():
+                color = colors.get(row.get('Priority', 'medium'), '#28a745')
+                fig_corr.add_trace(go.Scattergeo(
+                    lon=[row['Start_Lon'], row['End_Lon']],
+                    lat=[row['Start_Lat'], row['End_Lat']],
+                    mode='lines+markers',
+                    line=dict(width=3, color=color),
+                    marker=dict(size=8),
+                    name=row['Name'],
+                    hoverinfo='name'
+                ))
+            
+            fig_corr.update_geos(
+                center=dict(lat=24.0, lon=45.0),
+                projection_scale=4,
+                scope='asia',
+                showland=True,
+                landcolor='rgb(243, 243, 243)'
+            )
+            fig_corr.update_layout(
+                title="Saudi Arabia Development Corridors",
+                height=500,
+                showlegend=True,
+                margin={"r":0,"t":40,"l":0,"b":0}
+            )
+            st.plotly_chart(fig_corr, use_container_width=True)
         
         # Chart
         if 'Name' in corridors.columns and 'Investment_SAR_B' in corridors.columns:

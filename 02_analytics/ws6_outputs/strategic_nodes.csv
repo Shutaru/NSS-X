@@ -1,21 +1,21 @@
-Name,Region,Tier,Type,Pop_2024_M,Pop_2050_M,Functions,Priority
-Riyadh,Riyadh,1,capital,8.9,15.0,"National Capital, Financial Hub, Technology Center",critical
-Jeddah,Makkah,1,economic,4.8,7.5,"Commercial Gateway, Red Sea Hub, Creative Industries",critical
-Dammam-Khobar-Dhahran,Eastern Province,1,industrial,5.3,8.0,"Energy Hub, Industrial Base, Technology R&D",critical
-NEOM,Tabuk,1,emerging,0.05,2.0,"Future City, Innovation Hub, Sustainable Living",critical
-Makkah,Makkah,1,tourism,2.4,4.0,"Holy City, Religious Tourism, Services Hub",critical
-Madinah,Madinah,2,tourism,1.5,2.8,"Holy City, Cultural Tourism, Knowledge Hub",high
-Tabuk City,Tabuk,2,emerging,0.7,1.5,"NEOM Gateway, Agriculture, Tourism Base",high
-Abha,Asir,2,tourism,1.2,2.0,"Mountain Tourism, Regional Capital, Agriculture",medium
-Jubail,Eastern Province,2,industrial,0.5,1.2,"Industrial City, Petrochemicals, Manufacturing",high
-Yanbu,Madinah,2,industrial,0.3,0.8,"Industrial Port, Petrochemicals, Red Sea Access",high
-Buraydah,Al-Qassim,2,economic,0.8,1.2,"Agricultural Hub, Food Processing, Logistics",medium
-Hail,Hail,2,economic,0.5,0.8,"Agricultural Center, Mining Gateway, Heritage Tourism",medium
-Jazan City,Jazan,2,industrial,0.5,0.9,"Economic City, Agriculture, Fishing",medium
-Arar,Northern Borders,2,industrial,0.3,0.6,"Mining Hub, Renewable Energy, Border Trade",medium
-Sakaka,Al-Jouf,2,economic,0.35,0.6,"Olive Capital, Renewable Energy, Heritage Tourism",medium
-Al-Kharj,Riyadh,3,economic,0.4,0.7,"Agricultural Processing, Industrial Zone, Riyadh Satellite",medium
-Taif,Makkah,3,tourism,0.7,1.0,"Summer Resort, Agriculture, Heritage",medium
-AlUla,Madinah,3,tourism,0.05,0.15,"Heritage Tourism, Cultural Destination, Arts",high
-Najran,Najran,3,economic,0.4,0.55,"Heritage City, Agriculture, Border Trade",low
-Al-Baha,Al-Baha,3,tourism,0.25,0.35,"Mountain Tourism, Heritage, Agriculture",low
+Name,Region,Tier,Type,Pop_2024_M,Pop_2050_M,Functions,Priority,Lat,Lon
+Riyadh,Riyadh,1,capital,8.9,15.0,"National Capital, Financial Hub, Technology Center",critical,24.7136,46.6753
+Jeddah,Makkah,1,economic,4.8,7.5,"Commercial Gateway, Red Sea Hub, Creative Industries",critical,21.4858,39.1925
+Dammam-Khobar-Dhahran,Eastern Province,1,industrial,5.3,8.0,"Energy Hub, Industrial Base, Technology R&D",critical,26.4207,50.0888
+NEOM,Tabuk,1,emerging,0.05,2.0,"Future City, Innovation Hub, Sustainable Living",critical,28.0,35.0
+Makkah,Makkah,1,tourism,2.4,4.0,"Holy City, Religious Tourism, Services Hub",critical,21.3891,39.8579
+Madinah,Madinah,2,tourism,1.5,2.8,"Holy City, Cultural Tourism, Knowledge Hub",high,24.5247,39.5692
+Tabuk City,Tabuk,2,emerging,0.7,1.5,"NEOM Gateway, Agriculture, Tourism Base",high,28.3835,36.5662
+Abha,Asir,2,tourism,1.2,2.0,"Mountain Tourism, Regional Capital, Agriculture",medium,18.2164,42.5053
+Jubail,Eastern Province,2,industrial,0.5,1.2,"Industrial City, Petrochemicals, Manufacturing",high,27.0046,49.6225
+Yanbu,Madinah,2,industrial,0.3,0.8,"Industrial Port, Petrochemicals, Red Sea Access",high,24.0895,38.0618
+Buraydah,Al-Qassim,2,economic,0.8,1.2,"Agricultural Hub, Food Processing, Logistics",medium,26.326,43.975
+Hail,Hail,2,economic,0.5,0.8,"Agricultural Center, Mining Gateway, Heritage Tourism",medium,27.5114,41.7208
+Jazan City,Jazan,2,industrial,0.5,0.9,"Economic City, Agriculture, Fishing",medium,24.5,45.0
+Arar,Northern Borders,2,industrial,0.3,0.6,"Mining Hub, Renewable Energy, Border Trade",medium,24.5,45.0
+Sakaka,Al-Jouf,2,economic,0.35,0.6,"Olive Capital, Renewable Energy, Heritage Tourism",medium,29.9697,40.2064
+Al-Kharj,Riyadh,3,economic,0.4,0.7,"Agricultural Processing, Industrial Zone, Riyadh Satellite",medium,24.5,45.0
+Taif,Makkah,3,tourism,0.7,1.0,"Summer Resort, Agriculture, Heritage",medium,21.2703,40.4158
+AlUla,Madinah,3,tourism,0.05,0.15,"Heritage Tourism, Cultural Destination, Arts",high,24.5,45.0
+Najran,Najran,3,economic,0.4,0.55,"Heritage City, Agriculture, Border Trade",low,24.5,45.0
+Al-Baha,Al-Baha,3,tourism,0.25,0.35,"Mountain Tourism, Heritage, Agriculture",low,24.5,45.0

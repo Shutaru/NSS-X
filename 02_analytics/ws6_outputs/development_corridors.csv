@@ -1,7 +1,7 @@
-Name,Type,Origin,Destination,Length_km,Investment_SAR_B,Priority,Timeline
-Central Economic Corridor,economic,Riyadh,Dammam,450,85,critical,2025-2035
-Red Sea Tourism Corridor,tourism,NEOM,Jeddah,1200,150,critical,2025-2040
-Holy Cities Corridor,mixed,Makkah,Madinah,450,40,critical,2025-2030
-Northern Mining & Energy Corridor,logistics,Arar,Jubail,1100,95,high,2025-2040
-Southern Tourism & Agriculture Corridor,mixed,Abha,Jazan City,600,35,medium,2030-2045
-Trans-Arabia Land Bridge,logistics,Jeddah,Dammam,1200,120,critical,2025-2035
+Name,Type,Origin,Destination,Length_km,Investment_SAR_B,Priority,Timeline,Start_Lat,Start_Lon,End_Lat,End_Lon
+Central Economic Corridor,economic,Riyadh,Dammam,450,85,critical,2025-2035,24.5,45.0,25.0,46.0
+Red Sea Tourism Corridor,tourism,NEOM,Jeddah,1200,150,critical,2025-2040,28.0,35.0,21.4858,39.1925
+Holy Cities Corridor,mixed,Makkah,Madinah,450,40,critical,2025-2030,24.5,45.0,25.0,46.0
+Northern Mining & Energy Corridor,logistics,Arar,Jubail,1100,95,high,2025-2040,24.5,45.0,25.0,46.0
+Southern Tourism & Agriculture Corridor,mixed,Abha,Jazan City,600,35,medium,2030-2045,24.5,45.0,25.0,46.0
+Trans-Arabia Land Bridge,logistics,Jeddah,Dammam,1200,120,critical,2025-2035,24.5,45.0,25.0,46.0

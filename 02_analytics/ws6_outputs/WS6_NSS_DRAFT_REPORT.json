@@ -1,7 +1,7 @@
 {
   "metadata": {
     "report_title": "WS6 - National Spatial Strategy Draft",
-    "generated_date": "2026-01-22T13:23:26.168977",
+    "generated_date": "2026-01-22T13:47:35.415903",
     "version": "1.0",
     "author": "NSS X System"
   },
@@ -173,7 +173,9 @@
           "Qiddiya",
           "King Salman Park",
           "Riyadh Green"
-        ]
+        ],
+        "lat": 24.7136,
+        "lon": 46.6753
       },
       {
         "name": "Jeddah",
@@ -199,7 +201,9 @@
         "giga_projects": [
           "Jeddah Central",
           "Obhur Development"
-        ]
+        ],
+        "lat": 21.4858,
+        "lon": 39.1925
       },
       {
         "name": "Dammam-Khobar-Dhahran",
@@ -224,7 +228,9 @@
         "connectivity": "critical",
         "giga_projects": [
           "King Salman Energy Park"
-        ]
+        ],
+        "lat": 26.4207,
+        "lon": 50.0888
       },
       {
         "name": "NEOM",
@@ -252,7 +258,9 @@
           "Trojena",
           "Oxagon",
           "Sindalah"
-        ]
+        ],
+        "lat": 28.0,
+        "lon": 35.0
       },
       {
         "name": "Makkah",
@@ -273,7 +281,9 @@
           "Hospitality"
         ],
         "connectivity": "critical",
-        "giga_projects": []
+        "giga_projects": [],
+        "lat": 21.3891,
+        "lon": 39.8579
       },
       {
         "name": "Madinah",
@@ -296,7 +306,9 @@
         "connectivity": "high",
         "giga_projects": [
           "AlUla Development"
-        ]
+        ],
+        "lat": 24.5247,
+        "lon": 39.5692
       },
       {
         "name": "Tabuk City",
@@ -317,7 +329,9 @@
           "Agricultural modernization"
         ],
         "connectivity": "high",
-        "giga_projects": []
+        "giga_projects": [],
+        "lat": 28.3835,
+        "lon": 36.5662
       },
       {
         "name": "Abha",
@@ -340,7 +354,9 @@
         "connectivity": "medium",
         "giga_projects": [
           "Asir Development"
-        ]
+        ],
+        "lat": 18.2164,
+        "lon": 42.5053
       },
       {
         "name": "Jubail",
@@ -361,7 +377,9 @@
           "Desalination"
         ],
         "connectivity": "high",
-        "giga_projects": []
+        "giga_projects": [],
+        "lat": 27.0046,
+        "lon": 49.6225
       },
       {
         "name": "Yanbu",
@@ -382,7 +400,9 @@
           "Renewable energy"
         ],
         "connectivity": "high",
-        "giga_projects": []
+        "giga_projects": [],
+        "lat": 24.0895,
+        "lon": 38.0618
       },
       {
         "name": "Buraydah",
@@ -404,7 +424,9 @@
           "Food processing"
         ],
         "connectivity": "medium",
-        "giga_projects": []
+        "giga_projects": [],
+        "lat": 26.326,
+        "lon": 43.975
       },
       {
         "name": "Hail",
@@ -425,7 +447,9 @@
           "Tourism"
         ],
         "connectivity": "medium",
-        "giga_projects": []
+        "giga_projects": [],
+        "lat": 27.5114,
+        "lon": 41.7208
       },
       {
         "name": "Jazan City",
@@ -448,7 +472,9 @@
         "connectivity": "medium",
         "giga_projects": [
           "Jazan Economic City"
-        ]
+        ],
+        "lat": 24.0,
+        "lon": 45.0
       },
       {
         "name": "Arar",
@@ -471,7 +497,9 @@
         "connectivity": "medium",
         "giga_projects": [
           "Waad Al-Shamal"
-        ]
+        ],
+        "lat": 24.0,
+        "lon": 45.0
       },
       {
         "name": "Sakaka",
@@ -492,7 +520,9 @@
           "Heritage sites"
         ],
         "connectivity": "medium",
-        "giga_projects": []
+        "giga_projects": [],
+        "lat": 29.9697,
+        "lon": 40.2064
       },
       {
         "name": "Al-Kharj",
@@ -512,7 +542,9 @@
           "Riyadh connectivity"
         ],
         "connectivity": "medium",
-        "giga_projects": []
+        "giga_projects": [],
+        "lat": 24.0,
+        "lon": 45.0
       },
       {
         "name": "Taif",
@@ -533,7 +565,9 @@
           "Heritage preservation"
         ],
         "connectivity": "medium",
-        "giga_projects": []
+        "giga_projects": [],
+        "lat": 21.2703,
+        "lon": 40.4158
       },
       {
         "name": "AlUla",
@@ -556,7 +590,9 @@
         "connectivity": "high",
         "giga_projects": [
           "AlUla Development"
-        ]
+        ],
+        "lat": 24.0,
+        "lon": 45.0
       },
       {
         "name": "Najran",
@@ -576,7 +612,9 @@
           "Agricultural development"
         ],
         "connectivity": "low",
-        "giga_projects": []
+        "giga_projects": [],
+        "lat": 24.0,
+        "lon": 45.0
       },
       {
         "name": "Al-Baha",
@@ -596,7 +634,9 @@
           "Heritage preservation"
         ],
         "connectivity": "low",
-        "giga_projects": []
+        "giga_projects": [],
+        "lat": 24.0,
+        "lon": 45.0
       }
     ],
     "development_corridors": [
@@ -624,7 +664,11 @@
         ],
         "investment_sar_b": 85,
         "priority": "critical",
-        "timeline": "2025-2035"
+        "timeline": "2025-2035",
+        "start_lat": 0.0,
+        "start_lon": 0.0,
+        "end_lat": 0.0,
+        "end_lon": 0.0
       },
       {
         "name": "Red Sea Tourism Corridor",
@@ -652,7 +696,11 @@
         ],
         "investment_sar_b": 150,
         "priority": "critical",
-        "timeline": "2025-2040"
+        "timeline": "2025-2040",
+        "start_lat": 28.0,
+        "start_lon": 35.0,
+        "end_lat": 21.4858,
+        "end_lon": 39.1925
       },
       {
         "name": "Holy Cities Corridor",
@@ -677,7 +725,11 @@
         ],
         "investment_sar_b": 40,
         "priority": "critical",
-        "timeline": "2025-2030"
+        "timeline": "2025-2030",
+        "start_lat": 0.0,
+        "start_lon": 0.0,
+        "end_lat": 0.0,
+        "end_lon": 0.0
       },
       {
         "name": "Northern Mining & Energy Corridor",
@@ -705,7 +757,11 @@
         ],
         "investment_sar_b": 95,
         "priority": "high",
-        "timeline": "2025-2040"
+        "timeline": "2025-2040",
+        "start_lat": 0.0,
+        "start_lon": 0.0,
+        "end_lat": 0.0,
+        "end_lon": 0.0
       },
       {
         "name": "Southern Tourism & Agriculture Corridor",
@@ -731,7 +787,11 @@
         ],
         "investment_sar_b": 35,
         "priority": "medium",
-        "timeline": "2030-2045"
+        "timeline": "2030-2045",
+        "start_lat": 0.0,
+        "start_lon": 0.0,
+        "end_lat": 0.0,
+        "end_lon": 0.0
       },
       {
         "name": "Trans-Arabia Land Bridge",
@@ -757,7 +817,11 @@
         ],
         "investment_sar_b": 120,
         "priority": "critical",
-        "timeline": "2025-2035"
+        "timeline": "2025-2035",
+        "start_lat": 0.0,
+        "start_lon": 0.0,
+        "end_lat": 0.0,
+        "end_lon": 0.0
       }
     ],
     "functional_zones": [
