@@ -1,0 +1,908 @@
+{
+  "metadata": {
+    "report_title": "WS5 - Long-Term Scenario Modeling (2030-2050)",
+    "generated_date": "2026-01-22T13:08:54.725961",
+    "version": "1.0",
+    "author": "NSS X System"
+  },
+  "executive_summary": {
+    "overview": "This comprehensive scenario analysis models 7 alternative futures for \n            Saudi Arabia to 2050, including 4 core scenarios and 3 stress tests (climate, technology, \n            energy transition). The analysis projects demographic, economic, and spatial outcomes \n            at national and regional levels, with risk and opportunity assessments for all 13 regions.",
+    "scenarios_analyzed": {
+      "core_scenarios": [
+        "Baseline",
+        "Vision 2030",
+        "Accelerated",
+        "Conservative"
+      ],
+      "stress_tests": [
+        "Climate Stress",
+        "Technology Disruption",
+        "Energy Transition"
+      ],
+      "total": 7
+    },
+    "key_findings": [
+      "Population 2050 range: 50M - 69M",
+      "GDP 2050 range: $1854B - $6435B",
+      "Climate stress scenario shows highest regional risk (avg 7.5/10)",
+      "Energy transition scenario requires fastest economic restructuring",
+      "Tabuk (NEOM) shows highest growth potential across all scenarios",
+      "Al-Qassim and Riyadh face critical water stress in all scenarios",
+      "Vision 2030 achievement probability estimated at 35%"
+    ],
+    "critical_uncertainties": [
+      "Global oil demand trajectory",
+      "Climate change severity",
+      "Technology adoption pace",
+      "Regional geopolitical stability",
+      "Investment capacity and execution"
+    ],
+    "planning_implications": [
+      "Design flexible spatial strategies robust to multiple scenarios",
+      "Prioritize water security as non-negotiable investment",
+      "Accelerate economic diversification as risk mitigation",
+      "Develop regional specialization to distribute growth",
+      "Build climate adaptation into all infrastructure"
+    ]
+  },
+  "section_1_scenarios": {
+    "baseline": {
+      "name": "Baseline (Current Trends)",
+      "description": "Continuation of current development trends without major policy shifts.",
+      "probability": 0.3,
+      "key_assumptions": [
+        "Oil prices remain moderate ($70-80/barrel)",
+        "Vision 2030 targets partially achieved",
+        "Regional stability maintained",
+        "Gradual economic diversification",
+        "Climate policies implemented slowly"
+      ],
+      "key_risks": [
+        "Insufficient diversification",
+        "Youth unemployment persistence",
+        "Water stress intensification",
+        "Climate change impacts"
+      ],
+      "key_opportunities": [
+        "Incremental progress on transformation",
+        "Lower financial risk",
+        "Social stability"
+      ],
+      "demographic_summary": {
+        "2030": {
+          "year": 2030,
+          "total_population": 40.5124074268157,
+          "saudi_population": 26.73818890169836,
+          "expat_population": 13.77421852511734,
+          "urban_population_pct": 87.8,
+          "riyadh_share_pct": 25.9,
+          "youth_share_pct": 60.6
+        },
+        "2050": {
+          "year": 2050,
+          "total_population": 57.882011030158765,
+          "saudi_population": 38.202127279904786,
+          "expat_population": 19.679883750253982,
+          "urban_population_pct": 92,
+          "riyadh_share_pct": 28.9,
+          "youth_share_pct": 52.6
+        }
+      },
+      "economic_summary": {
+        "2030": {
+          "year": 2030,
+          "gdp_billion_usd": 1323.009944554132,
+          "gdp_per_capita_usd": 32656.90756453082,
+          "oil_gdp_share_pct": 33.2,
+          "tourism_gdp_share_pct": 8.0,
+          "tech_gdp_share_pct": 6.4,
+          "unemployment_rate_pct": 9.8,
+          "female_labor_participation_pct": 37.8
+        },
+        "2050": {
+          "year": 2050,
+          "gdp_billion_usd": 2389.5031244385777,
+          "gdp_per_capita_usd": 41282.31002881973,
+          "oil_gdp_share_pct": 20,
+          "tourism_gdp_share_pct": 15,
+          "tech_gdp_share_pct": 12,
+          "unemployment_rate_pct": 6,
+          "female_labor_participation_pct": 45
+        }
+      },
+      "spatial_summary": {
+        "2030": {
+          "year": 2030,
+          "urbanized_area_sqkm": 5900,
+          "new_cities_completed": 2,
+          "protected_area_pct": 4.6,
+          "renewable_capacity_gw": 14.0,
+          "rail_network_km": 1680,
+          "desalination_capacity_mcm": 3100
+        },
+        "2050": {
+          "year": 2050,
+          "urbanized_area_sqkm": 8900,
+          "new_cities_completed": 3,
+          "protected_area_pct": 6.6,
+          "renewable_capacity_gw": 44.0,
+          "rail_network_km": 3280,
+          "desalination_capacity_mcm": 5100
+        }
+      }
+    },
+    "vision2030": {
+      "name": "Vision 2030 Achievement",
+      "description": "Full achievement of Vision 2030 targets and continued progress to 2050.",
+      "probability": 0.35,
+      "key_assumptions": [
+        "Strong oil prices support transition ($80-100/barrel)",
+        "Mega-projects delivered on schedule",
+        "Tourism reaches 100M visitors by 2030",
+        "Non-oil GDP dominates by 2040",
+        "Significant social reforms continue"
+      ],
+      "key_risks": [
+        "Mega-project cost overruns",
+        "Global economic downturn",
+        "Execution capacity constraints",
+        "Labor market imbalances"
+      ],
+      "key_opportunities": [
+        "Global tourism hub",
+        "Regional technology leader",
+        "Clean energy pioneer",
+        "Entertainment capital"
+      ],
+      "demographic_summary": {
+        "2030": {
+          "year": 2030,
+          "total_population": 41.47694477745626,
+          "saudi_population": 25.715705762022882,
+          "expat_population": 15.761239015433379,
+          "urban_population_pct": 88.4,
+          "riyadh_share_pct": 26.2,
+          "youth_share_pct": 60.9
+        },
+        "2050": {
+          "year": 2050,
+          "total_population": 64.09507711901756,
+          "saudi_population": 39.73894781379089,
+          "expat_population": 24.356129305226673,
+          "urban_population_pct": 95,
+          "riyadh_share_pct": 30.2,
+          "youth_share_pct": 53.9
+        }
+      },
+      "economic_summary": {
+        "2030": {
+          "year": 2030,
+          "gdp_billion_usd": 1484.8259698125005,
+          "gdp_per_capita_usd": 35798.826981575075,
+          "oil_gdp_share_pct": 29.0,
+          "tourism_gdp_share_pct": 11.0,
+          "tech_gdp_share_pct": 8.8,
+          "unemployment_rate_pct": 8.0,
+          "female_labor_participation_pct": 42.0
+        },
+        "2050": {
+          "year": 2050,
+          "gdp_billion_usd": 3939.6853382423487,
+          "gdp_per_capita_usd": 61466.27034907506,
+          "oil_gdp_share_pct": 12,
+          "tourism_gdp_share_pct": 20,
+          "tech_gdp_share_pct": 18,
+          "unemployment_rate_pct": 4,
+          "female_labor_participation_pct": 55
+        }
+      },
+      "spatial_summary": {
+        "2030": {
+          "year": 2030,
+          "urbanized_area_sqkm": 6500,
+          "new_cities_completed": 4,
+          "protected_area_pct": 5.5,
+          "renewable_capacity_gw": 29,
+          "rail_network_km": 2100,
+          "desalination_capacity_mcm": 3700
+        },
+        "2050": {
+          "year": 2050,
+          "urbanized_area_sqkm": 11500,
+          "new_cities_completed": 8,
+          "protected_area_pct": 10.5,
+          "renewable_capacity_gw": 109,
+          "rail_network_km": 5100,
+          "desalination_capacity_mcm": 7700
+        }
+      }
+    },
+    "accelerated": {
+      "name": "Accelerated Transformation",
+      "description": "Beyond Vision 2030 - rapid diversification and global leadership.",
+      "probability": 0.15,
+      "key_assumptions": [
+        "Green hydrogen becomes major export",
+        "NEOM becomes global innovation hub",
+        "KSA leads G20 in growth rates",
+        "Full energy transition by 2045",
+        "Regional economic integration (GCC+)"
+      ],
+      "key_risks": [
+        "Social disruption from rapid change",
+        "Infrastructure capacity limits",
+        "Environmental carrying capacity",
+        "Geopolitical instability"
+      ],
+      "key_opportunities": [
+        "Global economic power",
+        "Technology leadership",
+        "Sustainable development model",
+        "Polycentric urban network"
+      ],
+      "demographic_summary": {
+        "2030": {
+          "year": 2030,
+          "total_population": 42.21284042294919,
+          "saudi_population": 24.483447445310528,
+          "expat_population": 17.72939297763866,
+          "urban_population_pct": 89.0,
+          "riyadh_share_pct": 25.6,
+          "youth_share_pct": 61.2
+        },
+        "2050": {
+          "year": 2050,
+          "total_population": 69.17065430839946,
+          "saudi_population": 40.11897949887169,
+          "expat_population": 29.051674809527775,
+          "urban_population_pct": 98,
+          "riyadh_share_pct": 27.6,
+          "youth_share_pct": 55.2
+        }
+      },
+      "economic_summary": {
+        "2030": {
+          "year": 2030,
+          "gdp_billion_usd": 1662.8092298486927,
+          "gdp_per_capita_usd": 39391.07658210792,
+          "oil_gdp_share_pct": 26.0,
+          "tourism_gdp_share_pct": 12.2,
+          "tech_gdp_share_pct": 11.2,
+          "unemployment_rate_pct": 7.4,
+          "female_labor_participation_pct": 45.0
+        },
+        "2050": {
+          "year": 2050,
+          "gdp_billion_usd": 6434.5470408241035,
+          "gdp_per_capita_usd": 93024.23267727785,
+          "oil_gdp_share_pct": 8,
+          "tourism_gdp_share_pct": 25,
+          "tech_gdp_share_pct": 25,
+          "unemployment_rate_pct": 3,
+          "female_labor_participation_pct": 65
+        }
+      },
+      "spatial_summary": {
+        "2030": {
+          "year": 2030,
+          "urbanized_area_sqkm": 7100,
+          "new_cities_completed": 6,
+          "protected_area_pct": 6.4,
+          "renewable_capacity_gw": 41,
+          "rail_network_km": 2400,
+          "desalination_capacity_mcm": 4300
+        },
+        "2050": {
+          "year": 2050,
+          "urbanized_area_sqkm": 14100,
+          "new_cities_completed": 15,
+          "protected_area_pct": 14.4,
+          "renewable_capacity_gw": 161,
+          "rail_network_km": 6400,
+          "desalination_capacity_mcm": 10300
+        }
+      }
+    },
+    "conservative": {
+      "name": "Conservative (Slower Transition)",
+      "description": "Slower transformation due to external or internal constraints.",
+      "probability": 0.2,
+      "key_assumptions": [
+        "Oil prices decline ($50-60/barrel)",
+        "Global recession impacts investment",
+        "Mega-projects scaled back",
+        "Gradual social reforms",
+        "Regional tensions increase"
+      ],
+      "key_risks": [
+        "Economic stagnation",
+        "Youth frustration",
+        "Continued oil dependence",
+        "Brain drain"
+      ],
+      "key_opportunities": [
+        "Lower risk exposure",
+        "More sustainable pace",
+        "Consolidation of gains"
+      ],
+      "demographic_summary": {
+        "2030": {
+          "year": 2030,
+          "total_population": 39.1006933603096,
+          "saudi_population": 27.37048535221672,
+          "expat_population": 11.730208008092879,
+          "urban_population_pct": 87.2,
+          "riyadh_share_pct": 26.5,
+          "youth_share_pct": 60.0
+        },
+        "2050": {
+          "year": 2050,
+          "total_population": 49.63576374449151,
+          "saudi_population": 34.74503462114406,
+          "expat_population": 14.890729123347453,
+          "urban_population_pct": 90,
+          "riyadh_share_pct": 31.5,
+          "youth_share_pct": 50.0
+        }
+      },
+      "economic_summary": {
+        "2030": {
+          "year": 2030,
+          "gdp_billion_usd": 1247.787960544512,
+          "gdp_per_capita_usd": 31912.169665285757,
+          "oil_gdp_share_pct": 35.0,
+          "tourism_gdp_share_pct": 6.8,
+          "tech_gdp_share_pct": 5.2,
+          "unemployment_rate_pct": 10.4,
+          "female_labor_participation_pct": 36.0
+        },
+        "2050": {
+          "year": 2050,
+          "gdp_billion_usd": 1854.1472707042599,
+          "gdp_per_capita_usd": 37355.066807248026,
+          "oil_gdp_share_pct": 28,
+          "tourism_gdp_share_pct": 10,
+          "tech_gdp_share_pct": 8,
+          "unemployment_rate_pct": 8.4,
+          "female_labor_participation_pct": 40
+        }
+      },
+      "spatial_summary": {
+        "2030": {
+          "year": 2030,
+          "urbanized_area_sqkm": 5600,
+          "new_cities_completed": 1,
+          "protected_area_pct": 4.3,
+          "renewable_capacity_gw": 9.8,
+          "rail_network_km": 1500,
+          "desalination_capacity_mcm": 2980
+        },
+        "2050": {
+          "year": 2050,
+          "urbanized_area_sqkm": 7600,
+          "new_cities_completed": 2,
+          "protected_area_pct": 5.3,
+          "renewable_capacity_gw": 25.8,
+          "rail_network_km": 2500,
+          "desalination_capacity_mcm": 4580
+        }
+      }
+    },
+    "climate_stress": {
+      "name": "Climate Stress",
+      "description": "Severe climate change impacts scenario with +3°C warming by 2050,\n            extreme water stress, reduced agricultural viability, and increased cooling costs.\n            Requires massive adaptation investment and potential population redistribution.",
+      "probability": 0.15,
+      "key_assumptions": [
+        "Global emissions follow RCP 8.5 pathway",
+        "+3°C temperature increase by 2050",
+        "Extreme heat events double in frequency",
+        "Water availability decreases 30%",
+        "Agricultural yields drop 40-60%",
+        "Cooling costs increase 80%",
+        "International tourism declines significantly"
+      ],
+      "key_risks": [
+        "Critical water shortages",
+        "Food security crisis",
+        "Heat-related health impacts",
+        "Infrastructure damage from extreme events",
+        "Economic disruption from adaptation costs",
+        "Climate migration pressures",
+        "Ecosystem collapse in vulnerable areas"
+      ],
+      "key_opportunities": [
+        "Leadership in climate adaptation technology",
+        "Desalination technology exports",
+        "Indoor/vertical farming innovation",
+        "Extreme heat construction expertise",
+        "Climate-resilient urban design model"
+      ],
+      "demographic_summary": {
+        "2030": {
+          "year": 2030,
+          "total_population": 38.639333481876406,
+          "saudi_population": 27.820320106951012,
+          "expat_population": 10.819013374925394,
+          "urban_population_pct": 89.0,
+          "riyadh_share_pct": 27.4,
+          "youth_share_pct": 60.0
+        },
+        "2050": {
+          "year": 2050,
+          "total_population": 47.14732986481359,
+          "saudi_population": 33.94607750266579,
+          "expat_population": 13.201252362147807,
+          "urban_population_pct": 95,
+          "riyadh_share_pct": 35.4,
+          "youth_share_pct": 50.0
+        }
+      },
+      "economic_summary": {
+        "2030": {
+          "year": 2030,
+          "gdp_billion_usd": 1211.535136448445,
+          "gdp_per_capita_usd": 31354.96985259101,
+          "oil_gdp_share_pct": 36.2,
+          "tourism_gdp_share_pct": 6.2,
+          "tech_gdp_share_pct": 5.8,
+          "unemployment_rate_pct": 12.2,
+          "female_labor_participation_pct": 35.4
+        },
+        "2050": {
+          "year": 2050,
+          "gdp_billion_usd": 1631.7621641368905,
+          "gdp_per_capita_usd": 34609.85317335409,
+          "oil_gdp_share_pct": 30.2,
+          "tourism_gdp_share_pct": 8,
+          "tech_gdp_share_pct": 10,
+          "unemployment_rate_pct": 15,
+          "female_labor_participation_pct": 42
+        }
+      },
+      "spatial_summary": {
+        "2030": {
+          "year": 2030,
+          "urbanized_area_sqkm": 6200,
+          "new_cities_completed": 2,
+          "protected_area_pct": 3.7,
+          "renewable_capacity_gw": 23,
+          "rail_network_km": 1560,
+          "desalination_capacity_mcm": 4600
+        },
+        "2050": {
+          "year": 2050,
+          "urbanized_area_sqkm": 10200,
+          "new_cities_completed": 3,
+          "protected_area_pct": 2.7,
+          "renewable_capacity_gw": 83,
+          "rail_network_km": 2760,
+          "desalination_capacity_mcm": 11600
+        }
+      }
+    },
+    "tech_disruption": {
+      "name": "Technology Disruption",
+      "description": "Rapid technological transformation driven by AI, automation, and \n            digitalization. Major disruption to labor markets, accelerated economic growth\n            in tech sectors, and fundamental changes to urban form and mobility.",
+      "probability": 0.2,
+      "key_assumptions": [
+        "AI reaches transformative capability by 2030",
+        "40% of jobs automated by 2040",
+        "Autonomous vehicles dominate by 2035",
+        "NEOM becomes global tech hub",
+        "Digital economy reaches 35% of GDP",
+        "Universal digital skills training implemented",
+        "Regulatory framework enables innovation"
+      ],
+      "key_risks": [
+        "Mass technological unemployment",
+        "Skills gap crisis",
+        "Social inequality from automation",
+        "Cybersecurity threats",
+        "Digital divide between regions",
+        "Traditional sector collapse"
+      ],
+      "key_opportunities": [
+        "Global AI and tech leadership",
+        "Productivity revolution",
+        "New industry creation",
+        "Quality of life improvements",
+        "Environmental efficiency gains",
+        "Attraction of global talent"
+      ],
+      "demographic_summary": {
+        "2030": {
+          "year": 2030,
+          "total_population": 40.9923120612096,
+          "saudi_population": 24.59538723672576,
+          "expat_population": 16.396924824483843,
+          "urban_population_pct": 89.6,
+          "riyadh_share_pct": 25.6,
+          "youth_share_pct": 60.9
+        },
+        "2050": {
+          "year": 2050,
+          "total_population": 60.91241936248652,
+          "saudi_population": 36.54745161749191,
+          "expat_population": 24.36496774499461,
+          "urban_population_pct": 98,
+          "riyadh_share_pct": 27.6,
+          "youth_share_pct": 53.9
+        }
+      },
+      "economic_summary": {
+        "2030": {
+          "year": 2030,
+          "gdp_billion_usd": 1571.7191763796484,
+          "gdp_per_capita_usd": 38341.80355654889,
+          "oil_gdp_share_pct": 27.2,
+          "tourism_gdp_share_pct": 9.8,
+          "tech_gdp_share_pct": 13.0,
+          "unemployment_rate_pct": 12.8,
+          "female_labor_participation_pct": 43.8
+        },
+        "2050": {
+          "year": 2050,
+          "gdp_billion_usd": 5040.716322924332,
+          "gdp_per_capita_usd": 82753.50701352546,
+          "oil_gdp_share_pct": 10,
+          "tourism_gdp_share_pct": 18,
+          "tech_gdp_share_pct": 35,
+          "unemployment_rate_pct": 5,
+          "female_labor_participation_pct": 60
+        }
+      },
+      "spatial_summary": {
+        "2030": {
+          "year": 2030,
+          "urbanized_area_sqkm": 6800,
+          "new_cities_completed": 4,
+          "protected_area_pct": 5.8,
+          "renewable_capacity_gw": 35,
+          "rail_network_km": 2280,
+          "desalination_capacity_mcm": 4000
+        },
+        "2050": {
+          "year": 2050,
+          "urbanized_area_sqkm": 12800,
+          "new_cities_completed": 10,
+          "protected_area_pct": 11.8,
+          "renewable_capacity_gw": 135,
+          "rail_network_km": 5880,
+          "desalination_capacity_mcm": 9000
+        }
+      }
+    },
+    "energy_transition": {
+      "name": "Energy Transition",
+      "description": "Accelerated global energy transition scenario with oil demand \n            peaking by 2028 and declining 50% by 2040. KSA pivots to become green hydrogen\n            and renewable energy superpower, requiring massive economic restructuring.",
+      "probability": 0.25,
+      "key_assumptions": [
+        "Global oil demand peaks 2028, declines 4%/year after",
+        "Oil prices drop to $30-40/barrel by 2040",
+        "Green hydrogen becomes major export (10% of GDP by 2040)",
+        "100GW renewable capacity by 2035",
+        "Net zero domestic emissions by 2050",
+        "Massive retraining of oil sector workforce",
+        "PIF pivots fully to clean energy investments"
+      ],
+      "key_risks": [
+        "Stranded oil assets",
+        "Fiscal crisis during transition",
+        "Social unrest from job losses",
+        "Failed hydrogen market development",
+        "Investment shortfall for transition",
+        "Skills shortage for new sectors"
+      ],
+      "key_opportunities": [
+        "Green hydrogen superpower",
+        "Solar manufacturing hub",
+        "Circular carbon economy leader",
+        "Sustainable tourism destination",
+        "Clean energy technology exports",
+        "Climate finance leadership"
+      ],
+      "demographic_summary": {
+        "2030": {
+          "year": 2030,
+          "total_population": 40.5124074268157,
+          "saudi_population": 25.927940753162048,
+          "expat_population": 14.584466673653651,
+          "urban_population_pct": 88.4,
+          "riyadh_share_pct": 25.9,
+          "youth_share_pct": 60.6
+        },
+        "2050": {
+          "year": 2050,
+          "total_population": 57.882011030158765,
+          "saudi_population": 37.04448705930161,
+          "expat_population": 20.837523970857156,
+          "urban_population_pct": 94,
+          "riyadh_share_pct": 28.9,
+          "youth_share_pct": 52.6
+        }
+      },
+      "economic_summary": {
+        "2030": {
+          "year": 2030,
+          "gdp_billion_usd": 1247.787960544512,
+          "gdp_per_capita_usd": 30800.143457250702,
+          "oil_gdp_share_pct": 23.0,
+          "tourism_gdp_share_pct": 8.6,
+          "tech_gdp_share_pct": 10.0,
+          "unemployment_rate_pct": 12.8,
+          "female_labor_participation_pct": 40.2
+        },
+        "2050": {
+          "year": 2050,
+          "gdp_billion_usd": 2948.2904326068146,
+          "gdp_per_capita_usd": 50936.21282561591,
+          "oil_gdp_share_pct": 5,
+          "tourism_gdp_share_pct": 15,
+          "tech_gdp_share_pct": 25,
+          "unemployment_rate_pct": 5.8,
+          "female_labor_participation_pct": 52
+        }
+      },
+      "spatial_summary": {
+        "2030": {
+          "year": 2030,
+          "urbanized_area_sqkm": 6080,
+          "new_cities_completed": 3,
+          "protected_area_pct": 7.0,
+          "renewable_capacity_gw": 53,
+          "rail_network_km": 2400,
+          "desalination_capacity_mcm": 4300
+        },
+        "2050": {
+          "year": 2050,
+          "urbanized_area_sqkm": 9680,
+          "new_cities_completed": 6,
+          "protected_area_pct": 17.0,
+          "renewable_capacity_gw": 213,
+          "rail_network_km": 6400,
+          "desalination_capacity_mcm": 10300
+        }
+      }
+    }
+  },
+  "section_2_regional_projections": {
+    "summary": "Regional projections for all 13 regions across 7 scenarios",
+    "data_file": "regional_scenario_projections.json"
+  },
+  "section_3_risk_heatmaps": {
+    "description": "Risk assessment by region and scenario (0-10 scale)",
+    "highest_risk_combinations": [
+      {
+        "region": "Al-Qassim",
+        "scenario": "climate_stress",
+        "risk_score": 9.375
+      },
+      {
+        "region": "Hail",
+        "scenario": "climate_stress",
+        "risk_score": 8.75
+      },
+      {
+        "region": "Riyadh",
+        "scenario": "climate_stress",
+        "risk_score": 8.125
+      },
+      {
+        "region": "Eastern Province",
+        "scenario": "climate_stress",
+        "risk_score": 8.125
+      },
+      {
+        "region": "Najran",
+        "scenario": "climate_stress",
+        "risk_score": 8.125
+      },
+      {
+        "region": "Al-Baha",
+        "scenario": "climate_stress",
+        "risk_score": 8.125
+      },
+      {
+        "region": "Makkah",
+        "scenario": "climate_stress",
+        "risk_score": 7.5
+      },
+      {
+        "region": "Madinah",
+        "scenario": "climate_stress",
+        "risk_score": 7.5
+      },
+      {
+        "region": "Tabuk",
+        "scenario": "climate_stress",
+        "risk_score": 7.5
+      },
+      {
+        "region": "Northern Borders",
+        "scenario": "climate_stress",
+        "risk_score": 7.5
+      }
+    ],
+    "data_file": "risk_heatmap_by_region.csv"
+  },
+  "section_4_opportunity_heatmaps": {
+    "description": "Opportunity assessment by region and scenario (0-10 scale)",
+    "highest_opportunity_combinations": [
+      {
+        "region": "Riyadh",
+        "scenario": "vision2030",
+        "opportunity_score": 9.1575
+      },
+      {
+        "region": "Tabuk",
+        "scenario": "vision2030",
+        "opportunity_score": 9.1575
+      },
+      {
+        "region": "Tabuk",
+        "scenario": "energy_transition",
+        "opportunity_score": 9.1575
+      },
+      {
+        "region": "Riyadh",
+        "scenario": "accelerated",
+        "opportunity_score": 8.325
+      },
+      {
+        "region": "Makkah",
+        "scenario": "vision2030",
+        "opportunity_score": 8.325
+      },
+      {
+        "region": "Eastern Province",
+        "scenario": "vision2030",
+        "opportunity_score": 8.325
+      },
+      {
+        "region": "Madinah",
+        "scenario": "vision2030",
+        "opportunity_score": 8.325
+      },
+      {
+        "region": "Tabuk",
+        "scenario": "accelerated",
+        "opportunity_score": 8.325
+      },
+      {
+        "region": "Tabuk",
+        "scenario": "tech_disruption",
+        "opportunity_score": 8.325
+      },
+      {
+        "region": "Northern Borders",
+        "scenario": "vision2030",
+        "opportunity_score": 8.325
+      }
+    ],
+    "data_file": "opportunity_heatmap_by_region.csv"
+  },
+  "section_5_scenario_maps": {
+    "description": "Spatial data for scenario visualization",
+    "maps_available": [
+      "Population distribution 2050",
+      "Economic corridors 2050",
+      "Infrastructure network 2050"
+    ],
+    "data_file": "scenario_map_data.json"
+  },
+  "section_6_model_documentation": {
+    "model_overview": {
+      "name": "NSS X Scenario Simulation Model",
+      "version": "1.0",
+      "language": "Python 3.11+",
+      "dependencies": [
+        "pandas",
+        "numpy",
+        "dataclasses"
+      ]
+    },
+    "model_structure": {
+      "components": [
+        {
+          "name": "ScenarioModeler",
+          "purpose": "Core scenario engine with 4 base scenarios",
+          "inputs": "Base year data, growth assumptions",
+          "outputs": "Demographic, economic, spatial projections"
+        },
+        {
+          "name": "ExtendedScenarioBuilder",
+          "purpose": "Stress test scenario generator",
+          "inputs": "Base scenarios, stress parameters",
+          "outputs": "3 additional stress scenarios"
+        },
+        {
+          "name": "RegionalScenarioProjector",
+          "purpose": "Regional-level projection engine",
+          "inputs": "National scenarios, regional profiles",
+          "outputs": "13 regional projections per scenario"
+        },
+        {
+          "name": "RiskOpportunityAnalyzer",
+          "purpose": "Risk and opportunity assessment",
+          "inputs": "Regional projections, scenario characteristics",
+          "outputs": "Risk/opportunity heatmaps"
+        }
+      ]
+    },
+    "key_assumptions": {
+      "demographic": "UN population projection methodology adapted for KSA",
+      "economic": "Compound annual growth rates with scenario modifiers",
+      "spatial": "Linear infrastructure expansion assumptions",
+      "climate": "IPCC AR6 scenarios for climate projections"
+    },
+    "calibration": {
+      "base_year": 2024,
+      "validation_data": "GASTAT 2023, SAMA 2023, Vision 2030 targets",
+      "last_calibration": "2026-01"
+    },
+    "limitations": [
+      "Simplified regional allocation model",
+      "Limited cross-sectoral interactions",
+      "Static assumption of policy responses",
+      "Uncertainty in technology adoption rates"
+    ],
+    "usage_guide": {
+      "basic_usage": "from ws5_comprehensive import generate_ws5_deliverables; report = generate_ws5_deliverables()",
+      "custom_scenarios": "Use ExtendedScenarioBuilder to add custom scenarios",
+      "regional_analysis": "Use RegionalScenarioProjector.project_region()",
+      "output_format": "JSON reports and CSV data files"
+    }
+  },
+  "recommendations": {
+    "spatial_planning": [
+      "Adopt adaptive spatial planning that accommodates scenario uncertainty",
+      "Prioritize infrastructure investments robust across all scenarios",
+      "Design urban areas for +3°C climate scenario as precaution",
+      "Preserve flexibility in land use designations for emerging sectors"
+    ],
+    "investment_priorities": [
+      "Water security: Mandatory in all scenarios (SAR 50B+)",
+      "Renewable energy: Critical for energy transition, beneficial in all",
+      "Digital infrastructure: Essential for tech disruption preparedness",
+      "Transport connectivity: High value across all scenarios"
+    ],
+    "regional_strategy": [
+      "Riyadh: Strengthen as economic engine while managing water/heat",
+      "Tabuk/NEOM: High-risk/high-reward - monitor execution closely",
+      "Eastern Province: Critical diversification needed for energy transition",
+      "Agricultural regions: Urgent water efficiency transformation"
+    ],
+    "governance": [
+      "Establish scenario monitoring dashboard with trigger indicators",
+      "Bi-annual scenario review and NSS update process",
+      "Regional early warning systems for trajectory deviation",
+      "Cross-ministerial scenario planning coordination"
+    ],
+    "resilience_building": [
+      "Build redundancy in critical infrastructure systems",
+      "Diversify economic corridors to reduce concentration risk",
+      "Protect natural capital as long-term insurance",
+      "Develop adaptive capacity through skills and institutions"
+    ]
+  },
+  "appendices": {
+    "data_sources": [
+      "GASTAT demographic projections",
+      "Vision 2030 official targets",
+      "IMF economic forecasts",
+      "World Bank development indicators",
+      "IPCC climate projections",
+      "IEA energy transition scenarios"
+    ],
+    "output_files": [
+      "WS5_SCENARIO_REPORT.json",
+      "WS5_SCENARIO_REPORT.md",
+      "scenario_comparison_2030.csv",
+      "scenario_comparison_2050.csv",
+      "risk_heatmap_by_region.csv",
+      "opportunity_heatmap_by_region.csv",
+      "regional_scenario_projections.json",
+      "scenario_map_data.json"
+    ]
+  }
+}

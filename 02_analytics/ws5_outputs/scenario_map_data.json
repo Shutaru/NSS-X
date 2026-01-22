@@ -1,0 +1,542 @@
+{
+  "vision2030": {
+    "population_distribution": [
+      {
+        "region": "Riyadh",
+        "population_millions": 19.783608977710582,
+        "population_share_pct": 27.215626189989546,
+        "urbanization_rate": 95,
+        "category": "major"
+      },
+      {
+        "region": "Makkah",
+        "population_millions": 18.94309389504456,
+        "population_share_pct": 26.0593586797158,
+        "urbanization_rate": 95,
+        "category": "major"
+      },
+      {
+        "region": "Eastern Province",
+        "population_millions": 9.670670765436824,
+        "population_share_pct": 13.303607084790157,
+        "urbanization_rate": 95,
+        "category": "major"
+      },
+      {
+        "region": "Madinah",
+        "population_millions": 4.632946946628691,
+        "population_share_pct": 6.373384775222708,
+        "urbanization_rate": 95,
+        "category": "major"
+      },
+      {
+        "region": "Tabuk",
+        "population_millions": 3.7360203681180906,
+        "population_share_pct": 5.139513922431739,
+        "urbanization_rate": 95,
+        "category": "major"
+      },
+      {
+        "region": "Asir",
+        "population_millions": 4.482901703344557,
+        "population_share_pct": 6.166972726874611,
+        "urbanization_rate": 95,
+        "category": "major"
+      },
+      {
+        "region": "Al-Qassim",
+        "population_millions": 2.6480083761897117,
+        "population_share_pct": 3.6427734795777504,
+        "urbanization_rate": 95,
+        "category": "medium"
+      },
+      {
+        "region": "Hail",
+        "population_millions": 1.368491146052381,
+        "population_share_pct": 1.8825859082250225,
+        "urbanization_rate": 95,
+        "category": "medium"
+      },
+      {
+        "region": "Northern Borders",
+        "population_millions": 0.9967793081609808,
+        "population_share_pct": 1.3712347972197425,
+        "urbanization_rate": 95,
+        "category": "small"
+      },
+      {
+        "region": "Jazan",
+        "population_millions": 3.3134490850807596,
+        "population_share_pct": 4.558197232907321,
+        "urbanization_rate": 95,
+        "category": "major"
+      },
+      {
+        "region": "Najran",
+        "population_millions": 1.0588852172458993,
+        "population_share_pct": 1.4566717469567172,
+        "urbanization_rate": 95,
+        "category": "medium"
+      },
+      {
+        "region": "Al-Baha",
+        "population_millions": 0.9123274307015873,
+        "population_share_pct": 1.2550572721500148,
+        "urbanization_rate": 95,
+        "category": "small"
+      },
+      {
+        "region": "Al-Jouf",
+        "population_millions": 1.144912268381814,
+        "population_share_pct": 1.5750161839388672,
+        "urbanization_rate": 95,
+        "category": "medium"
+      }
+    ],
+    "economic_corridors": [
+      {
+        "corridor_name": "Central Corridor",
+        "regions": [
+          "Riyadh",
+          "Al-Qassim",
+          "Hail"
+        ],
+        "dominant_sector": "Finance & Technology",
+        "connectivity": "high",
+        "gdp_share_2050": 58.878800000000005,
+        "investment_priority": "high"
+      },
+      {
+        "corridor_name": "Red Sea Corridor",
+        "regions": [
+          "Tabuk",
+          "Madinah",
+          "Makkah",
+          "Jazan"
+        ],
+        "dominant_sector": "Tourism & Logistics",
+        "connectivity": "high",
+        "gdp_share_2050": 39.02445,
+        "investment_priority": "high"
+      },
+      {
+        "corridor_name": "Gulf Industrial Corridor",
+        "regions": [
+          "Eastern Province"
+        ],
+        "dominant_sector": "Industry & Energy",
+        "connectivity": "high",
+        "gdp_share_2050": 32.605000000000004,
+        "investment_priority": "high"
+      },
+      {
+        "corridor_name": "Northern Development Corridor",
+        "regions": [
+          "Northern Borders",
+          "Al-Jouf"
+        ],
+        "dominant_sector": "Mining & Renewables",
+        "connectivity": "medium",
+        "gdp_share_2050": 2.2489600000000003,
+        "investment_priority": "medium"
+      },
+      {
+        "corridor_name": "Southern Tourism Corridor",
+        "regions": [
+          "Asir",
+          "Al-Baha",
+          "Najran"
+        ],
+        "dominant_sector": "Tourism & Agriculture",
+        "connectivity": "medium",
+        "gdp_share_2050": 4.62892,
+        "investment_priority": "medium"
+      }
+    ],
+    "infrastructure": {
+      "rail": {
+        "total_km": 5500,
+        "high_speed_km": 1500,
+        "freight_km": 4000
+      },
+      "airports": {
+        "international": 5,
+        "regional": 15,
+        "total_capacity_mppa": 150
+      },
+      "ports": {
+        "major_ports": 8,
+        "capacity_mteu": 50
+      },
+      "renewable_energy": {
+        "solar_gw": 50,
+        "wind_gw": 12,
+        "hydrogen_plants": 2
+      },
+      "water": {
+        "desalination_mcm_day": 10,
+        "recycling_pct": 80
+      }
+    }
+  },
+  "climate_stress": {
+    "population_distribution": [
+      {
+        "region": "Riyadh",
+        "population_millions": 12.136216959504795,
+        "population_share_pct": 26.200179385174334,
+        "urbanization_rate": 95,
+        "category": "major"
+      },
+      {
+        "region": "Makkah",
+        "population_millions": 12.094041031002126,
+        "population_share_pct": 26.10912820372353,
+        "urbanization_rate": 95,
+        "category": "major"
+      },
+      {
+        "region": "Eastern Province",
+        "population_millions": 6.690309232836454,
+        "population_share_pct": 14.443323041066957,
+        "urbanization_rate": 95,
+        "category": "major"
+      },
+      {
+        "region": "Madinah",
+        "population_millions": 3.017672465148655,
+        "population_share_pct": 6.514679176913965,
+        "urbanization_rate": 95,
+        "category": "major"
+      },
+      {
+        "region": "Tabuk",
+        "population_millions": 1.6734181143540252,
+        "population_share_pct": 3.612645928197434,
+        "urbanization_rate": 95,
+        "category": "medium"
+      },
+      {
+        "region": "Asir",
+        "population_millions": 2.979089524425034,
+        "population_share_pct": 6.431384689715901,
+        "urbanization_rate": 95,
+        "category": "medium"
+      },
+      {
+        "region": "Al-Qassim",
+        "population_millions": 1.8692385339166695,
+        "population_share_pct": 4.0353913468843725,
+        "urbanization_rate": 95,
+        "category": "medium"
+      },
+      {
+        "region": "Hail",
+        "population_millions": 0.9467418725711964,
+        "population_share_pct": 2.043866468075513,
+        "urbanization_rate": 95,
+        "category": "small"
+      },
+      {
+        "region": "Northern Borders",
+        "population_millions": 0.5876177010748898,
+        "population_share_pct": 1.2685739905142621,
+        "urbanization_rate": 95,
+        "category": "small"
+      },
+      {
+        "region": "Jazan",
+        "population_millions": 2.2019357354445908,
+        "population_share_pct": 4.753632161963927,
+        "urbanization_rate": 95,
+        "category": "medium"
+      },
+      {
+        "region": "Najran",
+        "population_millions": 0.7627206845119293,
+        "population_share_pct": 1.6465937302929456,
+        "urbanization_rate": 95,
+        "category": "small"
+      },
+      {
+        "region": "Al-Baha",
+        "population_millions": 0.6311612483807976,
+        "population_share_pct": 1.3625776453836753,
+        "urbanization_rate": 95,
+        "category": "small"
+      },
+      {
+        "region": "Al-Jouf",
+        "population_millions": 0.730958523851777,
+        "population_share_pct": 1.5780242320931805,
+        "urbanization_rate": 95,
+        "category": "small"
+      }
+    ],
+    "economic_corridors": [
+      {
+        "corridor_name": "Central Corridor",
+        "regions": [
+          "Riyadh",
+          "Al-Qassim",
+          "Hail"
+        ],
+        "dominant_sector": "Finance & Technology",
+        "connectivity": "high",
+        "gdp_share_2050": 58.338,
+        "investment_priority": "high"
+      },
+      {
+        "corridor_name": "Red Sea Corridor",
+        "regions": [
+          "Tabuk",
+          "Madinah",
+          "Makkah",
+          "Jazan"
+        ],
+        "dominant_sector": "Tourism & Logistics",
+        "connectivity": "high",
+        "gdp_share_2050": 32.36325,
+        "investment_priority": "high"
+      },
+      {
+        "corridor_name": "Gulf Industrial Corridor",
+        "regions": [
+          "Eastern Province"
+        ],
+        "dominant_sector": "Industry & Energy",
+        "connectivity": "high",
+        "gdp_share_2050": 27.925,
+        "investment_priority": "high"
+      },
+      {
+        "corridor_name": "Northern Development Corridor",
+        "regions": [
+          "Northern Borders",
+          "Al-Jouf"
+        ],
+        "dominant_sector": "Mining & Renewables",
+        "connectivity": "medium",
+        "gdp_share_2050": 1.8496000000000001,
+        "investment_priority": "medium"
+      },
+      {
+        "corridor_name": "Southern Tourism Corridor",
+        "regions": [
+          "Asir",
+          "Al-Baha",
+          "Najran"
+        ],
+        "dominant_sector": "Tourism & Agriculture",
+        "connectivity": "medium",
+        "gdp_share_2050": 3.9341999999999997,
+        "investment_priority": "medium"
+      }
+    ],
+    "infrastructure": {
+      "rail": {
+        "total_km": 3000,
+        "high_speed_km": 600,
+        "freight_km": 2400
+      },
+      "airports": {
+        "international": 4,
+        "regional": 12,
+        "total_capacity_mppa": 150
+      },
+      "ports": {
+        "major_ports": 8,
+        "capacity_mteu": 35
+      },
+      "renewable_energy": {
+        "solar_gw": 50,
+        "wind_gw": 12,
+        "hydrogen_plants": 2
+      },
+      "water": {
+        "desalination_mcm_day": 15,
+        "recycling_pct": 50
+      }
+    }
+  },
+  "energy_transition": {
+    "population_distribution": [
+      {
+        "region": "Riyadh",
+        "population_millions": 15.512900155502717,
+        "population_share_pct": 26.732897312501052,
+        "urbanization_rate": 95,
+        "category": "major"
+      },
+      {
+        "region": "Makkah",
+        "population_millions": 15.150661344950914,
+        "population_share_pct": 26.10866246098949,
+        "urbanization_rate": 95,
+        "category": "major"
+      },
+      {
+        "region": "Eastern Province",
+        "population_millions": 8.048868360175172,
+        "population_share_pct": 13.870363967892677,
+        "urbanization_rate": 95,
+        "category": "major"
+      },
+      {
+        "region": "Madinah",
+        "population_millions": 3.7423849183005697,
+        "population_share_pct": 6.449135282372974,
+        "urbanization_rate": 95,
+        "category": "major"
+      },
+      {
+        "region": "Tabuk",
+        "population_millions": 2.508150777965357,
+        "population_share_pct": 4.322218058486864,
+        "urbanization_rate": 95,
+        "category": "medium"
+      },
+      {
+        "region": "Asir",
+        "population_millions": 3.6573798178397023,
+        "population_share_pct": 6.302648642294064,
+        "urbanization_rate": 95,
+        "category": "major"
+      },
+      {
+        "region": "Al-Qassim",
+        "population_millions": 2.2261032302627948,
+        "population_share_pct": 3.836174310741811,
+        "urbanization_rate": 95,
+        "category": "medium"
+      },
+      {
+        "region": "Hail",
+        "population_millions": 1.1389908056851659,
+        "population_share_pct": 1.962787353947077,
+        "urbanization_rate": 95,
+        "category": "medium"
+      },
+      {
+        "region": "Northern Borders",
+        "population_millions": 0.7663550417893333,
+        "population_share_pct": 1.3206357568029994,
+        "urbanization_rate": 95,
+        "category": "small"
+      },
+      {
+        "region": "Jazan",
+        "population_millions": 2.703280734924997,
+        "population_share_pct": 4.6584794312608295,
+        "urbanization_rate": 95,
+        "category": "medium"
+      },
+      {
+        "region": "Najran",
+        "population_millions": 0.8991495752860273,
+        "population_share_pct": 1.5494764372717227,
+        "urbanization_rate": 95,
+        "category": "small"
+      },
+      {
+        "region": "Al-Baha",
+        "population_millions": 0.7593272037901105,
+        "population_share_pct": 1.3085249026313845,
+        "urbanization_rate": 95,
+        "category": "small"
+      },
+      {
+        "region": "Al-Jouf",
+        "population_millions": 0.9156993120574729,
+        "population_share_pct": 1.5779960828070574,
+        "urbanization_rate": 95,
+        "category": "small"
+      }
+    ],
+    "economic_corridors": [
+      {
+        "corridor_name": "Central Corridor",
+        "regions": [
+          "Riyadh",
+          "Al-Qassim",
+          "Hail"
+        ],
+        "dominant_sector": "Finance & Technology",
+        "connectivity": "high",
+        "gdp_share_2050": 58.6084,
+        "investment_priority": "high"
+      },
+      {
+        "corridor_name": "Red Sea Corridor",
+        "regions": [
+          "Tabuk",
+          "Madinah",
+          "Makkah",
+          "Jazan"
+        ],
+        "dominant_sector": "Tourism & Logistics",
+        "connectivity": "high",
+        "gdp_share_2050": 35.69385,
+        "investment_priority": "high"
+      },
+      {
+        "corridor_name": "Gulf Industrial Corridor",
+        "regions": [
+          "Eastern Province"
+        ],
+        "dominant_sector": "Industry & Energy",
+        "connectivity": "high",
+        "gdp_share_2050": 30.265000000000004,
+        "investment_priority": "high"
+      },
+      {
+        "corridor_name": "Northern Development Corridor",
+        "regions": [
+          "Northern Borders",
+          "Al-Jouf"
+        ],
+        "dominant_sector": "Mining & Renewables",
+        "connectivity": "medium",
+        "gdp_share_2050": 2.0492800000000004,
+        "investment_priority": "medium"
+      },
+      {
+        "corridor_name": "Southern Tourism Corridor",
+        "regions": [
+          "Asir",
+          "Al-Baha",
+          "Najran"
+        ],
+        "dominant_sector": "Tourism & Agriculture",
+        "connectivity": "medium",
+        "gdp_share_2050": 4.28156,
+        "investment_priority": "medium"
+      }
+    ],
+    "infrastructure": {
+      "rail": {
+        "total_km": 5000,
+        "high_speed_km": 1200,
+        "freight_km": 3800
+      },
+      "airports": {
+        "international": 4,
+        "regional": 12,
+        "total_capacity_mppa": 150
+      },
+      "ports": {
+        "major_ports": 8,
+        "capacity_mteu": 35
+      },
+      "renewable_energy": {
+        "solar_gw": 100,
+        "wind_gw": 20,
+        "hydrogen_plants": 5
+      },
+      "water": {
+        "desalination_mcm_day": 10,
+        "recycling_pct": 50
+      }
+    }
+  }
+}
