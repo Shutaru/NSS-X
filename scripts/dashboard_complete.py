@@ -933,7 +933,6 @@ def render_sidebar():
         st.markdown("""
         - [Vision 2030](https://vision2030.gov.sa)
         - [GASTAT](https://stats.gov.sa)
-        - [GitHub](https://github.com/Shutaru/NSS-X)
         """)
 
 
@@ -1368,11 +1367,10 @@ def render_ws5_scenarios():
                         marker_color=colors_list[i % len(colors_list)]
                     ))
                 
-                fig.update_layout(
-                    **get_chart_layout("Key Metrics Comparison - 2030", height=320),
-                    barmode='group',
-                    legend=dict(orientation='h', yanchor='bottom', y=-0.25, xanchor='center', x=0.5)
-                )
+                layout = get_chart_layout("Key Metrics Comparison - 2030", height=320)
+                layout['legend'] = dict(orientation='h', yanchor='bottom', y=-0.25, xanchor='center', x=0.5, bgcolor='rgba(0,0,0,0)', font=dict(size=10))
+                layout['barmode'] = 'group'
+                fig.update_layout(**layout)
                 st.plotly_chart(fig, use_container_width=True)
         
         # 2050 Comparison
@@ -1419,11 +1417,10 @@ def render_ws5_scenarios():
                         marker_color=colors_list[i % len(colors_list)]
                     ))
                 
-                fig2.update_layout(
-                    **get_chart_layout("Key Metrics Comparison - 2050", height=320),
-                    barmode='group',
-                    legend=dict(orientation='h', yanchor='bottom', y=-0.25, xanchor='center', x=0.5)
-                )
+                layout2 = get_chart_layout("Key Metrics Comparison - 2050", height=320)
+                layout2['legend'] = dict(orientation='h', yanchor='bottom', y=-0.25, xanchor='center', x=0.5, bgcolor='rgba(0,0,0,0)', font=dict(size=10))
+                layout2['barmode'] = 'group'
+                fig2.update_layout(**layout2)
                 st.plotly_chart(fig2, use_container_width=True)
     
     with tab2:
@@ -2099,7 +2096,7 @@ def main():
     <div class="footer">
         <p class="footer-brand">NSS X - National Spatial Strategy</p>
         <p class="footer-text">Kingdom of Saudi Arabia • Vision 2030 Aligned • All Workstreams Complete</p>
-        <p class="footer-text">© 2025-2026 | <a href="https://github.com/Shutaru/NSS-X" style="color: var(--ksa-green-light);">GitHub</a></p>
+        <p class="footer-text">© 2025-2026 Confidential</p>
     </div>
     """, unsafe_allow_html=True)
 
