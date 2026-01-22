@@ -33,7 +33,8 @@ $FoldersToCopy = @(
     "src",
     "scripts",
     "config",
-    "01_data"
+    "01_data",
+    "02_analytics"
 )
 
 Write-Host ""

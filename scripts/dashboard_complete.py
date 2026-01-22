@@ -282,32 +282,45 @@ def render_ws2_retrospective():
     
     continuity = ws2['continuity']
     
-    # Summary metrics
-    col1, col2, col3, col4 = st.columns(4)
-    continued = len(continuity[continuity['status'] == 'Continued'])
-    modified = len(continuity[continuity['status'] == 'Modified'])
-    discontinued = len(continuity[continuity['status'] == 'Discontinued'])
-    new_items = len(continuity[continuity['status'] == 'New'])
+    # Summary metrics based on Recommendation column
+    col1, col2, col3, col4, col5 = st.columns(5)
+    maintain = len(continuity[continuity['Recommendation'] == 'MAINTAIN'])
+    strengthen = len(continuity[continuity['Recommendation'] == 'STRENGTHEN'])
+    modify = len(continuity[continuity['Recommendation'] == 'MODIFY'])
+    new_items = len(continuity[continuity['Recommendation'] == 'NEW'])
+    discontinue = len(continuity[continuity['Recommendation'] == 'DISCONTINUE'])
     
-    col1.metric("Continued", continued, "From NSS 2001")
-    col2.metric("Modified", modified, "Updated")
-    col3.metric("Discontinued", discontinued, "Removed")
-    col4.metric("New", new_items, "Added in 2030")
+    col1.metric("Maintain", maintain, "Keep as-is")
+    col2.metric("Strengthen", strengthen, "Enhance")
+    col3.metric("Modify", modify, "Update")
+    col4.metric("New", new_items, "Introduce")
+    col5.metric("Discontinue", discontinue, "Remove")
     
-    # Chart
+    # Chart by Recommendation
     fig = px.pie(
         continuity, 
-        names='status', 
-        title="Policy Continuity Distribution",
-        color='status',
+        names='Recommendation', 
+        title="Policy Recommendations Distribution",
+        color='Recommendation',
         color_discrete_map={
-            'Continued': '#28a745',
-            'Modified': '#ffc107',
-            'Discontinued': '#dc3545',
-            'New': '#007bff'
+            'MAINTAIN': '#28a745',
+            'STRENGTHEN': '#17a2b8',
+            'MODIFY': '#ffc107',
+            'NEW': '#007bff',
+            'DISCONTINUE': '#dc3545'
         }
     )
     st.plotly_chart(fig, use_container_width=True)
+    
+    # Chart by Priority
+    fig2 = px.histogram(
+        continuity,
+        x='Priority',
+        color='Category',
+        title="Policies by Priority Level",
+        barmode='group'
+    )
+    st.plotly_chart(fig2, use_container_width=True)
     
     # Table
     st.dataframe(continuity, use_container_width=True)
