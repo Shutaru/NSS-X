@@ -188,6 +188,40 @@ st.markdown("""
         margin: 0.75rem 0;
     }
     
+    /* Inline row - all items in single line */
+    .stat-row {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 0.5rem;
+        margin: 0.75rem 0;
+        overflow-x: auto;
+    }
+    
+    .stat-row .stat-module {
+        flex: 1;
+        min-width: 140px;
+        max-width: 200px;
+        padding: 0.6rem 0.75rem;
+    }
+    
+    .stat-row .stat-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 0.95rem;
+    }
+    
+    .stat-row .stat-value {
+        font-size: 1rem;
+    }
+    
+    .stat-row .stat-label {
+        font-size: 0.6rem;
+    }
+    
+    .stat-row .stat-sub {
+        font-size: 0.6rem;
+    }
+    
     .stat-module {
         background: var(--bg-card);
         border: 1px solid var(--border-color);
@@ -940,8 +974,8 @@ def render_overview():
     """Render overview tab with premium styling."""
     ws6 = load_ws6_data()
     
-    # Compact KPI modules all in one row
-    st.markdown('<div class="stat-grid" style="grid-template-columns: repeat(5, 1fr);">', unsafe_allow_html=True)
+    # Compact KPI modules all in one horizontal row
+    st.markdown('<div class="stat-row">', unsafe_allow_html=True)
     st.markdown(render_stat_module("👥", "Population 2024", "34.1M", "+2.3% YoY", "green"), unsafe_allow_html=True)
     st.markdown(render_stat_module("💰", "GDP 2024", "$1.1T", "+4.5%", "green"), unsafe_allow_html=True)
     st.markdown(render_stat_module("🗺️", "Regions", "13", "All Covered", "blue"), unsafe_allow_html=True)
