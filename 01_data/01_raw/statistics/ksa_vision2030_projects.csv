@@ -1,0 +1,21 @@
+project_name,region_code,sector,budget_billion_usd,status,start_year,target_year,latitude,longitude,jobs_estimate
+NEOM,SA-07,Giga City,500.0,Under Construction,2017,2039,28.0,35.0,2500000
+THE LINE,SA-07,Urban,200.0,Under Construction,2021,2030,28.1,34.8,1000000
+OXAGON,SA-07,Industrial,50.0,Under Construction,2021,2030,27.8,35.2,250000
+TROJENA,SA-07,Tourism,30.0,Under Construction,2022,2026,28.2,35.5,150000
+SINDALAH,SA-07,Tourism,5.0,Operational,2022,2024,27.5,35.8,25000
+Red Sea Project,SA-03,Tourism,15.0,Under Construction,2019,2030,25.5,37.0,75000
+AMAALA,SA-07,Tourism,8.0,Under Construction,2020,2028,26.0,36.5,40000
+Qiddiya,SA-01,Entertainment,8.0,Under Construction,2019,2030,24.4,46.2,40000
+Diriyah Gate,SA-01,Heritage,20.0,Under Construction,2018,2027,24.7,46.6,100000
+King Salman Park,SA-01,Urban,23.0,Under Construction,2019,2027,24.7,46.7,115000
+Riyadh Metro,SA-01,Transport,22.5,Operational,2014,2024,24.7,46.7,112500
+New Murabba,SA-01,Urban,50.0,Announced,2024,2030,24.8,46.6,250000
+AlUla Development,SA-03,Heritage,15.0,Under Construction,2018,2035,26.6,37.9,75000
+Jeddah Tower,SA-02,Urban,2.0,Under Construction,2013,2028,21.5,39.2,10000
+Jeddah Central,SA-02,Urban,20.0,Planned,2025,2035,21.5,39.1,100000
+NEOM Green Hydrogen,SA-07,Energy,8.5,Under Construction,2021,2026,28.3,35.3,42500
+Sudair Solar PV,SA-01,Energy,1.5,Operational,2021,2024,25.5,45.7,7500
+Dumat Al Jandal Wind,SA-13,Energy,0.5,Operational,2019,2022,29.8,39.9,2500
+King Abdullah Economic City,SA-02,Industrial,100.0,Operational,2006,2035,22.4,39.1,500000
+SPARK,SA-04,Industrial,2.0,Under Construction,2018,2035,25.5,49.2,10000

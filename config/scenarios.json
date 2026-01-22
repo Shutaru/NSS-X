@@ -1,0 +1,230 @@
+{
+    "scenarios": {
+        "baseline": [
+            {
+                "id": "BAU_2030",
+                "name": "Business as Usual 2030",
+                "name_ar": "",
+                "description": "Continuation of current trends to 2030",
+                "horizon_year": 2030,
+                "scenario_type": "baseline",
+                "is_primary": true,
+                "parameters": {
+                    "demographic": {
+                        "population_growth_rate": 1.8,
+                        "urbanization_rate_change": 0.5,
+                        "migration_assumption": "current_trends"
+                    },
+                    "economic": {
+                        "gdp_growth_rate": 3.5,
+                        "diversification_pace": "moderate",
+                        "oil_dependency_reduction": "gradual"
+                    },
+                    "infrastructure": {
+                        "investment_level": "committed_projects",
+                        "completion_assumption": "as_planned"
+                    },
+                    "environment": {
+                        "climate_scenario": "RCP4.5",
+                        "water_stress_trend": "increasing"
+                    }
+                }
+            },
+            {
+                "id": "BAU_2050",
+                "name": "Business as Usual 2050",
+                "name_ar": "",
+                "description": "Continuation of current trends to 2050",
+                "horizon_year": 2050,
+                "scenario_type": "baseline",
+                "is_primary": true,
+                "parameters": {
+                    "demographic": {
+                        "population_growth_rate": 1.2,
+                        "urbanization_rate_change": 0.3,
+                        "migration_assumption": "gradual_decline"
+                    },
+                    "economic": {
+                        "gdp_growth_rate": 2.5,
+                        "diversification_pace": "moderate",
+                        "oil_dependency_reduction": "continued"
+                    },
+                    "infrastructure": {
+                        "investment_level": "extrapolated",
+                        "completion_assumption": "historical_rate"
+                    },
+                    "environment": {
+                        "climate_scenario": "RCP4.5",
+                        "water_stress_trend": "stabilizing"
+                    }
+                }
+            }
+        ],
+        "alternatives": [
+            {
+                "id": "CLIMATE_STRESS",
+                "name": "Climate Stress Scenario",
+                "name_ar": "",
+                "description": "Severe climate change impacts affecting water, agriculture, and urban livability",
+                "horizon_year": 2050,
+                "scenario_type": "stress_test",
+                "is_primary": false,
+                "key_drivers": [
+                    "Accelerated temperature increase (+2.5°C by 2050)",
+                    "Severe water stress in most regions",
+                    "Increased frequency of extreme heat events",
+                    "Agricultural productivity decline",
+                    "Higher energy demand for cooling"
+                ],
+                "parameters": {
+                    "demographic": {
+                        "population_growth_rate": 1.0,
+                        "urbanization_rate_change": 0.8,
+                        "migration_assumption": "internal_climate_migration"
+                    },
+                    "economic": {
+                        "gdp_growth_rate": 1.5,
+                        "adaptation_costs_pct_gdp": 2.0,
+                        "agriculture_decline_pct": 30
+                    },
+                    "infrastructure": {
+                        "investment_level": "adaptation_focused",
+                        "retrofit_requirement": "significant"
+                    },
+                    "environment": {
+                        "climate_scenario": "RCP8.5",
+                        "water_stress_trend": "critical",
+                        "temperature_increase_c": 2.5
+                    }
+                }
+            },
+            {
+                "id": "TECH_DISRUPTION",
+                "name": "Technology Disruption Scenario",
+                "name_ar": "",
+                "description": "Accelerated technological transformation reshaping economy and spatial patterns",
+                "horizon_year": 2050,
+                "scenario_type": "alternative",
+                "is_primary": false,
+                "key_drivers": [
+                    "AI and automation transforming labor markets",
+                    "Electric and autonomous vehicles mainstream",
+                    "Remote work reducing urban concentration need",
+                    "Smart cities and digital infrastructure",
+                    "Renewable energy dominance"
+                ],
+                "parameters": {
+                    "demographic": {
+                        "population_growth_rate": 1.5,
+                        "urbanization_rate_change": -0.2,
+                        "migration_assumption": "dispersed_settlement"
+                    },
+                    "economic": {
+                        "gdp_growth_rate": 4.5,
+                        "tech_sector_share_pct": 25,
+                        "job_displacement_pct": 20,
+                        "new_job_creation_pct": 25
+                    },
+                    "infrastructure": {
+                        "investment_level": "tech_accelerated",
+                        "digital_infrastructure": "ubiquitous",
+                        "ev_charging_coverage": "universal"
+                    },
+                    "environment": {
+                        "climate_scenario": "RCP2.6",
+                        "renewable_energy_share": 80,
+                        "carbon_reduction_pct": 60
+                    }
+                }
+            },
+            {
+                "id": "ECON_TRANSFORM",
+                "name": "Economic Transformation Scenario",
+                "name_ar": "",
+                "description": "Accelerated economic diversification and Vision realization",
+                "horizon_year": 2050,
+                "scenario_type": "alternative",
+                "is_primary": false,
+                "key_drivers": [
+                    "Successful Vision 2030 implementation and extension",
+                    "Tourism as major GDP contributor",
+                    "Manufacturing and tech hub development",
+                    "Regional economic leadership",
+                    "High skilled workforce development"
+                ],
+                "parameters": {
+                    "demographic": {
+                        "population_growth_rate": 2.2,
+                        "urbanization_rate_change": 0.6,
+                        "migration_assumption": "skilled_immigration"
+                    },
+                    "economic": {
+                        "gdp_growth_rate": 5.0,
+                        "non_oil_gdp_share": 75,
+                        "tourism_contribution_pct": 15,
+                        "manufacturing_share_pct": 20
+                    },
+                    "infrastructure": {
+                        "investment_level": "accelerated",
+                        "giga_projects_completion": "full",
+                        "regional_connectivity": "high"
+                    },
+                    "environment": {
+                        "climate_scenario": "RCP4.5",
+                        "sustainability_investment": "high",
+                        "circular_economy_adoption": "significant"
+                    }
+                }
+            },
+            {
+                "id": "DEMO_SHIFT",
+                "name": "Demographic Shift Scenario",
+                "name_ar": "",
+                "description": "Significant demographic changes affecting spatial demand patterns",
+                "horizon_year": 2050,
+                "scenario_type": "alternative",
+                "is_primary": false,
+                "key_drivers": [
+                    "Aging population and declining fertility",
+                    "Nationalization of workforce",
+                    "Reduced expatriate dependency",
+                    "Changing household structures",
+                    "Increased female labor participation"
+                ],
+                "parameters": {
+                    "demographic": {
+                        "population_growth_rate": 0.8,
+                        "fertility_rate": 1.6,
+                        "expatriate_share_reduction_pct": 40,
+                        "median_age_increase_years": 8,
+                        "female_labor_participation_pct": 45
+                    },
+                    "economic": {
+                        "gdp_growth_rate": 2.0,
+                        "productivity_growth_requirement": "high",
+                        "pension_system_stress": "significant"
+                    },
+                    "infrastructure": {
+                        "healthcare_investment": "major_increase",
+                        "elderly_care_facilities": "expansion",
+                        "housing_type_shift": "smaller_units"
+                    },
+                    "environment": {
+                        "climate_scenario": "RCP4.5",
+                        "per_capita_consumption": "stable"
+                    }
+                }
+            }
+        ]
+    },
+    "scenario_comparison_dimensions": [
+        "population_distribution",
+        "economic_geography",
+        "infrastructure_demand",
+        "environmental_pressure",
+        "urban_form",
+        "regional_balance",
+        "investment_needs",
+        "governance_implications"
+    ]
+}

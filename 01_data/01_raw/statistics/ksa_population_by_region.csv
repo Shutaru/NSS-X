@@ -1,0 +1,14 @@
+﻿region_code,region_name_en,region_name_ar,capital,population_2024,area_km2,pop_density_2022,population_pct
+SA-01,Riyadh,الرياض,Riyadh,8660885,404240,19.7,24.53
+SA-02,Makkah,مكة المكرمة,Makkah,9456987,153128,57.5,26.79
+SA-03,Madinah,المدينة المنورة,Madinah,2313706,151990,14.0,6.55
+SA-04,Eastern Province,الشرقية,Dammam,5324174,672522,7.6,15.08
+SA-05,Al-Qassim,القصيم,Buraidah,1532834,58046,23.2,4.34
+SA-06,Asir,عسير,Abha,2373629,76693,28.5,6.72
+SA-07,Tabuk,تبوك,Tabuk,992872,136000,6.5,2.81
+SA-08,Hail,حائل,Hail,772511,103887,6.6,2.19
+SA-09,Northern Borders,الحدود الشمالية,Arar,417633,111797,3.3,1.18
+SA-10,Jazan,جازان,Jazan,1699667,11671,105.0,4.81
+SA-11,Najran,نجران,Najran,640590,119000,4.8,1.81
+SA-12,Al-Baha,الباحة,Al Baha,507858,9921,30.2,1.44
+SA-13,Al-Jouf,الجوف,Sakaka,606934,100212,5.2,1.72

@@ -1,0 +1,14 @@
+indicator,value,unit,year,period,source
+GDP (Nominal),4700.0,Billion SAR,2024,Annual,GASTAT
+GDP (Real),4700.0,Billion SAR,2024,Annual,GASTAT
+GDP Growth Rate,4.8,%,2024,Annual,GASTAT
+Inflation (CPI),2.1,%,2025,December,GASTAT
+Unemployment Rate (Total),3.4,%,2025,Q3,GASTAT
+Unemployment Rate (Saudi),7.5,%,2025,Q3,GASTAT
+Non-Oil Revenue,502.5,Billion SAR,2024,Annual,GASTAT
+Oil Revenue,756.6,Billion SAR,2024,Annual,GASTAT
+Government Expenditure,1400.0,Billion SAR,2024,Annual,GASTAT
+FDI Net Inflow,24.9,Billion SAR,2025,Q3,GASTAT
+Exports,104.0,Billion SAR,2025,October,GASTAT
+Imports,80.1,Billion SAR,2025,October,GASTAT
+Trade Balance,23.9,Billion SAR,2025,October,GASTAT

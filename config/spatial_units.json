@@ -1,0 +1,109 @@
+{
+    "project": {
+        "name": "NSS - National Spatial Strategy",
+        "version": "1.0.0",
+        "country": "Kingdom of Saudi Arabia",
+        "iso_code": "SAU",
+        "horizons": [2030, 2050],
+        "vision": "Vision 2030"
+    },
+    "spatial_units": {
+        "hierarchy": [
+            {
+                "level": 1,
+                "name": "country",
+                "name_ar": "المملكة",
+                "description": "National level",
+                "code_pattern": "SA"
+            },
+            {
+                "level": 2,
+                "name": "region",
+                "name_ar": "منطقة",
+                "description": "Administrative regions (Mintaqah)",
+                "code_pattern": "SA-##",
+                "expected_count": 13,
+                "regions": [
+                    {"code": "SA-01", "name_en": "Riyadh", "name_ar": "الرياض", "capital": "Riyadh"},
+                    {"code": "SA-02", "name_en": "Makkah", "name_ar": "مكة المكرمة", "capital": "Makkah"},
+                    {"code": "SA-03", "name_en": "Madinah", "name_ar": "المدينة المنورة", "capital": "Madinah"},
+                    {"code": "SA-04", "name_en": "Eastern Province", "name_ar": "الشرقية", "capital": "Dammam"},
+                    {"code": "SA-05", "name_en": "Al-Qassim", "name_ar": "القصيم", "capital": "Buraidah"},
+                    {"code": "SA-06", "name_en": "Asir", "name_ar": "عسير", "capital": "Abha"},
+                    {"code": "SA-07", "name_en": "Tabuk", "name_ar": "تبوك", "capital": "Tabuk"},
+                    {"code": "SA-08", "name_en": "Hail", "name_ar": "حائل", "capital": "Hail"},
+                    {"code": "SA-09", "name_en": "Northern Borders", "name_ar": "الحدود الشمالية", "capital": "Arar"},
+                    {"code": "SA-10", "name_en": "Jazan", "name_ar": "جازان", "capital": "Jazan"},
+                    {"code": "SA-11", "name_en": "Najran", "name_ar": "نجران", "capital": "Najran"},
+                    {"code": "SA-12", "name_en": "Al-Baha", "name_ar": "الباحة", "capital": "Al Baha"},
+                    {"code": "SA-13", "name_en": "Al-Jouf", "name_ar": "الجوف", "capital": "Sakaka"}
+                ]
+            },
+            {
+                "level": 3,
+                "name": "governorate",
+                "name_ar": "محافظة",
+                "description": "Governorates (Muhafazah)",
+                "code_pattern": "SA-##-###",
+                "expected_count": 136
+            },
+            {
+                "level": 4,
+                "name": "municipality",
+                "name_ar": "بلدية",
+                "description": "Municipalities (Baladiyah)",
+                "code_pattern": "SA-##-###-####",
+                "expected_count": 285
+            },
+            {
+                "level": 5,
+                "name": "locality",
+                "name_ar": "محلية",
+                "description": "Localities/Settlements",
+                "code_pattern": "SA-##-###-####-#####",
+                "expected_count": null
+            }
+        ],
+        "analysis_grids": [
+            {
+                "resolution_km": 100,
+                "name": "macro_grid",
+                "use_case": "National overview"
+            },
+            {
+                "resolution_km": 10,
+                "name": "regional_grid",
+                "use_case": "Regional analysis"
+            },
+            {
+                "resolution_km": 1,
+                "name": "local_grid",
+                "use_case": "Urban analysis"
+            }
+        ]
+    },
+    "coordinate_reference_systems": {
+        "storage": {
+            "epsg": 4326,
+            "name": "WGS 84",
+            "use": "Data storage and exchange"
+        },
+        "analysis": [
+            {
+                "epsg": 32637,
+                "name": "UTM Zone 37N",
+                "region": "Western"
+            },
+            {
+                "epsg": 32638,
+                "name": "UTM Zone 38N",
+                "region": "Central"
+            },
+            {
+                "epsg": 32639,
+                "name": "UTM Zone 39N",
+                "region": "Eastern"
+            }
+        ]
+    }
+}

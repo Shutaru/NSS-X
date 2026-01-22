@@ -1,0 +1,277 @@
+{
+    "country": "Kingdom of Saudi Arabia",
+    "iso_code": "SAU",
+    "data_sources": [
+        {
+            "id": "gastat",
+            "name": "General Authority for Statistics",
+            "acronym": "GASTAT",
+            "type": "government",
+            "data_types": ["demographics", "economic", "social"],
+            "update_frequency": "annual",
+            "access_method": "api_and_download",
+            "url": "https://www.stats.gov.sa",
+            "contact": "",
+            "priority": "critical",
+            "datasets": [
+                {
+                    "name": "Population Census",
+                    "frequency": "decennial",
+                    "latest_year": 2022
+                },
+                {
+                    "name": "Population Estimates",
+                    "frequency": "annual",
+                    "latest_year": 2025
+                },
+                {
+                    "name": "GDP by Region",
+                    "frequency": "annual",
+                    "latest_year": 2024
+                },
+                {
+                    "name": "Employment Statistics",
+                    "frequency": "quarterly",
+                    "latest_year": 2025
+                }
+            ]
+        },
+        {
+            "id": "sdaia",
+            "name": "Saudi Data & Artificial Intelligence Authority",
+            "acronym": "SDAIA",
+            "type": "government",
+            "data_types": ["geospatial", "administrative", "ai_platforms"],
+            "update_frequency": "varies",
+            "access_method": "platform",
+            "url": "https://sdaia.gov.sa",
+            "contact": "",
+            "priority": "high",
+            "datasets": [
+                {
+                    "name": "Administrative Boundaries",
+                    "frequency": "as_updated",
+                    "latest_year": 2024
+                },
+                {
+                    "name": "National Address Database",
+                    "frequency": "continuous",
+                    "latest_year": 2025
+                }
+            ]
+        },
+        {
+            "id": "mewa",
+            "name": "Ministry of Environment, Water and Agriculture",
+            "acronym": "MEWA",
+            "type": "government",
+            "data_types": ["environment", "water", "agriculture"],
+            "update_frequency": "annual",
+            "access_method": "request",
+            "url": "",
+            "contact": "",
+            "priority": "high",
+            "datasets": [
+                {
+                    "name": "Water Resources Inventory",
+                    "frequency": "annual",
+                    "latest_year": 2024
+                },
+                {
+                    "name": "Protected Areas",
+                    "frequency": "as_updated",
+                    "latest_year": 2024
+                },
+                {
+                    "name": "Land Cover Maps",
+                    "frequency": "5-yearly",
+                    "latest_year": 2023
+                }
+            ]
+        },
+        {
+            "id": "mot",
+            "name": "Ministry of Transport",
+            "acronym": "MOT",
+            "type": "government",
+            "data_types": ["transport", "infrastructure"],
+            "update_frequency": "annual",
+            "access_method": "request",
+            "url": "",
+            "contact": "",
+            "priority": "high",
+            "datasets": [
+                {
+                    "name": "Road Network",
+                    "frequency": "annual",
+                    "latest_year": 2024
+                },
+                {
+                    "name": "Rail Network",
+                    "frequency": "as_updated",
+                    "latest_year": 2024
+                },
+                {
+                    "name": "Ports Data",
+                    "frequency": "annual",
+                    "latest_year": 2024
+                },
+                {
+                    "name": "Airports Data",
+                    "frequency": "annual",
+                    "latest_year": 2024
+                }
+            ]
+        },
+        {
+            "id": "moenergy",
+            "name": "Ministry of Energy",
+            "acronym": "MOE",
+            "type": "government",
+            "data_types": ["energy", "utilities"],
+            "update_frequency": "annual",
+            "access_method": "request",
+            "url": "",
+            "contact": "",
+            "priority": "high",
+            "datasets": [
+                {
+                    "name": "Power Plants",
+                    "frequency": "annual",
+                    "latest_year": 2024
+                },
+                {
+                    "name": "Transmission Network",
+                    "frequency": "annual",
+                    "latest_year": 2024
+                },
+                {
+                    "name": "Renewable Energy Projects",
+                    "frequency": "quarterly",
+                    "latest_year": 2025
+                }
+            ]
+        },
+        {
+            "id": "momra",
+            "name": "Ministry of Municipal, Rural Affairs and Housing",
+            "acronym": "MOMRAH",
+            "type": "government",
+            "data_types": ["urban", "housing", "land_use"],
+            "update_frequency": "varies",
+            "access_method": "request",
+            "url": "",
+            "contact": "",
+            "priority": "high",
+            "datasets": [
+                {
+                    "name": "Urban Areas Boundaries",
+                    "frequency": "as_updated",
+                    "latest_year": 2024
+                },
+                {
+                    "name": "Land Use Plans",
+                    "frequency": "as_updated",
+                    "latest_year": 2024
+                },
+                {
+                    "name": "Housing Statistics",
+                    "frequency": "annual",
+                    "latest_year": 2024
+                }
+            ]
+        },
+        {
+            "id": "royal_commissions",
+            "name": "Royal Commissions",
+            "acronym": "RC",
+            "type": "government",
+            "data_types": ["mega_projects", "economic_zones"],
+            "update_frequency": "varies",
+            "access_method": "request",
+            "url": "",
+            "contact": "",
+            "priority": "high",
+            "datasets": [
+                {
+                    "name": "Giga-Projects Data",
+                    "frequency": "quarterly",
+                    "latest_year": 2025
+                },
+                {
+                    "name": "Economic Cities Data",
+                    "frequency": "annual",
+                    "latest_year": 2024
+                }
+            ]
+        },
+        {
+            "id": "osm",
+            "name": "OpenStreetMap",
+            "acronym": "OSM",
+            "type": "open_data",
+            "data_types": ["transport", "poi", "buildings"],
+            "update_frequency": "continuous",
+            "access_method": "download",
+            "url": "https://www.openstreetmap.org",
+            "contact": "",
+            "priority": "medium",
+            "datasets": [
+                {
+                    "name": "Road Network (Supplementary)",
+                    "frequency": "continuous",
+                    "latest_year": 2025
+                },
+                {
+                    "name": "Points of Interest",
+                    "frequency": "continuous",
+                    "latest_year": 2025
+                }
+            ]
+        },
+        {
+            "id": "worldpop",
+            "name": "WorldPop",
+            "acronym": "WP",
+            "type": "research",
+            "data_types": ["demographics"],
+            "update_frequency": "annual",
+            "access_method": "download",
+            "url": "https://www.worldpop.org",
+            "contact": "",
+            "priority": "medium",
+            "datasets": [
+                {
+                    "name": "Population Density Raster",
+                    "frequency": "annual",
+                    "latest_year": 2024
+                }
+            ]
+        },
+        {
+            "id": "copernicus",
+            "name": "Copernicus Land Monitoring",
+            "acronym": "COP",
+            "type": "international",
+            "data_types": ["land_cover", "environment"],
+            "update_frequency": "varies",
+            "access_method": "download",
+            "url": "https://land.copernicus.eu",
+            "contact": "",
+            "priority": "medium",
+            "datasets": [
+                {
+                    "name": "Global Land Cover",
+                    "frequency": "annual",
+                    "latest_year": 2023
+                }
+            ]
+        }
+    ],
+    "data_access_status": {
+        "confirmed": [],
+        "pending_agreement": [],
+        "to_be_requested": ["gastat", "sdaia", "mewa", "mot", "moenergy", "momra", "royal_commissions"],
+        "open_access": ["osm", "worldpop", "copernicus"]
+    }
+}

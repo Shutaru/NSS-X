@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "created": "2026-01-22",
+    "country": "Kingdom of Saudi Arabia",
+    "iso_code": "SAU",
+    "sources": [
+      {
+        "name": "GASTAT",
+        "url": "https://www.stats.gov.sa",
+        "description": "General Authority for Statistics - Official statistics"
+      },
+      {
+        "name": "DataSaudi",
+        "url": "https://datasaudi.sa",
+        "description": "Ministry of Economy & Planning data portal"
+      },
+      {
+        "name": "OCHA HDX",
+        "url": "https://data.humdata.org",
+        "description": "Humanitarian Data Exchange - Admin boundaries"
+      }
+    ]
+  },
+  "datasets": [
+    {
+      "name": "Administrative Boundaries",
+      "path": "01_data/01_raw/gis/admin_boundaries/",
+      "format": [
+        "GeoJSON",
+        "Shapefile",
+        "XLSX"
+      ],
+      "source": "OCHA HDX",
+      "levels": [
+        "ADM0 (Country)",
+        "ADM1 (13 Regions)"
+      ]
+    },
+    {
+      "name": "Population by Region",
+      "path": "01_data/01_raw/statistics/ksa_population_by_region.csv",
+      "format": "CSV",
+      "source": "GASTAT 2024",
+      "coverage": "13 regions"
+    },
+    {
+      "name": "Economic Indicators",
+      "path": "01_data/01_raw/statistics/ksa_economic_indicators.csv",
+      "format": "CSV",
+      "source": "DataSaudi 2024-2025",
+      "indicators": 13
+    },
+    {
+      "name": "Employment by Region",
+      "path": "01_data/01_raw/statistics/ksa_employment_by_region.csv",
+      "format": "CSV",
+      "source": "GOSI Q3 2025",
+      "coverage": "13 regions"
+    },
+    {
+      "name": "Major Cities",
+      "path": "01_data/01_raw/statistics/ksa_major_cities.csv",
+      "format": "CSV",
+      "source": "GASTAT",
+      "count": 20
+    },
+    {
+      "name": "Vision 2030 Projects",
+      "path": "01_data/01_raw/statistics/ksa_vision2030_projects.csv",
+      "format": "CSV",
+      "source": "Official project data",
+      "count": 20
+    },
+    {
+      "name": "Water Consumption",
+      "path": "01_data/01_raw/statistics/ksa_water_consumption.csv",
+      "format": "CSV",
+      "source": "DataSaudi 2022",
+      "coverage": "13 regions"
+    }
+  ]
+}
