@@ -65,10 +65,27 @@ st.markdown("""
         background-color: var(--bg-offwhite) !important;
     }
     
-    /* Hide Streamlit branding */
+    /* Hide Streamlit branding and theme menu */
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
     header {visibility: hidden;}
+    
+    /* Hide the theme settings in hamburger menu */
+    [data-testid="stSidebarCollapseButton"] {
+        display: none !important;
+    }
+    
+    /* Force sidebar to always be visible */
+    [data-testid="stSidebar"] {
+        width: 280px !important;
+        min-width: 280px !important;
+    }
+    
+    [data-testid="stSidebar"][aria-expanded="false"] {
+        width: 280px !important;
+        min-width: 280px !important;
+        margin-left: 0 !important;
+    }
     
     /* ===== HERO HEADER ===== */
     .hero-container {

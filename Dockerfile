@@ -40,6 +40,7 @@ COPY src/ ./src/
 COPY scripts/ ./scripts/
 COPY config/ ./config/
 COPY 01_data/ ./01_data/
+COPY .streamlit/ ./.streamlit/
 
 # Create necessary directories
 RUN mkdir -p 02_analytics 03_scenarios 04_strategy 05_governance 06_deliverables

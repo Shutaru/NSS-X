@@ -1,0 +1,12 @@
+[theme]
+base = "light"
+primaryColor = "#006C35"
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#f8f9fa"
+textColor = "#1a1a1a"
+
+[ui]
+hideTopBar = false
+
+[server]
+headless = true
