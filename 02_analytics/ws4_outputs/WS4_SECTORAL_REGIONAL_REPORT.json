@@ -1,0 +1,2491 @@
+{
+  "metadata": {
+    "report_title": "WS4 - Sectoral & Regional Spatial Integration",
+    "generated_date": "2026-01-22T13:03:11.712541",
+    "version": "1.0",
+    "author": "NSS X System"
+  },
+  "executive_summary": {
+    "overview": "This integrated sectoral and regional spatial review analyzes 6 major \n            sectors and 13 regions to identify spatial conflicts, synergies, and corrective measures. \n            The analysis reveals critical water sustainability challenges, industrial-residential \n            conflicts, and coastal development pressures requiring immediate intervention.",
+    "key_findings": [
+      "6 sectoral strategies analyzed with SAR 1700B total investment",
+      "13 regional diagnostics completed covering 34.9M population",
+      "5 conflict map layers and 5 synergy map layers generated",
+      "CRITICAL: Agricultural water demand (89% of total) unsustainable",
+      "Top 3 regions concentrate 96.0% of GDP",
+      "2 regions with critical water availability",
+      "10 corrective measures identified (SAR 57.8B total)"
+    ],
+    "spatial_requirements": {
+      "total_land_km2": 83000,
+      "total_water_mcm_year": 16850,
+      "total_employment_2030": 4250000,
+      "total_investment_sar_billion": 1700,
+      "ksa_total_area_km2": 2149690,
+      "land_as_pct_of_total": 3.8610218217510437,
+      "water_comparison": {
+        "total_demand_mcm": 16850,
+        "current_supply_mcm": 22000,
+        "deficit_mcm": 0,
+        "agriculture_share_pct": 89.02077151335311
+      }
+    },
+    "national_aggregates": {
+      "total_population_2025_millions": 34.94,
+      "total_population_2030_millions": 40.35,
+      "population_growth_rate": 2.9210309112223776,
+      "water_balance": {
+        "total_demand_mcm": 11250,
+        "total_supply_mcm": 10270,
+        "deficit_mcm": 980,
+        "deficit_regions": [
+          "Riyadh",
+          "Makkah",
+          "Madinah",
+          "Tabuk",
+          "Al-Qassim",
+          "Hail",
+          "Northern Borders",
+          "Al-Jouf"
+        ]
+      },
+      "regional_concentration": {
+        "top_3_gdp_share": 96.0,
+        "top_3_population_share": 64.0
+      },
+      "giga_project_regions": [
+        "Riyadh",
+        "Makkah",
+        "Eastern Province",
+        "Madinah",
+        "Tabuk",
+        "Asir",
+        "Northern Borders",
+        "Jazan"
+      ]
+    },
+    "investment_summary": {
+      "total_sar_million": 57800,
+      "total_sar_billion": 57.8,
+      "by_priority": {
+        "critical": 15000,
+        "high": 14500,
+        "medium": 28300,
+        "low": 0
+      },
+      "by_type": {
+        "regulatory": 18800,
+        "investment": 22000,
+        "planning": 2000,
+        "incentive": 15000
+      },
+      "measure_count": 10
+    },
+    "critical_actions": [
+      "Implement agricultural water demand reduction (40% target)",
+      "Establish industrial-residential buffer zones",
+      "Develop integrated coastal zone management",
+      "Expand protected areas to meet 30x30 commitment",
+      "Create regional economic specialization programs"
+    ],
+    "workshop_program": {
+      "total_workshops": 4,
+      "target_audiences": [
+        "Regional Planning Authorities",
+        "Sectoral Ministries",
+        "Private Sector",
+        "Environmental/Civil Society"
+      ]
+    }
+  },
+  "section_1_sectoral_strategies": {
+    "tourism": {
+      "sector_name": "Tourism & Entertainment",
+      "strategy_document": "National Tourism Strategy 2030",
+      "vision2030_program": "Quality of Life Program",
+      "key_objectives": [
+        "Achieve 100 million annual tourist visits by 2030",
+        "Increase tourism GDP contribution to 10%",
+        "Create 1 million tourism jobs",
+        "Develop 5 world-class destinations",
+        "Preserve and showcase Saudi heritage"
+      ],
+      "spatial_requirements": [
+        "Coastal resort development zones",
+        "Heritage preservation districts",
+        "Entertainment complexes in major cities",
+        "Eco-tourism zones in natural areas",
+        "Religious tourism infrastructure"
+      ],
+      "target_regions": [
+        "Makkah",
+        "Madinah",
+        "Riyadh",
+        "Tabuk",
+        "Asir",
+        "Eastern Province"
+      ],
+      "resource_needs": {
+        "land_km2": 5000,
+        "water_mcm_year": 450,
+        "employment_2030": 1000000,
+        "investment_sar_billion": 500
+      },
+      "key_projects": [
+        "NEOM (Trojena ski resort, Sindalah island)",
+        "Red Sea Project",
+        "AMAALA",
+        "Qiddiya Entertainment City",
+        "Diriyah Gate",
+        "AlUla Heritage Development"
+      ],
+      "conflicts": [
+        "Competition with residential development in coastal areas",
+        "Water demand conflicts with agriculture",
+        "Environmental protection vs infrastructure development",
+        "Land value inflation displacing local communities"
+      ],
+      "synergies": [
+        "Transport infrastructure benefits multiple sectors",
+        "Heritage preservation supports cultural identity",
+        "Eco-tourism incentivizes environmental protection",
+        "Entertainment attracts talent for other sectors"
+      ],
+      "recommendations": [
+        "Establish coastal zone management framework",
+        "Create tourism-specific water allocation",
+        "Integrate heritage protection in development approvals",
+        "Develop local community benefit-sharing mechanisms"
+      ]
+    },
+    "industrial": {
+      "sector_name": "Manufacturing & Industry",
+      "strategy_document": "National Industrial Development and Logistics Program (NIDLP)",
+      "vision2030_program": "NIDLP",
+      "key_objectives": [
+        "Increase industrial GDP to 20% of total",
+        "Localize 50% of military equipment spending",
+        "Develop renewable energy equipment manufacturing",
+        "Create integrated industrial clusters",
+        "Enhance export competitiveness"
+      ],
+      "spatial_requirements": [
+        "Industrial cities and zones",
+        "Logistics hubs and dry ports",
+        "Special economic zones",
+        "Research and development parks",
+        "Worker housing and amenities"
+      ],
+      "target_regions": [
+        "Riyadh",
+        "Eastern Province",
+        "Makkah",
+        "Madinah",
+        "Tabuk"
+      ],
+      "resource_needs": {
+        "land_km2": 3000,
+        "water_mcm_year": 800,
+        "employment_2030": 1500000,
+        "investment_sar_billion": 450
+      },
+      "key_projects": [
+        "NEOM Industrial City",
+        "King Salman Energy Park (SPARK)",
+        "Ras Al-Khair Industrial City expansion",
+        "Sudair Industrial City",
+        "Jazan Economic City",
+        "King Abdullah Port expansion"
+      ],
+      "conflicts": [
+        "Industrial pollution affecting residential areas",
+        "Heavy water consumption vs other uses",
+        "Land conversion from agricultural use",
+        "Transport congestion in mixed-use areas",
+        "Environmental degradation risks"
+      ],
+      "synergies": [
+        "Integration with ports and logistics",
+        "Shared infrastructure with energy sector",
+        "Technology parks supporting innovation",
+        "Employment centers reducing commuting"
+      ],
+      "recommendations": [
+        "Enforce strict separation from residential zones",
+        "Mandate industrial water recycling (80% target)",
+        "Create green industrial park standards",
+        "Develop integrated industrial-logistics corridors"
+      ]
+    },
+    "energy": {
+      "sector_name": "Energy (Conventional & Renewable)",
+      "strategy_document": "Saudi Energy Efficiency Program & Renewable Energy Strategy",
+      "vision2030_program": "Multiple programs",
+      "key_objectives": [
+        "Achieve 50% renewable energy by 2030",
+        "Reduce oil consumption in power generation",
+        "Develop green hydrogen production",
+        "Enhance energy efficiency by 30%",
+        "Export clean energy technology"
+      ],
+      "spatial_requirements": [
+        "Solar farm sites (high irradiance areas)",
+        "Wind farm sites (coastal and elevated areas)",
+        "Transmission line corridors",
+        "Green hydrogen production facilities",
+        "Energy storage installations"
+      ],
+      "target_regions": [
+        "Tabuk",
+        "Al-Jouf",
+        "Northern Borders",
+        "Eastern Province",
+        "NEOM"
+      ],
+      "resource_needs": {
+        "land_km2": 8000,
+        "water_mcm_year": 200,
+        "employment_2030": 200000,
+        "investment_sar_billion": 200
+      },
+      "key_projects": [
+        "NEOM Green Hydrogen Project",
+        "Sudair Solar PV Project (1.5 GW)",
+        "Dumat Al-Jandal Wind Farm",
+        "Red Sea renewable energy complex",
+        "Sakaka Solar Project",
+        "National grid expansion"
+      ],
+      "conflicts": [
+        "Solar farms competing with agricultural land",
+        "Wind farms affecting bird migration routes",
+        "Transmission corridors through protected areas",
+        "Visual impact on tourism destinations"
+      ],
+      "synergies": [
+        "Agrivoltaics combining solar and agriculture",
+        "Renewable energy supporting water desalination",
+        "Green hydrogen enabling industrial decarbonization",
+        "Rural electrification improving quality of life"
+      ],
+      "recommendations": [
+        "Prioritize degraded land for solar installations",
+        "Establish renewable energy zones with streamlined approvals",
+        "Integrate transmission planning with spatial strategy",
+        "Create co-benefit requirements for renewable projects"
+      ]
+    },
+    "mining": {
+      "sector_name": "Mining & Minerals",
+      "strategy_document": "Mining Investment Law & Ma'aden Strategy",
+      "vision2030_program": "NIDLP",
+      "key_objectives": [
+        "Increase mining GDP contribution to 3% (SAR 240B)",
+        "Develop phosphate, gold, copper, and rare earth extraction",
+        "Create downstream processing industries",
+        "Attract USD 170 billion in mining investment",
+        "Become top 15 global mining nation"
+      ],
+      "spatial_requirements": [
+        "Mining concession areas",
+        "Processing and smelting facilities",
+        "Tailings storage facilities",
+        "Transport corridors (rail and road)",
+        "Mining towns and worker facilities"
+      ],
+      "target_regions": [
+        "Northern Borders",
+        "Madinah",
+        "Tabuk",
+        "Al-Jouf",
+        "Najran"
+      ],
+      "resource_needs": {
+        "land_km2": 15000,
+        "water_mcm_year": 350,
+        "employment_2030": 250000,
+        "investment_sar_billion": 170
+      },
+      "key_projects": [
+        "Waad Al-Shamal Phosphate City",
+        "Ma'aden Gold Operations (Mahd Ad Dhahab)",
+        "Jalamid Phosphate Mine",
+        "Khnaiguiyah Zinc-Copper Project",
+        "Arabian Shield rare earth exploration",
+        "North-South Railway for mineral transport"
+      ],
+      "conflicts": [
+        "Land degradation and rehabilitation needs",
+        "Water table depletion in mining areas",
+        "Conflict with environmental protection zones",
+        "Impact on traditional grazing lands",
+        "Dust and pollution affecting nearby communities"
+      ],
+      "synergies": [
+        "Railway development benefiting other sectors",
+        "Mining towns creating regional service centers",
+        "Processing industries adding local value",
+        "Technology development for harsh environment operations"
+      ],
+      "recommendations": [
+        "Establish mandatory rehabilitation bonds",
+        "Create buffer zones around mining operations",
+        "Require progressive reclamation plans",
+        "Develop community benefit agreements"
+      ]
+    },
+    "agriculture": {
+      "sector_name": "Agriculture & Food Security",
+      "strategy_document": "National Agriculture Strategy & Environment Fund Strategy",
+      "vision2030_program": "Environment Fund",
+      "key_objectives": [
+        "Achieve 80% food security for strategic commodities",
+        "Reduce agricultural water consumption by 40%",
+        "Develop high-tech greenhouse agriculture",
+        "Enhance date palm productivity and exports",
+        "Support rural livelihoods"
+      ],
+      "spatial_requirements": [
+        "Irrigated agricultural zones",
+        "Greenhouse and vertical farming complexes",
+        "Food processing and storage facilities",
+        "Livestock production areas",
+        "Research stations"
+      ],
+      "target_regions": [
+        "Al-Qassim",
+        "Riyadh",
+        "Hail",
+        "Al-Jouf",
+        "Jazan",
+        "Asir"
+      ],
+      "resource_needs": {
+        "land_km2": 50000,
+        "water_mcm_year": 15000,
+        "employment_2030": 800000,
+        "investment_sar_billion": 80
+      },
+      "key_projects": [
+        "NEOM Sustainable Food Production",
+        "Al-Jouf Agricultural Development",
+        "Jazan Coffee Cultivation Project",
+        "National Aquaculture Strategy",
+        "Indoor Farming Initiative",
+        "Date Palm Enhancement Program"
+      ],
+      "conflicts": [
+        "CRITICAL: Water consumption unsustainable",
+        "Urban expansion onto prime agricultural land",
+        "Competition with solar energy for land",
+        "Groundwater depletion affecting other sectors",
+        "Agricultural runoff polluting water sources"
+      ],
+      "synergies": [
+        "Agrivoltaics combining solar and crops",
+        "Treated wastewater reuse potential",
+        "Rural tourism and agri-tourism",
+        "Food processing supporting industrial sector"
+      ],
+      "recommendations": [
+        "CRITICAL: Phase out water-intensive crops (wheat, alfalfa)",
+        "Establish agricultural land protection zones",
+        "Mandate water-efficient irrigation technologies",
+        "Promote high-value, low-water crops",
+        "Develop treated wastewater reuse for agriculture"
+      ]
+    },
+    "transport": {
+      "sector_name": "Transport & Logistics",
+      "strategy_document": "National Transport & Logistics Strategy",
+      "vision2030_program": "NIDLP",
+      "key_objectives": [
+        "Connect all regions with modern transport infrastructure",
+        "Develop Saudi Arabia as a global logistics hub",
+        "Complete national railway network",
+        "Expand port capacity to 40 million TEUs",
+        "Enhance aviation to 330 million passengers"
+      ],
+      "spatial_requirements": [
+        "Railway corridors (5,000+ km new lines)",
+        "Highway network expansion",
+        "Airport expansion and new airports",
+        "Port development and expansion",
+        "Logistics parks and dry ports",
+        "Intermodal transfer facilities"
+      ],
+      "target_regions": [
+        "All 13 regions - national connectivity"
+      ],
+      "resource_needs": {
+        "land_km2": 2000,
+        "water_mcm_year": 50,
+        "employment_2030": 500000,
+        "investment_sar_billion": 300
+      },
+      "key_projects": [
+        "Land Bridge (Red Sea to Gulf)",
+        "Riyadh Metro (6 lines)",
+        "Haramain High Speed Rail extension",
+        "North-South Railway completion",
+        "NEOM Mobility (Oxagon port, The Line transport)",
+        "King Abdulaziz International Airport expansion",
+        "Red Sea International Airport",
+        "Jeddah Islamic Port expansion"
+      ],
+      "conflicts": [
+        "Railway corridors through agricultural land",
+        "Airport noise zones affecting residential areas",
+        "Port expansion impacting coastal ecosystems",
+        "Highway construction fragmenting habitats"
+      ],
+      "synergies": [
+        "TOD (Transit-Oriented Development) opportunities",
+        "Freight corridors supporting industrial clusters",
+        "Aviation enabling tourism growth",
+        "Connectivity reducing regional disparities"
+      ],
+      "recommendations": [
+        "Integrate transport planning with land use planning",
+        "Establish TOD zones around all metro stations",
+        "Create ecological crossing requirements for highways",
+        "Develop noise mitigation standards for airports"
+      ]
+    }
+  },
+  "section_2_regional_diagnostics": {
+    "Riyadh": {
+      "basic_info": {
+        "name": "Riyadh",
+        "name_ar": "الرياض",
+        "area_km2": 404240,
+        "population_2025_millions": 8.9,
+        "population_2030_millions": 10.5,
+        "urbanization_rate": 95.0
+      },
+      "settlement_hierarchy": {
+        "primary_city": "Riyadh City",
+        "secondary_cities": [
+          "Al-Kharj",
+          "Al-Majma'ah",
+          "Al-Dawadmi",
+          "Wadi al-Dawasir"
+        ],
+        "settlement_count": 450,
+        "urban_primacy_ratio": 0.92
+      },
+      "economic_profile": {
+        "gdp_contribution_pct": 50.0,
+        "gdp_per_capita_sar": 145000,
+        "dominant_sectors": [
+          "Government",
+          "Finance",
+          "Real Estate",
+          "Retail"
+        ],
+        "emerging_sectors": [
+          "Technology",
+          "Entertainment",
+          "Tourism"
+        ],
+        "employment_rate": 94.5
+      },
+      "competitive_position": {
+        "advantages": [
+          "National capital with government headquarters",
+          "Largest financial center in the region",
+          "Major international airport hub",
+          "Headquarters relocation policy driving growth",
+          "Largest consumer market"
+        ],
+        "strategic_assets": [
+          "King Khalid International Airport",
+          "Riyadh Metro (under construction)",
+          "King Abdullah Financial District",
+          "Diriyah UNESCO Heritage Site",
+          "Multiple universities and research centers"
+        ]
+      },
+      "environmental_capacity": {
+        "water_availability": "critical",
+        "water_sources": [
+          "Groundwater (depleting)",
+          "Desalination (piped)",
+          "Treated wastewater"
+        ],
+        "water_demand_mcm": 2500,
+        "water_supply_mcm": 2200,
+        "water_balance": -300,
+        "environmental_sensitivity": "medium",
+        "protected_areas_pct": 2.5,
+        "climate_risks": [
+          "Extreme heat",
+          "Dust storms",
+          "Flash floods"
+        ]
+      },
+      "development_outlook": {
+        "potential": "high",
+        "constraints": [
+          "Water scarcity",
+          "Urban sprawl",
+          "Traffic congestion",
+          "Air quality"
+        ],
+        "priority_investments": [
+          "Metro completion",
+          "Water infrastructure",
+          "Green corridors",
+          "Social infrastructure"
+        ],
+        "giga_projects": [
+          "Diriyah Gate",
+          "Qiddiya",
+          "King Salman Park",
+          "Sports Boulevard",
+          "Riyadh Green"
+        ],
+        "vision2030_role": "National capital, economic powerhouse, quality of life exemplar"
+      }
+    },
+    "Makkah": {
+      "basic_info": {
+        "name": "Makkah",
+        "name_ar": "مكة المكرمة",
+        "area_km2": 153128,
+        "population_2025_millions": 9.1,
+        "population_2030_millions": 10.2,
+        "urbanization_rate": 96.0
+      },
+      "settlement_hierarchy": {
+        "primary_city": "Jeddah",
+        "secondary_cities": [
+          "Makkah",
+          "Taif",
+          "Rabigh",
+          "Al Qunfudhah"
+        ],
+        "settlement_count": 380,
+        "urban_primacy_ratio": 0.48
+      },
+      "economic_profile": {
+        "gdp_contribution_pct": 21.0,
+        "gdp_per_capita_sar": 85000,
+        "dominant_sectors": [
+          "Religious Tourism",
+          "Trade",
+          "Logistics",
+          "Real Estate"
+        ],
+        "emerging_sectors": [
+          "Manufacturing",
+          "Creative Industries",
+          "Healthcare"
+        ],
+        "employment_rate": 92.0
+      },
+      "competitive_position": {
+        "advantages": [
+          "Holiest city in Islam (Makkah)",
+          "Major Red Sea port (Jeddah)",
+          "Gateway for Hajj and Umrah",
+          "Established commercial center",
+          "International airport"
+        ],
+        "strategic_assets": [
+          "Masjid al-Haram (Grand Mosque)",
+          "King Abdulaziz International Airport",
+          "Jeddah Islamic Port",
+          "King Abdullah Economic City",
+          "Historic Jeddah (UNESCO)"
+        ]
+      },
+      "environmental_capacity": {
+        "water_availability": "scarce",
+        "water_sources": [
+          "Desalination",
+          "Groundwater (limited)",
+          "Treated wastewater"
+        ],
+        "water_demand_mcm": 1800,
+        "water_supply_mcm": 1700,
+        "water_balance": -100,
+        "environmental_sensitivity": "high",
+        "protected_areas_pct": 3.0,
+        "climate_risks": [
+          "Extreme heat",
+          "Flash floods (Jeddah)",
+          "Sea level rise"
+        ]
+      },
+      "development_outlook": {
+        "potential": "high",
+        "constraints": [
+          "Water scarcity",
+          "Hajj peak demand",
+          "Coastal development pressure",
+          "Historic preservation"
+        ],
+        "priority_investments": [
+          "Flood protection",
+          "Public transport",
+          "Pilgrim facilities",
+          "Waterfront development"
+        ],
+        "giga_projects": [
+          "Red Sea Project (partial)",
+          "Jeddah Central",
+          "Obhur Development"
+        ],
+        "vision2030_role": "Religious and cultural tourism capital, Red Sea gateway"
+      }
+    },
+    "Eastern Province": {
+      "basic_info": {
+        "name": "Eastern Province",
+        "name_ar": "المنطقة الشرقية",
+        "area_km2": 672522,
+        "population_2025_millions": 5.3,
+        "population_2030_millions": 6.0,
+        "urbanization_rate": 90.0
+      },
+      "settlement_hierarchy": {
+        "primary_city": "Dammam",
+        "secondary_cities": [
+          "Al Khobar",
+          "Dhahran",
+          "Al Jubail",
+          "Al Hofuf",
+          "Qatif"
+        ],
+        "settlement_count": 280,
+        "urban_primacy_ratio": 0.35
+      },
+      "economic_profile": {
+        "gdp_contribution_pct": 25.0,
+        "gdp_per_capita_sar": 175000,
+        "dominant_sectors": [
+          "Oil & Gas",
+          "Petrochemicals",
+          "Manufacturing"
+        ],
+        "emerging_sectors": [
+          "Technology",
+          "Tourism",
+          "Logistics"
+        ],
+        "employment_rate": 95.0
+      },
+      "competitive_position": {
+        "advantages": [
+          "Center of oil and gas industry",
+          "Largest industrial base",
+          "Strategic Gulf location",
+          "Established expat community",
+          "Strong technical workforce"
+        ],
+        "strategic_assets": [
+          "Saudi Aramco headquarters",
+          "Jubail Industrial City",
+          "King Fahd International Airport",
+          "Multiple ports",
+          "KFUPM research university"
+        ]
+      },
+      "environmental_capacity": {
+        "water_availability": "moderate",
+        "water_sources": [
+          "Desalination",
+          "Groundwater",
+          "Industrial recycling"
+        ],
+        "water_demand_mcm": 1500,
+        "water_supply_mcm": 1600,
+        "water_balance": 100,
+        "environmental_sensitivity": "high",
+        "protected_areas_pct": 5.0,
+        "climate_risks": [
+          "Sea level rise",
+          "Industrial pollution",
+          "Extreme heat"
+        ]
+      },
+      "development_outlook": {
+        "potential": "high",
+        "constraints": [
+          "Oil dependency transition",
+          "Environmental remediation",
+          "Industrial diversification"
+        ],
+        "priority_investments": [
+          "Industrial diversification",
+          "Tourism infrastructure",
+          "Environmental cleanup",
+          "Rail connectivity"
+        ],
+        "giga_projects": [
+          "King Salman Energy Park (SPARK)",
+          "Ras Al-Khair expansion"
+        ],
+        "vision2030_role": "Industrial powerhouse, energy transition leader, Gulf gateway"
+      }
+    },
+    "Madinah": {
+      "basic_info": {
+        "name": "Madinah",
+        "name_ar": "المدينة المنورة",
+        "area_km2": 151990,
+        "population_2025_millions": 2.3,
+        "population_2030_millions": 2.7,
+        "urbanization_rate": 85.0
+      },
+      "settlement_hierarchy": {
+        "primary_city": "Madinah",
+        "secondary_cities": [
+          "Yanbu",
+          "Al-Ula",
+          "Khaybar"
+        ],
+        "settlement_count": 180,
+        "urban_primacy_ratio": 0.75
+      },
+      "economic_profile": {
+        "gdp_contribution_pct": 4.5,
+        "gdp_per_capita_sar": 72000,
+        "dominant_sectors": [
+          "Religious Tourism",
+          "Petrochemicals (Yanbu)",
+          "Agriculture"
+        ],
+        "emerging_sectors": [
+          "Cultural Tourism",
+          "Mining",
+          "Renewable Energy"
+        ],
+        "employment_rate": 91.0
+      },
+      "competitive_position": {
+        "advantages": [
+          "Second holiest city in Islam",
+          "Major pilgrimage destination",
+          "Yanbu industrial city and port",
+          "AlUla heritage and natural landscapes",
+          "Date palm production"
+        ],
+        "strategic_assets": [
+          "Prophet's Mosque",
+          "AlUla UNESCO World Heritage",
+          "Yanbu Industrial City",
+          "Prince Mohammad Bin Abdulaziz Airport",
+          "Haramain High Speed Rail station"
+        ]
+      },
+      "environmental_capacity": {
+        "water_availability": "scarce",
+        "water_sources": [
+          "Desalination (Yanbu)",
+          "Groundwater",
+          "Treated wastewater"
+        ],
+        "water_demand_mcm": 600,
+        "water_supply_mcm": 550,
+        "water_balance": -50,
+        "environmental_sensitivity": "high",
+        "protected_areas_pct": 8.0,
+        "climate_risks": [
+          "Extreme heat",
+          "Flash floods",
+          "Desertification"
+        ]
+      },
+      "development_outlook": {
+        "potential": "high",
+        "constraints": [
+          "Water scarcity",
+          "Heritage preservation requirements",
+          "Infrastructure gaps"
+        ],
+        "priority_investments": [
+          "AlUla development",
+          "Water infrastructure",
+          "Tourism facilities",
+          "Transport connectivity"
+        ],
+        "giga_projects": [
+          "AlUla Development",
+          "Yanbu expansion"
+        ],
+        "vision2030_role": "Religious tourism, cultural heritage showcase, industrial diversification"
+      }
+    },
+    "Tabuk": {
+      "basic_info": {
+        "name": "Tabuk",
+        "name_ar": "تبوك",
+        "area_km2": 139000,
+        "population_2025_millions": 1.0,
+        "population_2030_millions": 1.5,
+        "urbanization_rate": 78.0
+      },
+      "settlement_hierarchy": {
+        "primary_city": "Tabuk City",
+        "secondary_cities": [
+          "Haql",
+          "Duba",
+          "Umluj",
+          "Al Wajh"
+        ],
+        "settlement_count": 120,
+        "urban_primacy_ratio": 0.8
+      },
+      "economic_profile": {
+        "gdp_contribution_pct": 1.5,
+        "gdp_per_capita_sar": 55000,
+        "dominant_sectors": [
+          "Agriculture",
+          "Military",
+          "Trade"
+        ],
+        "emerging_sectors": [
+          "Tourism",
+          "Renewable Energy",
+          "Technology"
+        ],
+        "employment_rate": 88.0
+      },
+      "competitive_position": {
+        "advantages": [
+          "NEOM giga-project location",
+          "Red Sea coastline",
+          "Mild climate (highlands)",
+          "Agricultural potential",
+          "Strategic border location"
+        ],
+        "strategic_assets": [
+          "NEOM site",
+          "Red Sea coast",
+          "Tabuk Regional Airport",
+          "Agricultural zones",
+          "Military installations"
+        ]
+      },
+      "environmental_capacity": {
+        "water_availability": "scarce",
+        "water_sources": [
+          "Groundwater",
+          "Desalination (NEOM)",
+          "Springs (limited)"
+        ],
+        "water_demand_mcm": 400,
+        "water_supply_mcm": 350,
+        "water_balance": -50,
+        "environmental_sensitivity": "high",
+        "protected_areas_pct": 12.0,
+        "climate_risks": [
+          "Flash floods",
+          "Desertification",
+          "Seismic activity"
+        ]
+      },
+      "development_outlook": {
+        "potential": "very high",
+        "constraints": [
+          "Remote location",
+          "Infrastructure gaps",
+          "Labor availability",
+          "Environmental sensitivity"
+        ],
+        "priority_investments": [
+          "NEOM infrastructure",
+          "Transport connectivity",
+          "Water desalination",
+          "Skills development"
+        ],
+        "giga_projects": [
+          "NEOM (The Line, Trojena, Oxagon, Sindalah)"
+        ],
+        "vision2030_role": "Future city of tomorrow, tourism destination, renewable energy hub"
+      }
+    },
+    "Asir": {
+      "basic_info": {
+        "name": "Asir",
+        "name_ar": "عسير",
+        "area_km2": 81000,
+        "population_2025_millions": 2.3,
+        "population_2030_millions": 2.6,
+        "urbanization_rate": 65.0
+      },
+      "settlement_hierarchy": {
+        "primary_city": "Abha",
+        "secondary_cities": [
+          "Khamis Mushait",
+          "Bisha",
+          "Al-Namas"
+        ],
+        "settlement_count": 350,
+        "urban_primacy_ratio": 0.55
+      },
+      "economic_profile": {
+        "gdp_contribution_pct": 2.5,
+        "gdp_per_capita_sar": 48000,
+        "dominant_sectors": [
+          "Agriculture",
+          "Tourism",
+          "Military"
+        ],
+        "emerging_sectors": [
+          "Eco-tourism",
+          "Coffee cultivation",
+          "Handicrafts"
+        ],
+        "employment_rate": 89.0
+      },
+      "competitive_position": {
+        "advantages": [
+          "Cooler highland climate",
+          "Scenic mountain landscapes",
+          "Traditional villages and heritage",
+          "Agricultural diversity",
+          "Domestic tourism destination"
+        ],
+        "strategic_assets": [
+          "Asir National Park",
+          "Traditional villages (Rijal Alma)",
+          "Abha Regional Airport",
+          "Agricultural terraces",
+          "Cable cars and tourism infrastructure"
+        ]
+      },
+      "environmental_capacity": {
+        "water_availability": "moderate",
+        "water_sources": [
+          "Rainfall",
+          "Springs",
+          "Dams",
+          "Groundwater"
+        ],
+        "water_demand_mcm": 350,
+        "water_supply_mcm": 400,
+        "water_balance": 50,
+        "environmental_sensitivity": "high",
+        "protected_areas_pct": 15.0,
+        "climate_risks": [
+          "Landslides",
+          "Forest fires",
+          "Flash floods"
+        ]
+      },
+      "development_outlook": {
+        "potential": "medium",
+        "constraints": [
+          "Terrain challenges",
+          "Infrastructure access",
+          "Heritage preservation",
+          "Seasonal demand"
+        ],
+        "priority_investments": [
+          "Tourism infrastructure",
+          "Road improvements",
+          "Heritage preservation",
+          "Agricultural support"
+        ],
+        "giga_projects": [
+          "Asir Development"
+        ],
+        "vision2030_role": "Domestic tourism destination, agricultural heritage, eco-tourism model"
+      }
+    },
+    "Al-Qassim": {
+      "basic_info": {
+        "name": "Al-Qassim",
+        "name_ar": "القصيم",
+        "area_km2": 65000,
+        "population_2025_millions": 1.5,
+        "population_2030_millions": 1.7,
+        "urbanization_rate": 75.0
+      },
+      "settlement_hierarchy": {
+        "primary_city": "Buraydah",
+        "secondary_cities": [
+          "Unayzah",
+          "Al-Rass",
+          "Al-Badai'a"
+        ],
+        "settlement_count": 220,
+        "urban_primacy_ratio": 0.65
+      },
+      "economic_profile": {
+        "gdp_contribution_pct": 2.0,
+        "gdp_per_capita_sar": 52000,
+        "dominant_sectors": [
+          "Agriculture",
+          "Trade",
+          "Education"
+        ],
+        "emerging_sectors": [
+          "Food processing",
+          "Logistics",
+          "Renewable energy"
+        ],
+        "employment_rate": 90.0
+      },
+      "competitive_position": {
+        "advantages": [
+          "Date palm capital of Saudi Arabia",
+          "Agricultural productivity center",
+          "Central geographic location",
+          "Strong educational institutions",
+          "Traditional trading hub"
+        ],
+        "strategic_assets": [
+          "Date farms and processing",
+          "Qassim University",
+          "Central location on transport routes",
+          "Agricultural research centers",
+          "Regional markets"
+        ]
+      },
+      "environmental_capacity": {
+        "water_availability": "critical",
+        "water_sources": [
+          "Groundwater (rapidly depleting)",
+          "Treated wastewater"
+        ],
+        "water_demand_mcm": 2000,
+        "water_supply_mcm": 1500,
+        "water_balance": -500,
+        "environmental_sensitivity": "medium",
+        "protected_areas_pct": 3.0,
+        "climate_risks": [
+          "Groundwater depletion",
+          "Desertification",
+          "Extreme heat"
+        ]
+      },
+      "development_outlook": {
+        "potential": "medium",
+        "constraints": [
+          "CRITICAL water depletion",
+          "Agricultural transition needs",
+          "Limited diversification"
+        ],
+        "priority_investments": [
+          "Water efficiency",
+          "Agricultural modernization",
+          "Food processing",
+          "Solar energy"
+        ],
+        "giga_projects": [],
+        "vision2030_role": "Agricultural innovation center, food security contributor"
+      }
+    },
+    "Hail": {
+      "basic_info": {
+        "name": "Hail",
+        "name_ar": "حائل",
+        "area_km2": 103887,
+        "population_2025_millions": 0.75,
+        "population_2030_millions": 0.85,
+        "urbanization_rate": 70.0
+      },
+      "settlement_hierarchy": {
+        "primary_city": "Hail City",
+        "secondary_cities": [
+          "Baqaa",
+          "Al-Ghazalah"
+        ],
+        "settlement_count": 150,
+        "urban_primacy_ratio": 0.85
+      },
+      "economic_profile": {
+        "gdp_contribution_pct": 1.0,
+        "gdp_per_capita_sar": 48000,
+        "dominant_sectors": [
+          "Agriculture",
+          "Trade",
+          "Government"
+        ],
+        "emerging_sectors": [
+          "Mining",
+          "Renewable energy",
+          "Eco-tourism"
+        ],
+        "employment_rate": 88.0
+      },
+      "competitive_position": {
+        "advantages": [
+          "Agricultural potential",
+          "Mining resources",
+          "Cultural heritage",
+          "Central location"
+        ],
+        "strategic_assets": [
+          "Rock art sites",
+          "Agricultural zones",
+          "Mining deposits"
+        ]
+      },
+      "environmental_capacity": {
+        "water_availability": "scarce",
+        "water_sources": [
+          "Groundwater",
+          "Dams"
+        ],
+        "water_demand_mcm": 500,
+        "water_supply_mcm": 400,
+        "water_balance": -100,
+        "environmental_sensitivity": "medium",
+        "protected_areas_pct": 5.0,
+        "climate_risks": [
+          "Desertification",
+          "Groundwater depletion"
+        ]
+      },
+      "development_outlook": {
+        "potential": "medium",
+        "constraints": [
+          "Water scarcity",
+          "Remote location",
+          "Small market size"
+        ],
+        "priority_investments": [
+          "Mining development",
+          "Agricultural efficiency",
+          "Tourism"
+        ],
+        "giga_projects": [],
+        "vision2030_role": "Agricultural and mining development"
+      }
+    },
+    "Northern Borders": {
+      "basic_info": {
+        "name": "Northern Borders",
+        "name_ar": "الحدود الشمالية",
+        "area_km2": 111797,
+        "population_2025_millions": 0.42,
+        "population_2030_millions": 0.5,
+        "urbanization_rate": 65.0
+      },
+      "settlement_hierarchy": {
+        "primary_city": "Arar",
+        "secondary_cities": [
+          "Rafha",
+          "Turaif"
+        ],
+        "settlement_count": 80,
+        "urban_primacy_ratio": 0.75
+      },
+      "economic_profile": {
+        "gdp_contribution_pct": 0.8,
+        "gdp_per_capita_sar": 70000,
+        "dominant_sectors": [
+          "Mining (phosphate)",
+          "Government",
+          "Trade"
+        ],
+        "emerging_sectors": [
+          "Renewable energy",
+          "Industrial processing"
+        ],
+        "employment_rate": 85.0
+      },
+      "competitive_position": {
+        "advantages": [
+          "Phosphate reserves",
+          "Solar potential",
+          "Border trade"
+        ],
+        "strategic_assets": [
+          "Waad Al-Shamal Phosphate City",
+          "Solar irradiance"
+        ]
+      },
+      "environmental_capacity": {
+        "water_availability": "scarce",
+        "water_sources": [
+          "Groundwater",
+          "Desalination (limited)"
+        ],
+        "water_demand_mcm": 200,
+        "water_supply_mcm": 180,
+        "water_balance": -20,
+        "environmental_sensitivity": "low",
+        "protected_areas_pct": 2.0,
+        "climate_risks": [
+          "Extreme temperatures",
+          "Dust storms"
+        ]
+      },
+      "development_outlook": {
+        "potential": "high",
+        "constraints": [
+          "Remote location",
+          "Small population",
+          "Harsh climate"
+        ],
+        "priority_investments": [
+          "Mining expansion",
+          "Renewable energy",
+          "Infrastructure"
+        ],
+        "giga_projects": [
+          "Waad Al-Shamal expansion"
+        ],
+        "vision2030_role": "Mining and renewable energy hub"
+      }
+    },
+    "Jazan": {
+      "basic_info": {
+        "name": "Jazan",
+        "name_ar": "جازان",
+        "area_km2": 13457,
+        "population_2025_millions": 1.7,
+        "population_2030_millions": 1.9,
+        "urbanization_rate": 55.0
+      },
+      "settlement_hierarchy": {
+        "primary_city": "Jazan City",
+        "secondary_cities": [
+          "Sabya",
+          "Abu Arish",
+          "Farasan Islands"
+        ],
+        "settlement_count": 250,
+        "urban_primacy_ratio": 0.5
+      },
+      "economic_profile": {
+        "gdp_contribution_pct": 1.2,
+        "gdp_per_capita_sar": 32000,
+        "dominant_sectors": [
+          "Agriculture",
+          "Fishing",
+          "Industry"
+        ],
+        "emerging_sectors": [
+          "Tourism",
+          "Coffee production",
+          "Renewable energy"
+        ],
+        "employment_rate": 82.0
+      },
+      "competitive_position": {
+        "advantages": [
+          "Tropical climate",
+          "Agricultural diversity",
+          "Fishing",
+          "Farasan Islands"
+        ],
+        "strategic_assets": [
+          "Jazan Economic City",
+          "Farasan Marine Reserve",
+          "Coffee plantations"
+        ]
+      },
+      "environmental_capacity": {
+        "water_availability": "moderate",
+        "water_sources": [
+          "Rainfall",
+          "Dams",
+          "Groundwater"
+        ],
+        "water_demand_mcm": 400,
+        "water_supply_mcm": 450,
+        "water_balance": 50,
+        "environmental_sensitivity": "high",
+        "protected_areas_pct": 10.0,
+        "climate_risks": [
+          "Flooding",
+          "Tropical storms",
+          "Sea level rise"
+        ]
+      },
+      "development_outlook": {
+        "potential": "medium",
+        "constraints": [
+          "Infrastructure gaps",
+          "Education levels",
+          "Economic diversification"
+        ],
+        "priority_investments": [
+          "Economic city development",
+          "Tourism",
+          "Agricultural modernization"
+        ],
+        "giga_projects": [
+          "Jazan Economic City"
+        ],
+        "vision2030_role": "Economic diversification, eco-tourism, agricultural exports"
+      }
+    },
+    "Najran": {
+      "basic_info": {
+        "name": "Najran",
+        "name_ar": "نجران",
+        "area_km2": 149511,
+        "population_2025_millions": 0.62,
+        "population_2030_millions": 0.7,
+        "urbanization_rate": 60.0
+      },
+      "settlement_hierarchy": {
+        "primary_city": "Najran City",
+        "secondary_cities": [
+          "Sharurah",
+          "Hubuna"
+        ],
+        "settlement_count": 100,
+        "urban_primacy_ratio": 0.8
+      },
+      "economic_profile": {
+        "gdp_contribution_pct": 0.6,
+        "gdp_per_capita_sar": 38000,
+        "dominant_sectors": [
+          "Agriculture",
+          "Government",
+          "Trade"
+        ],
+        "emerging_sectors": [
+          "Mining",
+          "Tourism (heritage)"
+        ],
+        "employment_rate": 84.0
+      },
+      "competitive_position": {
+        "advantages": [
+          "Archaeological heritage",
+          "Agricultural oases",
+          "Border trade"
+        ],
+        "strategic_assets": [
+          "Ukhdood archaeological site",
+          "Traditional architecture",
+          "Dam systems"
+        ]
+      },
+      "environmental_capacity": {
+        "water_availability": "moderate",
+        "water_sources": [
+          "Dams",
+          "Groundwater",
+          "Seasonal rainfall"
+        ],
+        "water_demand_mcm": 300,
+        "water_supply_mcm": 320,
+        "water_balance": 20,
+        "environmental_sensitivity": "medium",
+        "protected_areas_pct": 4.0,
+        "climate_risks": [
+          "Border security",
+          "Flash floods"
+        ]
+      },
+      "development_outlook": {
+        "potential": "low",
+        "constraints": [
+          "Border location",
+          "Remote access",
+          "Small economy"
+        ],
+        "priority_investments": [
+          "Heritage tourism",
+          "Agricultural efficiency",
+          "Infrastructure"
+        ],
+        "giga_projects": [],
+        "vision2030_role": "Heritage preservation, agricultural sustainability"
+      }
+    },
+    "Al-Baha": {
+      "basic_info": {
+        "name": "Al-Baha",
+        "name_ar": "الباحة",
+        "area_km2": 9921,
+        "population_2025_millions": 0.5,
+        "population_2030_millions": 0.55,
+        "urbanization_rate": 50.0
+      },
+      "settlement_hierarchy": {
+        "primary_city": "Al-Baha City",
+        "secondary_cities": [
+          "Baljurashi",
+          "Al-Mandaq"
+        ],
+        "settlement_count": 180,
+        "urban_primacy_ratio": 0.6
+      },
+      "economic_profile": {
+        "gdp_contribution_pct": 0.4,
+        "gdp_per_capita_sar": 35000,
+        "dominant_sectors": [
+          "Agriculture",
+          "Government",
+          "Tourism"
+        ],
+        "emerging_sectors": [
+          "Eco-tourism",
+          "Honey production",
+          "Handicrafts"
+        ],
+        "employment_rate": 85.0
+      },
+      "competitive_position": {
+        "advantages": [
+          "Scenic mountains",
+          "Cool climate",
+          "Traditional villages",
+          "Honey production"
+        ],
+        "strategic_assets": [
+          "Thee Ain heritage village",
+          "Raghadan Forest",
+          "Traditional terraces"
+        ]
+      },
+      "environmental_capacity": {
+        "water_availability": "moderate",
+        "water_sources": [
+          "Rainfall",
+          "Springs",
+          "Dams"
+        ],
+        "water_demand_mcm": 100,
+        "water_supply_mcm": 120,
+        "water_balance": 20,
+        "environmental_sensitivity": "high",
+        "protected_areas_pct": 12.0,
+        "climate_risks": [
+          "Forest fires",
+          "Landslides",
+          "Flash floods"
+        ]
+      },
+      "development_outlook": {
+        "potential": "low",
+        "constraints": [
+          "Small size",
+          "Terrain challenges",
+          "Limited infrastructure"
+        ],
+        "priority_investments": [
+          "Tourism development",
+          "Heritage preservation",
+          "Road improvement"
+        ],
+        "giga_projects": [],
+        "vision2030_role": "Eco-tourism, heritage preservation"
+      }
+    },
+    "Al-Jouf": {
+      "basic_info": {
+        "name": "Al-Jouf",
+        "name_ar": "الجوف",
+        "area_km2": 100212,
+        "population_2025_millions": 0.55,
+        "population_2030_millions": 0.65,
+        "urbanization_rate": 68.0
+      },
+      "settlement_hierarchy": {
+        "primary_city": "Sakaka",
+        "secondary_cities": [
+          "Dumat Al-Jandal",
+          "Qurayyat"
+        ],
+        "settlement_count": 90,
+        "urban_primacy_ratio": 0.75
+      },
+      "economic_profile": {
+        "gdp_contribution_pct": 0.8,
+        "gdp_per_capita_sar": 55000,
+        "dominant_sectors": [
+          "Agriculture (olives)",
+          "Government",
+          "Trade"
+        ],
+        "emerging_sectors": [
+          "Renewable energy",
+          "Mining",
+          "Tourism"
+        ],
+        "employment_rate": 87.0
+      },
+      "competitive_position": {
+        "advantages": [
+          "Olive production capital",
+          "Solar potential",
+          "Archaeological sites",
+          "Border trade"
+        ],
+        "strategic_assets": [
+          "Olive groves",
+          "Dumat Al-Jandal wind farm",
+          "Archaeological sites"
+        ]
+      },
+      "environmental_capacity": {
+        "water_availability": "scarce",
+        "water_sources": [
+          "Groundwater",
+          "Desalination (limited)"
+        ],
+        "water_demand_mcm": 600,
+        "water_supply_mcm": 500,
+        "water_balance": -100,
+        "environmental_sensitivity": "medium",
+        "protected_areas_pct": 4.0,
+        "climate_risks": [
+          "Groundwater depletion",
+          "Extreme temperatures",
+          "Dust storms"
+        ]
+      },
+      "development_outlook": {
+        "potential": "medium",
+        "constraints": [
+          "Water scarcity",
+          "Remote location",
+          "Small market"
+        ],
+        "priority_investments": [
+          "Renewable energy",
+          "Agricultural efficiency",
+          "Tourism"
+        ],
+        "giga_projects": [],
+        "vision2030_role": "Renewable energy hub, agricultural innovation"
+      }
+    }
+  },
+  "section_3_conflict_synergy_maps": {
+    "conflict_layers": [
+      {
+        "name": "Industrial-Residential Conflict Zones",
+        "type": "conflict",
+        "description": "Areas where industrial development creates pollution and noise affecting residential areas",
+        "affected_regions": [
+          "Riyadh",
+          "Eastern Province",
+          "Makkah",
+          "Madinah"
+        ],
+        "severity": "high",
+        "land_uses": [
+          "industrial",
+          "residential"
+        ],
+        "area_km2": 850,
+        "priority": "critical",
+        "visualization": {
+          "fill_color": "#FF4444",
+          "opacity": 0.6,
+          "border_color": "#CC0000",
+          "pattern": "diagonal_stripes"
+        }
+      },
+      {
+        "name": "Water Competition Zones",
+        "type": "conflict",
+        "description": "Areas where agricultural and urban water demands exceed sustainable supply",
+        "affected_regions": [
+          "Al-Qassim",
+          "Riyadh",
+          "Al-Jouf",
+          "Hail",
+          "Tabuk"
+        ],
+        "severity": "critical",
+        "land_uses": [
+          "agricultural",
+          "residential",
+          "industrial"
+        ],
+        "area_km2": 25000,
+        "priority": "critical",
+        "visualization": {
+          "fill_color": "#0066CC",
+          "opacity": 0.5,
+          "border_color": "#003366",
+          "pattern": "water_drops"
+        }
+      },
+      {
+        "name": "Environmental Pressure Zones",
+        "type": "conflict",
+        "description": "Areas where development pressure threatens environmental protection areas",
+        "affected_regions": [
+          "Tabuk",
+          "Asir",
+          "Jazan",
+          "Eastern Province",
+          "Madinah"
+        ],
+        "severity": "high",
+        "land_uses": [
+          "environmental_protection",
+          "tourism",
+          "industrial",
+          "mining"
+        ],
+        "area_km2": 15000,
+        "priority": "high",
+        "visualization": {
+          "fill_color": "#228B22",
+          "opacity": 0.5,
+          "border_color": "#006400",
+          "pattern": "tree_icons"
+        }
+      },
+      {
+        "name": "Mining Impact Zones",
+        "type": "conflict",
+        "description": "Areas affected by mining operations requiring environmental management",
+        "affected_regions": [
+          "Northern Borders",
+          "Madinah",
+          "Tabuk",
+          "Najran"
+        ],
+        "severity": "medium",
+        "land_uses": [
+          "mining",
+          "agricultural",
+          "environmental_protection"
+        ],
+        "area_km2": 8000,
+        "priority": "high",
+        "visualization": {
+          "fill_color": "#8B4513",
+          "opacity": 0.5,
+          "border_color": "#5D3A1A",
+          "pattern": "mining_icons"
+        }
+      },
+      {
+        "name": "Coastal Development Pressure",
+        "type": "conflict",
+        "description": "Coastal areas facing competing demands from tourism, industry, and conservation",
+        "affected_regions": [
+          "Tabuk",
+          "Makkah",
+          "Eastern Province",
+          "Jazan"
+        ],
+        "severity": "high",
+        "land_uses": [
+          "tourism",
+          "industrial",
+          "environmental_protection",
+          "residential"
+        ],
+        "area_km2": 3000,
+        "priority": "critical",
+        "visualization": {
+          "fill_color": "#4169E1",
+          "opacity": 0.5,
+          "border_color": "#000080",
+          "pattern": "wave_pattern"
+        }
+      }
+    ],
+    "synergy_layers": [
+      {
+        "name": "Integrated Logistics Corridors",
+        "type": "synergy",
+        "description": "Transport corridors supporting multiple economic sectors",
+        "affected_regions": [
+          "Riyadh",
+          "Eastern Province",
+          "Makkah",
+          "Madinah",
+          "Tabuk"
+        ],
+        "severity": "high",
+        "land_uses": [
+          "infrastructure",
+          "industrial",
+          "logistics"
+        ],
+        "area_km2": 5000,
+        "priority": "investment",
+        "visualization": {
+          "fill_color": "#32CD32",
+          "opacity": 0.6,
+          "border_color": "#228B22",
+          "pattern": "arrows"
+        }
+      },
+      {
+        "name": "Innovation and Technology Clusters",
+        "type": "synergy",
+        "description": "Areas with synergies between technology, education, and industry",
+        "affected_regions": [
+          "Riyadh",
+          "Eastern Province",
+          "Tabuk"
+        ],
+        "severity": "high",
+        "land_uses": [
+          "technology",
+          "education",
+          "industrial"
+        ],
+        "area_km2": 500,
+        "priority": "investment",
+        "visualization": {
+          "fill_color": "#9370DB",
+          "opacity": 0.6,
+          "border_color": "#6A0DAD",
+          "pattern": "hexagons"
+        }
+      },
+      {
+        "name": "Eco-Tourism Development Zones",
+        "type": "synergy",
+        "description": "Areas where tourism and environmental protection create mutual benefits",
+        "affected_regions": [
+          "Tabuk",
+          "Asir",
+          "Madinah",
+          "Jazan",
+          "Al-Baha"
+        ],
+        "severity": "medium",
+        "land_uses": [
+          "tourism",
+          "environmental_protection"
+        ],
+        "area_km2": 12000,
+        "priority": "investment",
+        "visualization": {
+          "fill_color": "#90EE90",
+          "opacity": 0.5,
+          "border_color": "#32CD32",
+          "pattern": "leaf_icons"
+        }
+      },
+      {
+        "name": "Renewable Energy Development Zones",
+        "type": "synergy",
+        "description": "Areas optimal for solar and wind energy with minimal conflicts",
+        "affected_regions": [
+          "Tabuk",
+          "Al-Jouf",
+          "Northern Borders",
+          "Hail"
+        ],
+        "severity": "high",
+        "land_uses": [
+          "renewable_energy",
+          "industrial"
+        ],
+        "area_km2": 20000,
+        "priority": "investment",
+        "visualization": {
+          "fill_color": "#FFD700",
+          "opacity": 0.5,
+          "border_color": "#FFA500",
+          "pattern": "sun_icons"
+        }
+      },
+      {
+        "name": "Agrivoltaics Potential Zones",
+        "type": "synergy",
+        "description": "Areas where solar energy and agriculture can be combined",
+        "affected_regions": [
+          "Al-Qassim",
+          "Al-Jouf",
+          "Hail",
+          "Riyadh"
+        ],
+        "severity": "medium",
+        "land_uses": [
+          "renewable_energy",
+          "agricultural"
+        ],
+        "area_km2": 8000,
+        "priority": "investment",
+        "visualization": {
+          "fill_color": "#ADFF2F",
+          "opacity": 0.5,
+          "border_color": "#6B8E23",
+          "pattern": "solar_crop"
+        }
+      }
+    ],
+    "critical_conflicts": [
+      "Industrial-Residential Conflict Zones",
+      "Water Competition Zones",
+      "Coastal Development Pressure"
+    ]
+  },
+  "section_4_optimization_playbook": {
+    "summary": {
+      "total_sar_million": 57800,
+      "total_sar_billion": 57.8,
+      "by_priority": {
+        "critical": 15000,
+        "high": 14500,
+        "medium": 28300,
+        "low": 0
+      },
+      "by_type": {
+        "regulatory": 18800,
+        "investment": 22000,
+        "planning": 2000,
+        "incentive": 15000
+      },
+      "measure_count": 10
+    },
+    "measures": [
+      {
+        "id": "CM-001",
+        "title": "Agricultural Water Demand Reduction Program",
+        "conflict_addressed": "Water Competition (Agriculture vs Urban)",
+        "description": "Mandatory program to reduce agricultural water consumption by 40% through:\n            - Phase-out of water-intensive crops (wheat, alfalfa)\n            - Mandatory smart irrigation systems\n            - Treated wastewater reuse for irrigation\n            - Water pricing reform for agricultural sector",
+        "type": "regulatory",
+        "target_regions": [
+          "Al-Qassim",
+          "Riyadh",
+          "Al-Jouf",
+          "Hail"
+        ],
+        "timeline": "immediate",
+        "cost_sar_million": 5000,
+        "benefit": "6,000 MCM/year water savings by 2030",
+        "responsible_agency": "Ministry of Environment, Water and Agriculture",
+        "kpis": [
+          "Agricultural water consumption (MCM/year)",
+          "Smart irrigation adoption rate (%)",
+          "Treated wastewater reuse volume (MCM/year)",
+          "Groundwater level monitoring"
+        ],
+        "priority": "critical"
+      },
+      {
+        "id": "CM-002",
+        "title": "Industrial Zone Relocation and Buffer Program",
+        "conflict_addressed": "Industrial-Residential Conflicts",
+        "description": "Systematic relocation of incompatible industries and establishment of buffers:\n            - Mandatory relocation of heavy industry from mixed zones\n            - Establishment of 500m minimum buffer zones\n            - Green corridor requirements between zones\n            - Air quality monitoring network expansion",
+        "type": "regulatory",
+        "target_regions": [
+          "Riyadh",
+          "Eastern Province",
+          "Makkah"
+        ],
+        "timeline": "short-term",
+        "cost_sar_million": 8000,
+        "benefit": "50% reduction in residential exposure to industrial pollution",
+        "responsible_agency": "Ministry of Municipal and Rural Affairs",
+        "kpis": [
+          "Number of industries relocated",
+          "Buffer zone compliance rate (%)",
+          "Air quality index in residential areas",
+          "Noise level compliance (%)"
+        ],
+        "priority": "critical"
+      },
+      {
+        "id": "CM-003",
+        "title": "Integrated Coastal Zone Management Framework",
+        "conflict_addressed": "Coastal Development Pressure",
+        "description": "Comprehensive coastal zone management including:\n            - Mandatory setback requirements (200m minimum)\n            - Marine spatial planning for Red Sea and Gulf\n            - Tourism-conservation zoning standards\n            - Ecosystem-based management approach",
+        "type": "regulatory",
+        "target_regions": [
+          "Tabuk",
+          "Makkah",
+          "Eastern Province",
+          "Jazan"
+        ],
+        "timeline": "immediate",
+        "cost_sar_million": 2000,
+        "benefit": "Protection of 80% of critical coastal ecosystems",
+        "responsible_agency": "National Center for Environmental Compliance",
+        "kpis": [
+          "Protected coastal area (km)",
+          "Setback compliance rate (%)",
+          "Marine biodiversity index",
+          "Coastal erosion rates"
+        ],
+        "priority": "critical"
+      },
+      {
+        "id": "CM-004",
+        "title": "Mining Rehabilitation and Community Protection Program",
+        "conflict_addressed": "Mining Impact Zones",
+        "description": "Comprehensive mining impact management:\n            - Mandatory rehabilitation bonds (100% of estimated costs)\n            - Progressive land reclamation requirements\n            - Community benefit agreements\n            - Environmental monitoring requirements",
+        "type": "regulatory",
+        "target_regions": [
+          "Northern Borders",
+          "Madinah",
+          "Tabuk",
+          "Najran"
+        ],
+        "timeline": "short-term",
+        "cost_sar_million": 3000,
+        "benefit": "100% of mining areas with rehabilitation plans",
+        "responsible_agency": "Ministry of Industry and Mineral Resources",
+        "kpis": [
+          "Rehabilitation bond coverage (%)",
+          "Reclaimed land area (km²)",
+          "Community benefit payments (SAR)",
+          "Environmental compliance rate (%)"
+        ],
+        "priority": "high"
+      },
+      {
+        "id": "CM-005",
+        "title": "Protected Area Expansion and Enforcement",
+        "conflict_addressed": "Environmental Pressure Zones",
+        "description": "Accelerated protected area expansion to meet 30x30 commitment:\n            - Designate new protected areas (25% of land by 2030)\n            - Enhanced enforcement capacity\n            - Wildlife corridor establishment\n            - Biodiversity offset requirements for development",
+        "type": "investment",
+        "target_regions": [
+          "All regions"
+        ],
+        "timeline": "medium-term",
+        "cost_sar_million": 10000,
+        "benefit": "25% land protection, 30% marine protection by 2030",
+        "responsible_agency": "National Center for Wildlife",
+        "kpis": [
+          "Protected area coverage (%)",
+          "Enforcement actions per year",
+          "Wildlife population indices",
+          "Biodiversity offset area (km²)"
+        ],
+        "priority": "high"
+      },
+      {
+        "id": "CM-006",
+        "title": "Renewable Energy Zone Designation Program",
+        "conflict_addressed": "Energy vs Agriculture Land Competition",
+        "description": "Strategic designation of renewable energy zones:\n            - Priority zoning on degraded/non-agricultural land\n            - Streamlined permitting in designated zones\n            - Agrivoltaics incentive program\n            - Grid infrastructure co-investment",
+        "type": "planning",
+        "target_regions": [
+          "Tabuk",
+          "Al-Jouf",
+          "Northern Borders",
+          "Hail"
+        ],
+        "timeline": "short-term",
+        "cost_sar_million": 1500,
+        "benefit": "50 GW renewable capacity with minimal land conflicts",
+        "responsible_agency": "Ministry of Energy",
+        "kpis": [
+          "Designated RE zone area (km²)",
+          "Permitting time in zones (days)",
+          "Agrivoltaics installed capacity (MW)",
+          "Agricultural land conversion avoided (km²)"
+        ],
+        "priority": "high"
+      },
+      {
+        "id": "CM-007",
+        "title": "Transit-Oriented Development Zones",
+        "conflict_addressed": "Urban Sprawl and Transport Conflicts",
+        "description": "Establishment of TOD zones around all major transit stations:\n            - Mandatory mixed-use zoning within 800m of stations\n            - Density bonuses for TOD-compliant development\n            - Parking maximums in TOD zones\n            - Active mobility infrastructure requirements",
+        "type": "planning",
+        "target_regions": [
+          "Riyadh",
+          "Makkah",
+          "Eastern Province"
+        ],
+        "timeline": "medium-term",
+        "cost_sar_million": 500,
+        "benefit": "30% reduction in car dependency in TOD zones",
+        "responsible_agency": "Royal Commission for Riyadh City / Municipal authorities",
+        "kpis": [
+          "TOD zone population density",
+          "Transit ridership in zones",
+          "Car ownership in zones",
+          "Mixed-use development ratio"
+        ],
+        "priority": "medium"
+      },
+      {
+        "id": "CM-008",
+        "title": "Heritage and Tourism Compatibility Program",
+        "conflict_addressed": "Tourism Development vs Heritage Preservation",
+        "description": "Framework for tourism development respecting heritage values:\n            - Heritage impact assessment requirements\n            - Visitor carrying capacity limits\n            - Authentic preservation standards\n            - Community benefit-sharing mechanisms",
+        "type": "regulatory",
+        "target_regions": [
+          "Madinah",
+          "Riyadh",
+          "Asir",
+          "Al-Baha"
+        ],
+        "timeline": "medium-term",
+        "cost_sar_million": 800,
+        "benefit": "Protection of all UNESCO and national heritage sites",
+        "responsible_agency": "Heritage Commission",
+        "kpis": [
+          "Heritage sites with management plans (%)",
+          "Visitor satisfaction index",
+          "Heritage site condition index",
+          "Local community employment (%)"
+        ],
+        "priority": "medium"
+      },
+      {
+        "id": "CM-009",
+        "title": "Regional Economic Specialization Program",
+        "conflict_addressed": "Regional Imbalance and Duplication",
+        "description": "Development of distinctive economic identities for each region:\n            - Regional competitive advantage assessment\n            - Targeted investment incentives\n            - Infrastructure prioritization\n            - Skills development programs",
+        "type": "incentive",
+        "target_regions": [
+          "All regions except Riyadh, Makkah, Eastern Province"
+        ],
+        "timeline": "long-term",
+        "cost_sar_million": 15000,
+        "benefit": "Reduce top-3 regional GDP concentration from 96% to 85%",
+        "responsible_agency": "Ministry of Economy and Planning",
+        "kpis": [
+          "Regional GDP share changes",
+          "Private sector investment by region",
+          "Employment growth by region",
+          "Economic diversification index"
+        ],
+        "priority": "medium"
+      },
+      {
+        "id": "CM-010",
+        "title": "Urban Green Infrastructure Network",
+        "conflict_addressed": "Urban Heat and Environmental Quality",
+        "description": "Systematic development of urban green infrastructure:\n            - Green space requirements (9 m² per capita minimum)\n            - Urban forest programs\n            - Green building requirements\n            - Heat island mitigation",
+        "type": "investment",
+        "target_regions": [
+          "Riyadh",
+          "Makkah",
+          "Eastern Province"
+        ],
+        "timeline": "long-term",
+        "cost_sar_million": 12000,
+        "benefit": "3°C reduction in urban heat island effect",
+        "responsible_agency": "Ministry of Municipal and Rural Affairs",
+        "kpis": [
+          "Green space per capita (m²)",
+          "Tree canopy coverage (%)",
+          "Urban temperature differential (°C)",
+          "Air quality improvement"
+        ],
+        "priority": "medium"
+      }
+    ]
+  },
+  "section_5_workshop_materials": {
+    "workshops": [
+      {
+        "id": "WS4-W01",
+        "title": "Regional Spatial Integration Workshop",
+        "objective": "Align regional development plans with national spatial strategy",
+        "target_audience": [
+          "Regional Development Authorities (13 regions)",
+          "Municipal Planning Directors",
+          "Regional Governors' Representatives"
+        ],
+        "duration_hours": 6.0,
+        "agenda": [
+          "09:00-09:30: Opening and NSS Overview",
+          "09:30-10:30: Regional Diagnostic Presentations (3 focus regions)",
+          "10:30-10:45: Break",
+          "10:45-12:00: Interactive Session: Identifying Regional Priorities",
+          "12:00-13:00: Lunch",
+          "13:00-14:30: Working Groups: Conflict Resolution Strategies",
+          "14:30-15:00: Group Presentations",
+          "15:00-15:30: Synthesis and Next Steps"
+        ],
+        "discussion_points": [
+          "How do regional development plans align with national priorities?",
+          "What are the key spatial conflicts in each region?",
+          "How can inter-regional coordination be improved?",
+          "What resources are needed for regional implementation?"
+        ],
+        "presentations": [
+          "Regional diagnostic summaries (13 regions)",
+          "Conflict and synergy maps",
+          "Water availability analysis",
+          "Giga-project impact assessment"
+        ],
+        "feedback_mechanisms": [
+          "Real-time polling for priority ranking",
+          "Working group flip charts",
+          "Post-workshop online survey",
+          "Written comment submission"
+        ],
+        "expected_outputs": [
+          "Validated regional priorities",
+          "Identified inter-regional coordination needs",
+          "Regional implementation capacity assessment",
+          "Input for NSS regional chapters"
+        ]
+      },
+      {
+        "id": "WS4-W02",
+        "title": "Sectoral Spatial Coordination Workshop",
+        "objective": "Resolve sectoral conflicts and identify synergies",
+        "target_audience": [
+          "Ministry of Economy and Planning",
+          "Ministry of Municipal and Rural Affairs",
+          "Ministry of Environment, Water and Agriculture",
+          "Ministry of Industry and Mineral Resources",
+          "Ministry of Tourism",
+          "Ministry of Transport and Logistics",
+          "Ministry of Energy"
+        ],
+        "duration_hours": 8.0,
+        "agenda": [
+          "09:00-09:30: Opening and Sectoral Analysis Overview",
+          "09:30-11:00: Sectoral Strategy Presentations (6 sectors)",
+          "11:00-11:15: Break",
+          "11:15-12:30: Conflict Identification Exercise",
+          "12:30-13:30: Lunch",
+          "13:30-15:00: Working Groups: Cross-Sectoral Solutions",
+          "15:00-15:15: Break",
+          "15:15-16:30: Synergy Optimization Session",
+          "16:30-17:00: Commitments and Action Items"
+        ],
+        "discussion_points": [
+          "Where do sectoral strategies create spatial conflicts?",
+          "How can water allocation be optimized across sectors?",
+          "What mechanisms can improve cross-sectoral coordination?",
+          "How can giga-projects benefit multiple sectors?"
+        ],
+        "presentations": [
+          "Sectoral land and water requirements",
+          "Conflict matrix analysis",
+          "Synergy opportunity maps",
+          "International benchmarking examples"
+        ],
+        "feedback_mechanisms": [
+          "Sectoral conflict priority voting",
+          "Bilateral coordination agreements",
+          "Cross-sectoral working group formation",
+          "Action item tracking system"
+        ],
+        "expected_outputs": [
+          "Cross-sectoral coordination agreements",
+          "Conflict resolution action plans",
+          "Synergy exploitation roadmap",
+          "Inter-ministerial coordination mechanism proposal"
+        ]
+      },
+      {
+        "id": "WS4-W03",
+        "title": "Private Sector Spatial Development Forum",
+        "objective": "Engage private sector in spatial strategy implementation",
+        "target_audience": [
+          "Real estate developers",
+          "Industrial investors",
+          "Tourism operators",
+          "Infrastructure companies",
+          "Financial institutions",
+          "Chamber of Commerce representatives"
+        ],
+        "duration_hours": 4.0,
+        "agenda": [
+          "14:00-14:30: Opening and NSS Business Implications",
+          "14:30-15:30: Panel: Spatial Planning and Investment Climate",
+          "15:30-15:45: Break",
+          "15:45-16:45: Breakout Sessions: Sector-Specific Opportunities",
+          "16:45-17:30: Investment Facilitation Mechanisms",
+          "17:30-18:00: Q&A and Networking"
+        ],
+        "discussion_points": [
+          "How does spatial planning affect investment decisions?",
+          "What regulatory certainty do developers need?",
+          "How can public-private partnerships be strengthened?",
+          "What incentives support balanced regional development?"
+        ],
+        "presentations": [
+          "Investment opportunity maps",
+          "Regulatory framework overview",
+          "Incentive zone locations",
+          "Infrastructure development timeline"
+        ],
+        "feedback_mechanisms": [
+          "Investment barrier survey",
+          "Regulatory improvement suggestions",
+          "Partnership opportunity identification",
+          "Follow-up meeting requests"
+        ],
+        "expected_outputs": [
+          "Private sector input on spatial priorities",
+          "Investment barrier identification",
+          "PPP opportunity pipeline",
+          "Regulatory improvement recommendations"
+        ]
+      },
+      {
+        "id": "WS4-W04",
+        "title": "Environmental and Community Stakeholder Consultation",
+        "objective": "Ensure environmental sustainability and community voice in spatial planning",
+        "target_audience": [
+          "Environmental NGOs",
+          "Academic institutions",
+          "Community representatives",
+          "Youth organizations",
+          "Environmental consultants",
+          "Research centers"
+        ],
+        "duration_hours": 4.0,
+        "agenda": [
+          "10:00-10:30: Opening and Environmental Context",
+          "10:30-11:30: Presentation: Environmental Challenges and Spatial Solutions",
+          "11:30-11:45: Break",
+          "11:45-12:45: Participatory Mapping Exercise",
+          "12:45-13:30: Community Voice Session",
+          "13:30-14:00: Recommendations and Commitments"
+        ],
+        "discussion_points": [
+          "How can spatial planning better protect the environment?",
+          "What are community concerns about development?",
+          "How can 30x30 biodiversity targets be achieved?",
+          "What role can civil society play in monitoring?"
+        ],
+        "presentations": [
+          "Environmental sensitivity maps",
+          "Protected area expansion plans",
+          "Climate risk assessment",
+          "Community impact analysis"
+        ],
+        "feedback_mechanisms": [
+          "Participatory mapping inputs",
+          "Written submissions",
+          "Focus group discussions",
+          "Online consultation portal"
+        ],
+        "expected_outputs": [
+          "Environmental priority areas identified",
+          "Community concerns documented",
+          "Civil society monitoring proposals",
+          "Recommendations for environmental integration"
+        ]
+      }
+    ],
+    "presentation_outlines": {
+      "WS4-W01": {
+        "workshop": "Regional Spatial Integration Workshop",
+        "presentation_structure": [
+          {
+            "section": "Introduction",
+            "slides": [
+              "Title and objectives",
+              "Agenda overview",
+              "Workshop rules and logistics"
+            ]
+          },
+          {
+            "section": "Context Setting",
+            "slides": [
+              "NSS X overview and timeline",
+              "WS4 sectoral and regional analysis summary",
+              "Key challenges identified"
+            ]
+          },
+          {
+            "section": "Main Content",
+            "slides": [
+              "Regional diagnostic summaries (13 regions)",
+              "Conflict and synergy maps",
+              "Water availability analysis",
+              "Giga-project impact assessment"
+            ]
+          },
+          {
+            "section": "Interactive Sessions",
+            "slides": [
+              "Discussion questions",
+              "Working group instructions",
+              "Feedback mechanisms"
+            ]
+          },
+          {
+            "section": "Conclusion",
+            "slides": [
+              "Key takeaways",
+              "Next steps",
+              "Follow-up commitments"
+            ]
+          }
+        ],
+        "handout_materials": [
+          "Regional/sectoral diagnostic summaries",
+          "Conflict and synergy maps",
+          "Discussion question guides",
+          "Feedback forms"
+        ]
+      },
+      "WS4-W02": {
+        "workshop": "Sectoral Spatial Coordination Workshop",
+        "presentation_structure": [
+          {
+            "section": "Introduction",
+            "slides": [
+              "Title and objectives",
+              "Agenda overview",
+              "Workshop rules and logistics"
+            ]
+          },
+          {
+            "section": "Context Setting",
+            "slides": [
+              "NSS X overview and timeline",
+              "WS4 sectoral and regional analysis summary",
+              "Key challenges identified"
+            ]
+          },
+          {
+            "section": "Main Content",
+            "slides": [
+              "Sectoral land and water requirements",
+              "Conflict matrix analysis",
+              "Synergy opportunity maps",
+              "International benchmarking examples"
+            ]
+          },
+          {
+            "section": "Interactive Sessions",
+            "slides": [
+              "Discussion questions",
+              "Working group instructions",
+              "Feedback mechanisms"
+            ]
+          },
+          {
+            "section": "Conclusion",
+            "slides": [
+              "Key takeaways",
+              "Next steps",
+              "Follow-up commitments"
+            ]
+          }
+        ],
+        "handout_materials": [
+          "Regional/sectoral diagnostic summaries",
+          "Conflict and synergy maps",
+          "Discussion question guides",
+          "Feedback forms"
+        ]
+      },
+      "WS4-W03": {
+        "workshop": "Private Sector Spatial Development Forum",
+        "presentation_structure": [
+          {
+            "section": "Introduction",
+            "slides": [
+              "Title and objectives",
+              "Agenda overview",
+              "Workshop rules and logistics"
+            ]
+          },
+          {
+            "section": "Context Setting",
+            "slides": [
+              "NSS X overview and timeline",
+              "WS4 sectoral and regional analysis summary",
+              "Key challenges identified"
+            ]
+          },
+          {
+            "section": "Main Content",
+            "slides": [
+              "Investment opportunity maps",
+              "Regulatory framework overview",
+              "Incentive zone locations",
+              "Infrastructure development timeline"
+            ]
+          },
+          {
+            "section": "Interactive Sessions",
+            "slides": [
+              "Discussion questions",
+              "Working group instructions",
+              "Feedback mechanisms"
+            ]
+          },
+          {
+            "section": "Conclusion",
+            "slides": [
+              "Key takeaways",
+              "Next steps",
+              "Follow-up commitments"
+            ]
+          }
+        ],
+        "handout_materials": [
+          "Regional/sectoral diagnostic summaries",
+          "Conflict and synergy maps",
+          "Discussion question guides",
+          "Feedback forms"
+        ]
+      },
+      "WS4-W04": {
+        "workshop": "Environmental and Community Stakeholder Consultation",
+        "presentation_structure": [
+          {
+            "section": "Introduction",
+            "slides": [
+              "Title and objectives",
+              "Agenda overview",
+              "Workshop rules and logistics"
+            ]
+          },
+          {
+            "section": "Context Setting",
+            "slides": [
+              "NSS X overview and timeline",
+              "WS4 sectoral and regional analysis summary",
+              "Key challenges identified"
+            ]
+          },
+          {
+            "section": "Main Content",
+            "slides": [
+              "Environmental sensitivity maps",
+              "Protected area expansion plans",
+              "Climate risk assessment",
+              "Community impact analysis"
+            ]
+          },
+          {
+            "section": "Interactive Sessions",
+            "slides": [
+              "Discussion questions",
+              "Working group instructions",
+              "Feedback mechanisms"
+            ]
+          },
+          {
+            "section": "Conclusion",
+            "slides": [
+              "Key takeaways",
+              "Next steps",
+              "Follow-up commitments"
+            ]
+          }
+        ],
+        "handout_materials": [
+          "Regional/sectoral diagnostic summaries",
+          "Conflict and synergy maps",
+          "Discussion question guides",
+          "Feedback forms"
+        ]
+      }
+    }
+  },
+  "appendices": {
+    "data_sources": [
+      "Vision 2030 Program Documents",
+      "NIDLP Strategy Documents",
+      "Ministry of Economy and Planning Reports",
+      "GASTAT Regional Statistics",
+      "Ministry of Environment Water Reports",
+      "Giga-project Official Communications"
+    ],
+    "output_files": [
+      "corrective_measures_playbook.csv",
+      "land_use_conflict_matrix.csv",
+      "regional_diagnostics_summary.csv",
+      "map_layers_definition.json",
+      "WS4_SECTORAL_REGIONAL_REPORT.json",
+      "WS4_SECTORAL_REGIONAL_REPORT.md"
+    ]
+  }
+}

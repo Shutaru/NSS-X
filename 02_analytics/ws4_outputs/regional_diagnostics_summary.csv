@@ -1,0 +1,14 @@
+Region,Population_2025_M,Population_2030_M,GDP_Contribution_%,Water_Availability,Development_Potential,Giga_Projects
+Riyadh,8.9,10.5,50.0,critical,high,"Diriyah Gate, Qiddiya, King Salman Park, Sports Boulevard, Riyadh Green"
+Makkah,9.1,10.2,21.0,scarce,high,"Red Sea Project (partial), Jeddah Central, Obhur Development"
+Eastern Province,5.3,6.0,25.0,moderate,high,"King Salman Energy Park (SPARK), Ras Al-Khair expansion"
+Madinah,2.3,2.7,4.5,scarce,high,"AlUla Development, Yanbu expansion"
+Tabuk,1.0,1.5,1.5,scarce,very high,"NEOM (The Line, Trojena, Oxagon, Sindalah)"
+Asir,2.3,2.6,2.5,moderate,medium,Asir Development
+Al-Qassim,1.5,1.7,2.0,critical,medium,None
+Hail,0.75,0.85,1.0,scarce,medium,None
+Northern Borders,0.42,0.5,0.8,scarce,high,Waad Al-Shamal expansion
+Jazan,1.7,1.9,1.2,moderate,medium,Jazan Economic City
+Najran,0.62,0.7,0.6,moderate,low,None
+Al-Baha,0.5,0.55,0.4,moderate,low,None
+Al-Jouf,0.55,0.65,0.8,scarce,medium,None

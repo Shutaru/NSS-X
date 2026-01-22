@@ -1,0 +1,267 @@
+{
+  "conflict_layers": [
+    {
+      "id": "conflict_0",
+      "name": "Industrial-Residential Conflict Zones",
+      "type": "conflict",
+      "description": "Areas where industrial development creates pollution and noise affecting residential areas",
+      "regions": [
+        "Riyadh",
+        "Eastern Province",
+        "Makkah",
+        "Madinah"
+      ],
+      "severity": "high",
+      "land_uses": [
+        "industrial",
+        "residential"
+      ],
+      "area_km2": 850,
+      "priority": "critical",
+      "style": {
+        "fill_color": "#FF4444",
+        "opacity": 0.6,
+        "border_color": "#CC0000",
+        "pattern": "diagonal_stripes"
+      }
+    },
+    {
+      "id": "conflict_1",
+      "name": "Water Competition Zones",
+      "type": "conflict",
+      "description": "Areas where agricultural and urban water demands exceed sustainable supply",
+      "regions": [
+        "Al-Qassim",
+        "Riyadh",
+        "Al-Jouf",
+        "Hail",
+        "Tabuk"
+      ],
+      "severity": "critical",
+      "land_uses": [
+        "agricultural",
+        "residential",
+        "industrial"
+      ],
+      "area_km2": 25000,
+      "priority": "critical",
+      "style": {
+        "fill_color": "#0066CC",
+        "opacity": 0.5,
+        "border_color": "#003366",
+        "pattern": "water_drops"
+      }
+    },
+    {
+      "id": "conflict_2",
+      "name": "Environmental Pressure Zones",
+      "type": "conflict",
+      "description": "Areas where development pressure threatens environmental protection areas",
+      "regions": [
+        "Tabuk",
+        "Asir",
+        "Jazan",
+        "Eastern Province",
+        "Madinah"
+      ],
+      "severity": "high",
+      "land_uses": [
+        "environmental_protection",
+        "tourism",
+        "industrial",
+        "mining"
+      ],
+      "area_km2": 15000,
+      "priority": "high",
+      "style": {
+        "fill_color": "#228B22",
+        "opacity": 0.5,
+        "border_color": "#006400",
+        "pattern": "tree_icons"
+      }
+    },
+    {
+      "id": "conflict_3",
+      "name": "Mining Impact Zones",
+      "type": "conflict",
+      "description": "Areas affected by mining operations requiring environmental management",
+      "regions": [
+        "Northern Borders",
+        "Madinah",
+        "Tabuk",
+        "Najran"
+      ],
+      "severity": "medium",
+      "land_uses": [
+        "mining",
+        "agricultural",
+        "environmental_protection"
+      ],
+      "area_km2": 8000,
+      "priority": "high",
+      "style": {
+        "fill_color": "#8B4513",
+        "opacity": 0.5,
+        "border_color": "#5D3A1A",
+        "pattern": "mining_icons"
+      }
+    },
+    {
+      "id": "conflict_4",
+      "name": "Coastal Development Pressure",
+      "type": "conflict",
+      "description": "Coastal areas facing competing demands from tourism, industry, and conservation",
+      "regions": [
+        "Tabuk",
+        "Makkah",
+        "Eastern Province",
+        "Jazan"
+      ],
+      "severity": "high",
+      "land_uses": [
+        "tourism",
+        "industrial",
+        "environmental_protection",
+        "residential"
+      ],
+      "area_km2": 3000,
+      "priority": "critical",
+      "style": {
+        "fill_color": "#4169E1",
+        "opacity": 0.5,
+        "border_color": "#000080",
+        "pattern": "wave_pattern"
+      }
+    }
+  ],
+  "synergy_layers": [
+    {
+      "id": "synergy_0",
+      "name": "Integrated Logistics Corridors",
+      "type": "synergy",
+      "description": "Transport corridors supporting multiple economic sectors",
+      "regions": [
+        "Riyadh",
+        "Eastern Province",
+        "Makkah",
+        "Madinah",
+        "Tabuk"
+      ],
+      "impact": "high",
+      "land_uses": [
+        "infrastructure",
+        "industrial",
+        "logistics"
+      ],
+      "area_km2": 5000,
+      "action": "investment",
+      "style": {
+        "fill_color": "#32CD32",
+        "opacity": 0.6,
+        "border_color": "#228B22",
+        "pattern": "arrows"
+      }
+    },
+    {
+      "id": "synergy_1",
+      "name": "Innovation and Technology Clusters",
+      "type": "synergy",
+      "description": "Areas with synergies between technology, education, and industry",
+      "regions": [
+        "Riyadh",
+        "Eastern Province",
+        "Tabuk"
+      ],
+      "impact": "high",
+      "land_uses": [
+        "technology",
+        "education",
+        "industrial"
+      ],
+      "area_km2": 500,
+      "action": "investment",
+      "style": {
+        "fill_color": "#9370DB",
+        "opacity": 0.6,
+        "border_color": "#6A0DAD",
+        "pattern": "hexagons"
+      }
+    },
+    {
+      "id": "synergy_2",
+      "name": "Eco-Tourism Development Zones",
+      "type": "synergy",
+      "description": "Areas where tourism and environmental protection create mutual benefits",
+      "regions": [
+        "Tabuk",
+        "Asir",
+        "Madinah",
+        "Jazan",
+        "Al-Baha"
+      ],
+      "impact": "medium",
+      "land_uses": [
+        "tourism",
+        "environmental_protection"
+      ],
+      "area_km2": 12000,
+      "action": "investment",
+      "style": {
+        "fill_color": "#90EE90",
+        "opacity": 0.5,
+        "border_color": "#32CD32",
+        "pattern": "leaf_icons"
+      }
+    },
+    {
+      "id": "synergy_3",
+      "name": "Renewable Energy Development Zones",
+      "type": "synergy",
+      "description": "Areas optimal for solar and wind energy with minimal conflicts",
+      "regions": [
+        "Tabuk",
+        "Al-Jouf",
+        "Northern Borders",
+        "Hail"
+      ],
+      "impact": "high",
+      "land_uses": [
+        "renewable_energy",
+        "industrial"
+      ],
+      "area_km2": 20000,
+      "action": "investment",
+      "style": {
+        "fill_color": "#FFD700",
+        "opacity": 0.5,
+        "border_color": "#FFA500",
+        "pattern": "sun_icons"
+      }
+    },
+    {
+      "id": "synergy_4",
+      "name": "Agrivoltaics Potential Zones",
+      "type": "synergy",
+      "description": "Areas where solar energy and agriculture can be combined",
+      "regions": [
+        "Al-Qassim",
+        "Al-Jouf",
+        "Hail",
+        "Riyadh"
+      ],
+      "impact": "medium",
+      "land_uses": [
+        "renewable_energy",
+        "agricultural"
+      ],
+      "area_km2": 8000,
+      "action": "investment",
+      "style": {
+        "fill_color": "#ADFF2F",
+        "opacity": 0.5,
+        "border_color": "#6B8E23",
+        "pattern": "solar_crop"
+      }
+    }
+  ]
+}

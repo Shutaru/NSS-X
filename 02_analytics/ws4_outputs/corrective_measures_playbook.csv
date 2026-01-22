@@ -1,0 +1,11 @@
+ID,Title,Conflict,Type,Priority,Timeline,Cost (SAR M),Responsible Agency,Expected Benefit
+CM-001,Agricultural Water Demand Reduction Program,Water Competition (Agriculture vs Urban),REGULATORY,CRITICAL,immediate,5000,"Ministry of Environment, Water and Agriculture","6,000 MCM/year water savings by 2030"
+CM-002,Industrial Zone Relocation and Buffer Program,Industrial-Residential Conflicts,REGULATORY,CRITICAL,short-term,8000,Ministry of Municipal and Rural Affairs,50% reduction in residential exposure to industrial pollution
+CM-003,Integrated Coastal Zone Management Framework,Coastal Development Pressure,REGULATORY,CRITICAL,immediate,2000,National Center for Environmental Compliance,Protection of 80% of critical coastal ecosystems
+CM-004,Mining Rehabilitation and Community Protection Program,Mining Impact Zones,REGULATORY,HIGH,short-term,3000,Ministry of Industry and Mineral Resources,100% of mining areas with rehabilitation plans
+CM-005,Protected Area Expansion and Enforcement,Environmental Pressure Zones,INVESTMENT,HIGH,medium-term,10000,National Center for Wildlife,"25% land protection, 30% marine protection by 2030"
+CM-006,Renewable Energy Zone Designation Program,Energy vs Agriculture Land Competition,PLANNING,HIGH,short-term,1500,Ministry of Energy,50 GW renewable capacity with minimal land conflicts
+CM-007,Transit-Oriented Development Zones,Urban Sprawl and Transport Conflicts,PLANNING,MEDIUM,medium-term,500,Royal Commission for Riyadh City / Municipal authorities,30% reduction in car dependency in TOD zones
+CM-008,Heritage and Tourism Compatibility Program,Tourism Development vs Heritage Preservation,REGULATORY,MEDIUM,medium-term,800,Heritage Commission,Protection of all UNESCO and national heritage sites
+CM-009,Regional Economic Specialization Program,Regional Imbalance and Duplication,INCENTIVE,MEDIUM,long-term,15000,Ministry of Economy and Planning,Reduce top-3 regional GDP concentration from 96% to 85%
+CM-010,Urban Green Infrastructure Network,Urban Heat and Environmental Quality,INVESTMENT,MEDIUM,long-term,12000,Ministry of Municipal and Rural Affairs,3°C reduction in urban heat island effect

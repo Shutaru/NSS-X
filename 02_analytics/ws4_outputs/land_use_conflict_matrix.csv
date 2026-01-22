@@ -1,0 +1,9 @@
+,residential,industrial,agricultural,tourism,environmental_protection,mining,infrastructure,renewable_energy
+residential,0,-2,0,1,0,-2,2,0
+industrial,-2,0,-1,-1,-2,0,2,0
+agricultural,0,-1,0,0,-1,-2,0,1
+tourism,1,-1,0,0,2,-2,2,0
+environmental_protection,0,-2,-1,2,0,-2,0,1
+mining,-2,0,-2,-2,-2,0,1,0
+infrastructure,2,2,0,2,0,1,0,0
+renewable_energy,0,0,1,0,1,0,0,0
