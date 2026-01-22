@@ -24,7 +24,7 @@ st.set_page_config(
     page_title="NSS X - National Spatial Strategy",
     page_icon="🇸🇦",
     layout="wide",
-    initial_sidebar_state="expanded"
+    initial_sidebar_state="collapsed"
 )
 
 # ============================================================================
@@ -70,21 +70,13 @@ st.markdown("""
     footer {visibility: hidden;}
     header {visibility: hidden;}
     
-    /* Hide the theme settings in hamburger menu */
-    [data-testid="stSidebarCollapseButton"] {
+    /* Hide sidebar completely */
+    [data-testid="stSidebar"] {
         display: none !important;
     }
     
-    /* Force sidebar to always be visible */
-    [data-testid="stSidebar"] {
-        width: 280px !important;
-        min-width: 280px !important;
-    }
-    
-    [data-testid="stSidebar"][aria-expanded="false"] {
-        width: 280px !important;
-        min-width: 280px !important;
-        margin-left: 0 !important;
+    [data-testid="stSidebarCollapseButton"] {
+        display: none !important;
     }
     
     /* ===== HERO HEADER ===== */
@@ -531,53 +523,6 @@ st.markdown("""
         transition: width 0.4s ease;
     }
     
-    /* ===== SIDEBAR STYLING ===== */
-    .sidebar-section {
-        background: var(--bg-card);
-        border-radius: var(--radius-md);
-        padding: 0.75rem;
-        margin-bottom: 0.75rem;
-    }
-    
-    .sidebar-section-title {
-        font-size: 0.65rem;
-        text-transform: uppercase;
-        letter-spacing: 0.4px;
-        color: var(--text-muted);
-        margin-bottom: 0.5rem;
-    }
-    
-    .ws-item {
-        display: flex;
-        align-items: center;
-        gap: 0.4rem;
-        padding: 0.35rem;
-        margin: 0.15rem 0;
-        border-radius: var(--radius-sm);
-    }
-    
-    .ws-item:hover {
-        background: var(--bg-secondary);
-    }
-    
-    .ws-item-status {
-        width: 6px;
-        height: 6px;
-        border-radius: 50%;
-        background: #16a34a;
-    }
-    
-    .ws-item-name {
-        flex: 1;
-        font-size: 0.8rem;
-        color: var(--text-primary);
-    }
-    
-    .ws-item-pct {
-        font-size: 0.7rem;
-        color: var(--text-secondary);
-    }
-    
     /* ===== TABLE STYLING ===== */
     .stDataFrame {
         font-size: 0.75rem !important;
@@ -939,52 +884,6 @@ def render_header():
         <span class="hero-badge">✓ Complete Tender Deliverables</span>
     </div>
     """, unsafe_allow_html=True)
-
-
-def render_sidebar():
-    """Render sidebar with workstream status."""
-    with st.sidebar:
-        st.markdown("""
-        <div class="sidebar-section">
-            <div class="sidebar-section-title">Workstream Progress</div>
-        """, unsafe_allow_html=True)
-        
-        workstreams = [
-            ("WS1", "Data Collection", 95),
-            ("WS2", "NSS Review", 100),
-            ("WS3", "Benchmarking", 100),
-            ("WS4", "Sectoral Analysis", 100),
-            ("WS5", "Scenarios", 100),
-            ("WS6", "NSS Draft", 100),
-            ("WS7", "Governance", 100),
-        ]
-        
-        for ws_id, name, pct in workstreams:
-            st.markdown(f"""
-            <div class="ws-item">
-                <div class="ws-item-status"></div>
-                <span class="ws-item-name"><strong>{ws_id}</strong> {name}</span>
-                <span class="ws-item-pct">{pct}%</span>
-            </div>
-            """, unsafe_allow_html=True)
-        
-        st.markdown("</div>", unsafe_allow_html=True)
-        
-        # Quick stats
-        st.markdown("---")
-        st.markdown("### 📊 Quick Stats")
-        col1, col2 = st.columns(2)
-        col1.metric("Deliverables", "45+")
-        col2.metric("KPIs", "26")
-        col1.metric("Investment", "1.4T SAR")
-        col2.metric("Regions", "13")
-        
-        st.markdown("---")
-        st.markdown("### 🔗 Resources")
-        st.markdown("""
-        - [Vision 2030](https://vision2030.gov.sa)
-        - [GASTAT](https://stats.gov.sa)
-        """)
 
 
 def render_overview():
@@ -2516,7 +2415,6 @@ def render_deliverables():
 def main():
     """Main application."""
     render_header()
-    render_sidebar()
     
     # Main tabs with improved styling
     tabs = st.tabs([
