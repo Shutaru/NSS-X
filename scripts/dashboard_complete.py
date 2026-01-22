@@ -974,15 +974,18 @@ def render_overview():
     """Render overview tab with premium styling."""
     ws6 = load_ws6_data()
     
-    # Compact KPI modules all in one horizontal row - single HTML block
-    kpi_html = '<div class="stat-row">'
-    kpi_html += render_stat_module("👥", "Population 2024", "34.1M", "+2.3% YoY", "green")
-    kpi_html += render_stat_module("💰", "GDP 2024", "$1.1T", "+4.5%", "green")
-    kpi_html += render_stat_module("🗺️", "Regions", "13", "All Covered", "blue")
-    kpi_html += render_stat_module("🏙️", "Strategic Nodes", "20", "Tier 1-3", "amber")
-    kpi_html += render_stat_module("📈", "Investment", "SAR 1.4T", "2025-2050", "purple")
-    kpi_html += '</div>'
-    st.markdown(kpi_html, unsafe_allow_html=True)
+    # Compact KPI modules using Streamlit columns
+    cols = st.columns(5)
+    with cols[0]:
+        st.markdown(render_stat_module("👥", "Population 2024", "34.1M", "+2.3% YoY", "green"), unsafe_allow_html=True)
+    with cols[1]:
+        st.markdown(render_stat_module("💰", "GDP 2024", "$1.1T", "+4.5%", "green"), unsafe_allow_html=True)
+    with cols[2]:
+        st.markdown(render_stat_module("🗺️", "Regions", "13", "All Covered", "blue"), unsafe_allow_html=True)
+    with cols[3]:
+        st.markdown(render_stat_module("🏙️", "Strategic Nodes", "20", "Tier 1-3", "amber"), unsafe_allow_html=True)
+    with cols[4]:
+        st.markdown(render_stat_module("📈", "Investment", "SAR 1.4T", "2025-2050", "purple"), unsafe_allow_html=True)
     
     # Vision Statement
     if ws6:
