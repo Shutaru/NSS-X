@@ -11,6 +11,13 @@ from .ws2_comprehensive import (
     WS2ReportGenerator,
     generate_ws2_deliverables
 )
+from .ws3_benchmarking import (
+    InternationalBenchmarks,
+    MethodologyMatrix,
+    CountryXFitDesignPrinciples,
+    WS3ReportGenerator,
+    generate_ws3_deliverables
+)
 from .ws4_sectoral import SectoralAnalyzer, run_sectoral_analysis
 from .ws5_scenarios import ScenarioModeler, run_scenario_analysis
 
@@ -23,6 +30,13 @@ __all__ = [
     'ContinuityChangeMatrix',
     'WS2ReportGenerator',
     'generate_ws2_deliverables',
+    
+    # WS3 - International Benchmarking
+    'InternationalBenchmarks',
+    'MethodologyMatrix',
+    'CountryXFitDesignPrinciples',
+    'WS3ReportGenerator',
+    'generate_ws3_deliverables',
     
     # WS4 - Sectoral Analysis
     'SectoralAnalyzer',
