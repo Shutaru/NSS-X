@@ -1510,14 +1510,26 @@ def render_ws6_nss_draft():
         tier2 = nodes[nodes['Tier'] == 2] if 'Tier' in nodes.columns else pd.DataFrame()
         tier3 = nodes[nodes['Tier'] == 3] if 'Tier' in nodes.columns else pd.DataFrame()
         
-        st.markdown('<div class="stat-grid">', unsafe_allow_html=True)
-        st.markdown(render_stat_module("🏛️", "Tier 1 - National", str(len(tier1)), "Capital & Major Hubs", "green"), unsafe_allow_html=True)
-        st.markdown(render_stat_module("🏢", "Tier 2 - Regional", str(len(tier2)), "Regional Centers", "blue"), unsafe_allow_html=True)
-        st.markdown(render_stat_module("🏘️", "Tier 3 - Sub-regional", str(len(tier3)), "Growth Centers", "amber"), unsafe_allow_html=True)
+        # Tier stats with st.columns
         if 'Pop_2050_M' in nodes.columns:
             total_pop = nodes['Pop_2050_M'].sum()
-            st.markdown(render_stat_module("👥", "Target Population", f"{total_pop:.1f}M", "By 2050", "purple"), unsafe_allow_html=True)
-        st.markdown('</div>', unsafe_allow_html=True)
+            cols = st.columns(4)
+            with cols[0]:
+                st.markdown(render_stat_module("🏛️", "Tier 1 - National", str(len(tier1)), "Capital & Major Hubs", "green"), unsafe_allow_html=True)
+            with cols[1]:
+                st.markdown(render_stat_module("🏢", "Tier 2 - Regional", str(len(tier2)), "Regional Centers", "blue"), unsafe_allow_html=True)
+            with cols[2]:
+                st.markdown(render_stat_module("🏘️", "Tier 3 - Sub-regional", str(len(tier3)), "Growth Centers", "amber"), unsafe_allow_html=True)
+            with cols[3]:
+                st.markdown(render_stat_module("👥", "Target Population", f"{total_pop:.1f}M", "By 2050", "purple"), unsafe_allow_html=True)
+        else:
+            cols = st.columns(3)
+            with cols[0]:
+                st.markdown(render_stat_module("🏛️", "Tier 1 - National", str(len(tier1)), "Capital & Major Hubs", "green"), unsafe_allow_html=True)
+            with cols[1]:
+                st.markdown(render_stat_module("🏢", "Tier 2 - Regional", str(len(tier2)), "Regional Centers", "blue"), unsafe_allow_html=True)
+            with cols[2]:
+                st.markdown(render_stat_module("🏘️", "Tier 3 - Sub-regional", str(len(tier3)), "Growth Centers", "amber"), unsafe_allow_html=True)
         
         # Map and node details side by side
         col_map, col_detail = st.columns([3, 2])
@@ -1623,12 +1635,15 @@ def render_ws6_nss_draft():
             high = len(corridors[corridors['Priority'] == 'high']) if 'Priority' in corridors.columns else 0
             total_km = corridors['Length_km'].sum() if 'Length_km' in corridors.columns else 0
             
-            st.markdown('<div class="stat-grid">', unsafe_allow_html=True)
-            st.markdown(render_stat_module("🛤️", "Total Corridors", str(len(corridors)), f"{total_km:,.0f} km", "green"), unsafe_allow_html=True)
-            st.markdown(render_stat_module("💰", "Investment", f"SAR {total_investment:.0f}B", "Total planned", "blue"), unsafe_allow_html=True)
-            st.markdown(render_stat_module("🔴", "Critical Priority", str(critical), "Urgent corridors", "red"), unsafe_allow_html=True)
-            st.markdown(render_stat_module("🟡", "High Priority", str(high), "Important corridors", "amber"), unsafe_allow_html=True)
-            st.markdown('</div>', unsafe_allow_html=True)
+            cols = st.columns(4)
+            with cols[0]:
+                st.markdown(render_stat_module("🛤️", "Total Corridors", str(len(corridors)), f"{total_km:,.0f} km", "green"), unsafe_allow_html=True)
+            with cols[1]:
+                st.markdown(render_stat_module("💰", "Investment", f"SAR {total_investment:.0f}B", "Total planned", "blue"), unsafe_allow_html=True)
+            with cols[2]:
+                st.markdown(render_stat_module("🔴", "Critical Priority", str(critical), "Urgent corridors", "red"), unsafe_allow_html=True)
+            with cols[3]:
+                st.markdown(render_stat_module("🟡", "High Priority", str(high), "Important corridors", "amber"), unsafe_allow_html=True)
         
         # Full Corridor Map with ALL corridors
         if all(c in corridors.columns for c in ['Start_Lat', 'Start_Lon', 'End_Lat', 'End_Lon']):
