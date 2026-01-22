@@ -1330,31 +1330,48 @@ def render_ws4_sectoral():
         diagnostics = ws4['diagnostics']
         
         if 'Region' in diagnostics.columns:
-            numeric_cols = diagnostics.select_dtypes(include=[np.number]).columns.tolist()
+            # Get only truly numeric columns (exclude text columns like Water_Availability)
+            numeric_cols = []
+            for col in diagnostics.columns:
+                if col != 'Region':
+                    # Check if column has actual numeric values (not text like "critical", "high")
+                    try:
+                        col_data = pd.to_numeric(diagnostics[col], errors='coerce')
+                        if col_data.notna().sum() > 0 and col_data.notna().sum() == len(diagnostics):
+                            numeric_cols.append(col)
+                    except:
+                        pass
+            
             if numeric_cols:
-                # Normalize data for better color differentiation
-                data_matrix = diagnostics[numeric_cols].values
+                # Normalize each column to 0-100 for fair comparison
+                normalized_data = diagnostics[numeric_cols].copy()
+                for col in numeric_cols:
+                    col_min = normalized_data[col].min()
+                    col_max = normalized_data[col].max()
+                    if col_max > col_min:
+                        normalized_data[col] = ((normalized_data[col] - col_min) / (col_max - col_min) * 100).round(1)
                 
-                # Use diverging colorscale for better differentiation
                 fig = px.imshow(
-                    data_matrix,
+                    normalized_data.values,
                     x=numeric_cols,
                     y=diagnostics['Region'].values,
                     color_continuous_scale='RdYlGn',  # Red-Yellow-Green diverging
                     aspect='auto',
-                    text_auto='.1f'
+                    text_auto='.0f',
+                    zmin=0,
+                    zmax=100
                 )
                 fig.update_traces(
-                    texttemplate='%{z:.1f}',
+                    texttemplate='%{z:.0f}',
                     textfont=dict(size=10, color='#1a1a1a'),
-                    hovertemplate='Region: %{y}<br>Indicator: %{x}<br>Score: %{z:.2f}<extra></extra>'
+                    hovertemplate='Region: %{y}<br>Indicator: %{x}<br>Score: %{z:.0f}%<extra></extra>'
                 )
                 fig.update_layout(
                     height=450,
                     margin=dict(l=10, r=10, t=40, b=10),
                     paper_bgcolor='rgba(0,0,0,0)',
                     plot_bgcolor='rgba(0,0,0,0)',
-                    title=dict(text="Regional Performance Matrix", font=dict(size=13, color='#1a1a1a'), x=0),
+                    title=dict(text="Regional Performance (Normalized 0-100)", font=dict(size=13, color='#1a1a1a'), x=0),
                     xaxis=dict(title='', tickfont=dict(size=9), tickangle=35),
                     yaxis=dict(title='', tickfont=dict(size=10)),
                     coloraxis=dict(
@@ -1414,56 +1431,75 @@ def render_ws4_sectoral():
     with tab3:
         measures = ws4['measures']
         
-        # Group measures by category if available
-        if 'Category' in measures.columns or 'Sector' in measures.columns:
-            group_col = 'Category' if 'Category' in measures.columns else 'Sector'
-            groups = measures[group_col].unique()
-            
+        # Group measures by Type (REGULATORY, INVESTMENT, etc.) 
+        group_col = None
+        for col in ['Type', 'Category', 'Sector']:
+            if col in measures.columns:
+                group_col = col
+                break
+        
+        priority_col = None
+        for col in ['Priority', 'PRIORITY']:
+            if col in measures.columns:
+                priority_col = col
+                break
+        
+        if group_col and priority_col:
             # Create treemap of measures
-            if 'Priority' in measures.columns:
-                fig = px.treemap(
-                    measures,
-                    path=[group_col, 'Measure'] if 'Measure' in measures.columns else [group_col],
-                    color='Priority',
-                    color_discrete_map={'High': '#ef4444', 'Medium': '#f59e0b', 'Low': '#22c55e',
-                                       'HIGH': '#ef4444', 'MEDIUM': '#f59e0b', 'LOW': '#22c55e',
-                                       'Critical': '#dc2626', 'CRITICAL': '#dc2626'}
-                )
-                fig.update_traces(
-                    textfont=dict(size=11, color='white'),
-                    marker=dict(cornerradius=6)
-                )
-                fig.update_layout(
-                    height=400,
-                    margin=dict(l=10, r=10, t=40, b=10),
-                    paper_bgcolor='rgba(0,0,0,0)',
-                    title=dict(text="Corrective Measures by Category & Priority", font=dict(size=13, color='#1a1a1a'), x=0)
-                )
-                st.plotly_chart(fig, use_container_width=True)
-            else:
-                # Simple count by category
-                cat_counts = measures[group_col].value_counts().reset_index()
-                cat_counts.columns = [group_col, 'Count']
+            # Ensure Priority values are mapped correctly
+            priority_map = {
+                'CRITICAL': '#dc2626', 'Critical': '#dc2626', 'critical': '#dc2626',
+                'HIGH': '#ef4444', 'High': '#ef4444', 'high': '#ef4444',
+                'MEDIUM': '#f59e0b', 'Medium': '#f59e0b', 'medium': '#f59e0b',
+                'LOW': '#22c55e', 'Low': '#22c55e', 'low': '#22c55e'
+            }
+            
+            # Use Title if available for leaf nodes
+            path_cols = [group_col]
+            if 'Title' in measures.columns:
+                path_cols.append('Title')
+            elif 'Measure' in measures.columns:
+                path_cols.append('Measure')
+            
+            fig = px.treemap(
+                measures,
+                path=path_cols,
+                color=priority_col,
+                color_discrete_map=priority_map,
+                hover_data=['Conflict'] if 'Conflict' in measures.columns else None
+            )
+            fig.update_traces(
+                textfont=dict(size=11, color='white'),
+                marker=dict(cornerradius=6),
+                hovertemplate='<b>%{label}</b><br>Priority: %{color}<extra></extra>'
+            )
+            fig.update_layout(
+                height=420,
+                margin=dict(l=10, r=10, t=40, b=10),
+                paper_bgcolor='rgba(0,0,0,0)',
+                title=dict(text="Corrective Measures by Type & Priority", font=dict(size=13, color='#1a1a1a'), x=0)
+            )
+            st.plotly_chart(fig, use_container_width=True)
+            
+            # Summary stats inline
+            if priority_col:
+                priority_counts = measures[priority_col].value_counts()
+                critical = priority_counts.get('CRITICAL', 0) + priority_counts.get('Critical', 0)
+                high = priority_counts.get('HIGH', 0) + priority_counts.get('High', 0)
+                medium = priority_counts.get('MEDIUM', 0) + priority_counts.get('Medium', 0)
                 
-                fig = px.bar(
-                    cat_counts,
-                    x='Count',
-                    y=group_col,
-                    orientation='h',
-                    color='Count',
-                    color_continuous_scale=['#d4bc8e', '#006C35']
-                )
-                fig.update_layout(
-                    height=350,
-                    margin=dict(l=10, r=10, t=40, b=10),
-                    paper_bgcolor='rgba(0,0,0,0)',
-                    title=dict(text="Measures by Category", font=dict(size=13, color='#1a1a1a'), x=0),
-                    showlegend=False,
-                    coloraxis_showscale=False
-                )
-                st.plotly_chart(fig, use_container_width=True)
+                cols = st.columns(4)
+                with cols[0]:
+                    st.markdown(render_stat_module("📋", "Total Measures", str(len(measures)), "Interventions planned", "green"), unsafe_allow_html=True)
+                with cols[1]:
+                    st.markdown(render_stat_module("🔴", "Critical", str(critical), "Immediate action", "red"), unsafe_allow_html=True)
+                with cols[2]:
+                    st.markdown(render_stat_module("🟠", "High Priority", str(high), "Short-term focus", "amber"), unsafe_allow_html=True)
+                with cols[3]:
+                    st.markdown(render_stat_module("🟡", "Medium", str(medium), "Medium-term plan", "blue"), unsafe_allow_html=True)
         else:
             st.markdown(render_info_box("CORRECTIVE MEASURES", "Playbook of interventions to address identified issues"), unsafe_allow_html=True)
+            st.dataframe(measures, use_container_width=True, hide_index=True)
         
         with st.expander("📋 View Full Measures Playbook"):
             st.dataframe(measures, use_container_width=True, hide_index=True)
