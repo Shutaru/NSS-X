@@ -1204,25 +1204,25 @@ def render_ws3_benchmarking():
                 st.plotly_chart(fig_tree, use_container_width=True)
             
             with col2:
-                # Summary stats
+                # Summary stats using native Streamlit components
                 critical = len(principles[principles['Priority'] == 'CRITICAL'])
                 high = len(principles[principles['Priority'] == 'HIGH'])
                 medium = len(principles[principles['Priority'] == 'MEDIUM'])
+                total = len(principles)
                 
-                st.markdown(f"""
+                st.markdown("""
                 <div class="data-card" style="height: 100%;">
                     <div class="data-card-header" style="border-bottom: none; padding-bottom: 0;">
                         <h3 class="data-card-title">Priority Breakdown</h3>
                     </div>
-                    {render_progress_bar("Critical", critical, len(principles))}
-                    {render_progress_bar("High", high, len(principles))}
-                    {render_progress_bar("Medium", medium, len(principles))}
-                    <div style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid var(--border-light);">
-                        <div style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.3rem;">Total Principles</div>
-                        <div style="font-size: 1.5rem; font-weight: 700; color: var(--ksa-green);">{len(principles)}</div>
-                    </div>
                 </div>
                 """, unsafe_allow_html=True)
+                
+                st.markdown(render_progress_bar("Critical", critical, total), unsafe_allow_html=True)
+                st.markdown(render_progress_bar("High", high, total), unsafe_allow_html=True)
+                st.markdown(render_progress_bar("Medium", medium, total), unsafe_allow_html=True)
+                
+                st.metric("Total Principles", total)
         
         with st.expander("📋 View All Design Principles"):
             # Show key columns only
