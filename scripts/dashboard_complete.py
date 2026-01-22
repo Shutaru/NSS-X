@@ -1332,14 +1332,40 @@ def render_ws4_sectoral():
         if 'Region' in diagnostics.columns:
             numeric_cols = diagnostics.select_dtypes(include=[np.number]).columns.tolist()
             if numeric_cols:
+                # Normalize data for better color differentiation
+                data_matrix = diagnostics[numeric_cols].values
+                
+                # Use diverging colorscale for better differentiation
                 fig = px.imshow(
-                    diagnostics[numeric_cols].values,
+                    data_matrix,
                     x=numeric_cols,
                     y=diagnostics['Region'].values,
-                    color_continuous_scale=['#004d25', '#006C35', '#00a650', '#74c476', '#d4bc8e'],
-                    aspect='auto'
+                    color_continuous_scale='RdYlGn',  # Red-Yellow-Green diverging
+                    aspect='auto',
+                    text_auto='.1f'
                 )
-                fig.update_layout(**get_chart_layout("Regional Performance Heatmap", height=500))
+                fig.update_traces(
+                    texttemplate='%{z:.1f}',
+                    textfont=dict(size=10, color='#1a1a1a'),
+                    hovertemplate='Region: %{y}<br>Indicator: %{x}<br>Score: %{z:.2f}<extra></extra>'
+                )
+                fig.update_layout(
+                    height=450,
+                    margin=dict(l=10, r=10, t=40, b=10),
+                    paper_bgcolor='rgba(0,0,0,0)',
+                    plot_bgcolor='rgba(0,0,0,0)',
+                    title=dict(text="Regional Performance Matrix", font=dict(size=13, color='#1a1a1a'), x=0),
+                    xaxis=dict(title='', tickfont=dict(size=9), tickangle=35),
+                    yaxis=dict(title='', tickfont=dict(size=10)),
+                    coloraxis=dict(
+                        colorbar=dict(
+                            title='Score',
+                            thickness=12,
+                            len=0.6,
+                            tickfont=dict(size=9)
+                        )
+                    )
+                )
                 st.plotly_chart(fig, use_container_width=True)
         
         with st.expander("📋 View Full Diagnostics Data"):
@@ -1347,13 +1373,100 @@ def render_ws4_sectoral():
     
     with tab2:
         conflicts = ws4['conflicts']
-        st.markdown(render_info_box("CONFLICT MATRIX", "Analysis of land use conflicts across sectors and regions"), unsafe_allow_html=True)
-        st.dataframe(conflicts, use_container_width=True, hide_index=True)
+        
+        # Check if conflicts has proper structure for heatmap
+        if len(conflicts.columns) > 1:
+            # Try to create a conflict intensity visualization
+            first_col = conflicts.columns[0]
+            numeric_cols = conflicts.select_dtypes(include=[np.number]).columns.tolist()
+            
+            if numeric_cols and first_col not in numeric_cols:
+                # Create heatmap of conflicts
+                fig = px.imshow(
+                    conflicts[numeric_cols].values,
+                    x=numeric_cols,
+                    y=conflicts[first_col].values if first_col in conflicts.columns else None,
+                    color_continuous_scale=['#dcfce7', '#fef3c7', '#fecaca', '#ef4444'],
+                    aspect='auto',
+                    text_auto=True
+                )
+                fig.update_traces(
+                    texttemplate='%{z}',
+                    textfont=dict(size=11),
+                    hovertemplate='%{y}<br>%{x}: %{z}<extra></extra>'
+                )
+                fig.update_layout(
+                    height=400,
+                    margin=dict(l=10, r=10, t=40, b=10),
+                    paper_bgcolor='rgba(0,0,0,0)',
+                    title=dict(text="Land Use Conflict Intensity", font=dict(size=13, color='#1a1a1a'), x=0),
+                    xaxis=dict(title='', tickfont=dict(size=9), tickangle=30),
+                    yaxis=dict(title='', tickfont=dict(size=10)),
+                    coloraxis_showscale=True
+                )
+                st.plotly_chart(fig, use_container_width=True)
+            else:
+                st.markdown(render_info_box("CONFLICT MATRIX", "Analysis of land use conflicts across sectors and regions"), unsafe_allow_html=True)
+        
+        with st.expander("📋 View Full Conflict Matrix"):
+            st.dataframe(conflicts, use_container_width=True, hide_index=True)
     
     with tab3:
         measures = ws4['measures']
-        st.markdown(render_info_box("CORRECTIVE MEASURES", "Playbook of interventions to address identified issues"), unsafe_allow_html=True)
-        st.dataframe(measures, use_container_width=True, hide_index=True)
+        
+        # Group measures by category if available
+        if 'Category' in measures.columns or 'Sector' in measures.columns:
+            group_col = 'Category' if 'Category' in measures.columns else 'Sector'
+            groups = measures[group_col].unique()
+            
+            # Create treemap of measures
+            if 'Priority' in measures.columns:
+                fig = px.treemap(
+                    measures,
+                    path=[group_col, 'Measure'] if 'Measure' in measures.columns else [group_col],
+                    color='Priority',
+                    color_discrete_map={'High': '#ef4444', 'Medium': '#f59e0b', 'Low': '#22c55e',
+                                       'HIGH': '#ef4444', 'MEDIUM': '#f59e0b', 'LOW': '#22c55e',
+                                       'Critical': '#dc2626', 'CRITICAL': '#dc2626'}
+                )
+                fig.update_traces(
+                    textfont=dict(size=11, color='white'),
+                    marker=dict(cornerradius=6)
+                )
+                fig.update_layout(
+                    height=400,
+                    margin=dict(l=10, r=10, t=40, b=10),
+                    paper_bgcolor='rgba(0,0,0,0)',
+                    title=dict(text="Corrective Measures by Category & Priority", font=dict(size=13, color='#1a1a1a'), x=0)
+                )
+                st.plotly_chart(fig, use_container_width=True)
+            else:
+                # Simple count by category
+                cat_counts = measures[group_col].value_counts().reset_index()
+                cat_counts.columns = [group_col, 'Count']
+                
+                fig = px.bar(
+                    cat_counts,
+                    x='Count',
+                    y=group_col,
+                    orientation='h',
+                    color='Count',
+                    color_continuous_scale=['#d4bc8e', '#006C35']
+                )
+                fig.update_layout(
+                    height=350,
+                    margin=dict(l=10, r=10, t=40, b=10),
+                    paper_bgcolor='rgba(0,0,0,0)',
+                    title=dict(text="Measures by Category", font=dict(size=13, color='#1a1a1a'), x=0),
+                    showlegend=False,
+                    coloraxis_showscale=False
+                )
+                st.plotly_chart(fig, use_container_width=True)
+        else:
+            st.markdown(render_info_box("CORRECTIVE MEASURES", "Playbook of interventions to address identified issues"), unsafe_allow_html=True)
+        
+        with st.expander("📋 View Full Measures Playbook"):
+            st.dataframe(measures, use_container_width=True, hide_index=True)
 
 
 def render_ws5_scenarios():
