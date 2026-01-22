@@ -1431,77 +1431,99 @@ def render_ws4_sectoral():
     with tab3:
         measures = ws4['measures']
         
-        # Group measures by Type (REGULATORY, INVESTMENT, etc.) 
-        group_col = None
-        for col in ['Type', 'Category', 'Sector']:
-            if col in measures.columns:
-                group_col = col
-                break
-        
+        # Priority column detection
         priority_col = None
         for col in ['Priority', 'PRIORITY']:
             if col in measures.columns:
                 priority_col = col
                 break
         
-        if group_col and priority_col:
-            # Create treemap of measures
-            # Ensure Priority values are mapped correctly
-            priority_map = {
-                'CRITICAL': '#dc2626', 'Critical': '#dc2626', 'critical': '#dc2626',
-                'HIGH': '#ef4444', 'High': '#ef4444', 'high': '#ef4444',
-                'MEDIUM': '#f59e0b', 'Medium': '#f59e0b', 'medium': '#f59e0b',
-                'LOW': '#22c55e', 'Low': '#22c55e', 'low': '#22c55e'
-            }
+        # Summary stats inline first
+        if priority_col:
+            priority_counts = measures[priority_col].value_counts()
+            critical = priority_counts.get('CRITICAL', 0) + priority_counts.get('Critical', 0)
+            high = priority_counts.get('HIGH', 0) + priority_counts.get('High', 0)
+            medium = priority_counts.get('MEDIUM', 0) + priority_counts.get('Medium', 0)
             
-            # Use Title if available for leaf nodes
-            path_cols = [group_col]
-            if 'Title' in measures.columns:
-                path_cols.append('Title')
-            elif 'Measure' in measures.columns:
-                path_cols.append('Measure')
+            cols = st.columns(4)
+            with cols[0]:
+                st.markdown(render_stat_module("📋", "Total Measures", str(len(measures)), "Interventions planned", "green"), unsafe_allow_html=True)
+            with cols[1]:
+                st.markdown(render_stat_module("🔴", "Critical", str(critical), "Immediate action", "red"), unsafe_allow_html=True)
+            with cols[2]:
+                st.markdown(render_stat_module("🟠", "High Priority", str(high), "Short-term focus", "amber"), unsafe_allow_html=True)
+            with cols[3]:
+                st.markdown(render_stat_module("🟡", "Medium", str(medium), "Medium-term plan", "blue"), unsafe_allow_html=True)
+        
+        # Horizontal bar chart by Type - much cleaner than treemap
+        type_col = None
+        for col in ['Type', 'Category', 'Sector']:
+            if col in measures.columns:
+                type_col = col
+                break
+        
+        if type_col and priority_col:
+            # Group by Type and Priority
+            type_priority = measures.groupby([type_col, priority_col]).size().reset_index(name='Count')
             
-            fig = px.treemap(
-                measures,
-                path=path_cols,
+            # Create horizontal stacked bar
+            fig = px.bar(
+                type_priority,
+                y=type_col,
+                x='Count',
                 color=priority_col,
-                color_discrete_map=priority_map,
-                hover_data=['Conflict'] if 'Conflict' in measures.columns else None
+                orientation='h',
+                color_discrete_map={
+                    'CRITICAL': '#dc2626', 'Critical': '#dc2626',
+                    'HIGH': '#f97316', 'High': '#f97316',
+                    'MEDIUM': '#eab308', 'Medium': '#eab308',
+                    'LOW': '#22c55e', 'Low': '#22c55e'
+                },
+                barmode='stack',
+                text='Count'
             )
             fig.update_traces(
-                textfont=dict(size=11, color='white'),
-                marker=dict(cornerradius=6),
-                hovertemplate='<b>%{label}</b><br>Priority: %{color}<extra></extra>'
+                textposition='inside',
+                textfont=dict(size=14, color='white')
             )
             fig.update_layout(
-                height=420,
+                height=280,
                 margin=dict(l=10, r=10, t=40, b=10),
                 paper_bgcolor='rgba(0,0,0,0)',
-                title=dict(text="Corrective Measures by Type & Priority", font=dict(size=13, color='#1a1a1a'), x=0)
+                plot_bgcolor='rgba(0,0,0,0)',
+                title=dict(text="Measures by Type & Priority", font=dict(size=13, color='#1a1a1a'), x=0),
+                xaxis=dict(title='Number of Measures', tickfont=dict(size=11), gridcolor='rgba(0,0,0,0.05)'),
+                yaxis=dict(title='', tickfont=dict(size=12)),
+                legend=dict(
+                    orientation='h',
+                    yanchor='bottom',
+                    y=-0.25,
+                    xanchor='center',
+                    x=0.5,
+                    font=dict(size=11)
+                )
             )
             st.plotly_chart(fig, use_container_width=True)
-            
-            # Summary stats inline
-            if priority_col:
-                priority_counts = measures[priority_col].value_counts()
-                critical = priority_counts.get('CRITICAL', 0) + priority_counts.get('Critical', 0)
-                high = priority_counts.get('HIGH', 0) + priority_counts.get('High', 0)
-                medium = priority_counts.get('MEDIUM', 0) + priority_counts.get('Medium', 0)
-                
-                cols = st.columns(4)
-                with cols[0]:
-                    st.markdown(render_stat_module("📋", "Total Measures", str(len(measures)), "Interventions planned", "green"), unsafe_allow_html=True)
-                with cols[1]:
-                    st.markdown(render_stat_module("🔴", "Critical", str(critical), "Immediate action", "red"), unsafe_allow_html=True)
-                with cols[2]:
-                    st.markdown(render_stat_module("🟠", "High Priority", str(high), "Short-term focus", "amber"), unsafe_allow_html=True)
-                with cols[3]:
-                    st.markdown(render_stat_module("🟡", "Medium", str(medium), "Medium-term plan", "blue"), unsafe_allow_html=True)
-        else:
-            st.markdown(render_info_box("CORRECTIVE MEASURES", "Playbook of interventions to address identified issues"), unsafe_allow_html=True)
-            st.dataframe(measures, use_container_width=True, hide_index=True)
         
-        with st.expander("📋 View Full Measures Playbook"):
+        # Clean table with key columns - styled
+        st.markdown("#### 📋 Measures Details", unsafe_allow_html=True)
+        display_cols = ['ID', 'Title', 'Type', 'Priority', 'Timeline', 'Cost (SAR M)']
+        display_cols = [c for c in display_cols if c in measures.columns]
+        
+        if display_cols:
+            st.dataframe(
+                measures[display_cols],
+                use_container_width=True,
+                hide_index=True,
+                height=350,
+                column_config={
+                    'Title': st.column_config.TextColumn('Title', width='large'),
+                    'Cost (SAR M)': st.column_config.NumberColumn('Cost (SAR M)', format='%,.0f'),
+                    'Priority': st.column_config.TextColumn('Priority', width='small'),
+                    'Timeline': st.column_config.TextColumn('Timeline', width='small')
+                }
+            )
+        else:
             st.dataframe(measures, use_container_width=True, hide_index=True)
 
 
