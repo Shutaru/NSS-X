@@ -1341,7 +1341,6 @@ def render_ws5_scenarios():
         # Scenario Cards with key metrics
         if 'Scenario' in comparison_2030.columns:
             st.markdown("#### 2030 Projections", unsafe_allow_html=True)
-            st.markdown('<div class="stat-grid">', unsafe_allow_html=True)
             
             scenario_colors = {
                 'Baseline': 'amber',
@@ -1356,12 +1355,13 @@ def render_ws5_scenarios():
                 'Conservative': '📉'
             }
             
+            # Build scenario data list
+            scenarios_2030 = []
             for _, row in comparison_2030.iterrows():
                 scenario = row['Scenario']
                 pop = row.get('Population (M)', 'N/A')
                 gdp = row.get('GDP ($B)', 'N/A')
                 
-                # Match partial scenario names
                 color = 'amber'
                 icon = '📊'
                 for key in scenario_colors:
@@ -1372,16 +1372,14 @@ def render_ws5_scenarios():
                 
                 pop_str = f"{pop:.1f}M" if isinstance(pop, (int, float)) else str(pop)
                 gdp_str = f"${gdp:.0f}B" if isinstance(gdp, (int, float)) else str(gdp)
-                
-                st.markdown(render_stat_module(
-                    icon, 
-                    scenario[:25] + "..." if len(scenario) > 25 else scenario, 
-                    pop_str,
-                    f"GDP: {gdp_str}",
-                    color
-                ), unsafe_allow_html=True)
+                scenarios_2030.append((icon, scenario[:25] + "..." if len(scenario) > 25 else scenario, pop_str, gdp_str, color))
             
-            st.markdown('</div>', unsafe_allow_html=True)
+            # Render with st.columns
+            if scenarios_2030:
+                cols = st.columns(len(scenarios_2030))
+                for i, (icon, name, pop_str, gdp_str, color) in enumerate(scenarios_2030):
+                    with cols[i]:
+                        st.markdown(render_stat_module(icon, name, pop_str, f"GDP: {gdp_str}", color), unsafe_allow_html=True)
             
             # Visual comparison chart
             numeric_cols = ['Population (M)', 'GDP ($B)', 'Oil Share (%)', 'Urban (%)', 'Renewable GW']
@@ -1410,8 +1408,9 @@ def render_ws5_scenarios():
         # 2050 Comparison
         if 'Scenario' in comparison_2050.columns:
             st.markdown("#### 2050 Projections", unsafe_allow_html=True)
-            st.markdown('<div class="stat-grid">', unsafe_allow_html=True)
             
+            # Build scenario data list for 2050
+            scenarios_2050 = []
             for _, row in comparison_2050.iterrows():
                 scenario = row['Scenario']
                 pop = row.get('Population (M)', 'N/A')
@@ -1427,16 +1426,14 @@ def render_ws5_scenarios():
                 
                 pop_str = f"{pop:.1f}M" if isinstance(pop, (int, float)) else str(pop)
                 gdp_str = f"${gdp:.0f}B" if isinstance(gdp, (int, float)) else str(gdp)
-                
-                st.markdown(render_stat_module(
-                    icon, 
-                    scenario[:25] + "..." if len(scenario) > 25 else scenario, 
-                    pop_str,
-                    f"GDP: {gdp_str}",
-                    color
-                ), unsafe_allow_html=True)
+                scenarios_2050.append((icon, scenario[:25] + "..." if len(scenario) > 25 else scenario, pop_str, gdp_str, color))
             
-            st.markdown('</div>', unsafe_allow_html=True)
+            # Render with st.columns
+            if scenarios_2050:
+                cols_2050 = st.columns(len(scenarios_2050))
+                for i, (icon, name, pop_str, gdp_str, color) in enumerate(scenarios_2050):
+                    with cols_2050[i]:
+                        st.markdown(render_stat_module(icon, name, pop_str, f"GDP: {gdp_str}", color), unsafe_allow_html=True)
             
             numeric_cols = [c for c in ['Population (M)', 'GDP ($B)', 'Oil Share (%)', 'Urban (%)', 'Renewable GW'] if c in comparison_2050.columns]
             
