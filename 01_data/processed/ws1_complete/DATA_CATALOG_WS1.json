@@ -1,0 +1,226 @@
+{
+  "generated_at": "2026-01-22T12:36:45.717998",
+  "datasets": [
+    {
+      "name": "demographics_age_distribution",
+      "rows": 104,
+      "columns": [
+        "region_code",
+        "region_name_en",
+        "age_group",
+        "total",
+        "male",
+        "female",
+        "year"
+      ]
+    },
+    {
+      "name": "demographics_age_distribution_timeseries",
+      "rows": 4264,
+      "columns": [
+        "region_code",
+        "region_name_en",
+        "age_group",
+        "total",
+        "male",
+        "female",
+        "year"
+      ]
+    },
+    {
+      "name": "demographics_urban_rural",
+      "rows": 13,
+      "columns": [
+        "region_code",
+        "region_name_en",
+        "total_population",
+        "urban_population",
+        "rural_population",
+        "urbanization_rate",
+        "year"
+      ]
+    },
+    {
+      "name": "demographics_nationality",
+      "rows": 13,
+      "columns": [
+        "region_code",
+        "region_name_en",
+        "total_population",
+        "saudi_population",
+        "expat_population",
+        "saudi_ratio",
+        "year"
+      ]
+    },
+    {
+      "name": "economics_gdp_regional_sectoral",
+      "rows": 169,
+      "columns": [
+        "region_name_en",
+        "sector",
+        "gdp_billion_usd",
+        "gdp_share_regional",
+        "year"
+      ]
+    },
+    {
+      "name": "economics_gdp_timeseries",
+      "rows": 6084,
+      "columns": [
+        "region_name_en",
+        "sector",
+        "gdp_billion_usd",
+        "gdp_share_regional",
+        "year"
+      ]
+    },
+    {
+      "name": "economics_investments",
+      "rows": 13,
+      "columns": [
+        "region_name_en",
+        "total_investment_billion_usd",
+        "private_investment",
+        "public_investment",
+        "foreign_investment",
+        "year"
+      ]
+    },
+    {
+      "name": "economics_sectors",
+      "rows": 13,
+      "columns": [
+        "sector",
+        "gdp_share",
+        "employment_share",
+        "growth"
+      ]
+    },
+    {
+      "name": "environment_water_resources",
+      "rows": 13,
+      "columns": [
+        "region_name_en",
+        "total_consumption_mcm",
+        "groundwater_mcm",
+        "desalination_mcm",
+        "treated_wastewater_mcm",
+        "agriculture_share_pct",
+        "municipal_share_pct",
+        "industrial_share_pct",
+        "aquifer_stress_level",
+        "year"
+      ]
+    },
+    {
+      "name": "environment_climate",
+      "rows": 13,
+      "columns": [
+        "region_name_en",
+        "avg_temp_c",
+        "max_temp_c",
+        "min_temp_c",
+        "rainfall_mm",
+        "extreme_heat_days",
+        "drought_risk",
+        "year"
+      ]
+    },
+    {
+      "name": "environment_protected_areas",
+      "rows": 13,
+      "columns": [
+        "region_name_en",
+        "terrestrial_protected_pct",
+        "marine_protected_km2",
+        "key_protected_site",
+        "target_2030_pct",
+        "year"
+      ]
+    },
+    {
+      "name": "environment_air_quality",
+      "rows": 13,
+      "columns": [
+        "region_name_en",
+        "pm25_annual_avg",
+        "pm10_annual_avg",
+        "aqi_category",
+        "main_pollution_source",
+        "year"
+      ]
+    },
+    {
+      "name": "infrastructure_transport",
+      "rows": 13,
+      "columns": [
+        "region_name_en",
+        "airports",
+        "airport_capacity_mpax",
+        "rail_km",
+        "metro_km",
+        "highway_km",
+        "bus_routes",
+        "year"
+      ]
+    },
+    {
+      "name": "infrastructure_energy",
+      "rows": 13,
+      "columns": [
+        "region_name_en",
+        "power_capacity_gw",
+        "solar_capacity_mw",
+        "grid_coverage_pct",
+        "wind_capacity_mw",
+        "renewable_share_pct",
+        "year"
+      ]
+    },
+    {
+      "name": "infrastructure_ports",
+      "rows": 8,
+      "columns": [
+        "region_name_en",
+        "port_name",
+        "port_type",
+        "capacity_teu_annual",
+        "latitude",
+        "longitude",
+        "year"
+      ]
+    },
+    {
+      "name": "infrastructure_telecommunications",
+      "rows": 13,
+      "columns": [
+        "region_name_en",
+        "fiber_coverage_pct",
+        "mobile_coverage_4g_pct",
+        "mobile_coverage_5g_pct",
+        "internet_penetration_pct",
+        "data_centers",
+        "year"
+      ]
+    },
+    {
+      "name": "projects_vision2030",
+      "rows": 26,
+      "columns": [
+        "name",
+        "sector",
+        "jobs",
+        "region",
+        "status",
+        "start",
+        "end",
+        "lat",
+        "lon",
+        "description",
+        "flagship",
+        "budget_billion_usd"
+      ]
+    }
+  ]
+}

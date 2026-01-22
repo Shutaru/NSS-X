@@ -1,0 +1,14 @@
+region_name_en,total_consumption_mcm,groundwater_mcm,desalination_mcm,treated_wastewater_mcm,agriculture_share_pct,municipal_share_pct,industrial_share_pct,aquifer_stress_level,year
+Riyadh,2500,1000,1125,375,65,30,5,Critical,2024
+Makkah,2200,660,1210,330,65,30,5,High,2024
+Eastern Province,1800,810,720,270,65,30,5,High,2024
+Madinah,800,280,400,120,65,30,5,High,2024
+Al-Qassim,1200,1020,0,180,80,20,5,Critical,2024
+Asir,600,360,120,120,65,30,5,High,2024
+Tabuk,400,280,60,60,65,30,5,High,2024
+Hail,350,280,17,52,80,20,5,High,2024
+Northern Borders,150,112,15,22,65,30,5,High,2024
+Jazan,450,225,157,67,65,30,5,High,2024
+Najran,250,200,12,37,65,30,5,High,2024
+Al-Baha,150,105,15,30,65,30,5,High,2024
+Al-Jouf,300,270,0,30,80,20,5,Critical,2024

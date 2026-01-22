@@ -1,0 +1,352 @@
+{
+  "metadata": {
+    "title": "NSS X - GIS Layer Catalogue",
+    "version": "1.0.0",
+    "created": "2026-01-22",
+    "standard": "ISO 19115-1:2014",
+    "country": "Kingdom of Saudi Arabia"
+  },
+  "layers": [
+    {
+      "id": "sau_admin0",
+      "name": "Saudi Arabia Country Boundary",
+      "name_ar": "حدود المملكة العربية السعودية",
+      "category": "Administrative Boundaries",
+      "geometry_type": "MultiPolygon",
+      "source": "OCHA Humanitarian Data Exchange (HDX)",
+      "source_url": "https://data.humdata.org/dataset/cod-ab-sau",
+      "file_path": "01_data/01_raw/gis/admin_boundaries/sau_admin0.geojson",
+      "format": "GeoJSON",
+      "crs": "EPSG:4326",
+      "scale": "1:1,000,000",
+      "attributes": [
+        {"name": "adm0_name", "type": "string", "description": "Country name"},
+        {"name": "adm0_pcode", "type": "string", "description": "Country code (SAU)"},
+        {"name": "shape_area", "type": "float", "description": "Area in square degrees"}
+      ],
+      "update_frequency": "As needed",
+      "last_updated": "2023",
+      "use_cases": ["National overview maps", "Country boundary reference"],
+      "thumbnail": null
+    },
+    {
+      "id": "sau_admin1",
+      "name": "Saudi Arabia Administrative Regions",
+      "name_ar": "المناطق الإدارية",
+      "category": "Administrative Boundaries",
+      "geometry_type": "MultiPolygon",
+      "source": "OCHA Humanitarian Data Exchange (HDX)",
+      "source_url": "https://data.humdata.org/dataset/cod-ab-sau",
+      "file_path": "01_data/01_raw/gis/admin_boundaries/sau_admin1.geojson",
+      "format": "GeoJSON",
+      "crs": "EPSG:4326",
+      "scale": "1:500,000",
+      "feature_count": 13,
+      "attributes": [
+        {"name": "adm1_name", "type": "string", "description": "Region name (English)"},
+        {"name": "adm1_name1", "type": "string", "description": "Region name (Arabic)"},
+        {"name": "adm1_pcode", "type": "string", "description": "Region code (SA-01 to SA-13)"},
+        {"name": "adm0_name", "type": "string", "description": "Country name"},
+        {"name": "shape_area", "type": "float", "description": "Area in square degrees"}
+      ],
+      "update_frequency": "As needed",
+      "last_updated": "2023",
+      "use_cases": ["Regional analysis", "Choropleth maps", "Spatial joins"],
+      "thumbnail": null
+    },
+    {
+      "id": "settlements",
+      "name": "Major Cities and Settlements",
+      "name_ar": "المدن والمستوطنات الرئيسية",
+      "category": "Settlements",
+      "geometry_type": "Point",
+      "source": "GASTAT / Generated",
+      "file_path": "01_data/01_raw/statistics/ksa_major_cities.csv",
+      "format": "CSV with coordinates",
+      "crs": "EPSG:4326",
+      "feature_count": 20,
+      "attributes": [
+        {"name": "city_name_en", "type": "string", "description": "City name (English)"},
+        {"name": "city_name_ar", "type": "string", "description": "City name (Arabic)"},
+        {"name": "region", "type": "string", "description": "Parent region"},
+        {"name": "population_estimate", "type": "integer", "description": "Population"},
+        {"name": "latitude", "type": "float", "description": "Latitude (WGS84)"},
+        {"name": "longitude", "type": "float", "description": "Longitude (WGS84)"},
+        {"name": "is_capital", "type": "boolean", "description": "National capital"},
+        {"name": "is_regional_capital", "type": "boolean", "description": "Regional capital"}
+      ],
+      "update_frequency": "Annual",
+      "last_updated": "2024",
+      "use_cases": ["Settlement hierarchy", "Population distribution", "Service planning"],
+      "thumbnail": null
+    },
+    {
+      "id": "projects_vision2030",
+      "name": "Vision 2030 Mega-Projects",
+      "name_ar": "مشاريع رؤية 2030",
+      "category": "Development Projects",
+      "geometry_type": "Point",
+      "source": "Vision 2030 / Generated",
+      "file_path": "01_data/processed/ws1_complete/projects_vision2030.csv",
+      "format": "CSV with coordinates",
+      "crs": "EPSG:4326",
+      "feature_count": 26,
+      "attributes": [
+        {"name": "name", "type": "string", "description": "Project name"},
+        {"name": "sector", "type": "string", "description": "Project sector"},
+        {"name": "budget_billion_usd", "type": "float", "description": "Investment (billion USD)"},
+        {"name": "jobs", "type": "integer", "description": "Jobs to be created"},
+        {"name": "status", "type": "string", "description": "Implementation status"},
+        {"name": "start", "type": "integer", "description": "Start year"},
+        {"name": "end", "type": "integer", "description": "Completion year"},
+        {"name": "lat", "type": "float", "description": "Latitude"},
+        {"name": "lon", "type": "float", "description": "Longitude"},
+        {"name": "flagship", "type": "boolean", "description": "Flagship project"}
+      ],
+      "update_frequency": "Quarterly",
+      "last_updated": "2026-01-22",
+      "use_cases": ["Investment mapping", "Development corridors", "Impact assessment"],
+      "thumbnail": null
+    },
+    {
+      "id": "ports",
+      "name": "Seaports and Terminals",
+      "name_ar": "الموانئ البحرية",
+      "category": "Infrastructure",
+      "geometry_type": "Point",
+      "source": "Generated / Saudi Ports Authority",
+      "file_path": "01_data/processed/ws1_complete/infrastructure_ports.csv",
+      "format": "CSV with coordinates",
+      "crs": "EPSG:4326",
+      "feature_count": 8,
+      "attributes": [
+        {"name": "port_name", "type": "string", "description": "Port name"},
+        {"name": "port_type", "type": "string", "description": "Port type (Commercial/Industrial/Oil)"},
+        {"name": "region_name_en", "type": "string", "description": "Region"},
+        {"name": "capacity_teu_annual", "type": "integer", "description": "Container capacity (TEU/year)"},
+        {"name": "latitude", "type": "float", "description": "Latitude"},
+        {"name": "longitude", "type": "float", "description": "Longitude"}
+      ],
+      "update_frequency": "Annual",
+      "last_updated": "2024",
+      "use_cases": ["Logistics planning", "Trade analysis", "Infrastructure mapping"],
+      "thumbnail": null
+    },
+    {
+      "id": "transport_network",
+      "name": "Transport Infrastructure Summary",
+      "name_ar": "ملخص البنية التحتية للنقل",
+      "category": "Infrastructure",
+      "geometry_type": "Tabular (regional aggregates)",
+      "source": "Generated / Ministry of Transport",
+      "file_path": "01_data/processed/ws1_complete/infrastructure_transport.csv",
+      "format": "CSV",
+      "crs": null,
+      "feature_count": 13,
+      "attributes": [
+        {"name": "region_name_en", "type": "string", "description": "Region name"},
+        {"name": "airports", "type": "integer", "description": "Number of airports"},
+        {"name": "airport_capacity_mpax", "type": "float", "description": "Passenger capacity (millions)"},
+        {"name": "rail_km", "type": "float", "description": "Railway length (km)"},
+        {"name": "metro_km", "type": "float", "description": "Metro length (km)"},
+        {"name": "highway_km", "type": "float", "description": "Highway length (km)"},
+        {"name": "bus_routes", "type": "integer", "description": "Number of bus routes"}
+      ],
+      "update_frequency": "Annual",
+      "last_updated": "2024",
+      "use_cases": ["Connectivity analysis", "Transport planning", "Regional comparison"],
+      "thumbnail": null
+    },
+    {
+      "id": "energy_infrastructure",
+      "name": "Energy Infrastructure",
+      "name_ar": "البنية التحتية للطاقة",
+      "category": "Infrastructure",
+      "geometry_type": "Tabular (regional aggregates)",
+      "source": "Generated / SEC",
+      "file_path": "01_data/processed/ws1_complete/infrastructure_energy.csv",
+      "format": "CSV",
+      "crs": null,
+      "feature_count": 13,
+      "attributes": [
+        {"name": "region_name_en", "type": "string", "description": "Region name"},
+        {"name": "power_capacity_gw", "type": "float", "description": "Generation capacity (GW)"},
+        {"name": "solar_capacity_mw", "type": "float", "description": "Solar capacity (MW)"},
+        {"name": "wind_capacity_mw", "type": "float", "description": "Wind capacity (MW)"},
+        {"name": "grid_coverage_pct", "type": "float", "description": "Grid coverage (%)"},
+        {"name": "renewable_share_pct", "type": "float", "description": "Renewable share (%)"}
+      ],
+      "update_frequency": "Annual",
+      "last_updated": "2024",
+      "use_cases": ["Energy planning", "Renewable assessment", "Grid analysis"],
+      "thumbnail": null
+    },
+    {
+      "id": "water_resources",
+      "name": "Water Resources",
+      "name_ar": "الموارد المائية",
+      "category": "Environment",
+      "geometry_type": "Tabular (regional aggregates)",
+      "source": "Generated / MEWA",
+      "file_path": "01_data/processed/ws1_complete/environment_water_resources.csv",
+      "format": "CSV",
+      "crs": null,
+      "feature_count": 13,
+      "attributes": [
+        {"name": "region_name_en", "type": "string", "description": "Region name"},
+        {"name": "total_consumption_mcm", "type": "float", "description": "Total consumption (MCM)"},
+        {"name": "groundwater_mcm", "type": "float", "description": "Groundwater use (MCM)"},
+        {"name": "desalination_mcm", "type": "float", "description": "Desalination (MCM)"},
+        {"name": "agriculture_share_pct", "type": "float", "description": "Agricultural use (%)"},
+        {"name": "aquifer_stress_level", "type": "string", "description": "Stress level"}
+      ],
+      "update_frequency": "Annual",
+      "last_updated": "2024",
+      "use_cases": ["Water security", "Agricultural planning", "Sustainability assessment"],
+      "thumbnail": null
+    },
+    {
+      "id": "climate",
+      "name": "Climate Data",
+      "name_ar": "البيانات المناخية",
+      "category": "Environment",
+      "geometry_type": "Tabular (regional aggregates)",
+      "source": "Generated / NCM",
+      "file_path": "01_data/processed/ws1_complete/environment_climate.csv",
+      "format": "CSV",
+      "crs": null,
+      "feature_count": 13,
+      "attributes": [
+        {"name": "region_name_en", "type": "string", "description": "Region name"},
+        {"name": "avg_temp_c", "type": "float", "description": "Average temperature (°C)"},
+        {"name": "max_temp_c", "type": "float", "description": "Maximum temperature (°C)"},
+        {"name": "min_temp_c", "type": "float", "description": "Minimum temperature (°C)"},
+        {"name": "rainfall_mm", "type": "float", "description": "Annual rainfall (mm)"},
+        {"name": "extreme_heat_days", "type": "integer", "description": "Days above 35°C"},
+        {"name": "drought_risk", "type": "string", "description": "Drought risk level"}
+      ],
+      "update_frequency": "Annual",
+      "last_updated": "2024",
+      "use_cases": ["Climate analysis", "Urban planning", "Agricultural zoning"],
+      "thumbnail": null
+    },
+    {
+      "id": "protected_areas",
+      "name": "Protected Areas",
+      "name_ar": "المناطق المحمية",
+      "category": "Environment",
+      "geometry_type": "Tabular (regional aggregates)",
+      "source": "Generated / NCWCD",
+      "file_path": "01_data/processed/ws1_complete/environment_protected_areas.csv",
+      "format": "CSV",
+      "crs": null,
+      "feature_count": 13,
+      "attributes": [
+        {"name": "region_name_en", "type": "string", "description": "Region name"},
+        {"name": "terrestrial_protected_pct", "type": "float", "description": "Land protected (%)"},
+        {"name": "marine_protected_km2", "type": "float", "description": "Marine protected (km²)"},
+        {"name": "key_protected_site", "type": "string", "description": "Main protected site"},
+        {"name": "target_2030_pct", "type": "float", "description": "2030 target (%)"}
+      ],
+      "update_frequency": "Annual",
+      "last_updated": "2024",
+      "use_cases": ["Conservation planning", "Green Initiative tracking", "Eco-tourism"],
+      "thumbnail": null
+    },
+    {
+      "id": "demographics_regional",
+      "name": "Demographics by Region",
+      "name_ar": "التركيبة السكانية حسب المنطقة",
+      "category": "Demographics",
+      "geometry_type": "Tabular (joins to admin1)",
+      "source": "Generated / GASTAT",
+      "file_path": "01_data/processed/ws1_complete/demographics_*.csv",
+      "format": "CSV",
+      "crs": null,
+      "feature_count": 13,
+      "attributes": [
+        {"name": "region_name_en", "type": "string", "description": "Region name"},
+        {"name": "total_population", "type": "integer", "description": "Total population"},
+        {"name": "saudi_population", "type": "integer", "description": "Saudi nationals"},
+        {"name": "expat_population", "type": "integer", "description": "Expatriates"},
+        {"name": "urban_population", "type": "integer", "description": "Urban population"},
+        {"name": "rural_population", "type": "integer", "description": "Rural population"},
+        {"name": "urbanization_rate", "type": "float", "description": "Urbanization (%)"}
+      ],
+      "update_frequency": "Annual",
+      "last_updated": "2024",
+      "use_cases": ["Population mapping", "Service planning", "Demographic analysis"],
+      "thumbnail": null
+    },
+    {
+      "id": "gdp_regional",
+      "name": "GDP by Region and Sector",
+      "name_ar": "الناتج المحلي حسب المنطقة والقطاع",
+      "category": "Economics",
+      "geometry_type": "Tabular (joins to admin1)",
+      "source": "Generated / GASTAT, SAMA",
+      "file_path": "01_data/processed/ws1_complete/economics_gdp_regional_sectoral.csv",
+      "format": "CSV",
+      "crs": null,
+      "feature_count": 169,
+      "attributes": [
+        {"name": "region_name_en", "type": "string", "description": "Region name"},
+        {"name": "sector", "type": "string", "description": "Economic sector"},
+        {"name": "gdp_billion_usd", "type": "float", "description": "GDP (billion USD)"},
+        {"name": "gdp_share_regional", "type": "float", "description": "Share of regional GDP (%)"},
+        {"name": "year", "type": "integer", "description": "Reference year"}
+      ],
+      "update_frequency": "Annual",
+      "last_updated": "2024",
+      "use_cases": ["Economic mapping", "Sectoral analysis", "Regional comparison"],
+      "thumbnail": null
+    }
+  ],
+  "layer_groups": {
+    "administrative": {
+      "name": "Administrative Boundaries",
+      "layers": ["sau_admin0", "sau_admin1"]
+    },
+    "settlements": {
+      "name": "Settlements",
+      "layers": ["settlements"]
+    },
+    "infrastructure": {
+      "name": "Infrastructure",
+      "layers": ["ports", "transport_network", "energy_infrastructure"]
+    },
+    "environment": {
+      "name": "Environment",
+      "layers": ["water_resources", "climate", "protected_areas"]
+    },
+    "economics": {
+      "name": "Economics",
+      "layers": ["gdp_regional"]
+    },
+    "demographics": {
+      "name": "Demographics",
+      "layers": ["demographics_regional"]
+    },
+    "projects": {
+      "name": "Development Projects",
+      "layers": ["projects_vision2030"]
+    }
+  },
+  "recommended_basemaps": [
+    {
+      "name": "OpenStreetMap",
+      "url": "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+      "attribution": "© OpenStreetMap contributors"
+    },
+    {
+      "name": "Esri World Imagery",
+      "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+      "attribution": "© Esri"
+    },
+    {
+      "name": "CartoDB Positron",
+      "url": "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+      "attribution": "© CartoDB"
+    }
+  ]
+}

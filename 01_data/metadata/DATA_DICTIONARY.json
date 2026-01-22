@@ -1,0 +1,466 @@
+{
+  "metadata": {
+    "title": "NSS X - Spatial Data Dictionary",
+    "version": "1.0.0",
+    "created": "2026-01-22",
+    "country": "Kingdom of Saudi Arabia",
+    "standard": "ISO 19115-1:2014",
+    "language": "en"
+  },
+  "spatial_reference_systems": {
+    "storage_crs": {
+      "epsg": 4326,
+      "name": "WGS 84",
+      "description": "Geographic coordinate system for data storage and exchange"
+    },
+    "analysis_crs": [
+      {
+        "epsg": 32637,
+        "name": "WGS 84 / UTM zone 37N",
+        "region": "Western Saudi Arabia (Red Sea coast)",
+        "use": "Area and distance calculations"
+      },
+      {
+        "epsg": 32638,
+        "name": "WGS 84 / UTM zone 38N",
+        "region": "Central Saudi Arabia",
+        "use": "Area and distance calculations"
+      },
+      {
+        "epsg": 32639,
+        "name": "WGS 84 / UTM zone 39N",
+        "region": "Eastern Saudi Arabia (Gulf coast)",
+        "use": "Area and distance calculations"
+      }
+    ]
+  },
+  "administrative_hierarchy": {
+    "level_1": {
+      "name": "Country",
+      "arabic": "المملكة",
+      "code_pattern": "SAU",
+      "count": 1
+    },
+    "level_2": {
+      "name": "Region (Mintaqah)",
+      "arabic": "منطقة",
+      "code_pattern": "SA-##",
+      "count": 13,
+      "description": "Administrative regions with appointed Emirs"
+    },
+    "level_3": {
+      "name": "Governorate (Muhafazah)",
+      "arabic": "محافظة",
+      "code_pattern": "SA-##-###",
+      "count": 136,
+      "description": "Sub-regional administrative units"
+    },
+    "level_4": {
+      "name": "Municipality (Baladiyah)",
+      "arabic": "بلدية",
+      "code_pattern": "SA-##-###-####",
+      "count": 285,
+      "description": "Local government units"
+    }
+  },
+  "data_domains": {
+    "demographics": {
+      "description": "Population and demographic characteristics",
+      "update_frequency": "Annual",
+      "primary_source": "GASTAT (General Authority for Statistics)",
+      "variables": [
+        {
+          "name": "population",
+          "type": "integer",
+          "unit": "persons",
+          "description": "Total resident population"
+        },
+        {
+          "name": "saudi_population",
+          "type": "integer",
+          "unit": "persons",
+          "description": "Saudi national population"
+        },
+        {
+          "name": "expat_population",
+          "type": "integer",
+          "unit": "persons",
+          "description": "Non-Saudi expatriate population"
+        },
+        {
+          "name": "urbanization_rate",
+          "type": "float",
+          "unit": "percentage",
+          "description": "Share of population in urban areas"
+        },
+        {
+          "name": "population_density",
+          "type": "float",
+          "unit": "persons/km²",
+          "description": "Population per square kilometer"
+        },
+        {
+          "name": "age_group",
+          "type": "string",
+          "unit": "category",
+          "description": "Age cohort (0-4, 5-14, 15-24, etc.)"
+        },
+        {
+          "name": "male_population",
+          "type": "integer",
+          "unit": "persons",
+          "description": "Male population count"
+        },
+        {
+          "name": "female_population",
+          "type": "integer",
+          "unit": "persons",
+          "description": "Female population count"
+        }
+      ]
+    },
+    "economics": {
+      "description": "Economic activity and performance indicators",
+      "update_frequency": "Quarterly/Annual",
+      "primary_source": "GASTAT, SAMA (Saudi Central Bank)",
+      "variables": [
+        {
+          "name": "gdp_billion_usd",
+          "type": "float",
+          "unit": "billion USD",
+          "description": "Gross Domestic Product at current prices"
+        },
+        {
+          "name": "gdp_billion_sar",
+          "type": "float",
+          "unit": "billion SAR",
+          "description": "Gross Domestic Product in Saudi Riyals"
+        },
+        {
+          "name": "gdp_per_capita_usd",
+          "type": "float",
+          "unit": "USD/person",
+          "description": "GDP divided by population"
+        },
+        {
+          "name": "gdp_growth_rate",
+          "type": "float",
+          "unit": "percentage",
+          "description": "Year-over-year GDP growth"
+        },
+        {
+          "name": "oil_gdp_share",
+          "type": "float",
+          "unit": "percentage",
+          "description": "Share of GDP from oil sector"
+        },
+        {
+          "name": "nonoil_gdp_share",
+          "type": "float",
+          "unit": "percentage",
+          "description": "Share of GDP from non-oil sectors"
+        },
+        {
+          "name": "sector",
+          "type": "string",
+          "unit": "category",
+          "description": "Economic sector classification",
+          "values": [
+            "Oil & Gas",
+            "Manufacturing",
+            "Wholesale & Retail",
+            "Construction",
+            "Real Estate",
+            "Transport & Storage",
+            "Finance & Insurance",
+            "Tourism & Hospitality",
+            "ICT",
+            "Agriculture",
+            "Mining (non-oil)",
+            "Public Admin",
+            "Other Services"
+          ]
+        },
+        {
+          "name": "employment",
+          "type": "integer",
+          "unit": "persons",
+          "description": "Number of employed persons"
+        },
+        {
+          "name": "unemployment_rate",
+          "type": "float",
+          "unit": "percentage",
+          "description": "Share of labor force unemployed"
+        }
+      ]
+    },
+    "environment": {
+      "description": "Environmental resources and conditions",
+      "update_frequency": "Annual",
+      "primary_source": "MEWA, NCM, various",
+      "variables": [
+        {
+          "name": "water_consumption_mcm",
+          "type": "float",
+          "unit": "million cubic meters",
+          "description": "Total annual water consumption"
+        },
+        {
+          "name": "groundwater_share",
+          "type": "float",
+          "unit": "percentage",
+          "description": "Share of water from aquifers"
+        },
+        {
+          "name": "desalination_share",
+          "type": "float",
+          "unit": "percentage",
+          "description": "Share of water from desalination"
+        },
+        {
+          "name": "aquifer_stress",
+          "type": "string",
+          "unit": "category",
+          "description": "Level of groundwater stress",
+          "values": ["Low", "Medium", "High", "Critical"]
+        },
+        {
+          "name": "avg_temperature_c",
+          "type": "float",
+          "unit": "Celsius",
+          "description": "Annual average temperature"
+        },
+        {
+          "name": "rainfall_mm",
+          "type": "float",
+          "unit": "millimeters",
+          "description": "Annual precipitation"
+        },
+        {
+          "name": "protected_area_pct",
+          "type": "float",
+          "unit": "percentage",
+          "description": "Share of land in protected areas"
+        },
+        {
+          "name": "pm25_annual_avg",
+          "type": "float",
+          "unit": "µg/m³",
+          "description": "Annual average PM2.5 concentration"
+        },
+        {
+          "name": "aqi_category",
+          "type": "string",
+          "unit": "category",
+          "description": "Air Quality Index category",
+          "values": ["Good", "Moderate", "Unhealthy for Sensitive", "Unhealthy", "Very Unhealthy"]
+        }
+      ]
+    },
+    "infrastructure": {
+      "description": "Physical infrastructure assets and networks",
+      "update_frequency": "Annual",
+      "primary_source": "Ministry of Transport, SEC, various",
+      "variables": [
+        {
+          "name": "highway_km",
+          "type": "float",
+          "unit": "kilometers",
+          "description": "Total highway network length"
+        },
+        {
+          "name": "rail_km",
+          "type": "float",
+          "unit": "kilometers",
+          "description": "Total railway network length"
+        },
+        {
+          "name": "metro_km",
+          "type": "float",
+          "unit": "kilometers",
+          "description": "Urban metro network length"
+        },
+        {
+          "name": "airport_capacity_mpax",
+          "type": "float",
+          "unit": "million passengers/year",
+          "description": "Airport passenger capacity"
+        },
+        {
+          "name": "port_capacity_teu",
+          "type": "integer",
+          "unit": "TEU/year",
+          "description": "Container port capacity"
+        },
+        {
+          "name": "power_capacity_gw",
+          "type": "float",
+          "unit": "gigawatts",
+          "description": "Electricity generation capacity"
+        },
+        {
+          "name": "renewable_capacity_mw",
+          "type": "float",
+          "unit": "megawatts",
+          "description": "Solar + wind generation capacity"
+        },
+        {
+          "name": "fiber_coverage_pct",
+          "type": "float",
+          "unit": "percentage",
+          "description": "Fiber optic network coverage"
+        },
+        {
+          "name": "mobile_5g_coverage_pct",
+          "type": "float",
+          "unit": "percentage",
+          "description": "5G mobile network coverage"
+        }
+      ]
+    },
+    "projects": {
+      "description": "Major development and infrastructure projects",
+      "update_frequency": "Quarterly",
+      "primary_source": "Vision 2030, PIF, various",
+      "variables": [
+        {
+          "name": "project_name",
+          "type": "string",
+          "unit": null,
+          "description": "Official project name"
+        },
+        {
+          "name": "sector",
+          "type": "string",
+          "unit": "category",
+          "description": "Project sector classification"
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "unit": "category",
+          "description": "Implementation status",
+          "values": ["Announced", "Planned", "Under Construction", "Operational"]
+        },
+        {
+          "name": "budget_billion_usd",
+          "type": "float",
+          "unit": "billion USD",
+          "description": "Total project investment"
+        },
+        {
+          "name": "jobs_created",
+          "type": "integer",
+          "unit": "jobs",
+          "description": "Expected direct employment"
+        },
+        {
+          "name": "start_year",
+          "type": "integer",
+          "unit": "year",
+          "description": "Project start year"
+        },
+        {
+          "name": "completion_year",
+          "type": "integer",
+          "unit": "year",
+          "description": "Expected completion year"
+        },
+        {
+          "name": "flagship",
+          "type": "boolean",
+          "unit": null,
+          "description": "Vision 2030 flagship project"
+        }
+      ]
+    },
+    "settlements": {
+      "description": "Cities, towns and urban areas",
+      "update_frequency": "Annual",
+      "primary_source": "GASTAT, MoMRA",
+      "variables": [
+        {
+          "name": "city_name",
+          "type": "string",
+          "unit": null,
+          "description": "Settlement name"
+        },
+        {
+          "name": "population",
+          "type": "integer",
+          "unit": "persons",
+          "description": "City population"
+        },
+        {
+          "name": "hierarchy_class",
+          "type": "string",
+          "unit": "category",
+          "description": "Settlement hierarchy level",
+          "values": ["Metropolis", "Large City", "Medium City", "Small City", "Town", "Village"]
+        },
+        {
+          "name": "is_regional_capital",
+          "type": "boolean",
+          "unit": null,
+          "description": "Administrative capital of region"
+        },
+        {
+          "name": "latitude",
+          "type": "float",
+          "unit": "decimal degrees",
+          "description": "Geographic latitude (WGS84)"
+        },
+        {
+          "name": "longitude",
+          "type": "float",
+          "unit": "decimal degrees",
+          "description": "Geographic longitude (WGS84)"
+        }
+      ]
+    }
+  },
+  "data_quality_rules": {
+    "completeness": {
+      "description": "All required fields must have values",
+      "threshold": 0.95
+    },
+    "consistency": {
+      "description": "Values must be logically consistent",
+      "rules": [
+        "population >= saudi_population + expat_population",
+        "urbanization_rate between 0 and 100",
+        "completion_year >= start_year"
+      ]
+    },
+    "accuracy": {
+      "description": "Values must be within expected ranges",
+      "rules": [
+        "temperature between -10 and 55",
+        "rainfall between 0 and 500",
+        "gdp_growth_rate between -20 and 30"
+      ]
+    },
+    "timeliness": {
+      "description": "Data must be updated within specified frequency",
+      "max_age_months": 12
+    }
+  },
+  "update_procedures": {
+    "annual_update": {
+      "datasets": ["demographics", "economics_annual", "environment", "infrastructure"],
+      "source_refresh": "Q1 each year",
+      "validation_required": true
+    },
+    "quarterly_update": {
+      "datasets": ["economics_quarterly", "projects"],
+      "source_refresh": "Within 45 days of quarter end",
+      "validation_required": true
+    },
+    "event_driven": {
+      "datasets": ["projects"],
+      "trigger": "New project announcement or status change",
+      "validation_required": true
+    }
+  }
+}

@@ -1,0 +1,14 @@
+region_name_en,airports,airport_capacity_mpax,rail_km,metro_km,highway_km,bus_routes,year
+Riyadh,2,35.0,176,176,4500,85,2024
+Makkah,1,80.0,450,18,3800,65,2024
+Eastern Province,3,15.0,200,0,3200,45,2024
+Madinah,1,12.0,400,0,1500,25,2024
+Al-Qassim,1,2.0,100,0,1200,15,2024
+Asir,2,3.0,0,0,1800,20,2024
+Tabuk,1,2.0,0,0,1500,10,2024
+Hail,1,1.5,0,0,1100,10,2024
+Northern Borders,1,0.5,0,0,800,5,2024
+Jazan,1,1.5,0,0,900,12,2024
+Najran,1,0.8,0,0,700,8,2024
+Al-Baha,1,0.3,0,0,500,6,2024
+Al-Jouf,1,0.5,0,0,600,5,2024

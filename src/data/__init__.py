@@ -11,6 +11,7 @@ from .provider_interface import (
 )
 from .simulation_engine import SimulationEngine, CountryProfile, COUNTRY_PROFILES
 from .production_provider import ProductionDataProvider
+from .ws1_data_generator import WS1DataGenerator
 
 __all__ = [
     'DataProviderInterface',
@@ -20,7 +21,8 @@ __all__ = [
     'SimulationEngine',
     'CountryProfile',
     'COUNTRY_PROFILES',
-    'ProductionDataProvider'
+    'ProductionDataProvider',
+    'WS1DataGenerator'
 ]
 
 

@@ -1,0 +1,14 @@
+region_name_en,power_capacity_gw,solar_capacity_mw,grid_coverage_pct,wind_capacity_mw,renewable_share_pct,year
+Riyadh,25.0,1500,100,49,6.0,2024
+Makkah,18.0,500,100,71,2.8,2024
+Eastern Province,22.0,800,100,66,3.6,2024
+Madinah,6.0,300,99,43,5.0,2024
+Al-Qassim,4.0,600,98,30,15.0,2024
+Asir,3.5,200,97,62,5.7,2024
+Tabuk,2.5,400,95,14,16.0,2024
+Hail,2.0,300,96,58,15.0,2024
+Northern Borders,1.2,150,94,9,12.5,2024
+Jazan,2.5,100,96,64,4.0,2024
+Najran,1.5,200,95,62,13.3,2024
+Al-Baha,0.8,50,97,8,6.2,2024
+Al-Jouf,1.5,400,95,400,26.7,2024
