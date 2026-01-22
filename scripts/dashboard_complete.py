@@ -1542,24 +1542,24 @@ def render_ws5_scenarios():
         comparison_2030 = ws5['comparison_2030']
         comparison_2050 = ws5['comparison_2050']
         
-        # Scenario Cards with key metrics
+        scenario_colors = {
+            'Baseline': '#f59e0b',
+            'Vision 2030 Achievement': '#006C35', 
+            'Accelerated Transformation': '#3b82f6',
+            'Conservative': '#ef4444'
+        }
+        scenario_icons = {
+            'Baseline': '📊',
+            'Vision 2030 Achievement': '🎯',
+            'Accelerated Transformation': '🚀',
+            'Conservative': '📉'
+        }
+        
+        # 2030 Section
         if 'Scenario' in comparison_2030.columns:
             st.markdown("#### 2030 Projections", unsafe_allow_html=True)
             
-            scenario_colors = {
-                'Baseline': 'amber',
-                'Vision 2030 Achievement': 'green', 
-                'Accelerated Transformation': 'blue',
-                'Conservative': 'red'
-            }
-            scenario_icons = {
-                'Baseline': '📊',
-                'Vision 2030 Achievement': '🎯',
-                'Accelerated Transformation': '🚀',
-                'Conservative': '📉'
-            }
-            
-            # Build scenario data list
+            # Scenario modules inline
             scenarios_2030 = []
             for _, row in comparison_2030.iterrows():
                 scenario = row['Scenario']
@@ -1570,50 +1570,118 @@ def render_ws5_scenarios():
                 icon = '📊'
                 for key in scenario_colors:
                     if key.lower() in scenario.lower():
-                        color = scenario_colors[key]
+                        color = 'green' if 'vision' in key.lower() else 'blue' if 'accel' in key.lower() else 'red' if 'conservative' in key.lower() else 'amber'
                         icon = scenario_icons.get(key, '📊')
                         break
                 
                 pop_str = f"{pop:.1f}M" if isinstance(pop, (int, float)) else str(pop)
                 gdp_str = f"${gdp:.0f}B" if isinstance(gdp, (int, float)) else str(gdp)
-                scenarios_2030.append((icon, scenario[:25] + "..." if len(scenario) > 25 else scenario, pop_str, gdp_str, color))
+                scenarios_2030.append((icon, scenario[:20] + "..." if len(scenario) > 20 else scenario, pop_str, gdp_str, color))
             
-            # Render with st.columns
             if scenarios_2030:
                 cols = st.columns(len(scenarios_2030))
                 for i, (icon, name, pop_str, gdp_str, color) in enumerate(scenarios_2030):
                     with cols[i]:
                         st.markdown(render_stat_module(icon, name, pop_str, f"GDP: {gdp_str}", color), unsafe_allow_html=True)
             
-            # Visual comparison chart
+            # Modern comparison - Dot plot / Lollipop style
             numeric_cols = ['Population (M)', 'GDP ($B)', 'Oil Share (%)', 'Urban (%)', 'Renewable GW']
             numeric_cols = [c for c in numeric_cols if c in comparison_2030.columns]
             
             if numeric_cols:
-                # Create grouped bar chart
-                fig = go.Figure()
-                colors_list = ['#006C35', '#3b82f6', '#8b5cf6', '#ef4444']
+                col1, col2 = st.columns(2)
                 
-                for i, (_, row) in enumerate(comparison_2030.iterrows()):
-                    scenario = row['Scenario'][:20] + "..." if len(row['Scenario']) > 20 else row['Scenario']
-                    fig.add_trace(go.Bar(
-                        name=scenario,
-                        x=numeric_cols[:4],
-                        y=[row[c] for c in numeric_cols[:4]],
-                        marker_color=colors_list[i % len(colors_list)]
-                    ))
+                with col1:
+                    # GDP comparison - horizontal lollipop
+                    if 'GDP ($B)' in comparison_2030.columns:
+                        df_gdp = comparison_2030[['Scenario', 'GDP ($B)']].copy()
+                        df_gdp['Short'] = df_gdp['Scenario'].apply(lambda x: x[:18] + '...' if len(x) > 18 else x)
+                        df_gdp = df_gdp.sort_values('GDP ($B)')
+                        
+                        fig = go.Figure()
+                        colors = [scenario_colors.get(s.split()[0], '#6b7280') for s in df_gdp['Scenario']]
+                        
+                        # Lines
+                        for i, row in df_gdp.iterrows():
+                            fig.add_trace(go.Scatter(
+                                x=[0, row['GDP ($B)']],
+                                y=[row['Short'], row['Short']],
+                                mode='lines',
+                                line=dict(color='#e5e7eb', width=2),
+                                showlegend=False
+                            ))
+                        
+                        # Dots
+                        fig.add_trace(go.Scatter(
+                            x=df_gdp['GDP ($B)'],
+                            y=df_gdp['Short'],
+                            mode='markers+text',
+                            marker=dict(size=16, color=colors),
+                            text=[f"${v:.0f}B" for v in df_gdp['GDP ($B)']],
+                            textposition='middle right',
+                            textfont=dict(size=11),
+                            showlegend=False
+                        ))
+                        
+                        fig.update_layout(
+                            height=220,
+                            margin=dict(l=10, r=60, t=35, b=10),
+                            paper_bgcolor='rgba(0,0,0,0)',
+                            plot_bgcolor='rgba(0,0,0,0)',
+                            title=dict(text="GDP 2030 ($B)", font=dict(size=12, color='#1a1a1a'), x=0),
+                            xaxis=dict(showgrid=False, showticklabels=False, zeroline=False),
+                            yaxis=dict(tickfont=dict(size=10))
+                        )
+                        st.plotly_chart(fig, use_container_width=True)
                 
-                layout = get_chart_layout("Key Metrics Comparison - 2030", height=320)
-                layout['legend'] = dict(orientation='h', yanchor='bottom', y=-0.25, xanchor='center', x=0.5, bgcolor='rgba(0,0,0,0)', font=dict(size=10))
-                layout['barmode'] = 'group'
-                fig.update_layout(**layout)
-                st.plotly_chart(fig, use_container_width=True)
+                with col2:
+                    # Population comparison
+                    if 'Population (M)' in comparison_2030.columns:
+                        df_pop = comparison_2030[['Scenario', 'Population (M)']].copy()
+                        df_pop['Short'] = df_pop['Scenario'].apply(lambda x: x[:18] + '...' if len(x) > 18 else x)
+                        df_pop = df_pop.sort_values('Population (M)')
+                        
+                        fig2 = go.Figure()
+                        colors = [scenario_colors.get(s.split()[0], '#6b7280') for s in df_pop['Scenario']]
+                        
+                        for i, row in df_pop.iterrows():
+                            fig2.add_trace(go.Scatter(
+                                x=[0, row['Population (M)']],
+                                y=[row['Short'], row['Short']],
+                                mode='lines',
+                                line=dict(color='#e5e7eb', width=2),
+                                showlegend=False
+                            ))
+                        
+                        fig2.add_trace(go.Scatter(
+                            x=df_pop['Population (M)'],
+                            y=df_pop['Short'],
+                            mode='markers+text',
+                            marker=dict(size=16, color=colors),
+                            text=[f"{v:.1f}M" for v in df_pop['Population (M)']],
+                            textposition='middle right',
+                            textfont=dict(size=11),
+                            showlegend=False
+                        ))
+                        
+                        fig2.update_layout(
+                            height=220,
+                            margin=dict(l=10, r=60, t=35, b=10),
+                            paper_bgcolor='rgba(0,0,0,0)',
+                            plot_bgcolor='rgba(0,0,0,0)',
+                            title=dict(text="Population 2030 (M)", font=dict(size=12, color='#1a1a1a'), x=0),
+                            xaxis=dict(showgrid=False, showticklabels=False, zeroline=False),
+                            yaxis=dict(tickfont=dict(size=10))
+                        )
+                        st.plotly_chart(fig2, use_container_width=True)
         
-        # 2050 Comparison
+        # Divider
+        st.markdown("<hr style='border: none; border-top: 1px solid #e5e7eb; margin: 1.5rem 0;'>", unsafe_allow_html=True)
+        
+        # 2050 Section
         if 'Scenario' in comparison_2050.columns:
             st.markdown("#### 2050 Projections", unsafe_allow_html=True)
             
-            # Build scenario data list for 2050
             scenarios_2050 = []
             for _, row in comparison_2050.iterrows():
                 scenario = row['Scenario']
@@ -1624,15 +1692,14 @@ def render_ws5_scenarios():
                 icon = '📊'
                 for key in scenario_colors:
                     if key.lower() in scenario.lower():
-                        color = scenario_colors[key]
+                        color = 'green' if 'vision' in key.lower() else 'blue' if 'accel' in key.lower() else 'red' if 'conservative' in key.lower() else 'amber'
                         icon = scenario_icons.get(key, '📊')
                         break
                 
                 pop_str = f"{pop:.1f}M" if isinstance(pop, (int, float)) else str(pop)
                 gdp_str = f"${gdp:.0f}B" if isinstance(gdp, (int, float)) else str(gdp)
-                scenarios_2050.append((icon, scenario[:25] + "..." if len(scenario) > 25 else scenario, pop_str, gdp_str, color))
+                scenarios_2050.append((icon, scenario[:20] + "..." if len(scenario) > 20 else scenario, pop_str, gdp_str, color))
             
-            # Render with st.columns
             if scenarios_2050:
                 cols_2050 = st.columns(len(scenarios_2050))
                 for i, (icon, name, pop_str, gdp_str, color) in enumerate(scenarios_2050):
@@ -1642,21 +1709,87 @@ def render_ws5_scenarios():
             numeric_cols = [c for c in ['Population (M)', 'GDP ($B)', 'Oil Share (%)', 'Urban (%)', 'Renewable GW'] if c in comparison_2050.columns]
             
             if numeric_cols:
-                fig2 = go.Figure()
-                for i, (_, row) in enumerate(comparison_2050.iterrows()):
-                    scenario = row['Scenario'][:20] + "..." if len(row['Scenario']) > 20 else row['Scenario']
-                    fig2.add_trace(go.Bar(
-                        name=scenario,
-                        x=numeric_cols[:4],
-                        y=[row[c] for c in numeric_cols[:4]],
-                        marker_color=colors_list[i % len(colors_list)]
-                    ))
+                col1, col2 = st.columns(2)
                 
-                layout2 = get_chart_layout("Key Metrics Comparison - 2050", height=320)
-                layout2['legend'] = dict(orientation='h', yanchor='bottom', y=-0.25, xanchor='center', x=0.5, bgcolor='rgba(0,0,0,0)', font=dict(size=10))
-                layout2['barmode'] = 'group'
-                fig2.update_layout(**layout2)
-                st.plotly_chart(fig2, use_container_width=True)
+                with col1:
+                    if 'GDP ($B)' in comparison_2050.columns:
+                        df_gdp = comparison_2050[['Scenario', 'GDP ($B)']].copy()
+                        df_gdp['Short'] = df_gdp['Scenario'].apply(lambda x: x[:18] + '...' if len(x) > 18 else x)
+                        df_gdp = df_gdp.sort_values('GDP ($B)')
+                        
+                        fig = go.Figure()
+                        colors = [scenario_colors.get(s.split()[0], '#6b7280') for s in df_gdp['Scenario']]
+                        
+                        for i, row in df_gdp.iterrows():
+                            fig.add_trace(go.Scatter(
+                                x=[0, row['GDP ($B)']],
+                                y=[row['Short'], row['Short']],
+                                mode='lines',
+                                line=dict(color='#e5e7eb', width=2),
+                                showlegend=False
+                            ))
+                        
+                        fig.add_trace(go.Scatter(
+                            x=df_gdp['GDP ($B)'],
+                            y=df_gdp['Short'],
+                            mode='markers+text',
+                            marker=dict(size=16, color=colors),
+                            text=[f"${v:.0f}B" for v in df_gdp['GDP ($B)']],
+                            textposition='middle right',
+                            textfont=dict(size=11),
+                            showlegend=False
+                        ))
+                        
+                        fig.update_layout(
+                            height=220,
+                            margin=dict(l=10, r=60, t=35, b=10),
+                            paper_bgcolor='rgba(0,0,0,0)',
+                            plot_bgcolor='rgba(0,0,0,0)',
+                            title=dict(text="GDP 2050 ($B)", font=dict(size=12, color='#1a1a1a'), x=0),
+                            xaxis=dict(showgrid=False, showticklabels=False, zeroline=False),
+                            yaxis=dict(tickfont=dict(size=10))
+                        )
+                        st.plotly_chart(fig, use_container_width=True)
+                
+                with col2:
+                    if 'Population (M)' in comparison_2050.columns:
+                        df_pop = comparison_2050[['Scenario', 'Population (M)']].copy()
+                        df_pop['Short'] = df_pop['Scenario'].apply(lambda x: x[:18] + '...' if len(x) > 18 else x)
+                        df_pop = df_pop.sort_values('Population (M)')
+                        
+                        fig2 = go.Figure()
+                        colors = [scenario_colors.get(s.split()[0], '#6b7280') for s in df_pop['Scenario']]
+                        
+                        for i, row in df_pop.iterrows():
+                            fig2.add_trace(go.Scatter(
+                                x=[0, row['Population (M)']],
+                                y=[row['Short'], row['Short']],
+                                mode='lines',
+                                line=dict(color='#e5e7eb', width=2),
+                                showlegend=False
+                            ))
+                        
+                        fig2.add_trace(go.Scatter(
+                            x=df_pop['Population (M)'],
+                            y=df_pop['Short'],
+                            mode='markers+text',
+                            marker=dict(size=16, color=colors),
+                            text=[f"{v:.1f}M" for v in df_pop['Population (M)']],
+                            textposition='middle right',
+                            textfont=dict(size=11),
+                            showlegend=False
+                        ))
+                        
+                        fig2.update_layout(
+                            height=220,
+                            margin=dict(l=10, r=60, t=35, b=10),
+                            paper_bgcolor='rgba(0,0,0,0)',
+                            plot_bgcolor='rgba(0,0,0,0)',
+                            title=dict(text="Population 2050 (M)", font=dict(size=12, color='#1a1a1a'), x=0),
+                            xaxis=dict(showgrid=False, showticklabels=False, zeroline=False),
+                            yaxis=dict(tickfont=dict(size=10))
+                        )
+                        st.plotly_chart(fig2, use_container_width=True)
     
     with tab2:
         risks = ws5['risks']
@@ -1667,10 +1800,24 @@ def render_ws5_scenarios():
                     risks[numeric_cols].values,
                     x=numeric_cols,
                     y=risks['Region'].values,
-                    color_continuous_scale=['#22c55e', '#f59e0b', '#ef4444'],
-                    aspect='auto'
+                    color_continuous_scale=['#dcfce7', '#fef3c7', '#fecaca', '#ef4444'],
+                    aspect='auto',
+                    text_auto='.1f'
                 )
-                fig.update_layout(**get_chart_layout("Risk Levels by Region", height=450))
+                fig.update_traces(
+                    texttemplate='%{z:.1f}',
+                    textfont=dict(size=10, color='#1a1a1a'),
+                    hovertemplate='Region: %{y}<br>Risk: %{x}<br>Score: %{z:.2f}<extra></extra>'
+                )
+                fig.update_layout(
+                    height=420,
+                    margin=dict(l=10, r=10, t=40, b=10),
+                    paper_bgcolor='rgba(0,0,0,0)',
+                    title=dict(text="Risk Levels by Region (Higher = More Risk)", font=dict(size=13, color='#1a1a1a'), x=0),
+                    xaxis=dict(title='', tickfont=dict(size=9), tickangle=30),
+                    yaxis=dict(title='', tickfont=dict(size=10)),
+                    coloraxis=dict(colorbar=dict(title='Risk', thickness=12, len=0.6))
+                )
                 st.plotly_chart(fig, use_container_width=True)
             
             with st.expander("📋 View Risk Data"):
@@ -1685,10 +1832,24 @@ def render_ws5_scenarios():
                     opportunities[numeric_cols].values,
                     x=numeric_cols,
                     y=opportunities['Region'].values,
-                    color_continuous_scale=['#f8fafc', '#74c476', '#006C35'],
-                    aspect='auto'
+                    color_continuous_scale=['#fef3c7', '#86efac', '#006C35'],
+                    aspect='auto',
+                    text_auto='.1f'
                 )
-                fig.update_layout(**get_chart_layout("Opportunity Levels by Region", height=450))
+                fig.update_traces(
+                    texttemplate='%{z:.1f}',
+                    textfont=dict(size=10, color='#1a1a1a'),
+                    hovertemplate='Region: %{y}<br>Opportunity: %{x}<br>Score: %{z:.2f}<extra></extra>'
+                )
+                fig.update_layout(
+                    height=420,
+                    margin=dict(l=10, r=10, t=40, b=10),
+                    paper_bgcolor='rgba(0,0,0,0)',
+                    title=dict(text="Opportunity Levels by Region (Higher = More Potential)", font=dict(size=13, color='#1a1a1a'), x=0),
+                    xaxis=dict(title='', tickfont=dict(size=9), tickangle=30),
+                    yaxis=dict(title='', tickfont=dict(size=10)),
+                    coloraxis=dict(colorbar=dict(title='Score', thickness=12, len=0.6))
+                )
                 st.plotly_chart(fig, use_container_width=True)
             
             with st.expander("📋 View Opportunity Data"):
