@@ -1,6 +1,6 @@
 # National Spatial Strategy Draft - Saudi Arabia 2050
 
-**Generated:** 2026-01-22T13:47:35.415903
+**Generated:** 2026-01-22T14:15:47.464872
 **Version:** 1.0
 
 ---

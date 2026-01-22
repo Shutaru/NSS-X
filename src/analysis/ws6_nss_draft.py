@@ -48,9 +48,21 @@ CITY_COORDS = {
 }
 
 CORRIDOR_COORDS = {
+    # Central Economic Corridor: Riyadh to Dammam
+    "Central Economic Corridor": ((24.7136, 46.6753), (26.4207, 50.0888)),
+    # Red Sea Tourism Corridor: NEOM to Jeddah
+    "Red Sea Tourism Corridor": ((28.0000, 35.0000), (21.4858, 39.1925)),
+    # Holy Cities Corridor: Makkah to Madinah
+    "Holy Cities Corridor": ((21.3891, 39.8579), (24.5247, 39.5692)),
+    # Northern Mining Corridor: Arar to Jubail
+    "Northern Mining & Energy Corridor": ((30.9753, 41.0381), (27.0046, 49.6225)),
+    # Southern Corridor: Abha to Jazan
+    "Southern Tourism & Agriculture Corridor": ((18.2164, 42.5053), (16.8894, 42.5511)),
+    # Trans-Arabia Land Bridge: Jeddah to Dammam via Riyadh
+    "Trans-Arabia Land Bridge": ((21.4858, 39.1925), (26.4207, 50.0888)),
+    # Legacy entries for backward compatibility
     "Riyadh-Jeddah Economic Corridor": ((24.7136, 46.6753), (21.4858, 39.1925)),
     "Eastern Economic Corridor": ((26.4207, 50.0888), (27.0046, 49.6225)),
-    "Red Sea Tourism Corridor": ((28.0000, 35.0000), (21.4858, 39.1925)),
     "Northern Development Corridor": ((28.3835, 36.5662), (30.9753, 41.0381)),
     "Southern Growth Corridor": ((18.2164, 42.5053), (16.8894, 42.5511)),
     "Central Logistics Spine": ((24.7136, 46.6753), (26.3260, 43.9750))

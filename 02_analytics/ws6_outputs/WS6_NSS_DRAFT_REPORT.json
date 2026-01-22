@@ -1,7 +1,7 @@
 {
   "metadata": {
     "report_title": "WS6 - National Spatial Strategy Draft",
-    "generated_date": "2026-01-22T13:47:35.415903",
+    "generated_date": "2026-01-22T14:15:47.464872",
     "version": "1.0",
     "author": "NSS X System"
   },
@@ -665,10 +665,10 @@
         "investment_sar_b": 85,
         "priority": "critical",
         "timeline": "2025-2035",
-        "start_lat": 0.0,
-        "start_lon": 0.0,
-        "end_lat": 0.0,
-        "end_lon": 0.0
+        "start_lat": 24.7136,
+        "start_lon": 46.6753,
+        "end_lat": 26.4207,
+        "end_lon": 50.0888
       },
       {
         "name": "Red Sea Tourism Corridor",
@@ -726,10 +726,10 @@
         "investment_sar_b": 40,
         "priority": "critical",
         "timeline": "2025-2030",
-        "start_lat": 0.0,
-        "start_lon": 0.0,
-        "end_lat": 0.0,
-        "end_lon": 0.0
+        "start_lat": 21.3891,
+        "start_lon": 39.8579,
+        "end_lat": 24.5247,
+        "end_lon": 39.5692
       },
       {
         "name": "Northern Mining & Energy Corridor",
@@ -758,10 +758,10 @@
         "investment_sar_b": 95,
         "priority": "high",
         "timeline": "2025-2040",
-        "start_lat": 0.0,
-        "start_lon": 0.0,
-        "end_lat": 0.0,
-        "end_lon": 0.0
+        "start_lat": 30.9753,
+        "start_lon": 41.0381,
+        "end_lat": 27.0046,
+        "end_lon": 49.6225
       },
       {
         "name": "Southern Tourism & Agriculture Corridor",
@@ -788,10 +788,10 @@
         "investment_sar_b": 35,
         "priority": "medium",
         "timeline": "2030-2045",
-        "start_lat": 0.0,
-        "start_lon": 0.0,
-        "end_lat": 0.0,
-        "end_lon": 0.0
+        "start_lat": 18.2164,
+        "start_lon": 42.5053,
+        "end_lat": 16.8894,
+        "end_lon": 42.5511
       },
       {
         "name": "Trans-Arabia Land Bridge",
@@ -818,10 +818,10 @@
         "investment_sar_b": 120,
         "priority": "critical",
         "timeline": "2025-2035",
-        "start_lat": 0.0,
-        "start_lon": 0.0,
-        "end_lat": 0.0,
-        "end_lon": 0.0
+        "start_lat": 21.4858,
+        "start_lon": 39.1925,
+        "end_lat": 26.4207,
+        "end_lon": 50.0888
       }
     ],
     "functional_zones": [

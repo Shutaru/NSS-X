@@ -111,16 +111,23 @@ st.markdown("""
     /* ===== KPI CARDS ===== */
     .kpi-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-        gap: 0.75rem;
-        margin: 1rem 0;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 0.6rem;
+        margin: 0.75rem 0;
+    }
+    
+    .kpi-grid-compact {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 0.5rem;
+        margin: 0.5rem 0;
     }
     
     .kpi-card {
         background: var(--bg-card);
         border: 1px solid var(--border-color);
         border-radius: var(--radius-md);
-        padding: 1rem 1.25rem;
+        padding: 0.85rem 1rem;
         transition: all 0.15s ease;
     }
     
@@ -129,34 +136,228 @@ st.markdown("""
         box-shadow: var(--shadow-md);
     }
     
+    .kpi-card-compact {
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-sm);
+        padding: 0.6rem 0.8rem;
+        transition: all 0.15s ease;
+    }
+    
     .kpi-icon {
-        font-size: 1.25rem;
-        margin-bottom: 0.35rem;
+        font-size: 1.1rem;
+        margin-bottom: 0.25rem;
     }
     
     .kpi-label {
-        font-size: 0.7rem;
+        font-size: 0.65rem;
         color: var(--text-muted);
         text-transform: uppercase;
         letter-spacing: 0.4px;
-        margin-bottom: 0.2rem;
+        margin-bottom: 0.15rem;
     }
     
     .kpi-value {
-        font-size: 1.5rem;
+        font-size: 1.35rem;
         font-weight: 700;
         color: var(--text-primary);
         line-height: 1.2;
     }
     
+    .kpi-value-sm {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--text-primary);
+        line-height: 1.2;
+    }
+    
     .kpi-delta {
-        font-size: 0.7rem;
-        margin-top: 0.2rem;
+        font-size: 0.65rem;
+        margin-top: 0.15rem;
     }
     
     .kpi-delta.positive { color: #16a34a; }
     .kpi-delta.negative { color: #dc2626; }
     .kpi-delta.neutral { color: var(--text-secondary); }
+    
+    /* ===== STAT MODULE GRID (NEW) ===== */
+    .stat-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 0.6rem;
+        margin: 0.75rem 0;
+    }
+    
+    .stat-module {
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-md);
+        padding: 0.9rem 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+    
+    .stat-module:hover {
+        border-color: var(--ksa-green);
+        box-shadow: var(--shadow-sm);
+    }
+    
+    .stat-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: var(--radius-sm);
+        background: var(--bg-secondary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1rem;
+        flex-shrink: 0;
+    }
+    
+    .stat-icon.green { background: rgba(0, 108, 53, 0.1); }
+    .stat-icon.blue { background: rgba(59, 130, 246, 0.1); }
+    .stat-icon.amber { background: rgba(245, 158, 11, 0.1); }
+    .stat-icon.red { background: rgba(239, 68, 68, 0.1); }
+    .stat-icon.purple { background: rgba(139, 92, 246, 0.1); }
+    
+    .stat-content {
+        flex: 1;
+        min-width: 0;
+    }
+    
+    .stat-label {
+        font-size: 0.7rem;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+        margin-bottom: 0.1rem;
+    }
+    
+    .stat-value {
+        font-size: 1.15rem;
+        font-weight: 600;
+        color: var(--text-primary);
+        line-height: 1.2;
+    }
+    
+    .stat-sub {
+        font-size: 0.7rem;
+        color: var(--text-secondary);
+        margin-top: 0.1rem;
+    }
+    
+    /* ===== DATA MODULE CARDS (NEW) ===== */
+    .module-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 0.75rem;
+        margin: 0.75rem 0;
+    }
+    
+    .module-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-md);
+        padding: 1rem;
+    }
+    
+    .module-card:hover {
+        border-color: var(--ksa-green);
+    }
+    
+    .module-header {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 0.6rem;
+    }
+    
+    .module-icon {
+        font-size: 1rem;
+    }
+    
+    .module-title {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--text-primary);
+    }
+    
+    .module-badge {
+        margin-left: auto;
+        background: var(--bg-secondary);
+        color: var(--text-secondary);
+        padding: 0.15rem 0.4rem;
+        border-radius: 8px;
+        font-size: 0.6rem;
+        font-weight: 500;
+    }
+    
+    .module-badge.green { background: rgba(0, 108, 53, 0.1); color: var(--ksa-green); }
+    .module-badge.blue { background: rgba(59, 130, 246, 0.1); color: #3b82f6; }
+    .module-badge.amber { background: rgba(245, 158, 11, 0.1); color: #d97706; }
+    
+    .module-content {
+        font-size: 0.8rem;
+        color: var(--text-secondary);
+        line-height: 1.5;
+    }
+    
+    .module-stats {
+        display: flex;
+        gap: 1rem;
+        margin-top: 0.6rem;
+        padding-top: 0.6rem;
+        border-top: 1px solid var(--border-light);
+    }
+    
+    .module-stat {
+        text-align: center;
+    }
+    
+    .module-stat-value {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--text-primary);
+    }
+    
+    .module-stat-label {
+        font-size: 0.6rem;
+        color: var(--text-muted);
+        text-transform: uppercase;
+    }
+    
+    /* ===== COMPACT TABLE WRAPPER ===== */
+    .table-wrapper {
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-md);
+        overflow: hidden;
+    }
+    
+    .table-header {
+        background: var(--bg-secondary);
+        padding: 0.6rem 1rem;
+        border-bottom: 1px solid var(--border-color);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .table-title {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--text-primary);
+    }
+    
+    .table-badge {
+        background: var(--bg-card);
+        color: var(--text-secondary);
+        padding: 0.2rem 0.5rem;
+        border-radius: 8px;
+        font-size: 0.65rem;
+        font-weight: 500;
+    }
     
     /* ===== SECTION HEADERS ===== */
     .section-header {
@@ -327,8 +528,25 @@ st.markdown("""
     }
     
     /* ===== TABLE STYLING ===== */
+    .stDataFrame {
+        font-size: 0.75rem !important;
+    }
+    
+    .stDataFrame > div > div > div > div {
+        font-size: 0.75rem !important;
+    }
+    
+    div[data-testid="stDataFrame"] {
+        width: 100% !important;
+    }
+    
+    div[data-testid="stDataFrame"] > div {
+        width: 100% !important;
+    }
+    
     .dataframe {
-        font-size: 0.8rem !important;
+        font-size: 0.75rem !important;
+        width: 100% !important;
     }
     
     .dataframe th {
@@ -336,13 +554,17 @@ st.markdown("""
         color: var(--text-primary) !important;
         font-weight: 600 !important;
         text-transform: uppercase !important;
-        font-size: 0.65rem !important;
+        font-size: 0.6rem !important;
         letter-spacing: 0.3px !important;
         border-bottom: 2px solid var(--border-color) !important;
+        white-space: nowrap !important;
+        padding: 0.4rem 0.5rem !important;
     }
     
     .dataframe td {
         border-color: var(--border-light) !important;
+        padding: 0.35rem 0.5rem !important;
+        white-space: nowrap !important;
     }
     
     .dataframe tr:hover td {
@@ -579,6 +801,50 @@ def render_progress_bar(label: str, value: int, max_value: int = 100):
     """
 
 
+def render_stat_module(icon: str, label: str, value: str, subtitle: str = "", color: str = ""):
+    """Render a compact stat module for inline display."""
+    color_class = f" {color}" if color else ""
+    sub_html = f'<div class="stat-sub">{subtitle}</div>' if subtitle else ""
+    return f"""
+    <div class="stat-module">
+        <div class="stat-icon{color_class}">{icon}</div>
+        <div class="stat-content">
+            <div class="stat-label">{label}</div>
+            <div class="stat-value">{value}</div>
+            {sub_html}
+        </div>
+    </div>
+    """
+
+
+def render_module_card(icon: str, title: str, content: str, badge: str = "", badge_color: str = "", stats: list = None):
+    """Render a data module card with optional stats."""
+    badge_html = ""
+    if badge:
+        badge_class = f" {badge_color}" if badge_color else ""
+        badge_html = f'<span class="module-badge{badge_class}">{badge}</span>'
+    
+    stats_html = ""
+    if stats:
+        stats_items = "".join([
+            f'<div class="module-stat"><div class="module-stat-value">{s["value"]}</div><div class="module-stat-label">{s["label"]}</div></div>'
+            for s in stats
+        ])
+        stats_html = f'<div class="module-stats">{stats_items}</div>'
+    
+    return f"""
+    <div class="module-card">
+        <div class="module-header">
+            <span class="module-icon">{icon}</span>
+            <span class="module-title">{title}</span>
+            {badge_html}
+        </div>
+        <div class="module-content">{content}</div>
+        {stats_html}
+    </div>
+    """
+
+
 def get_chart_layout(title: str = "", height: int = 400):
     """Get consistent chart layout for light theme."""
     return dict(
@@ -737,7 +1003,7 @@ def render_overview():
 
 
 def render_ws2_retrospective():
-    """Render WS2 retrospective analysis with premium styling."""
+    """Render WS2 retrospective analysis with compact modules."""
     st.markdown(render_section_header("📜", "NSS 2001 & 2030 Review", "Analysis of existing policies and recommendations"), unsafe_allow_html=True)
     
     ws2 = load_ws2_data()
@@ -753,23 +1019,30 @@ def render_ws2_retrospective():
     modify = len(continuity[continuity['Recommendation'] == 'MODIFY'])
     new_items = len(continuity[continuity['Recommendation'] == 'NEW'])
     discontinue = len(continuity[continuity['Recommendation'] == 'DISCONTINUE'])
+    total = len(continuity)
     
-    st.markdown('<div class="kpi-grid">', unsafe_allow_html=True)
-    st.markdown(render_kpi_card("✓", "Maintain", str(maintain), "Keep as-is", "positive"), unsafe_allow_html=True)
-    st.markdown(render_kpi_card("⬆", "Strengthen", str(strengthen), "Enhance", "positive"), unsafe_allow_html=True)
-    st.markdown(render_kpi_card("↻", "Modify", str(modify), "Update", "neutral"), unsafe_allow_html=True)
-    st.markdown(render_kpi_card("✚", "New", str(new_items), "Introduce", "positive"), unsafe_allow_html=True)
-    st.markdown(render_kpi_card("✗", "Discontinue", str(discontinue), "Remove", "negative"), unsafe_allow_html=True)
+    # Compact stat modules in grid
+    st.markdown('<div class="stat-grid">', unsafe_allow_html=True)
+    st.markdown(render_stat_module("✓", "Maintain", str(maintain), f"{maintain*100//total}% of policies", "green"), unsafe_allow_html=True)
+    st.markdown(render_stat_module("⬆", "Strengthen", str(strengthen), "Enhance existing", "blue"), unsafe_allow_html=True)
+    st.markdown(render_stat_module("↻", "Modify", str(modify), "Update approach", "amber"), unsafe_allow_html=True)
+    st.markdown(render_stat_module("✚", "New", str(new_items), "Introduce fresh", "purple"), unsafe_allow_html=True)
+    st.markdown(render_stat_module("✗", "Discontinue", str(discontinue), "Phase out", "red"), unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True)
     
-    # Charts side by side
+    # Charts in two columns
     col1, col2 = st.columns(2)
     
     with col1:
+        # Donut chart for distribution
+        rec_counts = continuity['Recommendation'].value_counts().reset_index()
+        rec_counts.columns = ['Recommendation', 'Count']
+        
         fig = px.pie(
-            continuity, 
+            rec_counts, 
             names='Recommendation', 
-            title="Policy Recommendations Distribution",
+            values='Count',
+            title="",
             color='Recommendation',
             color_discrete_map={
                 'MAINTAIN': '#22c55e',
@@ -778,31 +1051,41 @@ def render_ws2_retrospective():
                 'NEW': '#8b5cf6',
                 'DISCONTINUE': '#ef4444'
             },
-            hole=0.4
+            hole=0.55
         )
-        fig.update_layout(**get_chart_layout())
-        fig.update_traces(textposition='inside', textinfo='percent+label')
+        fig.update_layout(**get_chart_layout(height=280))
+        fig.update_traces(textposition='inside', textinfo='percent', textfont_size=11)
         st.plotly_chart(fig, use_container_width=True)
     
     with col2:
-        fig2 = px.histogram(
-            continuity,
-            x='Priority',
-            color='Category',
-            title="Policies by Priority Level",
-            barmode='group',
-            color_discrete_sequence=KSA_COLORS
+        # Horizontal bar by priority
+        priority_counts = continuity.groupby(['Priority', 'Recommendation']).size().reset_index(name='Count')
+        fig2 = px.bar(
+            priority_counts,
+            y='Priority',
+            x='Count',
+            color='Recommendation',
+            title="",
+            orientation='h',
+            color_discrete_map={
+                'MAINTAIN': '#22c55e',
+                'STRENGTHEN': '#3b82f6',
+                'MODIFY': '#f59e0b',
+                'NEW': '#8b5cf6',
+                'DISCONTINUE': '#ef4444'
+            },
+            barmode='stack'
         )
-        fig2.update_layout(**get_chart_layout())
+        fig2.update_layout(**get_chart_layout(height=280))
         st.plotly_chart(fig2, use_container_width=True)
     
     # Data table with expander
     with st.expander("📋 View Full Continuity Matrix", expanded=False):
-        st.dataframe(continuity, use_container_width=True, height=400)
+        st.dataframe(continuity, use_container_width=True, height=350)
 
 
 def render_ws3_benchmarking():
-    """Render WS3 international benchmarking."""
+    """Render WS3 international benchmarking with improved visualizations."""
     st.markdown(render_section_header("🌍", "International Benchmarking", "Learning from global best practices"), unsafe_allow_html=True)
     
     ws3 = load_ws3_data()
@@ -810,67 +1093,160 @@ def render_ws3_benchmarking():
         st.warning("WS3 data not available. Run: `python src/analysis/ws3_benchmarking.py`")
         return
     
-    col1, col2 = st.columns(2)
-    
-    with col1:
-        st.markdown("""
-        <div class="data-card">
-            <div class="data-card-header">
-                <h3 class="data-card-title">Countries Analyzed</h3>
-                <span class="data-card-badge">8 Countries</span>
-            </div>
-        </div>
-        """, unsafe_allow_html=True)
-        
-        report = ws3['report']
-        countries = report.get('section_1_country_analyses', {})
-        
-        country_data = []
-        for country, data in countries.items():
-            if isinstance(data, dict):
-                country_data.append({
-                    'Country': country,
-                    'Relevance': data.get('relevance_score', 'N/A'),
-                    'Key Lesson': data.get('key_lessons', ['N/A'])[0] if data.get('key_lessons') else 'N/A'
-                })
-        
-        if country_data:
-            st.dataframe(pd.DataFrame(country_data), use_container_width=True, hide_index=True)
-    
-    with col2:
-        st.markdown("""
-        <div class="data-card">
-            <div class="data-card-header">
-                <h3 class="data-card-title">Methodology Comparison</h3>
-            </div>
-        </div>
-        """, unsafe_allow_html=True)
-        
-        methodology = ws3['methodology']
-        st.dataframe(methodology, use_container_width=True, hide_index=True)
-    
-    # Design principles chart
-    st.markdown(render_section_header("🎨", "Design Principles for KSA", "Adapted from international benchmarks"), unsafe_allow_html=True)
-    
+    report = ws3['report']
+    methodology = ws3['methodology']
     principles = ws3['principles']
-    if not principles.empty:
-        x_col = 'Principle' if 'Principle' in principles.columns else principles.columns[0]
-        y_col = 'Priority' if 'Priority' in principles.columns else principles.columns[1] if len(principles.columns) > 1 else principles.columns[0]
+    
+    # Countries Analyzed - Compact module cards
+    countries = report.get('section_1_country_analyses', {})
+    
+    st.markdown('<div class="module-grid">', unsafe_allow_html=True)
+    country_icons = {"Singapore": "🇸🇬", "Netherlands": "🇳🇱", "UAE": "🇦🇪", "South Korea": "🇰🇷", "Malaysia": "🇲🇾"}
+    
+    for country, data in countries.items():
+        if isinstance(data, dict):
+            relevance = data.get('relevance_score', 'N/A')
+            lessons = data.get('key_lessons', ['N/A'])
+            first_lesson = lessons[0][:100] + "..." if lessons and len(lessons[0]) > 100 else (lessons[0] if lessons else "N/A")
+            icon = country_icons.get(country, "🌍")
+            
+            stats = [{"value": str(relevance), "label": "Relevance"}]
+            st.markdown(render_module_card(
+                icon, 
+                country, 
+                first_lesson,
+                badge=f"Score: {relevance}",
+                badge_color="green" if relevance and float(str(relevance).replace('N/A', '0')) >= 4 else "amber",
+                stats=stats
+            ), unsafe_allow_html=True)
+    st.markdown('</div>', unsafe_allow_html=True)
+    
+    # Methodology Comparison - Radar Chart
+    st.markdown(render_section_header("📊", "Methodology Comparison", "Multi-dimensional analysis across criteria"), unsafe_allow_html=True)
+    
+    if not methodology.empty and 'Country' in methodology.columns:
+        # Radar chart for methodology comparison
+        categories = [col for col in methodology.columns if col not in ['Country', 'Average']]
         
-        fig = px.bar(
-            principles.head(10),
-            x=x_col,
-            y=y_col,
-            title="",
-            color=y_col,
-            color_continuous_scale=['#004d25', '#006C35', '#00a650', '#74c476']
+        fig = go.Figure()
+        colors = ['#006C35', '#3b82f6', '#f59e0b', '#8b5cf6', '#ef4444']
+        
+        for i, (_, row) in enumerate(methodology.iterrows()):
+            values = [row[cat] for cat in categories]
+            values.append(values[0])  # Close the polygon
+            
+            fig.add_trace(go.Scatterpolar(
+                r=values,
+                theta=categories + [categories[0]],
+                fill='toself',
+                name=row['Country'],
+                line=dict(color=colors[i % len(colors)]),
+                fillcolor=f"rgba{tuple(list(int(colors[i % len(colors)].lstrip('#')[j:j+2], 16) for j in (0, 2, 4)) + [0.1])}"
+            ))
+        
+        fig.update_layout(
+            polar=dict(
+                radialaxis=dict(
+                    visible=True,
+                    range=[0, 5],
+                    tickfont=dict(size=9),
+                    gridcolor='rgba(0,0,0,0.08)'
+                ),
+                angularaxis=dict(
+                    tickfont=dict(size=9),
+                    gridcolor='rgba(0,0,0,0.08)'
+                ),
+                bgcolor='rgba(0,0,0,0)'
+            ),
+            showlegend=True,
+            legend=dict(
+                orientation='h',
+                yanchor='bottom',
+                y=-0.2,
+                xanchor='center',
+                x=0.5,
+                font=dict(size=10)
+            ),
+            height=380,
+            margin=dict(l=60, r=60, t=30, b=60),
+            paper_bgcolor='rgba(0,0,0,0)',
+            font=dict(family="Inter, sans-serif", color='#6b7280', size=11)
         )
-        fig.update_layout(**get_chart_layout(height=350))
-        fig.update_xaxes(tickangle=45)
         st.plotly_chart(fig, use_container_width=True)
         
+        # Ranking bar chart
+        if 'Average' in methodology.columns:
+            meth_sorted = methodology.sort_values('Average', ascending=True)
+            fig_bar = px.bar(
+                meth_sorted,
+                y='Country',
+                x='Average',
+                orientation='h',
+                color='Average',
+                color_continuous_scale=['#ef4444', '#f59e0b', '#22c55e', '#006C35']
+            )
+            fig_bar.update_layout(**get_chart_layout("Overall Methodology Ranking", height=200))
+            fig_bar.update_coloraxes(showscale=False)
+            st.plotly_chart(fig_bar, use_container_width=True)
+    
+    # Design Principles - Better visualization
+    st.markdown(render_section_header("🎨", "Design Principles for KSA", "Adapted from international benchmarks"), unsafe_allow_html=True)
+    
+    if not principles.empty:
+        # Group by category for treemap
+        if 'Category' in principles.columns and 'Priority' in principles.columns:
+            # Priority distribution by category
+            cat_priority = principles.groupby(['Category', 'Priority']).size().reset_index(name='Count')
+            
+            col1, col2 = st.columns([2, 1])
+            
+            with col1:
+                # Treemap for categories
+                fig_tree = px.treemap(
+                    principles,
+                    path=['Category', 'Approach'] if 'Approach' in principles.columns else ['Category'],
+                    color='Priority',
+                    color_discrete_map={'CRITICAL': '#ef4444', 'HIGH': '#f59e0b', 'MEDIUM': '#22c55e'},
+                    hover_data=['Principle'] if 'Principle' in principles.columns else None
+                )
+                fig_tree.update_layout(
+                    height=350,
+                    margin=dict(l=10, r=10, t=30, b=10),
+                    paper_bgcolor='rgba(0,0,0,0)',
+                    font=dict(family="Inter, sans-serif", size=11)
+                )
+                fig_tree.update_traces(
+                    textinfo='label+value',
+                    textfont=dict(size=11)
+                )
+                st.plotly_chart(fig_tree, use_container_width=True)
+            
+            with col2:
+                # Summary stats
+                critical = len(principles[principles['Priority'] == 'CRITICAL'])
+                high = len(principles[principles['Priority'] == 'HIGH'])
+                medium = len(principles[principles['Priority'] == 'MEDIUM'])
+                
+                st.markdown(f"""
+                <div class="data-card" style="height: 100%;">
+                    <div class="data-card-header" style="border-bottom: none; padding-bottom: 0;">
+                        <h3 class="data-card-title">Priority Breakdown</h3>
+                    </div>
+                    {render_progress_bar("Critical", critical, len(principles))}
+                    {render_progress_bar("High", high, len(principles))}
+                    {render_progress_bar("Medium", medium, len(principles))}
+                    <div style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid var(--border-light);">
+                        <div style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.3rem;">Total Principles</div>
+                        <div style="font-size: 1.5rem; font-weight: 700; color: var(--ksa-green);">{len(principles)}</div>
+                    </div>
+                </div>
+                """, unsafe_allow_html=True)
+        
         with st.expander("📋 View All Design Principles"):
-            st.dataframe(principles, use_container_width=True, hide_index=True)
+            # Show key columns only
+            display_cols = ['ID', 'Principle', 'Category', 'Priority', 'Approach']
+            display_cols = [c for c in display_cols if c in principles.columns]
+            st.dataframe(principles[display_cols], use_container_width=True, hide_index=True, height=300)
 
 
 def render_ws4_sectoral():
@@ -915,7 +1291,7 @@ def render_ws4_sectoral():
 
 
 def render_ws5_scenarios():
-    """Render WS5 scenario planning."""
+    """Render WS5 scenario planning with improved visualizations."""
     st.markdown(render_section_header("🔮", "Scenario Planning", "Alternative futures and strategic pathways"), unsafe_allow_html=True)
     
     ws5 = load_ws5_data()
@@ -926,44 +1302,129 @@ def render_ws5_scenarios():
     tab1, tab2, tab3 = st.tabs(["📈 Scenario Comparison", "⚠️ Risk Heatmap", "💎 Opportunity Heatmap"])
     
     with tab1:
-        col1, col2 = st.columns(2)
+        comparison_2030 = ws5['comparison_2030']
+        comparison_2050 = ws5['comparison_2050']
         
-        with col1:
-            st.markdown("""
-            <div class="data-card">
-                <div class="data-card-header">
-                    <h3 class="data-card-title">2030 Projections</h3>
-                    <span class="data-card-badge">Short-term</span>
-                </div>
-            </div>
-            """, unsafe_allow_html=True)
-            comparison_2030 = ws5['comparison_2030']
-            st.dataframe(comparison_2030, use_container_width=True, hide_index=True)
-        
-        with col2:
-            st.markdown("""
-            <div class="data-card">
-                <div class="data-card-header">
-                    <h3 class="data-card-title">2050 Projections</h3>
-                    <span class="data-card-badge">Long-term</span>
-                </div>
-            </div>
-            """, unsafe_allow_html=True)
-            comparison_2050 = ws5['comparison_2050']
-            st.dataframe(comparison_2050, use_container_width=True, hide_index=True)
-        
+        # Scenario Cards with key metrics
         if 'Scenario' in comparison_2030.columns:
-            numeric_cols = comparison_2030.select_dtypes(include=[np.number]).columns.tolist()
+            st.markdown("#### 2030 Projections", unsafe_allow_html=True)
+            st.markdown('<div class="stat-grid">', unsafe_allow_html=True)
+            
+            scenario_colors = {
+                'Baseline': 'amber',
+                'Vision 2030 Achievement': 'green', 
+                'Accelerated Transformation': 'blue',
+                'Conservative': 'red'
+            }
+            scenario_icons = {
+                'Baseline': '📊',
+                'Vision 2030 Achievement': '🎯',
+                'Accelerated Transformation': '🚀',
+                'Conservative': '📉'
+            }
+            
+            for _, row in comparison_2030.iterrows():
+                scenario = row['Scenario']
+                pop = row.get('Population (M)', 'N/A')
+                gdp = row.get('GDP ($B)', 'N/A')
+                
+                # Match partial scenario names
+                color = 'amber'
+                icon = '📊'
+                for key in scenario_colors:
+                    if key.lower() in scenario.lower():
+                        color = scenario_colors[key]
+                        icon = scenario_icons.get(key, '📊')
+                        break
+                
+                pop_str = f"{pop:.1f}M" if isinstance(pop, (int, float)) else str(pop)
+                gdp_str = f"${gdp:.0f}B" if isinstance(gdp, (int, float)) else str(gdp)
+                
+                st.markdown(render_stat_module(
+                    icon, 
+                    scenario[:25] + "..." if len(scenario) > 25 else scenario, 
+                    pop_str,
+                    f"GDP: {gdp_str}",
+                    color
+                ), unsafe_allow_html=True)
+            
+            st.markdown('</div>', unsafe_allow_html=True)
+            
+            # Visual comparison chart
+            numeric_cols = ['Population (M)', 'GDP ($B)', 'Oil Share (%)', 'Urban (%)', 'Renewable GW']
+            numeric_cols = [c for c in numeric_cols if c in comparison_2030.columns]
+            
             if numeric_cols:
-                fig = px.bar(
-                    comparison_2030,
-                    x='Scenario',
-                    y=numeric_cols[0],
-                    color='Scenario',
-                    color_discrete_sequence=KSA_COLORS
+                # Create grouped bar chart
+                fig = go.Figure()
+                colors_list = ['#006C35', '#3b82f6', '#8b5cf6', '#ef4444']
+                
+                for i, (_, row) in enumerate(comparison_2030.iterrows()):
+                    scenario = row['Scenario'][:20] + "..." if len(row['Scenario']) > 20 else row['Scenario']
+                    fig.add_trace(go.Bar(
+                        name=scenario,
+                        x=numeric_cols[:4],
+                        y=[row[c] for c in numeric_cols[:4]],
+                        marker_color=colors_list[i % len(colors_list)]
+                    ))
+                
+                fig.update_layout(
+                    **get_chart_layout("Key Metrics Comparison - 2030", height=320),
+                    barmode='group',
+                    legend=dict(orientation='h', yanchor='bottom', y=-0.25, xanchor='center', x=0.5)
                 )
-                fig.update_layout(**get_chart_layout("Scenario Comparison 2030"))
                 st.plotly_chart(fig, use_container_width=True)
+        
+        # 2050 Comparison
+        if 'Scenario' in comparison_2050.columns:
+            st.markdown("#### 2050 Projections", unsafe_allow_html=True)
+            st.markdown('<div class="stat-grid">', unsafe_allow_html=True)
+            
+            for _, row in comparison_2050.iterrows():
+                scenario = row['Scenario']
+                pop = row.get('Population (M)', 'N/A')
+                gdp = row.get('GDP ($B)', 'N/A')
+                
+                color = 'amber'
+                icon = '📊'
+                for key in scenario_colors:
+                    if key.lower() in scenario.lower():
+                        color = scenario_colors[key]
+                        icon = scenario_icons.get(key, '📊')
+                        break
+                
+                pop_str = f"{pop:.1f}M" if isinstance(pop, (int, float)) else str(pop)
+                gdp_str = f"${gdp:.0f}B" if isinstance(gdp, (int, float)) else str(gdp)
+                
+                st.markdown(render_stat_module(
+                    icon, 
+                    scenario[:25] + "..." if len(scenario) > 25 else scenario, 
+                    pop_str,
+                    f"GDP: {gdp_str}",
+                    color
+                ), unsafe_allow_html=True)
+            
+            st.markdown('</div>', unsafe_allow_html=True)
+            
+            numeric_cols = [c for c in ['Population (M)', 'GDP ($B)', 'Oil Share (%)', 'Urban (%)', 'Renewable GW'] if c in comparison_2050.columns]
+            
+            if numeric_cols:
+                fig2 = go.Figure()
+                for i, (_, row) in enumerate(comparison_2050.iterrows()):
+                    scenario = row['Scenario'][:20] + "..." if len(row['Scenario']) > 20 else row['Scenario']
+                    fig2.add_trace(go.Bar(
+                        name=scenario,
+                        x=numeric_cols[:4],
+                        y=[row[c] for c in numeric_cols[:4]],
+                        marker_color=colors_list[i % len(colors_list)]
+                    ))
+                
+                fig2.update_layout(
+                    **get_chart_layout("Key Metrics Comparison - 2050", height=320),
+                    barmode='group',
+                    legend=dict(orientation='h', yanchor='bottom', y=-0.25, xanchor='center', x=0.5)
+                )
+                st.plotly_chart(fig2, use_container_width=True)
     
     with tab2:
         risks = ws5['risks']
@@ -977,11 +1438,11 @@ def render_ws5_scenarios():
                     color_continuous_scale=['#22c55e', '#f59e0b', '#ef4444'],
                     aspect='auto'
                 )
-                fig.update_layout(**get_chart_layout("Risk Levels by Region", height=500))
+                fig.update_layout(**get_chart_layout("Risk Levels by Region", height=450))
                 st.plotly_chart(fig, use_container_width=True)
             
             with st.expander("📋 View Risk Data"):
-                st.dataframe(risks, use_container_width=True, hide_index=True)
+                st.dataframe(risks, use_container_width=True, hide_index=True, height=300)
     
     with tab3:
         opportunities = ws5['opportunities']
@@ -995,15 +1456,15 @@ def render_ws5_scenarios():
                     color_continuous_scale=['#f8fafc', '#74c476', '#006C35'],
                     aspect='auto'
                 )
-                fig.update_layout(**get_chart_layout("Opportunity Levels by Region", height=500))
+                fig.update_layout(**get_chart_layout("Opportunity Levels by Region", height=450))
                 st.plotly_chart(fig, use_container_width=True)
             
             with st.expander("📋 View Opportunity Data"):
-                st.dataframe(opportunities, use_container_width=True, hide_index=True)
+                st.dataframe(opportunities, use_container_width=True, hide_index=True, height=300)
 
 
 def render_ws6_nss_draft():
-    """Render WS6 NSS draft with premium styling."""
+    """Render WS6 NSS draft with improved visualizations."""
     st.markdown(render_section_header("📋", "National Spatial Strategy Draft", "Complete NSS with spatial structure and regional objectives"), unsafe_allow_html=True)
     
     ws6 = load_ws6_data()
@@ -1016,145 +1477,259 @@ def render_ws6_nss_draft():
     with tab1:
         nodes = ws6['nodes']
         
-        # Tier metrics
-        tier1 = len(nodes[nodes['Tier'] == 1]) if 'Tier' in nodes.columns else 0
-        tier2 = len(nodes[nodes['Tier'] == 2]) if 'Tier' in nodes.columns else 0
-        tier3 = len(nodes[nodes['Tier'] == 3]) if 'Tier' in nodes.columns else 0
+        # Compact tier metrics in modules
+        tier1 = nodes[nodes['Tier'] == 1] if 'Tier' in nodes.columns else pd.DataFrame()
+        tier2 = nodes[nodes['Tier'] == 2] if 'Tier' in nodes.columns else pd.DataFrame()
+        tier3 = nodes[nodes['Tier'] == 3] if 'Tier' in nodes.columns else pd.DataFrame()
         
-        st.markdown('<div class="kpi-grid">', unsafe_allow_html=True)
-        st.markdown(render_kpi_card("🏛️", "Tier 1 (National)", str(tier1), "Capital & Major", "neutral"), unsafe_allow_html=True)
-        st.markdown(render_kpi_card("🏢", "Tier 2 (Regional)", str(tier2), "Regional Hubs", "neutral"), unsafe_allow_html=True)
-        st.markdown(render_kpi_card("🏘️", "Tier 3 (Sub-regional)", str(tier3), "Growth Centers", "neutral"), unsafe_allow_html=True)
+        st.markdown('<div class="stat-grid">', unsafe_allow_html=True)
+        st.markdown(render_stat_module("🏛️", "Tier 1 - National", str(len(tier1)), "Capital & Major Hubs", "green"), unsafe_allow_html=True)
+        st.markdown(render_stat_module("🏢", "Tier 2 - Regional", str(len(tier2)), "Regional Centers", "blue"), unsafe_allow_html=True)
+        st.markdown(render_stat_module("🏘️", "Tier 3 - Sub-regional", str(len(tier3)), "Growth Centers", "amber"), unsafe_allow_html=True)
+        if 'Pop_2050_M' in nodes.columns:
+            total_pop = nodes['Pop_2050_M'].sum()
+            st.markdown(render_stat_module("👥", "Target Population", f"{total_pop:.1f}M", "By 2050", "purple"), unsafe_allow_html=True)
         st.markdown('</div>', unsafe_allow_html=True)
         
-        # Map
-        if 'Lat' in nodes.columns and 'Lon' in nodes.columns:
-            fig_map = px.scatter_geo(
-                nodes,
-                lat='Lat',
-                lon='Lon',
-                size='Pop_2050_M' if 'Pop_2050_M' in nodes.columns else None,
-                color='Tier',
-                hover_name='Name' if 'Name' in nodes.columns else None,
-                hover_data={
-                    'Pop_2050_M': ':.1f',
-                    'Tier': True,
-                    'Lat': False,
-                    'Lon': False
-                } if 'Pop_2050_M' in nodes.columns else None,
-                color_discrete_sequence=['#006C35', '#00a650', '#74c476'],
-            )
-            fig_map.update_geos(
-                center=dict(lat=24.0, lon=45.0),
-                projection_scale=5,
-                showland=True,
-                landcolor='#f8f9fa',
-                countrycolor='#e5e7eb',
-                showocean=True,
-                oceancolor='#ffffff',
-                showcoastlines=True,
-                coastlinecolor='#d1d5db',
-                framecolor='#e5e7eb'
-            )
-            fig_map.update_layout(
-                **get_chart_layout("Strategic Nodes Network", height=450),
-                geo=dict(bgcolor='rgba(0,0,0,0)')
-            )
-            st.plotly_chart(fig_map, use_container_width=True)
+        # Map and node details side by side
+        col_map, col_detail = st.columns([3, 2])
         
-        # Bar chart
+        with col_map:
+            if 'Lat' in nodes.columns and 'Lon' in nodes.columns:
+                # Filter out nodes with default coordinates
+                valid_nodes = nodes[(nodes['Lat'] != 24.5) | (nodes['Lon'] != 45.0)].copy()
+                if len(valid_nodes) < len(nodes):
+                    # Add back nodes with valid coords
+                    valid_nodes = nodes[
+                        ((nodes['Lat'] != 24.5) | (nodes['Lon'] != 45.0)) |
+                        (nodes['Name'].isin(['Riyadh', 'Jeddah', 'Makkah', 'Madinah', 'NEOM']))
+                    ].copy()
+                
+                fig_map = px.scatter_geo(
+                    valid_nodes,
+                    lat='Lat',
+                    lon='Lon',
+                    size='Pop_2050_M' if 'Pop_2050_M' in valid_nodes.columns else None,
+                    color='Tier',
+                    hover_name='Name' if 'Name' in valid_nodes.columns else None,
+                    hover_data={
+                        'Pop_2050_M': ':.1f',
+                        'Tier': True,
+                        'Region': True if 'Region' in valid_nodes.columns else False,
+                        'Lat': False,
+                        'Lon': False
+                    } if 'Pop_2050_M' in valid_nodes.columns else None,
+                    color_discrete_map={1: '#006C35', 2: '#3b82f6', 3: '#f59e0b'},
+                    size_max=25
+                )
+                fig_map.update_geos(
+                    center=dict(lat=24.0, lon=45.0),
+                    projection_scale=5,
+                    showland=True,
+                    landcolor='#f8f9fa',
+                    countrycolor='#e5e7eb',
+                    showocean=True,
+                    oceancolor='#ffffff',
+                    showcoastlines=True,
+                    coastlinecolor='#d1d5db',
+                    framecolor='#e5e7eb'
+                )
+                fig_map.update_layout(
+                    height=380,
+                    margin=dict(l=0, r=0, t=30, b=0),
+                    paper_bgcolor='rgba(0,0,0,0)',
+                    geo=dict(bgcolor='rgba(0,0,0,0)'),
+                    legend=dict(orientation='h', yanchor='bottom', y=-0.1, xanchor='center', x=0.5, font=dict(size=10)),
+                    title=dict(text="Strategic Nodes Network", font=dict(size=13, color='#1a1a1a'), x=0)
+                )
+                st.plotly_chart(fig_map, use_container_width=True)
+        
+        with col_detail:
+            # Node cards for Tier 1
+            st.markdown("##### Tier 1 Nodes", unsafe_allow_html=True)
+            st.markdown('<div class="module-grid" style="grid-template-columns: 1fr;">', unsafe_allow_html=True)
+            for _, node in tier1.iterrows():
+                pop_2024 = node.get('Pop_2024_M', 0)
+                pop_2050 = node.get('Pop_2050_M', 0)
+                growth = ((pop_2050 - pop_2024) / pop_2024 * 100) if pop_2024 > 0 else 0
+                st.markdown(render_module_card(
+                    "🏛️",
+                    node.get('Name', 'Unknown'),
+                    node.get('Functions', '')[:80] + "..." if len(str(node.get('Functions', ''))) > 80 else node.get('Functions', ''),
+                    badge=node.get('Priority', '').upper() if node.get('Priority') else '',
+                    badge_color="green" if node.get('Priority') == 'critical' else "amber",
+                    stats=[
+                        {"value": f"{pop_2024:.1f}M", "label": "Pop 2024"},
+                        {"value": f"{pop_2050:.1f}M", "label": "Pop 2050"},
+                        {"value": f"+{growth:.0f}%", "label": "Growth"}
+                    ]
+                ), unsafe_allow_html=True)
+            st.markdown('</div>', unsafe_allow_html=True)
+        
+        # Population comparison bar chart
         if 'Pop_2050_M' in nodes.columns and 'Name' in nodes.columns:
+            nodes_sorted = nodes.sort_values('Pop_2050_M', ascending=True).tail(12)
             fig = px.bar(
-                nodes.sort_values('Pop_2050_M', ascending=True),
+                nodes_sorted,
                 x='Pop_2050_M',
                 y='Name',
                 color='Tier',
                 orientation='h',
-                color_discrete_sequence=['#006C35', '#00a650', '#74c476']
+                color_discrete_map={1: '#006C35', 2: '#3b82f6', 3: '#f59e0b'}
             )
-            fig.update_layout(**get_chart_layout("Population Targets 2050 (Millions)", height=600))
+            fig.update_layout(**get_chart_layout("Population Targets 2050 - Top 12 Nodes (Millions)", height=380))
             st.plotly_chart(fig, use_container_width=True)
         
         with st.expander("📋 View All Strategic Nodes"):
-            st.dataframe(nodes, use_container_width=True, hide_index=True)
+            display_cols = ['Name', 'Region', 'Tier', 'Type', 'Pop_2024_M', 'Pop_2050_M', 'Priority']
+            display_cols = [c for c in display_cols if c in nodes.columns]
+            st.dataframe(nodes[display_cols], use_container_width=True, hide_index=True, height=300)
     
     with tab2:
         corridors = ws6['corridors']
         
+        # Summary stats
         if 'Investment_SAR_B' in corridors.columns:
             total_investment = corridors['Investment_SAR_B'].sum()
-            st.markdown('<div class="kpi-grid">', unsafe_allow_html=True)
-            st.markdown(render_kpi_card("💰", "Total Corridor Investment", f"SAR {total_investment:.0f}B", f"{len(corridors)} Corridors", "neutral"), unsafe_allow_html=True)
+            critical = len(corridors[corridors['Priority'] == 'critical']) if 'Priority' in corridors.columns else 0
+            high = len(corridors[corridors['Priority'] == 'high']) if 'Priority' in corridors.columns else 0
+            total_km = corridors['Length_km'].sum() if 'Length_km' in corridors.columns else 0
+            
+            st.markdown('<div class="stat-grid">', unsafe_allow_html=True)
+            st.markdown(render_stat_module("🛤️", "Total Corridors", str(len(corridors)), f"{total_km:,.0f} km", "green"), unsafe_allow_html=True)
+            st.markdown(render_stat_module("💰", "Investment", f"SAR {total_investment:.0f}B", "Total planned", "blue"), unsafe_allow_html=True)
+            st.markdown(render_stat_module("🔴", "Critical Priority", str(critical), "Urgent corridors", "red"), unsafe_allow_html=True)
+            st.markdown(render_stat_module("🟡", "High Priority", str(high), "Important corridors", "amber"), unsafe_allow_html=True)
             st.markdown('</div>', unsafe_allow_html=True)
         
-        # Corridor Map
+        # Full Corridor Map with ALL corridors
         if all(c in corridors.columns for c in ['Start_Lat', 'Start_Lon', 'End_Lat', 'End_Lon']):
             fig_corr = go.Figure()
             
-            colors = {'critical': '#ef4444', 'high': '#f59e0b', 'medium': '#22c55e'}
+            priority_colors = {'critical': '#ef4444', 'high': '#f59e0b', 'medium': '#22c55e'}
+            priority_widths = {'critical': 4, 'high': 3, 'medium': 2}
             
             for _, row in corridors.iterrows():
-                color = colors.get(row.get('Priority', 'medium'), '#22c55e')
+                priority = row.get('Priority', 'medium')
+                color = priority_colors.get(priority, '#22c55e')
+                width = priority_widths.get(priority, 2)
+                
                 fig_corr.add_trace(go.Scattergeo(
                     lon=[row['Start_Lon'], row['End_Lon']],
                     lat=[row['Start_Lat'], row['End_Lat']],
                     mode='lines+markers',
-                    line=dict(width=3, color=color),
-                    marker=dict(size=10, color=color),
+                    line=dict(width=width, color=color),
+                    marker=dict(size=8, color=color, symbol='circle'),
                     name=row['Name'],
-                    hoverinfo='name'
+                    hovertemplate=f"<b>{row['Name']}</b><br>" +
+                                  f"Type: {row.get('Type', 'N/A')}<br>" +
+                                  f"Length: {row.get('Length_km', 'N/A')} km<br>" +
+                                  f"Investment: SAR {row.get('Investment_SAR_B', 'N/A')}B<br>" +
+                                  f"Priority: {priority.upper()}<extra></extra>"
                 ))
             
             fig_corr.update_geos(
-                center=dict(lat=24.0, lon=45.0),
-                projection_scale=5,
+                center=dict(lat=24.0, lon=44.0),
+                projection_scale=4.5,
                 showland=True,
                 landcolor='#f8f9fa',
                 countrycolor='#e5e7eb',
                 showocean=True,
                 oceancolor='#ffffff',
-                framecolor='#e5e7eb'
+                framecolor='#e5e7eb',
+                showcoastlines=True,
+                coastlinecolor='#d1d5db'
             )
             fig_corr.update_layout(
-                **get_chart_layout("Development Corridors", height=450),
+                height=450,
+                margin=dict(l=0, r=0, t=40, b=0),
+                paper_bgcolor='rgba(0,0,0,0)',
                 geo=dict(bgcolor='rgba(0,0,0,0)'),
-                showlegend=True
+                showlegend=True,
+                legend=dict(
+                    orientation='v',
+                    yanchor='top',
+                    y=0.98,
+                    xanchor='left',
+                    x=0.01,
+                    bgcolor='rgba(255,255,255,0.9)',
+                    bordercolor='#e5e7eb',
+                    borderwidth=1,
+                    font=dict(size=9)
+                ),
+                title=dict(text=f"Development Corridors Network ({len(corridors)} Corridors)", font=dict(size=13, color='#1a1a1a'), x=0)
             )
             st.plotly_chart(fig_corr, use_container_width=True)
         
-        # Investment bar
+        # Corridor details in module cards
+        st.markdown('<div class="module-grid">', unsafe_allow_html=True)
+        for _, corr in corridors.iterrows():
+            priority = corr.get('Priority', 'medium')
+            badge_color = "red" if priority == 'critical' else "amber" if priority == 'high' else "green"
+            
+            st.markdown(render_module_card(
+                "🛤️",
+                corr.get('Name', 'Unknown'),
+                f"{corr.get('Origin', '')} → {corr.get('Destination', '')}",
+                badge=priority.upper() if priority else '',
+                badge_color=badge_color,
+                stats=[
+                    {"value": f"{corr.get('Length_km', 0):,.0f}", "label": "KM"},
+                    {"value": f"{corr.get('Investment_SAR_B', 0):.0f}B", "label": "SAR"},
+                    {"value": corr.get('Timeline', 'N/A')[:9], "label": "Timeline"}
+                ]
+            ), unsafe_allow_html=True)
+        st.markdown('</div>', unsafe_allow_html=True)
+        
+        # Investment comparison
         if 'Name' in corridors.columns and 'Investment_SAR_B' in corridors.columns:
             fig = px.bar(
-                corridors,
-                x='Name',
-                y='Investment_SAR_B',
+                corridors.sort_values('Investment_SAR_B', ascending=True),
+                x='Investment_SAR_B',
+                y='Name',
                 color='Priority' if 'Priority' in corridors.columns else None,
+                orientation='h',
                 color_discrete_map={'critical': '#ef4444', 'high': '#f59e0b', 'medium': '#22c55e'}
             )
-            fig.update_layout(**get_chart_layout("Corridor Investments (SAR Billions)"))
-            fig.update_xaxes(tickangle=45)
+            fig.update_layout(**get_chart_layout("Corridor Investments (SAR Billions)", height=280))
             st.plotly_chart(fig, use_container_width=True)
-        
-        with st.expander("📋 View All Corridors"):
-            st.dataframe(corridors, use_container_width=True, hide_index=True)
     
     with tab3:
         objectives = ws6['objectives']
         
         if 'Region' in objectives.columns and 'GDP_Share_2050' in objectives.columns:
-            fig = px.pie(
-                objectives,
-                names='Region',
-                values='GDP_Share_2050',
-                hole=0.4,
-                color_discrete_sequence=KSA_COLORS + px.colors.qualitative.Set3
-            )
-            fig.update_layout(**get_chart_layout("Target GDP Share by Region (2050)"))
-            fig.update_traces(textposition='inside', textinfo='percent+label')
-            st.plotly_chart(fig, use_container_width=True)
+            col1, col2 = st.columns([2, 1])
+            
+            with col1:
+                # Treemap for GDP distribution
+                fig = px.treemap(
+                    objectives,
+                    path=['Region'],
+                    values='GDP_Share_2050',
+                    color='GDP_Share_2050',
+                    color_continuous_scale=['#f8f9fa', '#74c476', '#006C35']
+                )
+                fig.update_layout(
+                    height=350,
+                    margin=dict(l=10, r=10, t=30, b=10),
+                    paper_bgcolor='rgba(0,0,0,0)',
+                    title=dict(text="Target GDP Share by Region (2050)", font=dict(size=13, color='#1a1a1a'), x=0)
+                )
+                st.plotly_chart(fig, use_container_width=True)
+            
+            with col2:
+                # Top regions
+                top_regions = objectives.nlargest(5, 'GDP_Share_2050')
+                st.markdown("##### Top 5 Regions by GDP", unsafe_allow_html=True)
+                for _, reg in top_regions.iterrows():
+                    st.markdown(render_progress_bar(
+                        reg['Region'], 
+                        int(reg['GDP_Share_2050']), 
+                        100
+                    ), unsafe_allow_html=True)
         
         with st.expander("📋 View All Regional Objectives"):
-            st.dataframe(objectives, use_container_width=True, hide_index=True)
+            st.dataframe(objectives, use_container_width=True, hide_index=True, height=300)
     
     with tab4:
         investments = ws6['investments']
@@ -1162,28 +1737,37 @@ def render_ws6_nss_draft():
         if 'Cost_SAR_B' in investments.columns:
             total = investments['Cost_SAR_B'].sum()
             
-            st.markdown('<div class="kpi-grid">', unsafe_allow_html=True)
-            st.markdown(render_kpi_card("💰", "Total Investment", f"SAR {total:.0f}B", f"{len(investments)} Priority Items", "neutral"), unsafe_allow_html=True)
+            st.markdown('<div class="stat-grid">', unsafe_allow_html=True)
+            st.markdown(render_stat_module("💰", "Total Investment", f"SAR {total:.0f}B", f"{len(investments)} priority items", "green"), unsafe_allow_html=True)
+            
+            if 'Category' in investments.columns:
+                top_cat = investments.groupby('Category')['Cost_SAR_B'].sum().idxmax()
+                top_cat_val = investments.groupby('Category')['Cost_SAR_B'].sum().max()
+                st.markdown(render_stat_module("📊", "Top Category", top_cat, f"SAR {top_cat_val:.0f}B", "blue"), unsafe_allow_html=True)
             st.markdown('</div>', unsafe_allow_html=True)
         
         if 'Category' in investments.columns and 'Cost_SAR_B' in investments.columns:
             by_cat = investments.groupby('Category')['Cost_SAR_B'].sum().reset_index()
-            fig = px.pie(
+            by_cat = by_cat.sort_values('Cost_SAR_B', ascending=True)
+            
+            fig = px.bar(
                 by_cat,
-                names='Category',
-                values='Cost_SAR_B',
-                hole=0.4,
-                color_discrete_sequence=KSA_COLORS
+                x='Cost_SAR_B',
+                y='Category',
+                orientation='h',
+                color='Cost_SAR_B',
+                color_continuous_scale=['#74c476', '#006C35']
             )
-            fig.update_layout(**get_chart_layout("Investment by Category"))
+            fig.update_layout(**get_chart_layout("Investment by Category (SAR Billions)", height=300))
+            fig.update_coloraxes(showscale=False)
             st.plotly_chart(fig, use_container_width=True)
         
         with st.expander("📋 View All Investment Priorities"):
-            st.dataframe(investments, use_container_width=True, hide_index=True)
+            st.dataframe(investments, use_container_width=True, hide_index=True, height=300)
 
 
 def render_ws7_governance():
-    """Render WS7 governance framework."""
+    """Render WS7 governance framework with improved layout."""
     st.markdown(render_section_header("🏛️", "Governance & Implementation", "Framework for strategy execution and monitoring"), unsafe_allow_html=True)
     
     ws7 = load_ws7_data()
@@ -1197,27 +1781,98 @@ def render_ws7_governance():
         bodies = ws7['bodies']
         
         if 'Level' in bodies.columns:
-            national = len(bodies[bodies['Level'] == 'national'])
-            regional = len(bodies[bodies['Level'] == 'regional'])
-            local = len(bodies[bodies['Level'] == 'local'])
+            national = bodies[bodies['Level'] == 'national']
+            regional = bodies[bodies['Level'] == 'regional']
+            local = bodies[bodies['Level'] == 'local']
             
-            st.markdown('<div class="kpi-grid">', unsafe_allow_html=True)
-            st.markdown(render_kpi_card("🏛️", "National Level", str(national), "Central Bodies", "neutral"), unsafe_allow_html=True)
-            st.markdown(render_kpi_card("🏢", "Regional Level", str(regional), "Regional Bodies", "neutral"), unsafe_allow_html=True)
-            st.markdown(render_kpi_card("🏘️", "Local Level", str(local), "Local Bodies", "neutral"), unsafe_allow_html=True)
+            # Compact stats
+            st.markdown('<div class="stat-grid">', unsafe_allow_html=True)
+            st.markdown(render_stat_module("🏛️", "National Level", str(len(national)), "Central coordination", "green"), unsafe_allow_html=True)
+            st.markdown(render_stat_module("🏢", "Regional Level", str(len(regional)), "Regional execution", "blue"), unsafe_allow_html=True)
+            st.markdown(render_stat_module("🏘️", "Local Level", str(len(local)), "Local implementation", "amber"), unsafe_allow_html=True)
+            st.markdown(render_stat_module("📋", "Total Bodies", str(len(bodies)), "Complete framework", "purple"), unsafe_allow_html=True)
             st.markdown('</div>', unsafe_allow_html=True)
             
+            # Governance bodies as module cards
+            st.markdown("##### Governance Structure", unsafe_allow_html=True)
+            
+            # National bodies
+            if len(national) > 0:
+                st.markdown("###### 🏛️ National Level", unsafe_allow_html=True)
+                st.markdown('<div class="module-grid">', unsafe_allow_html=True)
+                for _, body in national.iterrows():
+                    mandate = str(body.get('Mandate', ''))[:120]
+                    if len(str(body.get('Mandate', ''))) > 120:
+                        mandate += "..."
+                    
+                    st.markdown(render_module_card(
+                        "🏛️",
+                        str(body.get('Name', 'Unknown'))[:40],
+                        mandate,
+                        badge=body.get('Type', '').upper() if body.get('Type') else '',
+                        badge_color="green",
+                        stats=[
+                            {"value": body.get('Meeting_Frequency', 'N/A'), "label": "Meetings"}
+                        ]
+                    ), unsafe_allow_html=True)
+                st.markdown('</div>', unsafe_allow_html=True)
+            
+            # Regional bodies
+            if len(regional) > 0:
+                st.markdown("###### 🏢 Regional Level", unsafe_allow_html=True)
+                st.markdown('<div class="module-grid">', unsafe_allow_html=True)
+                for _, body in regional.iterrows():
+                    mandate = str(body.get('Mandate', ''))[:120]
+                    if len(str(body.get('Mandate', ''))) > 120:
+                        mandate += "..."
+                    
+                    st.markdown(render_module_card(
+                        "🏢",
+                        str(body.get('Name', 'Unknown'))[:40],
+                        mandate,
+                        badge=body.get('Type', '').upper() if body.get('Type') else '',
+                        badge_color="blue",
+                        stats=[
+                            {"value": body.get('Meeting_Frequency', 'N/A'), "label": "Meetings"}
+                        ]
+                    ), unsafe_allow_html=True)
+                st.markdown('</div>', unsafe_allow_html=True)
+            
+            # Local bodies
+            if len(local) > 0:
+                st.markdown("###### 🏘️ Local Level", unsafe_allow_html=True)
+                st.markdown('<div class="module-grid">', unsafe_allow_html=True)
+                for _, body in local.iterrows():
+                    mandate = str(body.get('Mandate', ''))[:120]
+                    if len(str(body.get('Mandate', ''))) > 120:
+                        mandate += "..."
+                    
+                    st.markdown(render_module_card(
+                        "🏘️",
+                        str(body.get('Name', 'Unknown'))[:40],
+                        mandate,
+                        badge=body.get('Type', '').upper() if body.get('Type') else '',
+                        badge_color="amber",
+                        stats=[
+                            {"value": body.get('Meeting_Frequency', 'N/A'), "label": "Meetings"}
+                        ]
+                    ), unsafe_allow_html=True)
+                st.markdown('</div>', unsafe_allow_html=True)
+            
+            # Structure visualization
             if 'Type' in bodies.columns:
                 fig = px.sunburst(
                     bodies,
                     path=['Level', 'Type'],
-                    color_discrete_sequence=KSA_COLORS
+                    color='Level',
+                    color_discrete_map={'national': '#006C35', 'regional': '#3b82f6', 'local': '#f59e0b'}
                 )
-                fig.update_layout(**get_chart_layout("Governance Structure", height=450))
+                fig.update_layout(
+                    height=320,
+                    margin=dict(l=10, r=10, t=30, b=10),
+                    paper_bgcolor='rgba(0,0,0,0)'
+                )
                 st.plotly_chart(fig, use_container_width=True)
-        
-        with st.expander("📋 View All Governance Bodies"):
-            st.dataframe(bodies, use_container_width=True, hide_index=True)
     
     with tab2:
         raci = ws7['raci']
@@ -1230,28 +1885,50 @@ def render_ws7_governance():
                 'A': 'background-color: #3b82f6; color: white; font-weight: 600; text-align: center;',
                 'C': 'background-color: #f59e0b; color: black; font-weight: 600; text-align: center;',
                 'I': 'background-color: #6b7280; color: white; font-weight: 600; text-align: center;',
-                '-': 'background-color: #1e222a; color: #4b5563; text-align: center;'
+                '-': 'background-color: #f3f4f6; color: #9ca3af; text-align: center;'
             }
             return colors.get(val, '')
         
         raci_cols = [col for col in raci.columns if col not in ['Activity', 'Category']]
         styled_raci = raci.style.applymap(color_raci, subset=raci_cols)
-        st.dataframe(styled_raci, use_container_width=True, height=500)
+        st.dataframe(styled_raci, use_container_width=True, height=400)
     
     with tab3:
         kpis = ws7['kpis']
         
         if 'Category' in kpis.columns:
+            # KPI summary by category
             by_cat = kpis.groupby('Category').size().reset_index(name='Count')
-            fig = px.bar(
-                by_cat,
-                x='Category',
-                y='Count',
-                color='Category',
-                color_discrete_sequence=KSA_COLORS
-            )
-            fig.update_layout(**get_chart_layout("KPIs by Category"))
-            st.plotly_chart(fig, use_container_width=True)
+            
+            col1, col2 = st.columns([2, 1])
+            
+            with col1:
+                fig = px.bar(
+                    by_cat.sort_values('Count', ascending=True),
+                    y='Category',
+                    x='Count',
+                    orientation='h',
+                    color='Count',
+                    color_continuous_scale=['#74c476', '#006C35']
+                )
+                fig.update_layout(**get_chart_layout("KPIs by Category", height=280))
+                fig.update_coloraxes(showscale=False)
+                st.plotly_chart(fig, use_container_width=True)
+            
+            with col2:
+                st.markdown(f"""
+                <div class="data-card">
+                    <div class="data-card-header" style="border-bottom: none;">
+                        <h3 class="data-card-title">KPI Summary</h3>
+                    </div>
+                    <div style="font-size: 2rem; font-weight: 700; color: var(--ksa-green); margin: 0.5rem 0;">{len(kpis)}</div>
+                    <div style="font-size: 0.8rem; color: var(--text-secondary);">Total KPIs</div>
+                    <div style="margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid var(--border-light);">
+                        <div style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase;">Categories</div>
+                        <div style="font-size: 1.25rem; font-weight: 600; color: var(--text-primary);">{len(by_cat)}</div>
+                    </div>
+                </div>
+                """, unsafe_allow_html=True)
         
         # Target tracking
         if 'Target_2030' in kpis.columns and 'Baseline_2024' in kpis.columns:
@@ -1259,28 +1936,40 @@ def render_ws7_governance():
             kpis_copy['Improvement_Needed'] = kpis_copy['Target_2030'] - kpis_copy['Baseline_2024']
             
             name_col = 'Name' if 'Name' in kpis_copy.columns else 'KPI_ID'
+            top_kpis = kpis_copy.nlargest(8, 'Improvement_Needed')
+            
             fig = px.bar(
-                kpis_copy.head(10),
-                x=name_col,
-                y='Improvement_Needed',
+                top_kpis.sort_values('Improvement_Needed', ascending=True),
+                y=name_col,
+                x='Improvement_Needed',
+                orientation='h',
                 color='Improvement_Needed',
-                color_continuous_scale=['#ef4444', '#f59e0b', '#22c55e']
+                color_continuous_scale=['#f59e0b', '#22c55e', '#006C35']
             )
-            fig.update_layout(**get_chart_layout("Improvement Needed by 2030 (Top 10)"))
-            fig.update_xaxes(tickangle=45)
+            fig.update_layout(**get_chart_layout("Top 8 KPIs - Improvement Needed by 2030", height=300))
+            fig.update_coloraxes(showscale=False)
             st.plotly_chart(fig, use_container_width=True)
         
         with st.expander("📋 View All KPIs"):
-            st.dataframe(kpis, use_container_width=True, hide_index=True)
+            display_cols = ['KPI_ID', 'Name', 'Category', 'Baseline_2024', 'Target_2030', 'Unit']
+            display_cols = [c for c in display_cols if c in kpis.columns]
+            st.dataframe(kpis[display_cols] if display_cols else kpis, use_container_width=True, hide_index=True, height=300)
     
     with tab4:
         mechanisms = ws7['mechanisms']
-        st.markdown(render_info_box("MONITORING MECHANISMS", "Systems and processes for tracking implementation progress"), unsafe_allow_html=True)
-        st.dataframe(mechanisms, use_container_width=True, hide_index=True)
-        
-        st.markdown(render_section_header("⚙️", "Decision Processes", "Workflow for strategic decisions"), unsafe_allow_html=True)
         processes = ws7['processes']
-        st.dataframe(processes, use_container_width=True, hide_index=True)
+        
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            st.markdown("##### Monitoring Mechanisms", unsafe_allow_html=True)
+            st.markdown(render_info_box("OVERVIEW", "Systems and processes for tracking implementation progress"), unsafe_allow_html=True)
+            st.dataframe(mechanisms, use_container_width=True, hide_index=True, height=280)
+        
+        with col2:
+            st.markdown("##### Decision Processes", unsafe_allow_html=True)
+            st.markdown(render_info_box("OVERVIEW", "Workflow for strategic decisions"), unsafe_allow_html=True)
+            st.dataframe(processes, use_container_width=True, hide_index=True, height=280)
 
 
 def render_deliverables():
