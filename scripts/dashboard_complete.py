@@ -1904,13 +1904,13 @@ def render_ws6_nss_draft():
                 # Filter out nodes with default coordinates
                 valid_nodes = nodes[(nodes['Lat'] != 24.5) | (nodes['Lon'] != 45.0)].copy()
                 if len(valid_nodes) < len(nodes):
-                    # Add back nodes with valid coords
                     valid_nodes = nodes[
                         ((nodes['Lat'] != 24.5) | (nodes['Lon'] != 45.0)) |
                         (nodes['Name'].isin(['Riyadh', 'Jeddah', 'Makkah', 'Madinah', 'NEOM']))
                     ].copy()
                 
-                fig_map = px.scatter_geo(
+                # Modern interactive map with Mapbox
+                fig_map = px.scatter_mapbox(
                     valid_nodes,
                     lat='Lat',
                     lon='Lon',
@@ -1925,27 +1925,29 @@ def render_ws6_nss_draft():
                         'Lon': False
                     } if 'Pop_2050_M' in valid_nodes.columns else None,
                     color_discrete_map={1: '#006C35', 2: '#3b82f6', 3: '#f59e0b'},
-                    size_max=25
-                )
-                fig_map.update_geos(
+                    size_max=30,
+                    zoom=4.5,
                     center=dict(lat=24.0, lon=45.0),
-                    projection_scale=5,
-                    showland=True,
-                    landcolor='#f8f9fa',
-                    countrycolor='#e5e7eb',
-                    showocean=True,
-                    oceancolor='#ffffff',
-                    showcoastlines=True,
-                    coastlinecolor='#d1d5db',
-                    framecolor='#e5e7eb'
+                    mapbox_style='carto-positron'
                 )
                 fig_map.update_layout(
-                    height=380,
-                    margin=dict(l=0, r=0, t=30, b=0),
+                    height=420,
+                    margin=dict(l=0, r=0, t=35, b=0),
                     paper_bgcolor='rgba(0,0,0,0)',
-                    geo=dict(bgcolor='rgba(0,0,0,0)'),
-                    legend=dict(orientation='h', yanchor='bottom', y=-0.1, xanchor='center', x=0.5, font=dict(size=10)),
+                    legend=dict(
+                        orientation='h', 
+                        yanchor='bottom', 
+                        y=-0.08, 
+                        xanchor='center', 
+                        x=0.5, 
+                        font=dict(size=10),
+                        bgcolor='rgba(255,255,255,0.8)'
+                    ),
                     title=dict(text="Strategic Nodes Network", font=dict(size=13, color='#1a1a1a'), x=0)
+                )
+                fig_map.update_traces(
+                    marker=dict(opacity=0.85),
+                    hovertemplate='<b>%{hovertext}</b><br>Tier %{marker.color}<br>Pop 2050: %{marker.size:.1f}M<extra></extra>'
                 )
                 st.plotly_chart(fig_map, use_container_width=True)
         
@@ -2010,60 +2012,88 @@ def render_ws6_nss_draft():
             with cols[3]:
                 st.markdown(render_stat_module("🟡", "High Priority", str(high), "Important corridors", "amber"), unsafe_allow_html=True)
         
-        # Full Corridor Map with ALL corridors
+        # Modern Interactive Corridor Map with Mapbox
         if all(c in corridors.columns for c in ['Start_Lat', 'Start_Lon', 'End_Lat', 'End_Lon']):
             fig_corr = go.Figure()
             
             priority_colors = {'critical': '#ef4444', 'high': '#f59e0b', 'medium': '#22c55e'}
-            priority_widths = {'critical': 4, 'high': 3, 'medium': 2}
+            priority_widths = {'critical': 5, 'high': 4, 'medium': 3}
             
+            # Add corridor lines
             for _, row in corridors.iterrows():
                 priority = row.get('Priority', 'medium')
                 color = priority_colors.get(priority, '#22c55e')
-                width = priority_widths.get(priority, 2)
+                width = priority_widths.get(priority, 3)
                 
-                fig_corr.add_trace(go.Scattergeo(
+                # Line trace
+                fig_corr.add_trace(go.Scattermapbox(
                     lon=[row['Start_Lon'], row['End_Lon']],
                     lat=[row['Start_Lat'], row['End_Lat']],
-                    mode='lines+markers',
+                    mode='lines',
                     line=dict(width=width, color=color),
-                    marker=dict(size=8, color=color, symbol='circle'),
                     name=row['Name'],
+                    hoverinfo='skip',
+                    showlegend=False
+                ))
+                
+                # Start point
+                fig_corr.add_trace(go.Scattermapbox(
+                    lon=[row['Start_Lon']],
+                    lat=[row['Start_Lat']],
+                    mode='markers',
+                    marker=dict(size=10, color=color, symbol='circle'),
+                    name=f"{row['Name']} (Start)",
                     hovertemplate=f"<b>{row['Name']}</b><br>" +
+                                  f"From: {row.get('Origin', 'N/A')}<br>" +
                                   f"Type: {row.get('Type', 'N/A')}<br>" +
                                   f"Length: {row.get('Length_km', 'N/A')} km<br>" +
                                   f"Investment: SAR {row.get('Investment_SAR_B', 'N/A')}B<br>" +
-                                  f"Priority: {priority.upper()}<extra></extra>"
+                                  f"Priority: {priority.upper()}<extra></extra>",
+                    showlegend=False
+                ))
+                
+                # End point
+                fig_corr.add_trace(go.Scattermapbox(
+                    lon=[row['End_Lon']],
+                    lat=[row['End_Lat']],
+                    mode='markers',
+                    marker=dict(size=10, color=color, symbol='circle'),
+                    name=f"{row['Name']} (End)",
+                    hovertemplate=f"<b>{row['Name']}</b><br>" +
+                                  f"To: {row.get('Destination', 'N/A')}<extra></extra>",
+                    showlegend=False
                 ))
             
-            fig_corr.update_geos(
-                center=dict(lat=24.0, lon=44.0),
-                projection_scale=4.5,
-                showland=True,
-                landcolor='#f8f9fa',
-                countrycolor='#e5e7eb',
-                showocean=True,
-                oceancolor='#ffffff',
-                framecolor='#e5e7eb',
-                showcoastlines=True,
-                coastlinecolor='#d1d5db'
-            )
+            # Add legend traces
+            for priority, color in priority_colors.items():
+                fig_corr.add_trace(go.Scattermapbox(
+                    lon=[None], lat=[None],
+                    mode='lines',
+                    line=dict(width=priority_widths[priority], color=color),
+                    name=priority.capitalize(),
+                    showlegend=True
+                ))
+            
             fig_corr.update_layout(
-                height=450,
+                mapbox=dict(
+                    style='carto-positron',
+                    center=dict(lat=24.0, lon=44.0),
+                    zoom=4.2
+                ),
+                height=480,
                 margin=dict(l=0, r=0, t=40, b=0),
                 paper_bgcolor='rgba(0,0,0,0)',
-                geo=dict(bgcolor='rgba(0,0,0,0)'),
                 showlegend=True,
                 legend=dict(
-                    orientation='v',
-                    yanchor='top',
-                    y=0.98,
-                    xanchor='left',
-                    x=0.01,
+                    orientation='h',
+                    yanchor='bottom',
+                    y=-0.08,
+                    xanchor='center',
+                    x=0.5,
                     bgcolor='rgba(255,255,255,0.9)',
                     bordercolor='#e5e7eb',
                     borderwidth=1,
-                    font=dict(size=9)
+                    font=dict(size=10)
                 ),
                 title=dict(text=f"Development Corridors Network ({len(corridors)} Corridors)", font=dict(size=13, color='#1a1a1a'), x=0)
             )
