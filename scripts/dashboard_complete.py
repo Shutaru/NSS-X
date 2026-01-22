@@ -2225,13 +2225,16 @@ def render_ws7_governance():
             regional = bodies[bodies['Level'] == 'regional']
             local = bodies[bodies['Level'] == 'local']
             
-            # Compact stats
-            st.markdown('<div class="stat-grid">', unsafe_allow_html=True)
-            st.markdown(render_stat_module("🏛️", "National Level", str(len(national)), "Central coordination", "green"), unsafe_allow_html=True)
-            st.markdown(render_stat_module("🏢", "Regional Level", str(len(regional)), "Regional execution", "blue"), unsafe_allow_html=True)
-            st.markdown(render_stat_module("🏘️", "Local Level", str(len(local)), "Local implementation", "amber"), unsafe_allow_html=True)
-            st.markdown(render_stat_module("📋", "Total Bodies", str(len(bodies)), "Complete framework", "purple"), unsafe_allow_html=True)
-            st.markdown('</div>', unsafe_allow_html=True)
+            # Compact stats using st.columns (like WS2)
+            cols = st.columns(4)
+            with cols[0]:
+                st.markdown(render_stat_module("🏛️", "National Level", str(len(national)), "Central coordination", "green"), unsafe_allow_html=True)
+            with cols[1]:
+                st.markdown(render_stat_module("🏢", "Regional Level", str(len(regional)), "Regional execution", "blue"), unsafe_allow_html=True)
+            with cols[2]:
+                st.markdown(render_stat_module("🏘️", "Local Level", str(len(local)), "Local implementation", "amber"), unsafe_allow_html=True)
+            with cols[3]:
+                st.markdown(render_stat_module("📋", "Total Bodies", str(len(bodies)), "Complete framework", "purple"), unsafe_allow_html=True)
             
             # Governance bodies as module cards
             st.markdown("##### Governance Structure", unsafe_allow_html=True)
