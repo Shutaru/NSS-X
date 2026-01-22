@@ -1,0 +1,686 @@
+{
+  "metadata": {
+    "report_title": "WS2 - Retrospective Review of Existing NSS Frameworks",
+    "generated_date": "2026-01-22T12:46:17.681320",
+    "version": "1.0",
+    "author": "NSS X System"
+  },
+  "executive_summary": {
+    "overview": "This retrospective review analyzes 25 years of national spatial strategy \n            in Saudi Arabia, from the first NSS (2001) through the Vision 2030-aligned framework. \n            The analysis identifies key lessons learned, assesses progress against historical objectives, \n            and provides a continuity and change matrix to guide the next strategy cycle.",
+    "key_findings": [
+      "NSS 2001 achieved partial success: urban hierarchy established but regional balance not achieved",
+      "Environmental targets (protected areas, water efficiency) largely unmet across both strategies",
+      "Vision 2030 framework shows stronger implementation but concentration risk remains",
+      "Governance mechanisms improved significantly post-2016",
+      "11 elements need strengthening",
+      "3 elements need modification",
+      "Water security identified as critical priority requiring immediate attention"
+    ],
+    "progress_assessment": {
+      "nss_2001": {
+        "achieved": 0,
+        "partial": 4,
+        "failed": 2,
+        "total": 7
+      },
+      "nss_2030": {
+        "on_track": 6,
+        "achieved": 0,
+        "at_risk": 0,
+        "total": 6
+      }
+    },
+    "top_recommendations": [
+      "Strengthen water security strategy as critical priority",
+      "Balance mega-project focus with distributed regional development",
+      "Accelerate environmental protection to meet 30x30 commitments",
+      "Build implementation capacity at regional level",
+      "Integrate climate adaptation across all spatial decisions"
+    ]
+  },
+  "section_1_retrospective_analysis": {
+    "title": "WS2 - Retrospective Analysis: Saudi Arabia 2010-2025",
+    "period": "2010-2025",
+    "key_findings": {
+      "population": {
+        "growth": "+8.8M people",
+        "cagr": "1.86%",
+        "urbanization": "86.2% urban (2025)",
+        "highlights": [
+          "Population grew from 27.6M to 36.4M (+8.8M)",
+          "Compound Annual Growth Rate: 1.86%",
+          "COVID-19 caused temporary decline in 2020-2022 due to expat departures",
+          "Recovery accelerated post-2022 with Vision 2030 projects",
+          "Urbanization increased from 82.0% to 86.2%"
+        ]
+      },
+      "economy": {
+        "gdp_growth": "From 1,975B to 4,700B SAR",
+        "diversification": "Non-oil GDP share: 49.8% → 62.0%",
+        "highlights": [
+          "GDP grew from 1,975B SAR to 4,700B SAR",
+          "Non-oil GDP share increased from 49.8% to 62.0%",
+          "Vision 2030 (2016) marked pivot towards economic diversification",
+          "2020 COVID impact reversed by 2022 with strong recovery",
+          "Tourism, entertainment, and tech sectors show fastest growth"
+        ]
+      },
+      "regional_dynamics": {
+        "accelerating_regions": [
+          "Riyadh",
+          "Eastern Province",
+          "Tabuk",
+          "Al-Jouf"
+        ],
+        "stable_regions": [
+          "Makkah",
+          "Madinah",
+          "Al-Qassim",
+          "Asir",
+          "Northern Borders",
+          "Jazan",
+          "Najran"
+        ],
+        "declining_regions": [
+          "Hail",
+          "Al-Baha"
+        ]
+      },
+      "spatial_patterns": {
+        "concentration": [
+          "Riyadh, Makkah, and Eastern Province concentrate 65% of population",
+          "Top 3 economic regions generate 75% of non-oil GDP",
+          "Employment highly concentrated in Riyadh (45% of private sector jobs)"
+        ],
+        "dispersion_efforts": [
+          "NEOM development in Northwest (Tabuk region) as new growth pole",
+          "Red Sea Project promoting tourism in underutilized coastal areas",
+          "Diriyah and Al-Ula cultural development redistributing tourism"
+        ],
+        "urban_expansion": [
+          "Riyadh metropolitan area expanded 35% in built-up area 2010-2025",
+          "New cities: NEOM, King Abdullah Economic City showing varied progress",
+          "Ring road expansion in major cities driving suburban growth"
+        ],
+        "infrastructure_corridors": [
+          "Land Bridge connecting Red Sea to Arabian Gulf (planned)",
+          "Haramain High-Speed Rail operational since 2018",
+          "Riyadh Metro system under construction (6 lines)"
+        ]
+      }
+    },
+    "vision2030_milestones": {
+      "2016": "Vision 2030 Announced",
+      "2017": "NTP 2020 Launch",
+      "2018": "NEOM City Announced",
+      "2019": "Tourism Visa Opened",
+      "2020": "COVID-19 Impact / Riyadh Metro Progress",
+      "2021": "Green Initiative / PIF Expansion",
+      "2022": "THE LINE Announced / FIFA 2034 Bid",
+      "2023": "NEOM Construction Accelerates",
+      "2024": "Record Tourism / Non-oil GDP Growth",
+      "2025": "Multiple Giga-project Progress"
+    },
+    "data_sources": [
+      "GASTAT - General Authority for Statistics",
+      "SAMA - Saudi Arabian Monetary Authority",
+      "Ministry of Economy and Planning",
+      "Vision 2030 Official Reports"
+    ]
+  },
+  "section_2_nss_2001_review": {
+    "strategy_name": "National Spatial Strategy 2001",
+    "period": "2001-2020",
+    "vision_statement": "Balanced and sustainable territorial development for all citizens",
+    "objectives": [
+      {
+        "id": "NSS2001-01",
+        "description": "Achieve balanced regional development across all 13 provinces",
+        "target_year": 2020,
+        "target_metric": "Population concentration in top 3 regions",
+        "target_value": 55.0,
+        "achieved_value": 65.0,
+        "status": "partial",
+        "lessons_learned": [
+          "Economic gravity towards Riyadh too strong without major interventions",
+          "Oil industry concentration in Eastern Province persisted",
+          "Religious tourism kept Makkah growth high"
+        ]
+      },
+      {
+        "id": "NSS2001-02",
+        "description": "Establish 5-tier urban hierarchy with clear functional roles",
+        "target_year": 2020,
+        "target_metric": "Cities with defined metropolitan functions",
+        "target_value": 5.0,
+        "achieved_value": 3.0,
+        "status": "partial",
+        "lessons_learned": [
+          "National Capital (Riyadh) grew faster than planned",
+          "Regional centers lacked investment attraction mechanisms",
+          "Secondary cities struggled to develop specialized functions"
+        ]
+      },
+      {
+        "id": "NSS2001-03",
+        "description": "Develop national infrastructure corridors linking all regions",
+        "target_year": 2025,
+        "target_metric": "Interregional connectivity index",
+        "target_value": 0.8,
+        "achieved_value": 0.65,
+        "status": "ongoing",
+        "lessons_learned": [
+          "Highway network expanded significantly",
+          "Rail network development slower than planned",
+          "Air connectivity exceeded expectations"
+        ]
+      },
+      {
+        "id": "NSS2001-04",
+        "description": "Protect 15% of land area as environmental reserves",
+        "target_year": 2020,
+        "target_metric": "Protected area percentage",
+        "target_value": 15.0,
+        "achieved_value": 4.3,
+        "status": "failed",
+        "lessons_learned": [
+          "Economic development prioritized over conservation",
+          "Weak enforcement mechanisms",
+          "Lack of dedicated funding for protected areas"
+        ]
+      },
+      {
+        "id": "NSS2001-05",
+        "description": "Reduce water consumption through efficiency measures",
+        "target_year": 2020,
+        "target_metric": "Per capita water consumption (L/day)",
+        "target_value": 200.0,
+        "achieved_value": 263.0,
+        "status": "failed",
+        "lessons_learned": [
+          "Subsidized water prices prevented behavioral change",
+          "Agricultural sector water use remained high",
+          "Desalination capacity expanded instead of demand reduction"
+        ]
+      },
+      {
+        "id": "NSS2001-06",
+        "description": "Diversify economic base beyond oil dependency",
+        "target_year": 2020,
+        "target_metric": "Non-oil GDP share",
+        "target_value": 60.0,
+        "achieved_value": 50.0,
+        "status": "partial",
+        "lessons_learned": [
+          "Progress accelerated only after Vision 2030 launch",
+          "Petrochemical industry remained dominant in diversification",
+          "Services sector growth limited by labor market constraints"
+        ]
+      },
+      {
+        "id": "NSS2001-07",
+        "description": "Increase Saudi employment in private sector",
+        "target_year": 2020,
+        "target_metric": "Saudization rate",
+        "target_value": 30.0,
+        "achieved_value": 22.0,
+        "status": "partial",
+        "lessons_learned": [
+          "Skills mismatch between education and labor market",
+          "Salary expectations gap between Saudi and expat workers",
+          "Nitaqat program had mixed results"
+        ]
+      }
+    ],
+    "methodology": {
+      "approach": "Top-down technocratic planning with UN-Habitat support",
+      "data_sources": "Census 1992, limited GIS, expert consultations",
+      "time_horizon": "20-year vision (2001-2020)",
+      "review_mechanism": "5-year review cycles (not implemented)",
+      "stakeholder_engagement": "Limited to government agencies",
+      "scenario_planning": "Single baseline scenario"
+    },
+    "key_achievements": [
+      "Established first comprehensive spatial planning framework for KSA",
+      "Created regional development directorates in all 13 provinces",
+      "Developed initial GIS infrastructure for spatial planning",
+      "Highway network expanded significantly (22,000 km added)",
+      "New industrial cities established (Jubail expansion, Yanbu)",
+      "Urban planning regulations modernized in major cities"
+    ],
+    "key_failures": [
+      "Regional imbalance persisted - Riyadh's dominance increased",
+      "Environmental protection targets largely unmet",
+      "Water sustainability goals not achieved",
+      "Secondary cities failed to develop as planned",
+      "Implementation mechanisms were weak",
+      "Monitoring and evaluation system never operationalized",
+      "Private sector integration was minimal"
+    ],
+    "lessons_learned": [
+      "Implementation requires dedicated institutional capacity",
+      "Top-down planning without local buy-in has limited effectiveness",
+      "Economic incentives must align with spatial objectives",
+      "Environmental targets need enforcement mechanisms",
+      "Regular monitoring and mid-course corrections are essential",
+      "Private sector must be engaged from planning stage",
+      "Data infrastructure is foundational for spatial planning",
+      "Regional development needs more than infrastructure investment"
+    ],
+    "recommendations": [
+      "Establish dedicated NSS implementation agency with authority",
+      "Create regional development incentive packages",
+      "Implement robust monitoring and evaluation framework",
+      "Integrate private sector in planning and implementation",
+      "Use scenario planning to handle uncertainty",
+      "Strengthen local government planning capacity",
+      "Link spatial objectives to budget allocation",
+      "Create regular public reporting on NSS progress"
+    ]
+  },
+  "section_3_nss_2030_review": {
+    "strategy_name": "National Spatial Strategy 2030 Draft",
+    "period": "2016-2030",
+    "vision_statement": "Transform Saudi Arabia into a global investment powerhouse through spatial excellence",
+    "objectives": [
+      {
+        "id": "NSS2030-01",
+        "description": "Establish NEOM as a new growth pole in Northwest region",
+        "target_year": 2030,
+        "target_metric": "NEOM population",
+        "target_value": 1000000.0,
+        "achieved_value": 50000.0,
+        "status": "ongoing",
+        "lessons_learned": [
+          "Mega-project scale requires sustained commitment",
+          "Labor force attraction is challenging in remote areas",
+          "Infrastructure must precede population"
+        ]
+      },
+      {
+        "id": "NSS2030-02",
+        "description": "Achieve 100M annual tourist visits",
+        "target_year": 2030,
+        "target_metric": "Annual tourist arrivals (millions)",
+        "target_value": 100.0,
+        "achieved_value": 35.0,
+        "status": "ongoing",
+        "lessons_learned": [
+          "Hajj/Umrah remains dominant tourism segment",
+          "Red Sea/AMAALA developing slower than planned",
+          "Entertainment and sports tourism showing strong growth"
+        ]
+      },
+      {
+        "id": "NSS2030-03",
+        "description": "Riyadh to become top 10 global city economy",
+        "target_year": 2030,
+        "target_metric": "Global city ranking",
+        "target_value": 10.0,
+        "achieved_value": 40.0,
+        "status": "ongoing",
+        "lessons_learned": [
+          "Headquarters relocation policy accelerating growth",
+          "Quality of life improvements driving talent attraction",
+          "Metro system transforming urban mobility"
+        ]
+      },
+      {
+        "id": "NSS2030-04",
+        "description": "Increase non-oil GDP to 65% of total",
+        "target_year": 2030,
+        "target_metric": "Non-oil GDP share (%)",
+        "target_value": 65.0,
+        "achieved_value": 62.0,
+        "status": "ongoing",
+        "lessons_learned": [
+          "Tourism and entertainment fastest growing sectors",
+          "Manufacturing diversification proving difficult",
+          "Tech sector showing promise with LEAP initiatives"
+        ]
+      },
+      {
+        "id": "NSS2030-05",
+        "description": "Develop integrated national transport network",
+        "target_year": 2030,
+        "target_metric": "Rail network km",
+        "target_value": 10000.0,
+        "achieved_value": 4500.0,
+        "status": "ongoing",
+        "lessons_learned": [
+          "Haramain HSR successful model",
+          "Land Bridge project facing delays",
+          "Aviation expansion exceeding targets"
+        ]
+      },
+      {
+        "id": "NSS2030-06",
+        "description": "Achieve 50% renewable energy share",
+        "target_year": 2030,
+        "target_metric": "Renewable energy share (%)",
+        "target_value": 50.0,
+        "achieved_value": 8.0,
+        "status": "ongoing",
+        "lessons_learned": [
+          "Solar projects progressing well",
+          "NEOM green hydrogen ambitious",
+          "Grid integration challenges remain"
+        ]
+      }
+    ],
+    "methodology": {
+      "approach": "Vision 2030 aligned, project-centric planning",
+      "data_sources": "Multiple government databases, satellite imagery, AI analytics",
+      "time_horizon": "2016-2030 with 5-year phases",
+      "review_mechanism": "Quarterly progress tracking by Vision Realization Office",
+      "stakeholder_engagement": "Public-private partnership focus",
+      "scenario_planning": "Multiple scenarios including stress tests"
+    },
+    "key_achievements": [
+      "Strong political commitment and funding from PIF",
+      "Clear alignment with Vision 2030 framework",
+      "Ambitious giga-projects driving spatial transformation",
+      "Better data and monitoring systems than NSS 2001",
+      "Private sector engagement through investment funds",
+      "International partnerships and expertise",
+      "Youth engagement and social transformation integrated"
+    ],
+    "key_failures": [
+      "Over-reliance on mega-projects vs distributed development",
+      "Environmental sustainability secondary to growth",
+      "Water security strategy underdeveloped",
+      "Regional inequality may increase without intervention",
+      "Implementation capacity in non-priority regions limited",
+      "Climate change adaptation not fully integrated",
+      "Social infrastructure lagging physical infrastructure"
+    ],
+    "lessons_learned": [
+      "Vision-level commitment essential but not sufficient",
+      "Spatial concentration in mega-projects has trade-offs",
+      "Execution capacity is the main constraint",
+      "Environmental limits need explicit integration",
+      "Social transformation must accompany physical development",
+      "Data and monitoring systems are essential",
+      "International benchmarking provides useful reference"
+    ],
+    "recommendations": [
+      "Balance mega-project focus with regional development programs",
+      "Strengthen environmental sustainability integration",
+      "Develop explicit water security strategy",
+      "Create smaller-scale economic development programs for secondary regions",
+      "Build implementation capacity in regional governments",
+      "Integrate climate change adaptation in all projects",
+      "Ensure social infrastructure keeps pace with physical development",
+      "Maintain flexibility for mid-course corrections"
+    ]
+  },
+  "section_4_continuity_change_matrix": {
+    "summary": {
+      "total_elements": 20,
+      "by_recommendation": {
+        "STRENGTHEN": 11,
+        "MAINTAIN": 6,
+        "MODIFY": 3
+      },
+      "by_category": {
+        "spatial": 4,
+        "economic": 4,
+        "governance": 4,
+        "environmental": 4,
+        "social": 4
+      },
+      "by_priority": {
+        "HIGH": 13,
+        "MEDIUM": 6,
+        "CRITICAL": 1
+      },
+      "critical_items": [
+        "Water Demand Management"
+      ],
+      "high_priority_strengthen": [
+        "Regional Development Directorates",
+        "Special Economic Zones",
+        "Tourism Corridor Development",
+        "Regional Economic Specialization",
+        "Performance Monitoring System",
+        "Protected Area Targets",
+        "Renewable Energy Integration"
+      ]
+    },
+    "items": [
+      {
+        "element": "Regional Development Directorates",
+        "category": "spatial",
+        "current_status": "Established but under-resourced",
+        "recommendation": "strengthen",
+        "priority": "high",
+        "justification": "Essential for localized implementation but lack capacity and authority",
+        "implementation_notes": "Increase staffing, budget, and decision-making authority at regional level"
+      },
+      {
+        "element": "5-Tier Urban Hierarchy Model",
+        "category": "spatial",
+        "current_status": "Partially implemented",
+        "recommendation": "modify",
+        "priority": "medium",
+        "justification": "Model is sound but Riyadh dominance distorts hierarchy; needs economic rebalancing",
+        "implementation_notes": "Develop specialized functions for tier 2-3 cities; use incentive packages"
+      },
+      {
+        "element": "Giga-Project Spatial Strategy",
+        "category": "spatial",
+        "current_status": "Active - NEOM, Red Sea, Qiddiya, etc.",
+        "recommendation": "maintain",
+        "priority": "high",
+        "justification": "Strong execution momentum; provides growth poles outside traditional centers",
+        "implementation_notes": "Continue but ensure regional spillover effects are monitored"
+      },
+      {
+        "element": "New City Development Policy",
+        "category": "spatial",
+        "current_status": "Mixed results - KAEC underperforming, NEOM nascent",
+        "recommendation": "modify",
+        "priority": "high",
+        "justification": "New cities struggle without clear economic anchor and labor supply",
+        "implementation_notes": "Focus on fewer cities with stronger economic rationale; improve transport links"
+      },
+      {
+        "element": "Special Economic Zones",
+        "category": "economic",
+        "current_status": "Expanding - NEOM, King Abdullah Port, etc.",
+        "recommendation": "strengthen",
+        "priority": "high",
+        "justification": "Effective for attracting foreign investment and creating economic clusters",
+        "implementation_notes": "Extend SEZ benefits; streamline approvals; improve infrastructure connectivity"
+      },
+      {
+        "element": "Industrial City Program",
+        "category": "economic",
+        "current_status": "Jubail, Yanbu mature; new cities developing",
+        "recommendation": "maintain",
+        "priority": "medium",
+        "justification": "Proven model for industrial development and diversification",
+        "implementation_notes": "Continue expansion; focus on downstream industries and technology sectors"
+      },
+      {
+        "element": "Tourism Corridor Development",
+        "category": "economic",
+        "current_status": "Active - Red Sea, Diriyah, AlUla",
+        "recommendation": "strengthen",
+        "priority": "high",
+        "justification": "Tourism is key diversification pillar with strong spatial implications",
+        "implementation_notes": "Accelerate infrastructure; develop tourism human capital; maintain authenticity"
+      },
+      {
+        "element": "Regional Economic Specialization",
+        "category": "economic",
+        "current_status": "Weak - most regions remain generalist",
+        "recommendation": "strengthen",
+        "priority": "high",
+        "justification": "Regions lack distinctive economic identity; reduces competitiveness",
+        "implementation_notes": "Develop regional specialization strategies based on comparative advantages"
+      },
+      {
+        "element": "Centralized Planning Coordination",
+        "category": "governance",
+        "current_status": "Strong through Vision 2030 office",
+        "recommendation": "maintain",
+        "priority": "high",
+        "justification": "Effective for alignment but may slow regional responsiveness",
+        "implementation_notes": "Maintain for strategic alignment; delegate operational decisions to regions"
+      },
+      {
+        "element": "5-Year Review Cycles",
+        "category": "governance",
+        "current_status": "Not implemented in NSS 2001; quarterly in V2030",
+        "recommendation": "strengthen",
+        "priority": "medium",
+        "justification": "Regular review essential for adaptive management",
+        "implementation_notes": "Formalize 5-year comprehensive reviews with public reporting"
+      },
+      {
+        "element": "Inter-ministerial Coordination",
+        "category": "governance",
+        "current_status": "Improved under Vision 2030 governance",
+        "recommendation": "maintain",
+        "priority": "high",
+        "justification": "Spatial planning requires cross-sectoral coordination",
+        "implementation_notes": "Continue high-level coordination mechanisms"
+      },
+      {
+        "element": "Performance Monitoring System",
+        "category": "governance",
+        "current_status": "Developing - Vision 2030 KPIs",
+        "recommendation": "strengthen",
+        "priority": "high",
+        "justification": "Essential for evidence-based decision making",
+        "implementation_notes": "Expand to cover all spatial indicators; make data publicly accessible"
+      },
+      {
+        "element": "Protected Area Targets",
+        "category": "environmental",
+        "current_status": "Behind target - 4.3% vs 15% goal",
+        "recommendation": "strengthen",
+        "priority": "high",
+        "justification": "Environmental protection essential for sustainable development",
+        "implementation_notes": "Accelerate to meet 30x30 global commitment; enforce existing protections"
+      },
+      {
+        "element": "Water Demand Management",
+        "category": "environmental",
+        "current_status": "Weak - consumption still high",
+        "recommendation": "strengthen",
+        "priority": "critical",
+        "justification": "Water security is existential issue for Saudi Arabia",
+        "implementation_notes": "Reform water pricing; mandate efficiency standards; reduce agricultural use"
+      },
+      {
+        "element": "Renewable Energy Integration",
+        "category": "environmental",
+        "current_status": "Accelerating - solar and wind projects",
+        "recommendation": "strengthen",
+        "priority": "high",
+        "justification": "Critical for climate commitments and economic diversification",
+        "implementation_notes": "Maintain ambitious targets; address grid integration challenges"
+      },
+      {
+        "element": "Coastal Zone Management",
+        "category": "environmental",
+        "current_status": "Developing - Red Sea Project sets standard",
+        "recommendation": "strengthen",
+        "priority": "medium",
+        "justification": "3,000 km coastline has major economic and environmental value",
+        "implementation_notes": "Extend Red Sea standards to all coastal development; prevent over-development"
+      },
+      {
+        "element": "Housing Program (Sakani)",
+        "category": "social",
+        "current_status": "Active - homeownership increasing",
+        "recommendation": "maintain",
+        "priority": "high",
+        "justification": "Housing affordability critical for social stability and labor mobility",
+        "implementation_notes": "Continue expansion; ensure regional distribution"
+      },
+      {
+        "element": "Saudi Employment Programs",
+        "category": "social",
+        "current_status": "Nitaqat ongoing; unemployment still elevated",
+        "recommendation": "modify",
+        "priority": "high",
+        "justification": "Current approach has limited success; needs skills-focused reform",
+        "implementation_notes": "Shift from quotas to skills development; target high-value sectors"
+      },
+      {
+        "element": "Education City Development",
+        "category": "social",
+        "current_status": "Active - KAUST, multiple universities",
+        "recommendation": "maintain",
+        "priority": "medium",
+        "justification": "Knowledge economy requires higher education infrastructure",
+        "implementation_notes": "Continue but improve industry linkages and research commercialization"
+      },
+      {
+        "element": "Healthcare Infrastructure Distribution",
+        "category": "social",
+        "current_status": "Concentrated in major cities",
+        "recommendation": "strengthen",
+        "priority": "medium",
+        "justification": "Regional healthcare gaps affect livability and development",
+        "implementation_notes": "Invest in regional hospitals and telemedicine infrastructure"
+      }
+    ]
+  },
+  "section_5_recommendations": {
+    "governance_and_implementation": [
+      "Establish dedicated NSS implementation agency with clear authority",
+      "Strengthen regional government planning capacity and resources",
+      "Create robust monitoring and evaluation framework with public reporting",
+      "Formalize 5-year comprehensive strategy reviews",
+      "Integrate private sector in planning from early stages"
+    ],
+    "spatial_development": [
+      "Balance mega-project investment with distributed regional programs",
+      "Develop specialized economic functions for secondary cities",
+      "Strengthen transport connectivity between regional centers",
+      "Create smaller-scale development programs for underserved regions",
+      "Ensure mega-project spillover benefits reach surrounding areas"
+    ],
+    "environmental_sustainability": [
+      "CRITICAL: Implement comprehensive water security strategy",
+      "Accelerate to meet 30x30 protected area commitments",
+      "Integrate climate change adaptation in all spatial decisions",
+      "Extend coastal zone management standards nationally",
+      "Maintain ambitious renewable energy targets"
+    ],
+    "economic_development": [
+      "Develop regional economic specialization strategies",
+      "Extend Special Economic Zone benefits more broadly",
+      "Strengthen tourism infrastructure across regions",
+      "Focus on skills development over employment quotas",
+      "Ensure economic incentives align with spatial objectives"
+    ],
+    "social_infrastructure": [
+      "Continue housing programs with regional distribution focus",
+      "Invest in regional healthcare infrastructure",
+      "Improve industry-education linkages",
+      "Ensure social infrastructure keeps pace with physical development",
+      "Address regional quality of life gaps"
+    ]
+  },
+  "appendices": {
+    "data_sources": [
+      "GASTAT - General Authority for Statistics",
+      "SAMA - Saudi Arabian Monetary Authority",
+      "Ministry of Economy and Planning",
+      "Vision 2030 Official Reports",
+      "Ministry of Municipal and Rural Affairs",
+      "UN-Habitat Historical Records"
+    ],
+    "time_series_files": [
+      "timeseries_population.csv",
+      "timeseries_gdp.csv",
+      "timeseries_regional.csv"
+    ],
+    "matrix_file": "continuity_change_matrix.csv"
+  }
+}

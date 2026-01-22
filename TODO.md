@@ -9,8 +9,8 @@
 
 | Workstream | Progresso | Status |
 |------------|-----------|--------|
-| WS1 - Data & GIS Foundation | ███░░ 70% | 🟢 Quase completo |
-| WS2 - Retrospective Review | ██░░░ 70% | 🟡 Parcial |
+| WS1 - Data & GIS Foundation | █████ 95% | ✅ Completo |
+| WS2 - Retrospective Review | █████ 100% | ✅ Completo |
 | WS3 - International Benchmarking | ░░░░░ 5% | 🔴 Por fazer |
 | WS4 - Sectoral & Regional | ███░░ 60% | 🟡 Parcial |
 | WS5 - Scenario Modeling | ████░ 75% | 🟢 Bom |
@@ -121,25 +121,48 @@ Extrair lições aprendidas e oportunidades de melhoria dos frameworks NSS anter
 - [x] Análise de transformação económica
 - [x] Tracking de milestones Vision 2030
 - [x] Código de análise (`ws2_retrospective.py`)
-- [ ] **Revisão do NSS 2001**
-  - [ ] Objectivos originais
-  - [ ] O que foi alcançado
-  - [ ] O que falhou e porquê
-  - [ ] Lições aprendidas
-- [ ] **Revisão do NSS 2030 Draft**
-  - [ ] Metodologia utilizada
-  - [ ] Pressupostos chave
-  - [ ] Pontos fortes a manter
-  - [ ] Gaps a colmatar
-- [ ] **Relatório formal (PDF/Word)**
-  - [ ] Executive Summary
-  - [ ] Análise detalhada
-  - [ ] Conclusões e recomendações
+- [x] **Revisão do NSS 2001**
+  - [x] Objectivos originais (7 objectivos analisados)
+  - [x] O que foi alcançado (6 achievements)
+  - [x] O que falhou e porquê (7 failures + lessons)
+  - [x] Lições aprendidas (8 lessons documented)
+- [x] **Revisão do NSS 2030 Draft**
+  - [x] Metodologia utilizada
+  - [x] Pressupostos chave (6 objectives tracked)
+  - [x] Pontos fortes a manter (7 strengths)
+  - [x] Gaps a colmatar (7 gaps identified)
+- [x] **Relatório formal**
+  - [x] Executive Summary
+  - [x] Análise detalhada
+  - [x] Conclusões e recomendações
+  - [x] Formato JSON: `WS2_RETROSPECTIVE_REPORT.json`
+  - [x] Formato Markdown: `WS2_RETROSPECTIVE_REPORT.md`
 
 #### 2.2 Continuity and Change Matrix
-- [ ] Matriz de elementos a manter vs mudar
-- [ ] Justificação para cada decisão
-- [ ] Priorização de mudanças
+- [x] Matriz de elementos a manter vs mudar (20 elementos)
+- [x] Justificação para cada decisão
+- [x] Priorização de mudanças (CRITICAL, HIGH, MEDIUM, LOW)
+- [x] Ficheiro CSV: `continuity_change_matrix.csv`
+- [x] Categorias: spatial, economic, governance, environmental, social
+- [x] Recomendações: STRENGTHEN (11), MAINTAIN (6), MODIFY (3)
+
+### ✅ WS2 STATUS: COMPLETE (100%)
+
+**Código Desenvolvido:**
+- `src/analysis/ws2_retrospective.py` - Análise retrospectiva 2010-2025
+- `src/analysis/ws2_comprehensive.py` - Módulo completo WS2 (~900 lines)
+  - NSS2001Reviewer - Revisão completa do NSS 2001
+  - NSS2030DraftReviewer - Revisão do draft 2030
+  - ContinuityChangeMatrix - Matriz de 20 elementos
+  - WS2ReportGenerator - Gerador de relatórios
+
+**Ficheiros Gerados (6 deliverables):**
+- `02_analytics/ws2_outputs/WS2_RETROSPECTIVE_REPORT.json`
+- `02_analytics/ws2_outputs/WS2_RETROSPECTIVE_REPORT.md`
+- `02_analytics/ws2_outputs/continuity_change_matrix.csv`
+- `02_analytics/ws2_outputs/timeseries_population.csv`
+- `02_analytics/ws2_outputs/timeseries_gdp.csv`
+- `02_analytics/ws2_outputs/timeseries_regional.csv`
 
 ---
 
