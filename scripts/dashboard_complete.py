@@ -1943,13 +1943,14 @@ def render_ws6_nss_draft():
                         font=dict(size=10),
                         bgcolor='rgba(255,255,255,0.8)'
                     ),
-                    title=dict(text="Strategic Nodes Network", font=dict(size=13, color='#1a1a1a'), x=0)
+                    title=dict(text="Strategic Nodes Network", font=dict(size=13, color='#1a1a1a'), x=0),
+                    dragmode='zoom'
                 )
                 fig_map.update_traces(
                     marker=dict(opacity=0.85),
                     hovertemplate='<b>%{hovertext}</b><br>Tier %{marker.color}<br>Pop 2050: %{marker.size:.1f}M<extra></extra>'
                 )
-                st.plotly_chart(fig_map, use_container_width=True)
+                st.plotly_chart(fig_map, use_container_width=True, config={'scrollZoom': True, 'displayModeBar': True, 'modeBarButtonsToAdd': ['zoom2d', 'pan2d', 'resetScale2d']})
         
         with col_detail:
             # Node cards for Tier 1
@@ -2095,9 +2096,10 @@ def render_ws6_nss_draft():
                     borderwidth=1,
                     font=dict(size=10)
                 ),
-                title=dict(text=f"Development Corridors Network ({len(corridors)} Corridors)", font=dict(size=13, color='#1a1a1a'), x=0)
+                title=dict(text=f"Development Corridors Network ({len(corridors)} Corridors)", font=dict(size=13, color='#1a1a1a'), x=0),
+                dragmode='zoom'
             )
-            st.plotly_chart(fig_corr, use_container_width=True)
+            st.plotly_chart(fig_corr, use_container_width=True, config={'scrollZoom': True, 'displayModeBar': True, 'modeBarButtonsToAdd': ['zoom2d', 'pan2d', 'resetScale2d']})
         
         # Corridor details in module cards
         st.markdown('<div class="module-grid">', unsafe_allow_html=True)
