@@ -1050,14 +1050,18 @@ def render_ws2_retrospective():
     discontinue = len(continuity[continuity['Recommendation'] == 'DISCONTINUE'])
     total = len(continuity)
     
-    # Compact stat modules in grid
-    st.markdown('<div class="stat-grid">', unsafe_allow_html=True)
-    st.markdown(render_stat_module("✓", "Maintain", str(maintain), f"{maintain*100//total}% of policies", "green"), unsafe_allow_html=True)
-    st.markdown(render_stat_module("⬆", "Strengthen", str(strengthen), "Enhance existing", "blue"), unsafe_allow_html=True)
-    st.markdown(render_stat_module("↻", "Modify", str(modify), "Update approach", "amber"), unsafe_allow_html=True)
-    st.markdown(render_stat_module("✚", "New", str(new_items), "Introduce fresh", "purple"), unsafe_allow_html=True)
-    st.markdown(render_stat_module("✗", "Discontinue", str(discontinue), "Phase out", "red"), unsafe_allow_html=True)
-    st.markdown('</div>', unsafe_allow_html=True)
+    # Compact stat modules using st.columns
+    cols = st.columns(5)
+    with cols[0]:
+        st.markdown(render_stat_module("✓", "Maintain", str(maintain), f"{maintain*100//total}% of policies", "green"), unsafe_allow_html=True)
+    with cols[1]:
+        st.markdown(render_stat_module("⬆", "Strengthen", str(strengthen), "Enhance existing", "blue"), unsafe_allow_html=True)
+    with cols[2]:
+        st.markdown(render_stat_module("↻", "Modify", str(modify), "Update approach", "amber"), unsafe_allow_html=True)
+    with cols[3]:
+        st.markdown(render_stat_module("✚", "New", str(new_items), "Introduce fresh", "purple"), unsafe_allow_html=True)
+    with cols[4]:
+        st.markdown(render_stat_module("✗", "Discontinue", str(discontinue), "Phase out", "red"), unsafe_allow_html=True)
     
     # Charts in two columns
     col1, col2 = st.columns(2)
